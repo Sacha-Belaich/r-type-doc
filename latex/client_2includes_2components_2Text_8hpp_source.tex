@@ -1,0 +1,37 @@
+\doxysection{Text.\+hpp}
+\hypertarget{client_2includes_2components_2Text_8hpp_source}{}\label{client_2includes_2components_2Text_8hpp_source}\index{client/includes/components/Text.hpp@{client/includes/components/Text.hpp}}
+\mbox{\hyperlink{client_2includes_2components_2Text_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2024}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ r-\/type}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ Text\ component\ Header}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IGraphical_8hpp}{../../../lib/graphical/includes/IGraphical.hpp}}"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceClient_1_1Components}{Client::Components}}\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classClient_1_1Components_1_1Text}{Text}}\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classClient_1_1Components_1_1Text_a91e223741eb20389c850106b7a4176e3}{Text}}(std::string\ \mbox{\hyperlink{classClient_1_1Components_1_1Text_aaf1bffa66da35308e1015d7394a66aa9}{font}}\ =\ \textcolor{stringliteral}{"{}"{}},\ std::string\ \mbox{\hyperlink{classClient_1_1Components_1_1Text_a8143459c04418ab06f9db924b3d7914b}{str}}\ =\ \textcolor{stringliteral}{"{}"{}},\ \mbox{\hyperlink{structGraphical_1_1Color}{Graphical::Color}}\ \mbox{\hyperlink{classClient_1_1Components_1_1Text_ac003db1f1912b6d4f5b706af54c4967d}{color}}\ =\ \{0,\ 0,\ 0,\ 255\},}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classClient_1_1Components_1_1Text_ab1cdb220c10bdf9f3d242b3bf612c383}{fontSize}}\ =\ 13,\ int8\_t\ \mbox{\hyperlink{classClient_1_1Components_1_1Text_a6527552cbcd6186514df851b10f9bdd0}{rotation}}\ =\ 0);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classClient_1_1Components_1_1Text_a9f89a95be239d2c51f252f20f1c292b4}{log}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00022\ \textcolor{comment}{}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**\ @brief\ compute\ the\ size\ based\ on\ fontSize\ and\ string\ length*/}}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{structGraphical_1_1Vect2i}{Graphical::Vect2i}}\ \mbox{\hyperlink{classClient_1_1Components_1_1Text_abfde68c5ccbe5e7c3a90b82e68e78a9b}{computeSize}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classClient_1_1Components_1_1Text_aaf1bffa66da35308e1015d7394a66aa9}{font}},\ \mbox{\hyperlink{classClient_1_1Components_1_1Text_a8143459c04418ab06f9db924b3d7914b}{str}};}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ int8\_t\ \mbox{\hyperlink{classClient_1_1Components_1_1Text_a6527552cbcd6186514df851b10f9bdd0}{rotation}};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classClient_1_1Components_1_1Text_ab1cdb220c10bdf9f3d242b3bf612c383}{fontSize}};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structGraphical_1_1Color}{Graphical::Color}}\ \mbox{\hyperlink{classClient_1_1Components_1_1Text_ac003db1f1912b6d4f5b706af54c4967d}{color}};}
+\DoxyCodeLine{00030\ \ \ \ \ \};}
+\DoxyCodeLine{00031\ \}\ \textcolor{comment}{//\ namespace\ Client::Components}}
+
+\end{DoxyCode}

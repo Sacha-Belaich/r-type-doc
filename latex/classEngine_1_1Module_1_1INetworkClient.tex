@@ -1,0 +1,129 @@
+\doxysection{Engine\+::Module\+::INetwork\+Client Interface Reference}
+\hypertarget{classEngine_1_1Module_1_1INetworkClient}{}\label{classEngine_1_1Module_1_1INetworkClient}\index{Engine::Module::INetworkClient@{Engine::Module::INetworkClient}}
+
+
+Interface for managing network client functionality.  
+
+
+
+
+{\ttfamily \#include $<$INetwork\+Client.\+hpp$>$}
+
+Inheritance diagram for Engine\+::Module\+::INetwork\+Client\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classEngine_1_1Module_1_1INetworkClient}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkClient_ae292860a6de9653e6d25cc7fcf337d17}{connect}} (const std\+::string \&ip, uint16\+\_\+t port)=0
+\begin{DoxyCompactList}\small\item\em Connect to a remote server. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkClient_aa033db471c1c577ddcfa65ec1d6b3641}{close}} ()=0
+\begin{DoxyCompactList}\small\item\em Close the connection. \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ uint8\+\_\+t $>$ \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkClient_a188946319523bda58976076197aaf21d}{get\+Oldest\+Packet}} ()=0
+\begin{DoxyCompactList}\small\item\em Retrieve the oldest received packet. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkClient_a54ef44e19971819fb47f522bc4c38637}{send}} (const std\+::vector$<$ uint8\+\_\+t $>$ \&packet)=0
+\begin{DoxyCompactList}\small\item\em Send a packet to the connected endpoint. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classEngine_1_1Module_1_1IModule}{Engine\+::\+Module\+::\+IModule}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classEngine_1_1Module_1_1IModule_a6bd5fa440d706fadbe1f806de2abd3a5}{\texorpdfstring{$\sim$}{\string~}\+IModule}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespaceEngine_1_1Module_a4f2927ec966fd747da59cf6593ae7864}{module\+\_\+info\+\_\+t}} \mbox{\hyperlink{classEngine_1_1Module_1_1IModule_adb9199647e717948fa37f90b8ae352f8}{get\+Info}} ()=0
+\begin{DoxyCompactList}\small\item\em Retrieve module information. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEngine_1_1Module_1_1IModule_ad38434ae26e3afe6b51db6df3836cfb0}{load\+Module}} (\mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core\+::\+Core}} \&core)=0
+\begin{DoxyCompactList}\small\item\em Load the module into the application\textquotesingle{}s core. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEngine_1_1Module_1_1IModule_afff50ba5f4fe555a31f85b692eb1ecbb}{unload\+Module}} (\mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core\+::\+Core}} \&core)=0
+\begin{DoxyCompactList}\small\item\em Unload the module and clean up its resources. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for managing network client functionality. 
+
+The \doxylink{classEngine_1_1Module_1_1INetworkClient}{INetwork\+Client} interface provides methods to handle network connections, including connecting to a remote server, sending and receiving packets, and managing the connection lifecycle. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classEngine_1_1Module_1_1INetworkClient_aa033db471c1c577ddcfa65ec1d6b3641}\label{classEngine_1_1Module_1_1INetworkClient_aa033db471c1c577ddcfa65ec1d6b3641} 
+\index{Engine::Module::INetworkClient@{Engine::Module::INetworkClient}!close@{close}}
+\index{close@{close}!Engine::Module::INetworkClient@{Engine::Module::INetworkClient}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily virtual void Engine\+::\+Module\+::\+INetwork\+Client\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Close the connection. 
+
+This method closes the connection and releases the associated socket. 
+
+Implemented in \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkClient_a0e69820bb5bf1cf561db7918b30070fd}{Engine\+::\+Module\+::\+Network\+Client}}.
+
+\Hypertarget{classEngine_1_1Module_1_1INetworkClient_ae292860a6de9653e6d25cc7fcf337d17}\label{classEngine_1_1Module_1_1INetworkClient_ae292860a6de9653e6d25cc7fcf337d17} 
+\index{Engine::Module::INetworkClient@{Engine::Module::INetworkClient}!connect@{connect}}
+\index{connect@{connect}!Engine::Module::INetworkClient@{Engine::Module::INetworkClient}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily virtual void Engine\+::\+Module\+::\+INetwork\+Client\+::connect (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ip,  }\item[{uint16\+\_\+t}]{port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Connect to a remote server. 
+
+This method establishes a connection to the specified server and port, and starts asynchronously receiving data. Incoming data is stored in a buffer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ip} & The IP address of the remote server. \\
+\hline
+{\em port} & The port on the remote server to connect to. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkClient_a7ca1be4a6e62da27e62f03bd9e6f36e2}{Engine\+::\+Module\+::\+Network\+Client}}.
+
+\Hypertarget{classEngine_1_1Module_1_1INetworkClient_a188946319523bda58976076197aaf21d}\label{classEngine_1_1Module_1_1INetworkClient_a188946319523bda58976076197aaf21d} 
+\index{Engine::Module::INetworkClient@{Engine::Module::INetworkClient}!getOldestPacket@{getOldestPacket}}
+\index{getOldestPacket@{getOldestPacket}!Engine::Module::INetworkClient@{Engine::Module::INetworkClient}}
+\doxysubsubsection{\texorpdfstring{getOldestPacket()}{getOldestPacket()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$ uint8\+\_\+t $>$ Engine\+::\+Module\+::\+INetwork\+Client\+::get\+Oldest\+Packet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Retrieve the oldest received packet. 
+
+This method fetches the content of the oldest complete packet received from the remote server.
+
+\begin{DoxyReturn}{Returns}
+A vector containing the content of the oldest full packet. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkClient_aa2f28621ca05c8ae91d0e6c243f6038f}{Engine\+::\+Module\+::\+Network\+Client}}.
+
+\Hypertarget{classEngine_1_1Module_1_1INetworkClient_a54ef44e19971819fb47f522bc4c38637}\label{classEngine_1_1Module_1_1INetworkClient_a54ef44e19971819fb47f522bc4c38637} 
+\index{Engine::Module::INetworkClient@{Engine::Module::INetworkClient}!send@{send}}
+\index{send@{send}!Engine::Module::INetworkClient@{Engine::Module::INetworkClient}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily virtual void Engine\+::\+Module\+::\+INetwork\+Client\+::send (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint8\+\_\+t $>$ \&}]{packet }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Send a packet to the connected endpoint. 
+
+This method sends a serialized packet asynchronously to the currently connected server.
+
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & A vector containing the serialized packet to send. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkClient_a37a033617ffa025eb44fb2f0126307df}{Engine\+::\+Module\+::\+Network\+Client}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+lib/engine/includes/\mbox{\hyperlink{INetworkClient_8hpp}{INetwork\+Client.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,66 @@
+\doxysection{Module\+Loader.\+hpp}
+\hypertarget{ModuleLoader_8hpp_source}{}\label{ModuleLoader_8hpp_source}\index{lib/engine/core/ModuleLoader.hpp@{lib/engine/core/ModuleLoader.hpp}}
+\mbox{\hyperlink{ModuleLoader_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2025}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ ModuleLoader.hpp}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ ModuleLoader.hpp}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ R\_TYPE\_MODULELOADER\_HPP}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ R\_TYPE\_MODULELOADER\_HPP}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <cstdio>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <dylib.hpp>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <filesystem>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IModule_8hpp}{../includes/IModule.hpp}}"{}}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceEngine_1_1Core}{Engine::Core}}\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classEngine_1_1Core_1_1ModuleLoader}{ModuleLoader}}\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEngine_1_1Core_1_1ModuleLoader_a5193c34b054739a4e09c8bf0bc18655b}{ModuleLoader}}(\textcolor{keyword}{const}\ std::string\&\ moduleFolder);}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEngine_1_1Core_1_1ModuleLoader_a150b6ede69ac0da3bceb686b9e7b2ee6}{\string~ModuleLoader}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Core_1_1ModuleLoader_a00a23ff7aac25c62712b44a380b59a25}{registerModule}}(\textcolor{keyword}{const}\ std::string\&\ path);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ T\&\ \mbox{\hyperlink{classEngine_1_1Core_1_1ModuleLoader_a8af986dd129f13598422ab0cb74a927a}{loadModule}}(\textcolor{keyword}{const}\ std::string\&\ name)\ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{classEngine_1_1Core_1_1ModuleLoader_afeac18072b0631bf82ef55dbe464a248}{\_modules}}.contains(name))\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Invalid\ module\ name:\ "{}}\ +\ name);}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}T\&\textcolor{keyword}{>}(*\mbox{\hyperlink{classEngine_1_1Core_1_1ModuleLoader_afeac18072b0631bf82ef55dbe464a248}{\_modules}}[name]);}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (\textcolor{keyword}{const}\ std::exception\&\ e)\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Erreur\ lors\ du\ chargement\ du\ module\ '"{}}\ <<\ name\ <<\ \textcolor{stringliteral}{"{}':\ "{}}\ <<\ e.what()}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::endl;}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}invalid\ module\ type\ in\ template"{}});}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ T\&\ \mbox{\hyperlink{classEngine_1_1Core_1_1ModuleLoader_ace40309e13ff0d29270c05cff97ca78a}{getModule}}(std::string\ name)}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}T\ \&\textcolor{keyword}{>}(*\mbox{\hyperlink{classEngine_1_1Core_1_1ModuleLoader_afeac18072b0631bf82ef55dbe464a248}{\_modules}}[name]);}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ std::unordered\_map<std::string,\ std::unique\_ptr<dylib>>\ \mbox{\hyperlink{classEngine_1_1Core_1_1ModuleLoader_a3a731d91642680bc18aa5139d89f2294}{\_libraries}};}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ std::unordered\_map<std::string,\ std::unique\_ptr<Engine::Module::IModule>>\ \mbox{\hyperlink{classEngine_1_1Core_1_1ModuleLoader_afeac18072b0631bf82ef55dbe464a248}{\_modules}};}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ std::vector<std::string>\ \mbox{\hyperlink{classEngine_1_1Core_1_1ModuleLoader_a82028c517d31abcf9c896f04a351e2c4}{\_loaded}};}
+\DoxyCodeLine{00056\ \ \ \ \ \};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \}\ \textcolor{comment}{//\ Core}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//R\_TYPE\_MODULELOADER\_HPP}}
+
+\end{DoxyCode}

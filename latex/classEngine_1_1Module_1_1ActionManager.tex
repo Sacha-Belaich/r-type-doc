@@ -1,0 +1,100 @@
+\doxysection{Engine\+::Module\+::Action\+Manager Class Reference}
+\hypertarget{classEngine_1_1Module_1_1ActionManager}{}\label{classEngine_1_1Module_1_1ActionManager}\index{Engine::Module::ActionManager@{Engine::Module::ActionManager}}
+
+
+{\ttfamily \#include $<$Action\+Manager.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEngine_1_1Module_1_1ActionManager_a2a239dcf97e6e49f33ae881b1212880d}{Action\+Manager}} ()
+\item 
+void \mbox{\hyperlink{classEngine_1_1Module_1_1ActionManager_a60d51569bbbc0129bdbf87cb86c8a451}{add\+\_\+action}} (std\+::string \&name, std\+::vector$<$ \mbox{\hyperlink{namespaceGraphical_a028209aca40d8b0d34872f3297183452}{Graphical\+::\+Key}} $>$ keybinds)
+\item 
+void \mbox{\hyperlink{classEngine_1_1Module_1_1ActionManager_a06a12a01b3d03d0be992c542677e102b}{remove\+\_\+action}} (std\+::string \&name)
+\item 
+void \mbox{\hyperlink{classEngine_1_1Module_1_1ActionManager_a6b8191e251426b65e68e6bdfde1981cb}{disable\+\_\+action}} (std\+::string \&name)
+\item 
+void \mbox{\hyperlink{classEngine_1_1Module_1_1ActionManager_ae7cac1c73b80149799db379b82363e70}{enable\+\_\+action}} (std\+::string \&name)
+\item 
+{\footnotesize template$<$typename Function $>$ }\\void \mbox{\hyperlink{classEngine_1_1Module_1_1ActionManager_a41196a64644ab2ec4b062a86df7d9140}{register\+Action\+Listener}} (std\+::string \&action, Function \&\&f)
+\item 
+void \mbox{\hyperlink{classEngine_1_1Module_1_1ActionManager_a416e9c802292cdd42d715575dd2388b5}{handle\+\_\+inputs}} (const \mbox{\hyperlink{namespaceGraphical_aaf527a3bc294ab26e5cc06976b0410db}{Graphical\+::event\+\_\+t}} \&events, \mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core\+::\+Core}} \&core)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ \mbox{\hyperlink{namespaceGraphical_a028209aca40d8b0d34872f3297183452}{Graphical\+::\+Key}}, std\+::string $>$ \mbox{\hyperlink{classEngine_1_1Module_1_1ActionManager_a0102b2d0caa70c9bd18c2ecf318827f7}{key\+Map}}
+\item 
+std\+::map$<$ std\+::string, std\+::function$<$ void(\mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core\+::\+Core}} \&)$>$ \mbox{\hyperlink{classEngine_1_1Module_1_1ActionManager_aa9eafa2b67f36d05dddf450ddc7bc973}{action\+Listeners}} )
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classEngine_1_1Module_1_1ActionManager_a2a239dcf97e6e49f33ae881b1212880d}\label{classEngine_1_1Module_1_1ActionManager_a2a239dcf97e6e49f33ae881b1212880d} 
+\index{Engine::Module::ActionManager@{Engine::Module::ActionManager}!ActionManager@{ActionManager}}
+\index{ActionManager@{ActionManager}!Engine::Module::ActionManager@{Engine::Module::ActionManager}}
+\doxysubsubsection{\texorpdfstring{ActionManager()}{ActionManager()}}
+{\footnotesize\ttfamily Engine\+::\+Module\+::\+Action\+Manager\+::\+Action\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classEngine_1_1Module_1_1ActionManager_a60d51569bbbc0129bdbf87cb86c8a451}\label{classEngine_1_1Module_1_1ActionManager_a60d51569bbbc0129bdbf87cb86c8a451} 
+\index{Engine::Module::ActionManager@{Engine::Module::ActionManager}!add\_action@{add\_action}}
+\index{add\_action@{add\_action}!Engine::Module::ActionManager@{Engine::Module::ActionManager}}
+\doxysubsubsection{\texorpdfstring{add\_action()}{add\_action()}}
+{\footnotesize\ttfamily void Engine\+::\+Module\+::\+Action\+Manager\+::add\+\_\+action (\begin{DoxyParamCaption}\item[{std\+::string \&}]{name,  }\item[{std\+::vector$<$ \mbox{\hyperlink{namespaceGraphical_a028209aca40d8b0d34872f3297183452}{Graphical\+::\+Key}} $>$}]{keybinds }\end{DoxyParamCaption})}
+
+\Hypertarget{classEngine_1_1Module_1_1ActionManager_a6b8191e251426b65e68e6bdfde1981cb}\label{classEngine_1_1Module_1_1ActionManager_a6b8191e251426b65e68e6bdfde1981cb} 
+\index{Engine::Module::ActionManager@{Engine::Module::ActionManager}!disable\_action@{disable\_action}}
+\index{disable\_action@{disable\_action}!Engine::Module::ActionManager@{Engine::Module::ActionManager}}
+\doxysubsubsection{\texorpdfstring{disable\_action()}{disable\_action()}}
+{\footnotesize\ttfamily void Engine\+::\+Module\+::\+Action\+Manager\+::disable\+\_\+action (\begin{DoxyParamCaption}\item[{std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+\Hypertarget{classEngine_1_1Module_1_1ActionManager_ae7cac1c73b80149799db379b82363e70}\label{classEngine_1_1Module_1_1ActionManager_ae7cac1c73b80149799db379b82363e70} 
+\index{Engine::Module::ActionManager@{Engine::Module::ActionManager}!enable\_action@{enable\_action}}
+\index{enable\_action@{enable\_action}!Engine::Module::ActionManager@{Engine::Module::ActionManager}}
+\doxysubsubsection{\texorpdfstring{enable\_action()}{enable\_action()}}
+{\footnotesize\ttfamily void Engine\+::\+Module\+::\+Action\+Manager\+::enable\+\_\+action (\begin{DoxyParamCaption}\item[{std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+\Hypertarget{classEngine_1_1Module_1_1ActionManager_a416e9c802292cdd42d715575dd2388b5}\label{classEngine_1_1Module_1_1ActionManager_a416e9c802292cdd42d715575dd2388b5} 
+\index{Engine::Module::ActionManager@{Engine::Module::ActionManager}!handle\_inputs@{handle\_inputs}}
+\index{handle\_inputs@{handle\_inputs}!Engine::Module::ActionManager@{Engine::Module::ActionManager}}
+\doxysubsubsection{\texorpdfstring{handle\_inputs()}{handle\_inputs()}}
+{\footnotesize\ttfamily void Engine\+::\+Module\+::\+Action\+Manager\+::handle\+\_\+inputs (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceGraphical_aaf527a3bc294ab26e5cc06976b0410db}{Graphical\+::event\+\_\+t}} \&}]{events,  }\item[{\mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core\+::\+Core}} \&}]{core }\end{DoxyParamCaption})}
+
+\Hypertarget{classEngine_1_1Module_1_1ActionManager_a41196a64644ab2ec4b062a86df7d9140}\label{classEngine_1_1Module_1_1ActionManager_a41196a64644ab2ec4b062a86df7d9140} 
+\index{Engine::Module::ActionManager@{Engine::Module::ActionManager}!registerActionListener@{registerActionListener}}
+\index{registerActionListener@{registerActionListener}!Engine::Module::ActionManager@{Engine::Module::ActionManager}}
+\doxysubsubsection{\texorpdfstring{registerActionListener()}{registerActionListener()}}
+{\footnotesize\ttfamily template$<$typename Function $>$ \\
+void Engine\+::\+Module\+::\+Action\+Manager\+::register\+Action\+Listener (\begin{DoxyParamCaption}\item[{std\+::string \&}]{action,  }\item[{Function \&\&}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classEngine_1_1Module_1_1ActionManager_a06a12a01b3d03d0be992c542677e102b}\label{classEngine_1_1Module_1_1ActionManager_a06a12a01b3d03d0be992c542677e102b} 
+\index{Engine::Module::ActionManager@{Engine::Module::ActionManager}!remove\_action@{remove\_action}}
+\index{remove\_action@{remove\_action}!Engine::Module::ActionManager@{Engine::Module::ActionManager}}
+\doxysubsubsection{\texorpdfstring{remove\_action()}{remove\_action()}}
+{\footnotesize\ttfamily void Engine\+::\+Module\+::\+Action\+Manager\+::remove\+\_\+action (\begin{DoxyParamCaption}\item[{std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classEngine_1_1Module_1_1ActionManager_aa9eafa2b67f36d05dddf450ddc7bc973}\label{classEngine_1_1Module_1_1ActionManager_aa9eafa2b67f36d05dddf450ddc7bc973} 
+\index{Engine::Module::ActionManager@{Engine::Module::ActionManager}!actionListeners@{actionListeners}}
+\index{actionListeners@{actionListeners}!Engine::Module::ActionManager@{Engine::Module::ActionManager}}
+\doxysubsubsection{\texorpdfstring{actionListeners}{actionListeners}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, std\+::function$<$void(\mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core\+::\+Core}} \&)$>$ Engine\+::\+Module\+::\+Action\+Manager\+::action\+Listeners) \hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classEngine_1_1Module_1_1ActionManager_a0102b2d0caa70c9bd18c2ecf318827f7}\label{classEngine_1_1Module_1_1ActionManager_a0102b2d0caa70c9bd18c2ecf318827f7} 
+\index{Engine::Module::ActionManager@{Engine::Module::ActionManager}!keyMap@{keyMap}}
+\index{keyMap@{keyMap}!Engine::Module::ActionManager@{Engine::Module::ActionManager}}
+\doxysubsubsection{\texorpdfstring{keyMap}{keyMap}}
+{\footnotesize\ttfamily std\+::map$<$\mbox{\hyperlink{namespaceGraphical_a028209aca40d8b0d34872f3297183452}{Graphical\+::\+Key}}, std\+::string$>$ Engine\+::\+Module\+::\+Action\+Manager\+::key\+Map\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/engine/modules/renderer/includes/\mbox{\hyperlink{ActionManager_8hpp}{Action\+Manager.\+hpp}}\item 
+lib/engine/modules/renderer/src/\mbox{\hyperlink{ActionManager_8cpp}{Action\+Manager.\+cpp}}\end{DoxyCompactItemize}

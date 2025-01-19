@@ -1,0 +1,295 @@
+\doxysection{R\+\_\+\+Type Namespace Reference}
+\hypertarget{namespaceR__Type}{}\label{namespaceR__Type}\index{R\_Type@{R\_Type}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceR__Type_1_1Component}{Component}}
+\item 
+namespace \mbox{\hyperlink{namespaceR__Type_1_1Entity}{Entity}}
+\item 
+namespace \mbox{\hyperlink{namespaceR__Type_1_1Scene}{Scene}}
+\item 
+namespace \mbox{\hyperlink{namespaceR__Type_1_1System}{System}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structR__Type_1_1AcceptConnection}{Accept\+Connection}}
+\item 
+class \mbox{\hyperlink{classR__Type_1_1ArgHandler}{Arg\+Handler}}
+\item 
+struct \mbox{\hyperlink{structR__Type_1_1CameraMove}{Camera\+Move}}
+\item 
+class \mbox{\hyperlink{classR__Type_1_1CommandException}{Command\+Exception}}
+\item 
+class \mbox{\hyperlink{classR__Type_1_1Core}{Core}}
+\item 
+struct \mbox{\hyperlink{structR__Type_1_1Dead}{Dead}}
+\item 
+class \mbox{\hyperlink{classR__Type_1_1DuplicateComponentNameException}{Duplicate\+Component\+Name\+Exception}}
+\item 
+struct \mbox{\hyperlink{structR__Type_1_1Empty}{Empty}}
+\item 
+struct \mbox{\hyperlink{structR__Type_1_1EntityPositionVelocity}{Entity\+Position\+Velocity}}
+\item 
+class \mbox{\hyperlink{classR__Type_1_1Exception}{Exception}}
+\item 
+class \mbox{\hyperlink{classR__Type_1_1FileException}{File\+Exception}}
+\item 
+class \mbox{\hyperlink{classR__Type_1_1GraphicalException}{Graphical\+Exception}}
+\item 
+struct \mbox{\hyperlink{structR__Type_1_1Hit}{Hit}}
+\item 
+class \mbox{\hyperlink{classR__Type_1_1InvalidComponentNameException}{Invalid\+Component\+Name\+Exception}}
+\item 
+class \mbox{\hyperlink{classR__Type_1_1InvalidSceneNameException}{Invalid\+Scene\+Name\+Exception}}
+\item 
+class \mbox{\hyperlink{classR__Type_1_1InvalidSystemNameException}{Invalid\+System\+Name\+Exception}}
+\item 
+class \mbox{\hyperlink{classR__Type_1_1NetworkException}{Network\+Exception}}
+\item 
+class \mbox{\hyperlink{classR__Type_1_1NoCameraException}{No\+Camera\+Exception}}
+\item 
+class \mbox{\hyperlink{classR__Type_1_1PacketHandling}{Packet\+Handling}}
+\item 
+struct \mbox{\hyperlink{structR__Type_1_1PacketInputsKeys}{Packet\+Inputs\+Keys}}
+\item 
+struct \mbox{\hyperlink{structR__Type_1_1RoomInfo}{Room\+Info}}
+\item 
+struct \mbox{\hyperlink{structR__Type_1_1SetReady}{Set\+Ready}}
+\item 
+struct \mbox{\hyperlink{structR__Type_1_1SpawnEntity}{Spawn\+Entity}}
+\item 
+struct \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespaceR__Type_a29a5b7feb706140364e1f796877d1420}{Input\+Key}} \+: uint8\+\_\+t \{ \newline
+\mbox{\hyperlink{namespaceR__Type_a29a5b7feb706140364e1f796877d1420abaee99e8bb2b3c314475ead672054754}{MOVE\+\_\+\+UP}}
+, \mbox{\hyperlink{namespaceR__Type_a29a5b7feb706140364e1f796877d1420ab0b8330814b804f21a9354e7b2f069b7}{MOVE\+\_\+\+DOWN}}
+, \mbox{\hyperlink{namespaceR__Type_a29a5b7feb706140364e1f796877d1420a7e87c6d5fb00ada4c2d5a01a6108dc9e}{MOVE\+\_\+\+LEFT}}
+, \mbox{\hyperlink{namespaceR__Type_a29a5b7feb706140364e1f796877d1420aed7d241df1b780fcb478524f1ee0db5f}{MOVE\+\_\+\+RIGHT}}
+, \newline
+\mbox{\hyperlink{namespaceR__Type_a29a5b7feb706140364e1f796877d1420a5f17e1839f80fbd3d7c6d53066e8301b}{SHOOT}}
+, \mbox{\hyperlink{namespaceR__Type_a29a5b7feb706140364e1f796877d1420ae2d493dd20ca47b636df1f006da10d9e}{NB\+\_\+\+INPUTS\+\_\+\+KEYS}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7da}{Entity\+Type}} \+: uint8\+\_\+t \{ \newline
+\mbox{\hyperlink{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daad7faccded865a0273b1f3e3a7131f00a}{PLAYER}}
+, \mbox{\hyperlink{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daa2d1bb42123fc0e990c341d1269018226}{PLAYER\+\_\+\+SHOOT}}
+, \mbox{\hyperlink{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daac382dcaac8012038a7b1e4c718847bfb}{ENEMY\+\_\+\+FLY}}
+, \mbox{\hyperlink{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daa4f6a3edcbfe26f86c946df45d1750c99}{ENEMY\+\_\+\+TURRET}}
+, \newline
+\mbox{\hyperlink{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daa9a7c63ea3189e45a837c7511a1a3e921}{ENEMY\+\_\+\+SHOOT}}
+, \mbox{\hyperlink{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daa7cb17ffe5c13693d73ffa5477de5a783}{BOSS\+\_\+\+HEART}}
+, \mbox{\hyperlink{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daae0a4b62c43289c7879d4b4fd3b18d524}{BOSS}}
+, \mbox{\hyperlink{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daa5b4f8bc4a3ac62b012b47d66dea528e7}{WALL}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespaceR__Type_a74e491cdd8a91bbba15f1e0040e474f1}{Command\+Id\+Client}} \+: uint16\+\_\+t \{ \newline
+\mbox{\hyperlink{namespaceR__Type_a74e491cdd8a91bbba15f1e0040e474f1ae8a2f5658c8f1737438d85c97355416d}{CONNECT}}
+, \mbox{\hyperlink{namespaceR__Type_a74e491cdd8a91bbba15f1e0040e474f1acb14a60990487e0c14818bd4e6450993}{CLIENT\+\_\+\+ASK\+\_\+\+START\+\_\+\+GAME}}
+, \mbox{\hyperlink{namespaceR__Type_a74e491cdd8a91bbba15f1e0040e474f1ad1fe8895a9431b839e956c1f7065215c}{INPUT\+\_\+\+KEYS}}
+, \mbox{\hyperlink{namespaceR__Type_a74e491cdd8a91bbba15f1e0040e474f1a5f1cd61ce429dc4d494eec948b855c5e}{DISCONNECT}}
+, \newline
+\mbox{\hyperlink{namespaceR__Type_a74e491cdd8a91bbba15f1e0040e474f1a53a056c69230aa6eed24ad14a35aca93}{SET\+\_\+\+READY}}
+, \mbox{\hyperlink{namespaceR__Type_a74e491cdd8a91bbba15f1e0040e474f1a0c4e4ede1c5b71f744b267f314969b06}{CLIENT\+\_\+\+JOIN\+\_\+\+ROOM}}
+, \mbox{\hyperlink{namespaceR__Type_a74e491cdd8a91bbba15f1e0040e474f1acab097802fb3560ec4315db6b12634c4}{GET\+\_\+\+ROOM\+\_\+\+LIST\+\_\+\+RESPONSE}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespaceR__Type_a94450a4be13c826d506fb6cf6918599d}{Command\+Id\+Server}} \+: uint16\+\_\+t \{ \newline
+\mbox{\hyperlink{namespaceR__Type_a94450a4be13c826d506fb6cf6918599da9e2eeaa4f49bb41dec9bcc5098801ff7}{ACCEPT\+\_\+\+CONNECTION}}
+, \mbox{\hyperlink{namespaceR__Type_a94450a4be13c826d506fb6cf6918599dacc05118fa04b826058323193e25bc61d}{START\+\_\+\+GAME}}
+, \mbox{\hyperlink{namespaceR__Type_a94450a4be13c826d506fb6cf6918599da8588c6e07a965380a244e3e6ec74abdc}{POSITION\+\_\+\+VELOCITY}}
+, \mbox{\hyperlink{namespaceR__Type_a94450a4be13c826d506fb6cf6918599da7c4c29723869b9992e798bdee1ce8201}{SPAWN}}
+, \newline
+\mbox{\hyperlink{namespaceR__Type_a94450a4be13c826d506fb6cf6918599da87eaedcb26e6650818b6d5d80746ea80}{HIT}}
+, \mbox{\hyperlink{namespaceR__Type_a94450a4be13c826d506fb6cf6918599da8e55a9fae0266be1283e1537e305166d}{KILL}}
+, \mbox{\hyperlink{namespaceR__Type_a94450a4be13c826d506fb6cf6918599dabef1270562e0398580310609ee476a12}{CAMERA\+\_\+\+MOVE}}
+, \mbox{\hyperlink{namespaceR__Type_a94450a4be13c826d506fb6cf6918599da3108f8ca23cb42781457f5fd89291867}{END\+\_\+\+GAME}}
+, \newline
+\mbox{\hyperlink{namespaceR__Type_a94450a4be13c826d506fb6cf6918599dac4a82e2bb39ab2107183a5fc32c2037e}{SERVER\+\_\+\+SHUTDOWN}}
+, \mbox{\hyperlink{namespaceR__Type_a94450a4be13c826d506fb6cf6918599dabbcd1f8520ca037a6e092b79a40113ee}{SERVER\+\_\+\+JOIN\+\_\+\+ROOM}}
+, \mbox{\hyperlink{namespaceR__Type_a94450a4be13c826d506fb6cf6918599daf799db3f61c90866a65fe64ec3e93af1}{ROOM\+\_\+\+LIST}}
+, \mbox{\hyperlink{namespaceR__Type_a94450a4be13c826d506fb6cf6918599da3decaa7ea378aeee74b4d5ad0ab67474}{ROOM\+\_\+\+JOINED}}
+, \newline
+\mbox{\hyperlink{namespaceR__Type_a94450a4be13c826d506fb6cf6918599da4db7e4fbf3ecde431dfd1405039a2368}{ROOM\+\_\+\+JOIN\+\_\+\+FAILED}}
+, \mbox{\hyperlink{namespaceR__Type_a94450a4be13c826d506fb6cf6918599da4b2d9e71b7081894d13e8719c31352ee}{GET\+\_\+\+ROOM\+\_\+\+LIST}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{namespaceR__Type_a74e491cdd8a91bbba15f1e0040e474f1}\label{namespaceR__Type_a74e491cdd8a91bbba15f1e0040e474f1} 
+\index{R\_Type@{R\_Type}!CommandIdClient@{CommandIdClient}}
+\index{CommandIdClient@{CommandIdClient}!R\_Type@{R\_Type}}
+\doxysubsubsection{\texorpdfstring{CommandIdClient}{CommandIdClient}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespaceR__Type_a74e491cdd8a91bbba15f1e0040e474f1}{R\+\_\+\+Type\+::\+Command\+Id\+Client}} \+: uint16\+\_\+t}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CONNECT@{CONNECT}!R\_Type@{R\_Type}}\index{R\_Type@{R\_Type}!CONNECT@{CONNECT}}}\Hypertarget{namespaceR__Type_a74e491cdd8a91bbba15f1e0040e474f1ae8a2f5658c8f1737438d85c97355416d}\label{namespaceR__Type_a74e491cdd8a91bbba15f1e0040e474f1ae8a2f5658c8f1737438d85c97355416d} 
+CONNECT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CLIENT\_ASK\_START\_GAME@{CLIENT\_ASK\_START\_GAME}!R\_Type@{R\_Type}}\index{R\_Type@{R\_Type}!CLIENT\_ASK\_START\_GAME@{CLIENT\_ASK\_START\_GAME}}}\Hypertarget{namespaceR__Type_a74e491cdd8a91bbba15f1e0040e474f1acb14a60990487e0c14818bd4e6450993}\label{namespaceR__Type_a74e491cdd8a91bbba15f1e0040e474f1acb14a60990487e0c14818bd4e6450993} 
+CLIENT\+\_\+\+ASK\+\_\+\+START\+\_\+\+GAME&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INPUT\_KEYS@{INPUT\_KEYS}!R\_Type@{R\_Type}}\index{R\_Type@{R\_Type}!INPUT\_KEYS@{INPUT\_KEYS}}}\Hypertarget{namespaceR__Type_a74e491cdd8a91bbba15f1e0040e474f1ad1fe8895a9431b839e956c1f7065215c}\label{namespaceR__Type_a74e491cdd8a91bbba15f1e0040e474f1ad1fe8895a9431b839e956c1f7065215c} 
+INPUT\+\_\+\+KEYS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DISCONNECT@{DISCONNECT}!R\_Type@{R\_Type}}\index{R\_Type@{R\_Type}!DISCONNECT@{DISCONNECT}}}\Hypertarget{namespaceR__Type_a74e491cdd8a91bbba15f1e0040e474f1a5f1cd61ce429dc4d494eec948b855c5e}\label{namespaceR__Type_a74e491cdd8a91bbba15f1e0040e474f1a5f1cd61ce429dc4d494eec948b855c5e} 
+DISCONNECT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SET\_READY@{SET\_READY}!R\_Type@{R\_Type}}\index{R\_Type@{R\_Type}!SET\_READY@{SET\_READY}}}\Hypertarget{namespaceR__Type_a74e491cdd8a91bbba15f1e0040e474f1a53a056c69230aa6eed24ad14a35aca93}\label{namespaceR__Type_a74e491cdd8a91bbba15f1e0040e474f1a53a056c69230aa6eed24ad14a35aca93} 
+SET\+\_\+\+READY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CLIENT\_JOIN\_ROOM@{CLIENT\_JOIN\_ROOM}!R\_Type@{R\_Type}}\index{R\_Type@{R\_Type}!CLIENT\_JOIN\_ROOM@{CLIENT\_JOIN\_ROOM}}}\Hypertarget{namespaceR__Type_a74e491cdd8a91bbba15f1e0040e474f1a0c4e4ede1c5b71f744b267f314969b06}\label{namespaceR__Type_a74e491cdd8a91bbba15f1e0040e474f1a0c4e4ede1c5b71f744b267f314969b06} 
+CLIENT\+\_\+\+JOIN\+\_\+\+ROOM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GET\_ROOM\_LIST\_RESPONSE@{GET\_ROOM\_LIST\_RESPONSE}!R\_Type@{R\_Type}}\index{R\_Type@{R\_Type}!GET\_ROOM\_LIST\_RESPONSE@{GET\_ROOM\_LIST\_RESPONSE}}}\Hypertarget{namespaceR__Type_a74e491cdd8a91bbba15f1e0040e474f1acab097802fb3560ec4315db6b12634c4}\label{namespaceR__Type_a74e491cdd8a91bbba15f1e0040e474f1acab097802fb3560ec4315db6b12634c4} 
+GET\+\_\+\+ROOM\+\_\+\+LIST\+\_\+\+RESPONSE&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{namespaceR__Type_a94450a4be13c826d506fb6cf6918599d}\label{namespaceR__Type_a94450a4be13c826d506fb6cf6918599d} 
+\index{R\_Type@{R\_Type}!CommandIdServer@{CommandIdServer}}
+\index{CommandIdServer@{CommandIdServer}!R\_Type@{R\_Type}}
+\doxysubsubsection{\texorpdfstring{CommandIdServer}{CommandIdServer}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespaceR__Type_a94450a4be13c826d506fb6cf6918599d}{R\+\_\+\+Type\+::\+Command\+Id\+Server}} \+: uint16\+\_\+t}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ACCEPT\_CONNECTION@{ACCEPT\_CONNECTION}!R\_Type@{R\_Type}}\index{R\_Type@{R\_Type}!ACCEPT\_CONNECTION@{ACCEPT\_CONNECTION}}}\Hypertarget{namespaceR__Type_a94450a4be13c826d506fb6cf6918599da9e2eeaa4f49bb41dec9bcc5098801ff7}\label{namespaceR__Type_a94450a4be13c826d506fb6cf6918599da9e2eeaa4f49bb41dec9bcc5098801ff7} 
+ACCEPT\+\_\+\+CONNECTION&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{START\_GAME@{START\_GAME}!R\_Type@{R\_Type}}\index{R\_Type@{R\_Type}!START\_GAME@{START\_GAME}}}\Hypertarget{namespaceR__Type_a94450a4be13c826d506fb6cf6918599dacc05118fa04b826058323193e25bc61d}\label{namespaceR__Type_a94450a4be13c826d506fb6cf6918599dacc05118fa04b826058323193e25bc61d} 
+START\+\_\+\+GAME&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{POSITION\_VELOCITY@{POSITION\_VELOCITY}!R\_Type@{R\_Type}}\index{R\_Type@{R\_Type}!POSITION\_VELOCITY@{POSITION\_VELOCITY}}}\Hypertarget{namespaceR__Type_a94450a4be13c826d506fb6cf6918599da8588c6e07a965380a244e3e6ec74abdc}\label{namespaceR__Type_a94450a4be13c826d506fb6cf6918599da8588c6e07a965380a244e3e6ec74abdc} 
+POSITION\+\_\+\+VELOCITY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPAWN@{SPAWN}!R\_Type@{R\_Type}}\index{R\_Type@{R\_Type}!SPAWN@{SPAWN}}}\Hypertarget{namespaceR__Type_a94450a4be13c826d506fb6cf6918599da7c4c29723869b9992e798bdee1ce8201}\label{namespaceR__Type_a94450a4be13c826d506fb6cf6918599da7c4c29723869b9992e798bdee1ce8201} 
+SPAWN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIT@{HIT}!R\_Type@{R\_Type}}\index{R\_Type@{R\_Type}!HIT@{HIT}}}\Hypertarget{namespaceR__Type_a94450a4be13c826d506fb6cf6918599da87eaedcb26e6650818b6d5d80746ea80}\label{namespaceR__Type_a94450a4be13c826d506fb6cf6918599da87eaedcb26e6650818b6d5d80746ea80} 
+HIT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KILL@{KILL}!R\_Type@{R\_Type}}\index{R\_Type@{R\_Type}!KILL@{KILL}}}\Hypertarget{namespaceR__Type_a94450a4be13c826d506fb6cf6918599da8e55a9fae0266be1283e1537e305166d}\label{namespaceR__Type_a94450a4be13c826d506fb6cf6918599da8e55a9fae0266be1283e1537e305166d} 
+KILL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CAMERA\_MOVE@{CAMERA\_MOVE}!R\_Type@{R\_Type}}\index{R\_Type@{R\_Type}!CAMERA\_MOVE@{CAMERA\_MOVE}}}\Hypertarget{namespaceR__Type_a94450a4be13c826d506fb6cf6918599dabef1270562e0398580310609ee476a12}\label{namespaceR__Type_a94450a4be13c826d506fb6cf6918599dabef1270562e0398580310609ee476a12} 
+CAMERA\+\_\+\+MOVE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{END\_GAME@{END\_GAME}!R\_Type@{R\_Type}}\index{R\_Type@{R\_Type}!END\_GAME@{END\_GAME}}}\Hypertarget{namespaceR__Type_a94450a4be13c826d506fb6cf6918599da3108f8ca23cb42781457f5fd89291867}\label{namespaceR__Type_a94450a4be13c826d506fb6cf6918599da3108f8ca23cb42781457f5fd89291867} 
+END\+\_\+\+GAME&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SERVER\_SHUTDOWN@{SERVER\_SHUTDOWN}!R\_Type@{R\_Type}}\index{R\_Type@{R\_Type}!SERVER\_SHUTDOWN@{SERVER\_SHUTDOWN}}}\Hypertarget{namespaceR__Type_a94450a4be13c826d506fb6cf6918599dac4a82e2bb39ab2107183a5fc32c2037e}\label{namespaceR__Type_a94450a4be13c826d506fb6cf6918599dac4a82e2bb39ab2107183a5fc32c2037e} 
+SERVER\+\_\+\+SHUTDOWN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SERVER\_JOIN\_ROOM@{SERVER\_JOIN\_ROOM}!R\_Type@{R\_Type}}\index{R\_Type@{R\_Type}!SERVER\_JOIN\_ROOM@{SERVER\_JOIN\_ROOM}}}\Hypertarget{namespaceR__Type_a94450a4be13c826d506fb6cf6918599dabbcd1f8520ca037a6e092b79a40113ee}\label{namespaceR__Type_a94450a4be13c826d506fb6cf6918599dabbcd1f8520ca037a6e092b79a40113ee} 
+SERVER\+\_\+\+JOIN\+\_\+\+ROOM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ROOM\_LIST@{ROOM\_LIST}!R\_Type@{R\_Type}}\index{R\_Type@{R\_Type}!ROOM\_LIST@{ROOM\_LIST}}}\Hypertarget{namespaceR__Type_a94450a4be13c826d506fb6cf6918599daf799db3f61c90866a65fe64ec3e93af1}\label{namespaceR__Type_a94450a4be13c826d506fb6cf6918599daf799db3f61c90866a65fe64ec3e93af1} 
+ROOM\+\_\+\+LIST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ROOM\_JOINED@{ROOM\_JOINED}!R\_Type@{R\_Type}}\index{R\_Type@{R\_Type}!ROOM\_JOINED@{ROOM\_JOINED}}}\Hypertarget{namespaceR__Type_a94450a4be13c826d506fb6cf6918599da3decaa7ea378aeee74b4d5ad0ab67474}\label{namespaceR__Type_a94450a4be13c826d506fb6cf6918599da3decaa7ea378aeee74b4d5ad0ab67474} 
+ROOM\+\_\+\+JOINED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ROOM\_JOIN\_FAILED@{ROOM\_JOIN\_FAILED}!R\_Type@{R\_Type}}\index{R\_Type@{R\_Type}!ROOM\_JOIN\_FAILED@{ROOM\_JOIN\_FAILED}}}\Hypertarget{namespaceR__Type_a94450a4be13c826d506fb6cf6918599da4db7e4fbf3ecde431dfd1405039a2368}\label{namespaceR__Type_a94450a4be13c826d506fb6cf6918599da4db7e4fbf3ecde431dfd1405039a2368} 
+ROOM\+\_\+\+JOIN\+\_\+\+FAILED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GET\_ROOM\_LIST@{GET\_ROOM\_LIST}!R\_Type@{R\_Type}}\index{R\_Type@{R\_Type}!GET\_ROOM\_LIST@{GET\_ROOM\_LIST}}}\Hypertarget{namespaceR__Type_a94450a4be13c826d506fb6cf6918599da4b2d9e71b7081894d13e8719c31352ee}\label{namespaceR__Type_a94450a4be13c826d506fb6cf6918599da4b2d9e71b7081894d13e8719c31352ee} 
+GET\+\_\+\+ROOM\+\_\+\+LIST&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7da}\label{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7da} 
+\index{R\_Type@{R\_Type}!EntityType@{EntityType}}
+\index{EntityType@{EntityType}!R\_Type@{R\_Type}}
+\doxysubsubsection{\texorpdfstring{EntityType}{EntityType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7da}{R\+\_\+\+Type\+::\+Entity\+Type}} \+: uint8\+\_\+t}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PLAYER@{PLAYER}!R\_Type@{R\_Type}}\index{R\_Type@{R\_Type}!PLAYER@{PLAYER}}}\Hypertarget{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daad7faccded865a0273b1f3e3a7131f00a}\label{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daad7faccded865a0273b1f3e3a7131f00a} 
+PLAYER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PLAYER\_SHOOT@{PLAYER\_SHOOT}!R\_Type@{R\_Type}}\index{R\_Type@{R\_Type}!PLAYER\_SHOOT@{PLAYER\_SHOOT}}}\Hypertarget{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daa2d1bb42123fc0e990c341d1269018226}\label{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daa2d1bb42123fc0e990c341d1269018226} 
+PLAYER\+\_\+\+SHOOT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ENEMY\_FLY@{ENEMY\_FLY}!R\_Type@{R\_Type}}\index{R\_Type@{R\_Type}!ENEMY\_FLY@{ENEMY\_FLY}}}\Hypertarget{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daac382dcaac8012038a7b1e4c718847bfb}\label{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daac382dcaac8012038a7b1e4c718847bfb} 
+ENEMY\+\_\+\+FLY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ENEMY\_TURRET@{ENEMY\_TURRET}!R\_Type@{R\_Type}}\index{R\_Type@{R\_Type}!ENEMY\_TURRET@{ENEMY\_TURRET}}}\Hypertarget{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daa4f6a3edcbfe26f86c946df45d1750c99}\label{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daa4f6a3edcbfe26f86c946df45d1750c99} 
+ENEMY\+\_\+\+TURRET&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ENEMY\_SHOOT@{ENEMY\_SHOOT}!R\_Type@{R\_Type}}\index{R\_Type@{R\_Type}!ENEMY\_SHOOT@{ENEMY\_SHOOT}}}\Hypertarget{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daa9a7c63ea3189e45a837c7511a1a3e921}\label{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daa9a7c63ea3189e45a837c7511a1a3e921} 
+ENEMY\+\_\+\+SHOOT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BOSS\_HEART@{BOSS\_HEART}!R\_Type@{R\_Type}}\index{R\_Type@{R\_Type}!BOSS\_HEART@{BOSS\_HEART}}}\Hypertarget{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daa7cb17ffe5c13693d73ffa5477de5a783}\label{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daa7cb17ffe5c13693d73ffa5477de5a783} 
+BOSS\+\_\+\+HEART&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BOSS@{BOSS}!R\_Type@{R\_Type}}\index{R\_Type@{R\_Type}!BOSS@{BOSS}}}\Hypertarget{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daae0a4b62c43289c7879d4b4fd3b18d524}\label{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daae0a4b62c43289c7879d4b4fd3b18d524} 
+BOSS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WALL@{WALL}!R\_Type@{R\_Type}}\index{R\_Type@{R\_Type}!WALL@{WALL}}}\Hypertarget{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daa5b4f8bc4a3ac62b012b47d66dea528e7}\label{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daa5b4f8bc4a3ac62b012b47d66dea528e7} 
+WALL&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{namespaceR__Type_a29a5b7feb706140364e1f796877d1420}\label{namespaceR__Type_a29a5b7feb706140364e1f796877d1420} 
+\index{R\_Type@{R\_Type}!InputKey@{InputKey}}
+\index{InputKey@{InputKey}!R\_Type@{R\_Type}}
+\doxysubsubsection{\texorpdfstring{InputKey}{InputKey}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespaceR__Type_a29a5b7feb706140364e1f796877d1420}{R\+\_\+\+Type\+::\+Input\+Key}} \+: uint8\+\_\+t}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MOVE\_UP@{MOVE\_UP}!R\_Type@{R\_Type}}\index{R\_Type@{R\_Type}!MOVE\_UP@{MOVE\_UP}}}\Hypertarget{namespaceR__Type_a29a5b7feb706140364e1f796877d1420abaee99e8bb2b3c314475ead672054754}\label{namespaceR__Type_a29a5b7feb706140364e1f796877d1420abaee99e8bb2b3c314475ead672054754} 
+MOVE\+\_\+\+UP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MOVE\_DOWN@{MOVE\_DOWN}!R\_Type@{R\_Type}}\index{R\_Type@{R\_Type}!MOVE\_DOWN@{MOVE\_DOWN}}}\Hypertarget{namespaceR__Type_a29a5b7feb706140364e1f796877d1420ab0b8330814b804f21a9354e7b2f069b7}\label{namespaceR__Type_a29a5b7feb706140364e1f796877d1420ab0b8330814b804f21a9354e7b2f069b7} 
+MOVE\+\_\+\+DOWN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MOVE\_LEFT@{MOVE\_LEFT}!R\_Type@{R\_Type}}\index{R\_Type@{R\_Type}!MOVE\_LEFT@{MOVE\_LEFT}}}\Hypertarget{namespaceR__Type_a29a5b7feb706140364e1f796877d1420a7e87c6d5fb00ada4c2d5a01a6108dc9e}\label{namespaceR__Type_a29a5b7feb706140364e1f796877d1420a7e87c6d5fb00ada4c2d5a01a6108dc9e} 
+MOVE\+\_\+\+LEFT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MOVE\_RIGHT@{MOVE\_RIGHT}!R\_Type@{R\_Type}}\index{R\_Type@{R\_Type}!MOVE\_RIGHT@{MOVE\_RIGHT}}}\Hypertarget{namespaceR__Type_a29a5b7feb706140364e1f796877d1420aed7d241df1b780fcb478524f1ee0db5f}\label{namespaceR__Type_a29a5b7feb706140364e1f796877d1420aed7d241df1b780fcb478524f1ee0db5f} 
+MOVE\+\_\+\+RIGHT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHOOT@{SHOOT}!R\_Type@{R\_Type}}\index{R\_Type@{R\_Type}!SHOOT@{SHOOT}}}\Hypertarget{namespaceR__Type_a29a5b7feb706140364e1f796877d1420a5f17e1839f80fbd3d7c6d53066e8301b}\label{namespaceR__Type_a29a5b7feb706140364e1f796877d1420a5f17e1839f80fbd3d7c6d53066e8301b} 
+SHOOT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NB\_INPUTS\_KEYS@{NB\_INPUTS\_KEYS}!R\_Type@{R\_Type}}\index{R\_Type@{R\_Type}!NB\_INPUTS\_KEYS@{NB\_INPUTS\_KEYS}}}\Hypertarget{namespaceR__Type_a29a5b7feb706140364e1f796877d1420ae2d493dd20ca47b636df1f006da10d9e}\label{namespaceR__Type_a29a5b7feb706140364e1f796877d1420ae2d493dd20ca47b636df1f006da10d9e} 
+NB\+\_\+\+INPUTS\+\_\+\+KEYS&\\
+\hline
+
+\end{DoxyEnumFields}

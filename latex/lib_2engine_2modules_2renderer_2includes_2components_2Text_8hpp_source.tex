@@ -1,0 +1,39 @@
+\doxysection{Text.\+hpp}
+\hypertarget{lib_2engine_2modules_2renderer_2includes_2components_2Text_8hpp_source}{}\label{lib_2engine_2modules_2renderer_2includes_2components_2Text_8hpp_source}\index{lib/engine/modules/renderer/includes/components/Text.hpp@{lib/engine/modules/renderer/includes/components/Text.hpp}}
+\mbox{\hyperlink{lib_2engine_2modules_2renderer_2includes_2components_2Text_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2024}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ r-\/type}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ Text\ component\ Header}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}../../../lib/graphical/includes/IGraphical.hpp"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceEngine_1_1Module_1_1Component}{Engine::Module::Component}}\ \{}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classEngine_1_1Module_1_1Component_1_1Text}{Text}}\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classEngine_1_1Module_1_1Component_1_1Text_ab9db886e8e75adfbfb4ae4cca1c81fdb}{Text}}(std::string\ \mbox{\hyperlink{classEngine_1_1Module_1_1Component_1_1Text_a170ef0240ba1b063651bd63296bc8575}{font}}\ =\ \textcolor{stringliteral}{"{}"{}},\ std::string\ \mbox{\hyperlink{classEngine_1_1Module_1_1Component_1_1Text_a4681f5606bf6e38ca44b6f172c9e3a4b}{str}}\ =\ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structGraphical_1_1Color}{Graphical::Color}}\ \mbox{\hyperlink{classEngine_1_1Module_1_1Component_1_1Text_a23a9a34886e520e4e93ca63d5f802aac}{color}}\ =\ \{0,\ 0,\ 0,\ 255\},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classEngine_1_1Module_1_1Component_1_1Text_a3d13d2613051a525571ebd65304e92e1}{fontSize}}\ =\ 13,}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ int8\_t\ \mbox{\hyperlink{classEngine_1_1Module_1_1Component_1_1Text_adbf094464cea8f2db419cb57e3944118}{rotation}}\ =\ 0);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1Component_1_1Text_ad490b2ab8b8fc55386e4ac9f4e9a5ebf}{log}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00024\ \textcolor{comment}{}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**\ @brief\ compute\ the\ size\ based\ on\ fontSize\ and\ string\ length*/}}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{structGraphical_1_1Vect2i}{Graphical::Vect2i}}\ \mbox{\hyperlink{classEngine_1_1Module_1_1Component_1_1Text_a52affeb5fce0281e2535debb93cee407}{computeSize}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classEngine_1_1Module_1_1Component_1_1Text_a170ef0240ba1b063651bd63296bc8575}{font}},\ \mbox{\hyperlink{classEngine_1_1Module_1_1Component_1_1Text_a4681f5606bf6e38ca44b6f172c9e3a4b}{str}};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ int8\_t\ \mbox{\hyperlink{classEngine_1_1Module_1_1Component_1_1Text_adbf094464cea8f2db419cb57e3944118}{rotation}};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classEngine_1_1Module_1_1Component_1_1Text_a3d13d2613051a525571ebd65304e92e1}{fontSize}};}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structGraphical_1_1Color}{Graphical::Color}}\ \mbox{\hyperlink{classEngine_1_1Module_1_1Component_1_1Text_a23a9a34886e520e4e93ca63d5f802aac}{color}};}
+\DoxyCodeLine{00032\ \};}
+\DoxyCodeLine{00033\ \}\ \ \textcolor{comment}{//\ namespace\ Engine::Module::Component}}
+
+\end{DoxyCode}

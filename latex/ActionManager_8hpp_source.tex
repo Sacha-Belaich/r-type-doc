@@ -1,0 +1,53 @@
+\doxysection{Action\+Manager.\+hpp}
+\hypertarget{ActionManager_8hpp_source}{}\label{ActionManager_8hpp_source}\index{lib/engine/modules/renderer/includes/ActionManager.hpp@{lib/engine/modules/renderer/includes/ActionManager.hpp}}
+\mbox{\hyperlink{ActionManager_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2025}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ Project\ Name}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IGraphical_8hpp}{IGraphical.hpp}}"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceEngine_1_1Core}{Engine::Core}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }Core;}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceEngine_1_1Module}{Engine::Module}}\ \{}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classEngine_1_1Module_1_1ActionManager}{ActionManager}}\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEngine_1_1Module_1_1ActionManager_a2a239dcf97e6e49f33ae881b1212880d}{ActionManager}}();}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1ActionManager_a60d51569bbbc0129bdbf87cb86c8a451}{add\_action}}(std::string\ \&name,\ std::vector<Graphical::Key>\ keybinds);}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1ActionManager_a06a12a01b3d03d0be992c542677e102b}{remove\_action}}(std::string\ \&name);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1ActionManager_a6b8191e251426b65e68e6bdfde1981cb}{disable\_action}}(std::string\ \&name);}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1ActionManager_ae7cac1c73b80149799db379b82363e70}{enable\_action}}(std::string\ \&name);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ Function>}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1ActionManager_a41196a64644ab2ec4b062a86df7d9140}{registerActionListener}}(std::string\ \&action,\ Function\ \&\&f)\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEngine_1_1Module_1_1ActionManager_aa9eafa2b67f36d05dddf450ddc7bc973}{actionListeners}}[action]\ =}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ([f\ =\ std::forward<Function>(f)](\mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core::Core}}\ \&core)\ \{\ f(core);\ \});}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1ActionManager_a416e9c802292cdd42d715575dd2388b5}{handle\_inputs}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structGraphical_1_1event__s}{Graphical::event\_t}}\ \&events,\ \mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core::Core}}\ \&core);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ std::map<Graphical::Key,\ std::string>\ \mbox{\hyperlink{classEngine_1_1Module_1_1ActionManager_a0102b2d0caa70c9bd18c2ecf318827f7}{keyMap}};}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ std::map<std::string,\ std::function<void(\mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core::Core}}\ \&)>>\ \mbox{\hyperlink{classEngine_1_1Module_1_1ActionManager_aa9eafa2b67f36d05dddf450ddc7bc973}{actionListeners}};}
+\DoxyCodeLine{00045\ \};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \}\ \ \textcolor{comment}{//\ namespace\ Engine::Module}}
+
+\end{DoxyCode}

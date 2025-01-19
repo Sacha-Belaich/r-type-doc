@@ -1,0 +1,47 @@
+\doxysection{Entity\+Type.\+hpp}
+\hypertarget{EntityType_8hpp_source}{}\label{EntityType_8hpp_source}\index{server/src/components/EntityType.hpp@{server/src/components/EntityType.hpp}}
+\mbox{\hyperlink{EntityType_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2024}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ r-\/type}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ EntityType.hpp}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{RTypeProtocol_8hpp}{RTypeProtocol.hpp}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceR__Type_1_1Component}{R\_Type::Component}}\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classR__Type_1_1Component_1_1EntityType}{EntityType}}\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{classR__Type_1_1Component_1_1EntityType_a80dff2c7804301a5369ed7ee621a8e90}{Side}}\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classR__Type_1_1Component_1_1EntityType_a80dff2c7804301a5369ed7ee621a8e90a1d2ff6d2f6f75eb1a7e1190b66cefe9b}{Ally}},}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classR__Type_1_1Component_1_1EntityType_a80dff2c7804301a5369ed7ee621a8e90a8dd0b7b378e9945785522f9810ec18e7}{Ennemy}},}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classR__Type_1_1Component_1_1EntityType_a80dff2c7804301a5369ed7ee621a8e90aa7792fc60570c2e225dbe08dfb3eaeaa}{Neutral}}}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7da}{EntityType}}(\mbox{\hyperlink{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7da}{R\_Type::EntityType}}\ \mbox{\hyperlink{classR__Type_1_1Component_1_1EntityType_aabf60cb90cb5b78657f665d0fca67c53}{type}});}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1Component_1_1EntityType_a92ef2fbd0eb16266263ff8868bd0893c}{log}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7da}{R\_Type::EntityType}}\ \mbox{\hyperlink{classR__Type_1_1Component_1_1EntityType_aabf60cb90cb5b78657f665d0fca67c53}{type}};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classR__Type_1_1Component_1_1EntityType_a80dff2c7804301a5369ed7ee621a8e90}{Side}}\ \mbox{\hyperlink{classR__Type_1_1Component_1_1EntityType_a133eb7e1c345ec1254b7da4ffe9438b2}{side}};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ std::unordered\_map<R\_Type::EntityType,\ Side>\ \mbox{\hyperlink{classR__Type_1_1Component_1_1EntityType_a53ba582ddb8bba6d19fe4b2af5617466}{\_type\_sides}}\{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \{\mbox{\hyperlink{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daad7faccded865a0273b1f3e3a7131f00a}{PLAYER}},\ \mbox{\hyperlink{classR__Type_1_1Component_1_1EntityType_a80dff2c7804301a5369ed7ee621a8e90a1d2ff6d2f6f75eb1a7e1190b66cefe9b}{Ally}}\},}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \{\mbox{\hyperlink{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daa2d1bb42123fc0e990c341d1269018226}{PLAYER\_SHOOT}},\ \mbox{\hyperlink{classR__Type_1_1Component_1_1EntityType_a80dff2c7804301a5369ed7ee621a8e90a1d2ff6d2f6f75eb1a7e1190b66cefe9b}{Ally}}\},}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \{\mbox{\hyperlink{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daac382dcaac8012038a7b1e4c718847bfb}{ENEMY\_FLY}},\ \mbox{\hyperlink{classR__Type_1_1Component_1_1EntityType_a80dff2c7804301a5369ed7ee621a8e90a8dd0b7b378e9945785522f9810ec18e7}{Ennemy}}\},}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \{\mbox{\hyperlink{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daa4f6a3edcbfe26f86c946df45d1750c99}{ENEMY\_TURRET}},\ \mbox{\hyperlink{classR__Type_1_1Component_1_1EntityType_a80dff2c7804301a5369ed7ee621a8e90a8dd0b7b378e9945785522f9810ec18e7}{Ennemy}}\},}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \{\mbox{\hyperlink{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daa9a7c63ea3189e45a837c7511a1a3e921}{ENEMY\_SHOOT}},\ \mbox{\hyperlink{classR__Type_1_1Component_1_1EntityType_a80dff2c7804301a5369ed7ee621a8e90a8dd0b7b378e9945785522f9810ec18e7}{Ennemy}}\},}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \{\mbox{\hyperlink{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daa7cb17ffe5c13693d73ffa5477de5a783}{BOSS\_HEART}},\ \mbox{\hyperlink{classR__Type_1_1Component_1_1EntityType_a80dff2c7804301a5369ed7ee621a8e90a8dd0b7b378e9945785522f9810ec18e7}{Ennemy}}\},}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \{\mbox{\hyperlink{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daa5b4f8bc4a3ac62b012b47d66dea528e7}{WALL}},\ \mbox{\hyperlink{classR__Type_1_1Component_1_1EntityType_a80dff2c7804301a5369ed7ee621a8e90aa7792fc60570c2e225dbe08dfb3eaeaa}{Neutral}}\},}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00040\ \ \ \ \ \};}
+\DoxyCodeLine{00041\ \}\ \textcolor{comment}{//\ R\_Type}}
+
+\end{DoxyCode}

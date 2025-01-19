@@ -1,0 +1,161 @@
+\doxysection{Engine\+::Module\+::Renderer Class Reference}
+\hypertarget{classEngine_1_1Module_1_1Renderer}{}\label{classEngine_1_1Module_1_1Renderer}\index{Engine::Module::Renderer@{Engine::Module::Renderer}}
+
+
+{\ttfamily \#include $<$Renderer.\+hpp$>$}
+
+Inheritance diagram for Engine\+::Module\+::Renderer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classEngine_1_1Module_1_1Renderer}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEngine_1_1Module_1_1Renderer_aa88ed421884e13e2777f5891b7a5f464}{Renderer}} (const char \texorpdfstring{$\ast$}{*}graph\+Lib)
+\item 
+\mbox{\hyperlink{classEngine_1_1Module_1_1Renderer_aeb036e55b24fbeb592738f98eff99fe5}{\texorpdfstring{$\sim$}{\string~}\+Renderer}} () override
+\item 
+\mbox{\hyperlink{classGraphical_1_1IGraphical}{Graphical\+::\+IGraphical}} \& \mbox{\hyperlink{classEngine_1_1Module_1_1Renderer_a2b99a1c14be2f4cb95870346e8c87aee}{get\+Graph\+Lib}} (void)
+\item 
+\mbox{\hyperlink{classEngine_1_1Module_1_1ActionManager}{Action\+Manager}} \& \mbox{\hyperlink{classEngine_1_1Module_1_1Renderer_a536433938eda0a0079f68584590d1923}{get\+Action\+Manager}} (void)
+\item 
+\mbox{\hyperlink{namespaceEngine_1_1Module_a4f2927ec966fd747da59cf6593ae7864}{module\+\_\+info\+\_\+t}} \mbox{\hyperlink{classEngine_1_1Module_1_1Renderer_a978f5aa16e4b4cf5ccd4c34ba1146dd5}{get\+Info}} () override
+\begin{DoxyCompactList}\small\item\em Retrieve module information. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEngine_1_1Module_1_1Renderer_a5b4cbe1f2fee8cf17218f729dc7b3302}{load\+Module}} (\mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core\+::\+Core}} \&core) override
+\begin{DoxyCompactList}\small\item\em Load the module into the application\textquotesingle{}s core. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEngine_1_1Module_1_1Renderer_ad22cba4e127846eec5eb8d2a58bf40c6}{unload\+Module}} (\mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core\+::\+Core}} \&core) override
+\begin{DoxyCompactList}\small\item\em Unload the module and clean up its resources. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classEngine_1_1Module_1_1IModule}{Engine\+::\+Module\+::\+IModule}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classEngine_1_1Module_1_1IModule_a6bd5fa440d706fadbe1f806de2abd3a5}{\texorpdfstring{$\sim$}{\string~}\+IModule}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+dylib \mbox{\hyperlink{classEngine_1_1Module_1_1Renderer_aec4e1a4dfed70bf200623436937690f0}{\+\_\+dylib}}
+\item 
+\mbox{\hyperlink{classEngine_1_1Module_1_1ActionManager}{Action\+Manager}} \mbox{\hyperlink{classEngine_1_1Module_1_1Renderer_a03f12b3977f78f9ec737b1dfbba01aa8}{\+\_\+action\+Manager}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classGraphical_1_1IGraphical}{Graphical\+::\+IGraphical}} $>$ \mbox{\hyperlink{classEngine_1_1Module_1_1Renderer_a0a1d451909a69cf8cac327a892aa9952}{\+\_\+graph\+Lib}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classEngine_1_1Module_1_1Renderer_aa88ed421884e13e2777f5891b7a5f464}\label{classEngine_1_1Module_1_1Renderer_aa88ed421884e13e2777f5891b7a5f464} 
+\index{Engine::Module::Renderer@{Engine::Module::Renderer}!Renderer@{Renderer}}
+\index{Renderer@{Renderer}!Engine::Module::Renderer@{Engine::Module::Renderer}}
+\doxysubsubsection{\texorpdfstring{Renderer()}{Renderer()}}
+{\footnotesize\ttfamily Engine\+::\+Module\+::\+Renderer\+::\+Renderer (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{graph\+Lib }\end{DoxyParamCaption})}
+
+\Hypertarget{classEngine_1_1Module_1_1Renderer_aeb036e55b24fbeb592738f98eff99fe5}\label{classEngine_1_1Module_1_1Renderer_aeb036e55b24fbeb592738f98eff99fe5} 
+\index{Engine::Module::Renderer@{Engine::Module::Renderer}!````~Renderer@{\texorpdfstring{$\sim$}{\string~}Renderer}}
+\index{````~Renderer@{\texorpdfstring{$\sim$}{\string~}Renderer}!Engine::Module::Renderer@{Engine::Module::Renderer}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Renderer()}{\string~Renderer()}}
+{\footnotesize\ttfamily Engine\+::\+Module\+::\+Renderer\+::\texorpdfstring{$\sim$}{\string~}\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classEngine_1_1Module_1_1Renderer_a536433938eda0a0079f68584590d1923}\label{classEngine_1_1Module_1_1Renderer_a536433938eda0a0079f68584590d1923} 
+\index{Engine::Module::Renderer@{Engine::Module::Renderer}!getActionManager@{getActionManager}}
+\index{getActionManager@{getActionManager}!Engine::Module::Renderer@{Engine::Module::Renderer}}
+\doxysubsubsection{\texorpdfstring{getActionManager()}{getActionManager()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Module_1_1ActionManager}{Action\+Manager}} \& Engine\+::\+Module\+::\+Renderer\+::get\+Action\+Manager (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classEngine_1_1Module_1_1Renderer_a2b99a1c14be2f4cb95870346e8c87aee}\label{classEngine_1_1Module_1_1Renderer_a2b99a1c14be2f4cb95870346e8c87aee} 
+\index{Engine::Module::Renderer@{Engine::Module::Renderer}!getGraphLib@{getGraphLib}}
+\index{getGraphLib@{getGraphLib}!Engine::Module::Renderer@{Engine::Module::Renderer}}
+\doxysubsubsection{\texorpdfstring{getGraphLib()}{getGraphLib()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGraphical_1_1IGraphical}{Graphical\+::\+IGraphical}} \& Engine\+::\+Module\+::\+Renderer\+::get\+Graph\+Lib (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classEngine_1_1Module_1_1Renderer_a978f5aa16e4b4cf5ccd4c34ba1146dd5}\label{classEngine_1_1Module_1_1Renderer_a978f5aa16e4b4cf5ccd4c34ba1146dd5} 
+\index{Engine::Module::Renderer@{Engine::Module::Renderer}!getInfo@{getInfo}}
+\index{getInfo@{getInfo}!Engine::Module::Renderer@{Engine::Module::Renderer}}
+\doxysubsubsection{\texorpdfstring{getInfo()}{getInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceEngine_1_1Module_a4f2927ec966fd747da59cf6593ae7864}{module\+\_\+info\+\_\+t}} Engine\+::\+Module\+::\+Renderer\+::get\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Retrieve module information. 
+
+This method provides essential information about the module, such as its name and description.
+
+\begin{DoxyReturn}{Returns}
+A structure containing the module\textquotesingle{}s name and description. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classEngine_1_1Module_1_1IModule_adb9199647e717948fa37f90b8ae352f8}{Engine\+::\+Module\+::\+IModule}}.
+
+\Hypertarget{classEngine_1_1Module_1_1Renderer_a5b4cbe1f2fee8cf17218f729dc7b3302}\label{classEngine_1_1Module_1_1Renderer_a5b4cbe1f2fee8cf17218f729dc7b3302} 
+\index{Engine::Module::Renderer@{Engine::Module::Renderer}!loadModule@{loadModule}}
+\index{loadModule@{loadModule}!Engine::Module::Renderer@{Engine::Module::Renderer}}
+\doxysubsubsection{\texorpdfstring{loadModule()}{loadModule()}}
+{\footnotesize\ttfamily void Engine\+::\+Module\+::\+Renderer\+::load\+Module (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core\+::\+Core}} \&}]{core }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Load the module into the application\textquotesingle{}s core. 
+
+This method is responsible for initializing the module and integrating its functionalities into the application\textquotesingle{}s core.
+
+
+\begin{DoxyParams}{Parameters}
+{\em core} & A reference to the application\textquotesingle{}s core. This is used to register the module\textquotesingle{}s functionalities. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classEngine_1_1Module_1_1IModule_ad38434ae26e3afe6b51db6df3836cfb0}{Engine\+::\+Module\+::\+IModule}}.
+
+\Hypertarget{classEngine_1_1Module_1_1Renderer_ad22cba4e127846eec5eb8d2a58bf40c6}\label{classEngine_1_1Module_1_1Renderer_ad22cba4e127846eec5eb8d2a58bf40c6} 
+\index{Engine::Module::Renderer@{Engine::Module::Renderer}!unloadModule@{unloadModule}}
+\index{unloadModule@{unloadModule}!Engine::Module::Renderer@{Engine::Module::Renderer}}
+\doxysubsubsection{\texorpdfstring{unloadModule()}{unloadModule()}}
+{\footnotesize\ttfamily void Engine\+::\+Module\+::\+Renderer\+::unload\+Module (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core\+::\+Core}} \&}]{core }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Unload the module and clean up its resources. 
+
+This method is responsible for removing the module\textquotesingle{}s functionalities from the application\textquotesingle{}s core and releasing any allocated resources.
+
+
+\begin{DoxyParams}{Parameters}
+{\em core} & A reference to the application\textquotesingle{}s core. This is used to unregister the module\textquotesingle{}s functionalities. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classEngine_1_1Module_1_1IModule_afff50ba5f4fe555a31f85b692eb1ecbb}{Engine\+::\+Module\+::\+IModule}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classEngine_1_1Module_1_1Renderer_a03f12b3977f78f9ec737b1dfbba01aa8}\label{classEngine_1_1Module_1_1Renderer_a03f12b3977f78f9ec737b1dfbba01aa8} 
+\index{Engine::Module::Renderer@{Engine::Module::Renderer}!\_actionManager@{\_actionManager}}
+\index{\_actionManager@{\_actionManager}!Engine::Module::Renderer@{Engine::Module::Renderer}}
+\doxysubsubsection{\texorpdfstring{\_actionManager}{\_actionManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Module_1_1ActionManager}{Action\+Manager}} Engine\+::\+Module\+::\+Renderer\+::\+\_\+action\+Manager\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classEngine_1_1Module_1_1Renderer_aec4e1a4dfed70bf200623436937690f0}\label{classEngine_1_1Module_1_1Renderer_aec4e1a4dfed70bf200623436937690f0} 
+\index{Engine::Module::Renderer@{Engine::Module::Renderer}!\_dylib@{\_dylib}}
+\index{\_dylib@{\_dylib}!Engine::Module::Renderer@{Engine::Module::Renderer}}
+\doxysubsubsection{\texorpdfstring{\_dylib}{\_dylib}}
+{\footnotesize\ttfamily dylib Engine\+::\+Module\+::\+Renderer\+::\+\_\+dylib\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classEngine_1_1Module_1_1Renderer_a0a1d451909a69cf8cac327a892aa9952}\label{classEngine_1_1Module_1_1Renderer_a0a1d451909a69cf8cac327a892aa9952} 
+\index{Engine::Module::Renderer@{Engine::Module::Renderer}!\_graphLib@{\_graphLib}}
+\index{\_graphLib@{\_graphLib}!Engine::Module::Renderer@{Engine::Module::Renderer}}
+\doxysubsubsection{\texorpdfstring{\_graphLib}{\_graphLib}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classGraphical_1_1IGraphical}{Graphical\+::\+IGraphical}}$>$ Engine\+::\+Module\+::\+Renderer\+::\+\_\+graph\+Lib\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/engine/modules/renderer/includes/\mbox{\hyperlink{Renderer_8hpp}{Renderer.\+hpp}}\item 
+lib/engine/modules/renderer/src/\mbox{\hyperlink{Renderer_8cpp}{Renderer.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,99 @@
+\doxysection{Engine\+::Module\+::Audio\+Manager\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classEngine_1_1Module_1_1AudioManager}{}\label{classEngine_1_1Module_1_1AudioManager}\index{Engine::Module::AudioManager$<$ T $>$@{Engine::Module::AudioManager$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Audio\+Manager.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Function $>$ }\\\mbox{\hyperlink{classEngine_1_1Module_1_1AudioManager_a87a37649e08b2c79b77336de4a16988e}{Audio\+Manager}} (Function \&\&f)
+\item 
+\mbox{\hyperlink{classEngine_1_1Module_1_1AudioManager_a7d3da7d2c88aaefe0f5df26880e4608f}{Audio\+Manager}} (const \mbox{\hyperlink{classEngine_1_1Module_1_1AudioManager}{Audio\+Manager}} \&)=delete
+\item 
+\mbox{\hyperlink{classEngine_1_1Module_1_1AudioManager_a56b81586cb19aebc6a08d7469dd5689a}{Audio\+Manager}} (\mbox{\hyperlink{classEngine_1_1Module_1_1AudioManager}{Audio\+Manager}} \&\&)=delete
+\item 
+T \& \mbox{\hyperlink{classEngine_1_1Module_1_1AudioManager_a1cd826a29fd898de0dbb449f3d9d8b2b}{operator\mbox{[}$\,$\mbox{]}}} (const std\+::string \&path)
+\item 
+void \mbox{\hyperlink{classEngine_1_1Module_1_1AudioManager_a4b027a1acbb4c0d567f7230e4d3cb3ca}{emplace}} (const std\+::string \&path)
+\item 
+void \mbox{\hyperlink{classEngine_1_1Module_1_1AudioManager_a452d8d0722c5e5f202b8f711c62af942}{destroy}} (const std\+::string \&path)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::vector$<$ T $>$ $>$ \mbox{\hyperlink{classEngine_1_1Module_1_1AudioManager_a30119b34606db077bc16c1209af4bf93}{\+\_\+audios}}
+\item 
+std\+::function$<$ T(const std\+::string \&) \mbox{\hyperlink{classEngine_1_1Module_1_1AudioManager_a17e493895d4bbfa7052e65a86cc6ee47}{\+\_\+ctor}} )
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classEngine_1_1Module_1_1AudioManager_a87a37649e08b2c79b77336de4a16988e}\label{classEngine_1_1Module_1_1AudioManager_a87a37649e08b2c79b77336de4a16988e} 
+\index{Engine::Module::AudioManager$<$ T $>$@{Engine::Module::AudioManager$<$ T $>$}!AudioManager@{AudioManager}}
+\index{AudioManager@{AudioManager}!Engine::Module::AudioManager$<$ T $>$@{Engine::Module::AudioManager$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{AudioManager()}{AudioManager()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename Function $>$ \\
+\mbox{\hyperlink{classEngine_1_1Module_1_1AudioManager}{Engine\+::\+Module\+::\+Audio\+Manager}}$<$ T $>$\+::\+Audio\+Manager (\begin{DoxyParamCaption}\item[{Function \&\&}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\Hypertarget{classEngine_1_1Module_1_1AudioManager_a7d3da7d2c88aaefe0f5df26880e4608f}\label{classEngine_1_1Module_1_1AudioManager_a7d3da7d2c88aaefe0f5df26880e4608f} 
+\index{Engine::Module::AudioManager$<$ T $>$@{Engine::Module::AudioManager$<$ T $>$}!AudioManager@{AudioManager}}
+\index{AudioManager@{AudioManager}!Engine::Module::AudioManager$<$ T $>$@{Engine::Module::AudioManager$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{AudioManager()}{AudioManager()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classEngine_1_1Module_1_1AudioManager}{Engine\+::\+Module\+::\+Audio\+Manager}}$<$ T $>$\+::\+Audio\+Manager (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classEngine_1_1Module_1_1AudioManager}{Audio\+Manager}}$<$ T $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{classEngine_1_1Module_1_1AudioManager_a56b81586cb19aebc6a08d7469dd5689a}\label{classEngine_1_1Module_1_1AudioManager_a56b81586cb19aebc6a08d7469dd5689a} 
+\index{Engine::Module::AudioManager$<$ T $>$@{Engine::Module::AudioManager$<$ T $>$}!AudioManager@{AudioManager}}
+\index{AudioManager@{AudioManager}!Engine::Module::AudioManager$<$ T $>$@{Engine::Module::AudioManager$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{AudioManager()}{AudioManager()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classEngine_1_1Module_1_1AudioManager}{Engine\+::\+Module\+::\+Audio\+Manager}}$<$ T $>$\+::\+Audio\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1Module_1_1AudioManager}{Audio\+Manager}}$<$ T $>$ \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classEngine_1_1Module_1_1AudioManager_a452d8d0722c5e5f202b8f711c62af942}\label{classEngine_1_1Module_1_1AudioManager_a452d8d0722c5e5f202b8f711c62af942} 
+\index{Engine::Module::AudioManager$<$ T $>$@{Engine::Module::AudioManager$<$ T $>$}!destroy@{destroy}}
+\index{destroy@{destroy}!Engine::Module::AudioManager$<$ T $>$@{Engine::Module::AudioManager$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classEngine_1_1Module_1_1AudioManager}{Engine\+::\+Module\+::\+Audio\+Manager}}$<$ T $>$\+::destroy (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classEngine_1_1Module_1_1AudioManager_a4b027a1acbb4c0d567f7230e4d3cb3ca}\label{classEngine_1_1Module_1_1AudioManager_a4b027a1acbb4c0d567f7230e4d3cb3ca} 
+\index{Engine::Module::AudioManager$<$ T $>$@{Engine::Module::AudioManager$<$ T $>$}!emplace@{emplace}}
+\index{emplace@{emplace}!Engine::Module::AudioManager$<$ T $>$@{Engine::Module::AudioManager$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{emplace()}{emplace()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classEngine_1_1Module_1_1AudioManager}{Engine\+::\+Module\+::\+Audio\+Manager}}$<$ T $>$\+::emplace (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classEngine_1_1Module_1_1AudioManager_a1cd826a29fd898de0dbb449f3d9d8b2b}\label{classEngine_1_1Module_1_1AudioManager_a1cd826a29fd898de0dbb449f3d9d8b2b} 
+\index{Engine::Module::AudioManager$<$ T $>$@{Engine::Module::AudioManager$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Engine::Module::AudioManager$<$ T $>$@{Engine::Module::AudioManager$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \& \mbox{\hyperlink{classEngine_1_1Module_1_1AudioManager}{Engine\+::\+Module\+::\+Audio\+Manager}}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classEngine_1_1Module_1_1AudioManager_a30119b34606db077bc16c1209af4bf93}\label{classEngine_1_1Module_1_1AudioManager_a30119b34606db077bc16c1209af4bf93} 
+\index{Engine::Module::AudioManager$<$ T $>$@{Engine::Module::AudioManager$<$ T $>$}!\_audios@{\_audios}}
+\index{\_audios@{\_audios}!Engine::Module::AudioManager$<$ T $>$@{Engine::Module::AudioManager$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\_audios}{\_audios}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::unordered\+\_\+map$<$std\+::string, std\+::vector$<$T$>$ $>$ \mbox{\hyperlink{classEngine_1_1Module_1_1AudioManager}{Engine\+::\+Module\+::\+Audio\+Manager}}$<$ T $>$\+::\+\_\+audios\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classEngine_1_1Module_1_1AudioManager_a17e493895d4bbfa7052e65a86cc6ee47}\label{classEngine_1_1Module_1_1AudioManager_a17e493895d4bbfa7052e65a86cc6ee47} 
+\index{Engine::Module::AudioManager$<$ T $>$@{Engine::Module::AudioManager$<$ T $>$}!\_ctor@{\_ctor}}
+\index{\_ctor@{\_ctor}!Engine::Module::AudioManager$<$ T $>$@{Engine::Module::AudioManager$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\_ctor}{\_ctor}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::function$<$T(const std\+::string \&) \mbox{\hyperlink{classEngine_1_1Module_1_1AudioManager}{Engine\+::\+Module\+::\+Audio\+Manager}}$<$ T $>$\+::\+\_\+ctor) \hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+lib/engine/modules/audio/\mbox{\hyperlink{AudioManager_8hpp}{Audio\+Manager.\+hpp}}\end{DoxyCompactItemize}

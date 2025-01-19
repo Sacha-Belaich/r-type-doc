@@ -1,0 +1,296 @@
+\doxysection{Engine\+::Module\+::Network\+Server Class Reference}
+\hypertarget{classEngine_1_1Module_1_1NetworkServer}{}\label{classEngine_1_1Module_1_1NetworkServer}\index{Engine::Module::NetworkServer@{Engine::Module::NetworkServer}}
+
+
+{\ttfamily \#include $<$Network\+Server.\+hpp$>$}
+
+Inheritance diagram for Engine\+::Module\+::Network\+Server\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classEngine_1_1Module_1_1NetworkServer}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEngine_1_1Module_1_1NetworkServer_aba04f98997b52d3972de408d9d0a6bac}{Network\+Server}} ()
+\item 
+\mbox{\hyperlink{classEngine_1_1Module_1_1NetworkServer_a007518420620351752cf9df4d8f59609}{\texorpdfstring{$\sim$}{\string~}\+Network\+Server}} () override
+\item 
+\mbox{\hyperlink{namespaceEngine_1_1Module_a4f2927ec966fd747da59cf6593ae7864}{module\+\_\+info\+\_\+t}} \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkServer_a5a854747c884601216166843d83b78e7}{get\+Info}} () override
+\begin{DoxyCompactList}\small\item\em Retrieve module information. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkServer_ad0b1cbc11bf5738b9826a00f939d28fd}{load\+Module}} (\mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core\+::\+Core}} \&core) override
+\begin{DoxyCompactList}\small\item\em Load the module into the application\textquotesingle{}s core. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkServer_a995f8a6f502c92396f1bfb7f01f14ac5}{unload\+Module}} (\mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core\+::\+Core}} \&core) override
+\begin{DoxyCompactList}\small\item\em Unload the module and clean up its resources. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkServer_a1dac5b6d58541923df171f701b090476}{host}} (uint16\+\_\+t port) override
+\begin{DoxyCompactList}\small\item\em Host a server on a specified port. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkServer_a05ac2d295e2d1282217d3a6c2a2e92d1}{close}} () override
+\begin{DoxyCompactList}\small\item\em Close all connections and release sockets. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::pair$<$ uint16\+\_\+t, std\+::vector$<$ uint8\+\_\+t $>$ $>$ $>$ \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkServer_a6009587823345f1661106de591e3edf6}{get\+All\+Oldest\+Packet}} () override
+\begin{DoxyCompactList}\small\item\em Retrieve the oldest received packets from all clients. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkServer_a1038b5aa8b515094facffe4210034a8c}{send}} (uint16\+\_\+t client, const std\+::vector$<$ uint8\+\_\+t $>$ \&packet) override
+\begin{DoxyCompactList}\small\item\em Send a packet to a specific client. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkServer_a0529dc98852b587563ea110ec3009170}{send\+All}} (const std\+::vector$<$ uint8\+\_\+t $>$ \&packet) override
+\begin{DoxyCompactList}\small\item\em Send a packet to all connected clients. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classEngine_1_1Module_1_1IModule}{Engine\+::\+Module\+::\+IModule}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classEngine_1_1Module_1_1IModule_a6bd5fa440d706fadbe1f806de2abd3a5}{\texorpdfstring{$\sim$}{\string~}\+IModule}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkServer_afededd277c371572d61c0a9f6cfa6a90}{\+\_\+async\+Receive}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::mutex \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkServer_aa1f9d5e5c072396a26b4a683b111ae72}{\+\_\+mutex}}
+\item 
+const std\+::string \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkServer_acff71c32fca198eabae59a0c547a755a}{\+\_\+packet\+\_\+start}} = "{}PACKET\+\_\+\+START"{}
+\item 
+const std\+::string \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkServer_a2b3f305dbbfd55681182e79c65be07ff}{\+\_\+packet\+\_\+end}} = "{}PACKET\+\_\+\+END"{}
+\item 
+asio\+::ip\+::udp\+::endpoint \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkServer_aeb148d59f1ef5412ecc4b5e6c5862adc}{\+\_\+tmp\+\_\+endpoint}}
+\item 
+asio\+::io\+\_\+context \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkServer_a112f942e7936eb9a7bfa060ca4aac1f8}{\+\_\+context}}
+\item 
+asio\+::ip\+::udp\+::socket \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkServer_adfcbfc65473d0df3005b5078c567349f}{\+\_\+socket}}
+\item 
+std\+::vector$<$ std\+::pair$<$ asio\+::ip\+::udp\+::endpoint, std\+::vector$<$ uint8\+\_\+t $>$ $>$ $>$ \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkServer_ac069cff10193eae1157f2cc94b150d04}{\+\_\+clients}} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classEngine_1_1Module_1_1NetworkServer_aba04f98997b52d3972de408d9d0a6bac}\label{classEngine_1_1Module_1_1NetworkServer_aba04f98997b52d3972de408d9d0a6bac} 
+\index{Engine::Module::NetworkServer@{Engine::Module::NetworkServer}!NetworkServer@{NetworkServer}}
+\index{NetworkServer@{NetworkServer}!Engine::Module::NetworkServer@{Engine::Module::NetworkServer}}
+\doxysubsubsection{\texorpdfstring{NetworkServer()}{NetworkServer()}}
+{\footnotesize\ttfamily Engine\+::\+Module\+::\+Network\+Server\+::\+Network\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classEngine_1_1Module_1_1NetworkServer_a007518420620351752cf9df4d8f59609}\label{classEngine_1_1Module_1_1NetworkServer_a007518420620351752cf9df4d8f59609} 
+\index{Engine::Module::NetworkServer@{Engine::Module::NetworkServer}!````~NetworkServer@{\texorpdfstring{$\sim$}{\string~}NetworkServer}}
+\index{````~NetworkServer@{\texorpdfstring{$\sim$}{\string~}NetworkServer}!Engine::Module::NetworkServer@{Engine::Module::NetworkServer}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}NetworkServer()}{\string~NetworkServer()}}
+{\footnotesize\ttfamily Engine\+::\+Module\+::\+Network\+Server\+::\texorpdfstring{$\sim$}{\string~}\+Network\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classEngine_1_1Module_1_1NetworkServer_afededd277c371572d61c0a9f6cfa6a90}\label{classEngine_1_1Module_1_1NetworkServer_afededd277c371572d61c0a9f6cfa6a90} 
+\index{Engine::Module::NetworkServer@{Engine::Module::NetworkServer}!\_asyncReceive@{\_asyncReceive}}
+\index{\_asyncReceive@{\_asyncReceive}!Engine::Module::NetworkServer@{Engine::Module::NetworkServer}}
+\doxysubsubsection{\texorpdfstring{\_asyncReceive()}{\_asyncReceive()}}
+{\footnotesize\ttfamily void Engine\+::\+Module\+::\+Network\+Server\+::\+\_\+async\+Receive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classEngine_1_1Module_1_1NetworkServer_a05ac2d295e2d1282217d3a6c2a2e92d1}\label{classEngine_1_1Module_1_1NetworkServer_a05ac2d295e2d1282217d3a6c2a2e92d1} 
+\index{Engine::Module::NetworkServer@{Engine::Module::NetworkServer}!close@{close}}
+\index{close@{close}!Engine::Module::NetworkServer@{Engine::Module::NetworkServer}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void Engine\+::\+Module\+::\+Network\+Server\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Close all connections and release sockets. 
+
+This method closes all client connections and releases the resources associated with the server\textquotesingle{}s sockets. 
+
+Implements \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer_a6c2e5e401b1b3dd9aa4461149ea788fb}{Engine\+::\+Module\+::\+INetwork\+Server}}.
+
+\Hypertarget{classEngine_1_1Module_1_1NetworkServer_a6009587823345f1661106de591e3edf6}\label{classEngine_1_1Module_1_1NetworkServer_a6009587823345f1661106de591e3edf6} 
+\index{Engine::Module::NetworkServer@{Engine::Module::NetworkServer}!getAllOldestPacket@{getAllOldestPacket}}
+\index{getAllOldestPacket@{getAllOldestPacket}!Engine::Module::NetworkServer@{Engine::Module::NetworkServer}}
+\doxysubsubsection{\texorpdfstring{getAllOldestPacket()}{getAllOldestPacket()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::pair$<$ uint16\+\_\+t, std\+::vector$<$ uint8\+\_\+t $>$ $>$ $>$ Engine\+::\+Module\+::\+Network\+Server\+::get\+All\+Oldest\+Packet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Retrieve the oldest received packets from all clients. 
+
+This method fetches a list of the oldest complete packets received from each client, along with the client IDs that sent them.
+
+\begin{DoxyReturn}{Returns}
+A vector of pairs, where each pair consists of a client ID and the content of the oldest full packet sent by that client. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer_afe74f9b2d93a128bcc05b7b36148c4ff}{Engine\+::\+Module\+::\+INetwork\+Server}}.
+
+\Hypertarget{classEngine_1_1Module_1_1NetworkServer_a5a854747c884601216166843d83b78e7}\label{classEngine_1_1Module_1_1NetworkServer_a5a854747c884601216166843d83b78e7} 
+\index{Engine::Module::NetworkServer@{Engine::Module::NetworkServer}!getInfo@{getInfo}}
+\index{getInfo@{getInfo}!Engine::Module::NetworkServer@{Engine::Module::NetworkServer}}
+\doxysubsubsection{\texorpdfstring{getInfo()}{getInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceEngine_1_1Module_a4f2927ec966fd747da59cf6593ae7864}{module\+\_\+info\+\_\+t}} Engine\+::\+Module\+::\+Network\+Server\+::get\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Retrieve module information. 
+
+This method provides essential information about the module, such as its name and description.
+
+\begin{DoxyReturn}{Returns}
+A structure containing the module\textquotesingle{}s name and description. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classEngine_1_1Module_1_1IModule_adb9199647e717948fa37f90b8ae352f8}{Engine\+::\+Module\+::\+IModule}}.
+
+\Hypertarget{classEngine_1_1Module_1_1NetworkServer_a1dac5b6d58541923df171f701b090476}\label{classEngine_1_1Module_1_1NetworkServer_a1dac5b6d58541923df171f701b090476} 
+\index{Engine::Module::NetworkServer@{Engine::Module::NetworkServer}!host@{host}}
+\index{host@{host}!Engine::Module::NetworkServer@{Engine::Module::NetworkServer}}
+\doxysubsubsection{\texorpdfstring{host()}{host()}}
+{\footnotesize\ttfamily void Engine\+::\+Module\+::\+Network\+Server\+::host (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Host a server on a specified port. 
+
+This method starts hosting a server and begins asynchronously receiving data from connected clients.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & The port on which the server listens for incoming connections. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer_ad88f595fc57ea53efc6c963f78cc71ce}{Engine\+::\+Module\+::\+INetwork\+Server}}.
+
+\Hypertarget{classEngine_1_1Module_1_1NetworkServer_ad0b1cbc11bf5738b9826a00f939d28fd}\label{classEngine_1_1Module_1_1NetworkServer_ad0b1cbc11bf5738b9826a00f939d28fd} 
+\index{Engine::Module::NetworkServer@{Engine::Module::NetworkServer}!loadModule@{loadModule}}
+\index{loadModule@{loadModule}!Engine::Module::NetworkServer@{Engine::Module::NetworkServer}}
+\doxysubsubsection{\texorpdfstring{loadModule()}{loadModule()}}
+{\footnotesize\ttfamily void Engine\+::\+Module\+::\+Network\+Server\+::load\+Module (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core\+::\+Core}} \&}]{core }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Load the module into the application\textquotesingle{}s core. 
+
+This method is responsible for initializing the module and integrating its functionalities into the application\textquotesingle{}s core.
+
+
+\begin{DoxyParams}{Parameters}
+{\em core} & A reference to the application\textquotesingle{}s core. This is used to register the module\textquotesingle{}s functionalities. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classEngine_1_1Module_1_1IModule_ad38434ae26e3afe6b51db6df3836cfb0}{Engine\+::\+Module\+::\+IModule}}.
+
+\Hypertarget{classEngine_1_1Module_1_1NetworkServer_a1038b5aa8b515094facffe4210034a8c}\label{classEngine_1_1Module_1_1NetworkServer_a1038b5aa8b515094facffe4210034a8c} 
+\index{Engine::Module::NetworkServer@{Engine::Module::NetworkServer}!send@{send}}
+\index{send@{send}!Engine::Module::NetworkServer@{Engine::Module::NetworkServer}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily void Engine\+::\+Module\+::\+Network\+Server\+::send (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{client,  }\item[{const std\+::vector$<$ uint8\+\_\+t $>$ \&}]{packet }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Send a packet to a specific client. 
+
+This method sends a serialized packet asynchronously to the specified client.
+
+
+\begin{DoxyParams}{Parameters}
+{\em client} & The ID of the client to which the message is sent. \\
+\hline
+{\em packet} & A vector containing the serialized packet to send. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer_a31ecd115491ba419220adb83d71ea6b3}{Engine\+::\+Module\+::\+INetwork\+Server}}.
+
+\Hypertarget{classEngine_1_1Module_1_1NetworkServer_a0529dc98852b587563ea110ec3009170}\label{classEngine_1_1Module_1_1NetworkServer_a0529dc98852b587563ea110ec3009170} 
+\index{Engine::Module::NetworkServer@{Engine::Module::NetworkServer}!sendAll@{sendAll}}
+\index{sendAll@{sendAll}!Engine::Module::NetworkServer@{Engine::Module::NetworkServer}}
+\doxysubsubsection{\texorpdfstring{sendAll()}{sendAll()}}
+{\footnotesize\ttfamily void Engine\+::\+Module\+::\+Network\+Server\+::send\+All (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint8\+\_\+t $>$ \&}]{packet }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Send a packet to all connected clients. 
+
+This method sends a serialized packet asynchronously to all clients currently connected to the server.
+
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & A vector containing the serialized packet to send. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer_a96dec081b5ac197ce78ffe913d6a821b}{Engine\+::\+Module\+::\+INetwork\+Server}}.
+
+\Hypertarget{classEngine_1_1Module_1_1NetworkServer_a995f8a6f502c92396f1bfb7f01f14ac5}\label{classEngine_1_1Module_1_1NetworkServer_a995f8a6f502c92396f1bfb7f01f14ac5} 
+\index{Engine::Module::NetworkServer@{Engine::Module::NetworkServer}!unloadModule@{unloadModule}}
+\index{unloadModule@{unloadModule}!Engine::Module::NetworkServer@{Engine::Module::NetworkServer}}
+\doxysubsubsection{\texorpdfstring{unloadModule()}{unloadModule()}}
+{\footnotesize\ttfamily void Engine\+::\+Module\+::\+Network\+Server\+::unload\+Module (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core\+::\+Core}} \&}]{core }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Unload the module and clean up its resources. 
+
+This method is responsible for removing the module\textquotesingle{}s functionalities from the application\textquotesingle{}s core and releasing any allocated resources.
+
+
+\begin{DoxyParams}{Parameters}
+{\em core} & A reference to the application\textquotesingle{}s core. This is used to unregister the module\textquotesingle{}s functionalities. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classEngine_1_1Module_1_1IModule_afff50ba5f4fe555a31f85b692eb1ecbb}{Engine\+::\+Module\+::\+IModule}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classEngine_1_1Module_1_1NetworkServer_ac069cff10193eae1157f2cc94b150d04}\label{classEngine_1_1Module_1_1NetworkServer_ac069cff10193eae1157f2cc94b150d04} 
+\index{Engine::Module::NetworkServer@{Engine::Module::NetworkServer}!\_clients@{\_clients}}
+\index{\_clients@{\_clients}!Engine::Module::NetworkServer@{Engine::Module::NetworkServer}}
+\doxysubsubsection{\texorpdfstring{\_clients}{\_clients}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::pair$<$asio\+::ip\+::udp\+::endpoint, std\+::vector$<$uint8\+\_\+t$>$ $>$ $>$ Engine\+::\+Module\+::\+Network\+Server\+::\+\_\+clients \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classEngine_1_1Module_1_1NetworkServer_a112f942e7936eb9a7bfa060ca4aac1f8}\label{classEngine_1_1Module_1_1NetworkServer_a112f942e7936eb9a7bfa060ca4aac1f8} 
+\index{Engine::Module::NetworkServer@{Engine::Module::NetworkServer}!\_context@{\_context}}
+\index{\_context@{\_context}!Engine::Module::NetworkServer@{Engine::Module::NetworkServer}}
+\doxysubsubsection{\texorpdfstring{\_context}{\_context}}
+{\footnotesize\ttfamily asio\+::io\+\_\+context Engine\+::\+Module\+::\+Network\+Server\+::\+\_\+context\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classEngine_1_1Module_1_1NetworkServer_aa1f9d5e5c072396a26b4a683b111ae72}\label{classEngine_1_1Module_1_1NetworkServer_aa1f9d5e5c072396a26b4a683b111ae72} 
+\index{Engine::Module::NetworkServer@{Engine::Module::NetworkServer}!\_mutex@{\_mutex}}
+\index{\_mutex@{\_mutex}!Engine::Module::NetworkServer@{Engine::Module::NetworkServer}}
+\doxysubsubsection{\texorpdfstring{\_mutex}{\_mutex}}
+{\footnotesize\ttfamily std\+::mutex Engine\+::\+Module\+::\+Network\+Server\+::\+\_\+mutex\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classEngine_1_1Module_1_1NetworkServer_a2b3f305dbbfd55681182e79c65be07ff}\label{classEngine_1_1Module_1_1NetworkServer_a2b3f305dbbfd55681182e79c65be07ff} 
+\index{Engine::Module::NetworkServer@{Engine::Module::NetworkServer}!\_packet\_end@{\_packet\_end}}
+\index{\_packet\_end@{\_packet\_end}!Engine::Module::NetworkServer@{Engine::Module::NetworkServer}}
+\doxysubsubsection{\texorpdfstring{\_packet\_end}{\_packet\_end}}
+{\footnotesize\ttfamily const std\+::string Engine\+::\+Module\+::\+Network\+Server\+::\+\_\+packet\+\_\+end = "{}PACKET\+\_\+\+END"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classEngine_1_1Module_1_1NetworkServer_acff71c32fca198eabae59a0c547a755a}\label{classEngine_1_1Module_1_1NetworkServer_acff71c32fca198eabae59a0c547a755a} 
+\index{Engine::Module::NetworkServer@{Engine::Module::NetworkServer}!\_packet\_start@{\_packet\_start}}
+\index{\_packet\_start@{\_packet\_start}!Engine::Module::NetworkServer@{Engine::Module::NetworkServer}}
+\doxysubsubsection{\texorpdfstring{\_packet\_start}{\_packet\_start}}
+{\footnotesize\ttfamily const std\+::string Engine\+::\+Module\+::\+Network\+Server\+::\+\_\+packet\+\_\+start = "{}PACKET\+\_\+\+START"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classEngine_1_1Module_1_1NetworkServer_adfcbfc65473d0df3005b5078c567349f}\label{classEngine_1_1Module_1_1NetworkServer_adfcbfc65473d0df3005b5078c567349f} 
+\index{Engine::Module::NetworkServer@{Engine::Module::NetworkServer}!\_socket@{\_socket}}
+\index{\_socket@{\_socket}!Engine::Module::NetworkServer@{Engine::Module::NetworkServer}}
+\doxysubsubsection{\texorpdfstring{\_socket}{\_socket}}
+{\footnotesize\ttfamily asio\+::ip\+::udp\+::socket Engine\+::\+Module\+::\+Network\+Server\+::\+\_\+socket\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classEngine_1_1Module_1_1NetworkServer_aeb148d59f1ef5412ecc4b5e6c5862adc}\label{classEngine_1_1Module_1_1NetworkServer_aeb148d59f1ef5412ecc4b5e6c5862adc} 
+\index{Engine::Module::NetworkServer@{Engine::Module::NetworkServer}!\_tmp\_endpoint@{\_tmp\_endpoint}}
+\index{\_tmp\_endpoint@{\_tmp\_endpoint}!Engine::Module::NetworkServer@{Engine::Module::NetworkServer}}
+\doxysubsubsection{\texorpdfstring{\_tmp\_endpoint}{\_tmp\_endpoint}}
+{\footnotesize\ttfamily asio\+::ip\+::udp\+::endpoint Engine\+::\+Module\+::\+Network\+Server\+::\+\_\+tmp\+\_\+endpoint\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/engine/modules/network\+\_\+server/\mbox{\hyperlink{NetworkServer_8hpp}{Network\+Server.\+hpp}}\item 
+lib/engine/modules/network\+\_\+server/\mbox{\hyperlink{NetworkServer_8cpp}{Network\+Server.\+cpp}}\end{DoxyCompactItemize}

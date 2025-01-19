@@ -1,0 +1,87 @@
+\doxysection{R\+\_\+\+Type\+::System Namespace Reference}
+\hypertarget{namespaceR__Type_1_1System}{}\label{namespaceR__Type_1_1System}\index{R\_Type::System@{R\_Type::System}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classR__Type_1_1System_1_1HandleClientInputs}{Handle\+Client\+Inputs}}
+\item 
+class \mbox{\hyperlink{classR__Type_1_1System_1_1HitboxRectangleCollision}{Hitbox\+Rectangle\+Collision}}
+\item 
+class \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator}{Level\+Creator}}
+\item 
+class \mbox{\hyperlink{classR__Type_1_1System_1_1LobbySystem}{Lobby\+System}}
+\item 
+class \mbox{\hyperlink{classR__Type_1_1System_1_1NetworkReceiver}{Network\+Receiver}}
+\item 
+class \mbox{\hyperlink{classR__Type_1_1System_1_1NetworkSender}{Network\+Sender}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{namespaceR__Type_1_1System_a6ad317b49f63e3768131da385d871a35}{shoot}} (\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&r, const \mbox{\hyperlink{classECS_1_1Component_1_1Position}{ECS\+::\+Component\+::\+Position}} \&position, const \mbox{\hyperlink{classECS_1_1Component_1_1Velocity}{ECS\+::\+Component\+::\+Velocity}} \&cam\+\_\+velocity)
+\item 
+static bool \mbox{\hyperlink{namespaceR__Type_1_1System_afe698ef2c378aa2a8757524b83188b5a}{check\+\_\+collision}} (const \mbox{\hyperlink{classECS_1_1Component_1_1Position}{ECS\+::\+Component\+::\+Position}} \&pos1, const \mbox{\hyperlink{classECS_1_1Component_1_1HitboxRectangle}{ECS\+::\+Component\+::\+Hitbox\+Rectangle}} \&rec1, const \mbox{\hyperlink{classECS_1_1Component_1_1Position}{ECS\+::\+Component\+::\+Position}} \&pos2, const \mbox{\hyperlink{classECS_1_1Component_1_1HitboxRectangle}{ECS\+::\+Component\+::\+Hitbox\+Rectangle}} \&rec2)
+\item 
+static void \mbox{\hyperlink{namespaceR__Type_1_1System_a4753e84b49acb63906b669cef98a79cf}{remove\+\_\+out\+\_\+of\+\_\+camera\+\_\+entity}} (const \mbox{\hyperlink{classECS_1_1SparseArray}{ECS\+::\+Sparse\+Array}}$<$ \mbox{\hyperlink{classECS_1_1Component_1_1Position}{ECS\+::\+Component\+::\+Position}} $>$ \&positions, const \mbox{\hyperlink{classECS_1_1SparseArray}{ECS\+::\+Sparse\+Array}}$<$ \mbox{\hyperlink{classECS_1_1Component_1_1HitboxRectangle}{ECS\+::\+Component\+::\+Hitbox\+Rectangle}} $>$ \&hitbox\+\_\+rectangles, \mbox{\hyperlink{classECS_1_1SparseArray}{ECS\+::\+Sparse\+Array}}$<$ \mbox{\hyperlink{classECS_1_1Component_1_1Health}{ECS\+::\+Component\+::\+Health}} $>$ \&healths, const \mbox{\hyperlink{classECS_1_1SparseArray}{ECS\+::\+Sparse\+Array}}$<$ \mbox{\hyperlink{classR__Type_1_1Component_1_1EntityType}{Component\+::\+Entity\+Type}} $>$ \&entity\+\_\+types)
+\item 
+static int \mbox{\hyperlink{namespaceR__Type_1_1System_a5a87dcea845b6b1f673f0cf3ffea23da}{get\+Camera\+Next\+Stop}} (const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4}{Level\+Creator\+::\+Level\+Element\+Type}} $>$ $>$ \&level, const std\+::size\+\_\+t pos\+\_\+in\+\_\+level)
+\item 
+static void \mbox{\hyperlink{namespaceR__Type_1_1System_a0938c4e33e446167f4af6f35c8fdcf0d}{camera\+\_\+handler}} (const \mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&registry, \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{Engine\+::\+Module\+::\+INetwork\+Server}} \&server, const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4}{Level\+Creator\+::\+Level\+Element\+Type}} $>$ $>$ \&level, const std\+::size\+\_\+t pos\+\_\+in\+\_\+level, \mbox{\hyperlink{classECS_1_1Component_1_1Position}{ECS\+::\+Component\+::\+Position}} \&position, \mbox{\hyperlink{classECS_1_1Component_1_1Velocity}{ECS\+::\+Component\+::\+Velocity}} \&velocity)
+\item 
+static void \mbox{\hyperlink{namespaceR__Type_1_1System_aa0fc9d2619231870b087c48981b772a4}{kill\+\_\+all\+\_\+entitys\+\_\+but\+\_\+players}} (\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&r)
+\item 
+static void \mbox{\hyperlink{namespaceR__Type_1_1System_adfb2632a72c225848c02388151c8195b}{send\+Position\+Packet}} (\mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{Engine\+::\+Module\+::\+INetwork\+Server}} \&network\+\_\+lib, const std\+::size\+\_\+t entity, const \mbox{\hyperlink{classECS_1_1Component_1_1Position}{ECS\+::\+Component\+::\+Position}} \&pos, const \mbox{\hyperlink{classECS_1_1Component_1_1Velocity}{ECS\+::\+Component\+::\+Velocity}} \&vel)
+\item 
+static void \mbox{\hyperlink{namespaceR__Type_1_1System_acab55258418fdc23bc9f4fda1033bb06}{send\+Dead\+Packet}} (\mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{Engine\+::\+Module\+::\+INetwork\+Server}} \&network\+\_\+lib, const std\+::size\+\_\+t entity, const int hp)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceR__Type_1_1System_a0938c4e33e446167f4af6f35c8fdcf0d}\label{namespaceR__Type_1_1System_a0938c4e33e446167f4af6f35c8fdcf0d} 
+\index{R\_Type::System@{R\_Type::System}!camera\_handler@{camera\_handler}}
+\index{camera\_handler@{camera\_handler}!R\_Type::System@{R\_Type::System}}
+\doxysubsubsection{\texorpdfstring{camera\_handler()}{camera\_handler()}}
+{\footnotesize\ttfamily static void R\+\_\+\+Type\+::\+System\+::camera\+\_\+handler (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&}]{registry,  }\item[{\mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{Engine\+::\+Module\+::\+INetwork\+Server}} \&}]{server,  }\item[{const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4}{Level\+Creator\+::\+Level\+Element\+Type}} $>$ $>$ \&}]{level,  }\item[{const std\+::size\+\_\+t}]{pos\+\_\+in\+\_\+level,  }\item[{\mbox{\hyperlink{classECS_1_1Component_1_1Position}{ECS\+::\+Component\+::\+Position}} \&}]{position,  }\item[{\mbox{\hyperlink{classECS_1_1Component_1_1Velocity}{ECS\+::\+Component\+::\+Velocity}} \&}]{velocity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{namespaceR__Type_1_1System_afe698ef2c378aa2a8757524b83188b5a}\label{namespaceR__Type_1_1System_afe698ef2c378aa2a8757524b83188b5a} 
+\index{R\_Type::System@{R\_Type::System}!check\_collision@{check\_collision}}
+\index{check\_collision@{check\_collision}!R\_Type::System@{R\_Type::System}}
+\doxysubsubsection{\texorpdfstring{check\_collision()}{check\_collision()}}
+{\footnotesize\ttfamily static bool R\+\_\+\+Type\+::\+System\+::check\+\_\+collision (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classECS_1_1Component_1_1Position}{ECS\+::\+Component\+::\+Position}} \&}]{pos1,  }\item[{const \mbox{\hyperlink{classECS_1_1Component_1_1HitboxRectangle}{ECS\+::\+Component\+::\+Hitbox\+Rectangle}} \&}]{rec1,  }\item[{const \mbox{\hyperlink{classECS_1_1Component_1_1Position}{ECS\+::\+Component\+::\+Position}} \&}]{pos2,  }\item[{const \mbox{\hyperlink{classECS_1_1Component_1_1HitboxRectangle}{ECS\+::\+Component\+::\+Hitbox\+Rectangle}} \&}]{rec2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{namespaceR__Type_1_1System_a5a87dcea845b6b1f673f0cf3ffea23da}\label{namespaceR__Type_1_1System_a5a87dcea845b6b1f673f0cf3ffea23da} 
+\index{R\_Type::System@{R\_Type::System}!getCameraNextStop@{getCameraNextStop}}
+\index{getCameraNextStop@{getCameraNextStop}!R\_Type::System@{R\_Type::System}}
+\doxysubsubsection{\texorpdfstring{getCameraNextStop()}{getCameraNextStop()}}
+{\footnotesize\ttfamily static int R\+\_\+\+Type\+::\+System\+::get\+Camera\+Next\+Stop (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4}{Level\+Creator\+::\+Level\+Element\+Type}} $>$ $>$ \&}]{level,  }\item[{const std\+::size\+\_\+t}]{pos\+\_\+in\+\_\+level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{namespaceR__Type_1_1System_aa0fc9d2619231870b087c48981b772a4}\label{namespaceR__Type_1_1System_aa0fc9d2619231870b087c48981b772a4} 
+\index{R\_Type::System@{R\_Type::System}!kill\_all\_entitys\_but\_players@{kill\_all\_entitys\_but\_players}}
+\index{kill\_all\_entitys\_but\_players@{kill\_all\_entitys\_but\_players}!R\_Type::System@{R\_Type::System}}
+\doxysubsubsection{\texorpdfstring{kill\_all\_entitys\_but\_players()}{kill\_all\_entitys\_but\_players()}}
+{\footnotesize\ttfamily static void R\+\_\+\+Type\+::\+System\+::kill\+\_\+all\+\_\+entitys\+\_\+but\+\_\+players (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{namespaceR__Type_1_1System_a4753e84b49acb63906b669cef98a79cf}\label{namespaceR__Type_1_1System_a4753e84b49acb63906b669cef98a79cf} 
+\index{R\_Type::System@{R\_Type::System}!remove\_out\_of\_camera\_entity@{remove\_out\_of\_camera\_entity}}
+\index{remove\_out\_of\_camera\_entity@{remove\_out\_of\_camera\_entity}!R\_Type::System@{R\_Type::System}}
+\doxysubsubsection{\texorpdfstring{remove\_out\_of\_camera\_entity()}{remove\_out\_of\_camera\_entity()}}
+{\footnotesize\ttfamily static void R\+\_\+\+Type\+::\+System\+::remove\+\_\+out\+\_\+of\+\_\+camera\+\_\+entity (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classECS_1_1SparseArray}{ECS\+::\+Sparse\+Array}}$<$ \mbox{\hyperlink{classECS_1_1Component_1_1Position}{ECS\+::\+Component\+::\+Position}} $>$ \&}]{positions,  }\item[{const \mbox{\hyperlink{classECS_1_1SparseArray}{ECS\+::\+Sparse\+Array}}$<$ \mbox{\hyperlink{classECS_1_1Component_1_1HitboxRectangle}{ECS\+::\+Component\+::\+Hitbox\+Rectangle}} $>$ \&}]{hitbox\+\_\+rectangles,  }\item[{\mbox{\hyperlink{classECS_1_1SparseArray}{ECS\+::\+Sparse\+Array}}$<$ \mbox{\hyperlink{classECS_1_1Component_1_1Health}{ECS\+::\+Component\+::\+Health}} $>$ \&}]{healths,  }\item[{const \mbox{\hyperlink{classECS_1_1SparseArray}{ECS\+::\+Sparse\+Array}}$<$ \mbox{\hyperlink{classR__Type_1_1Component_1_1EntityType}{Component\+::\+Entity\+Type}} $>$ \&}]{entity\+\_\+types }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{namespaceR__Type_1_1System_acab55258418fdc23bc9f4fda1033bb06}\label{namespaceR__Type_1_1System_acab55258418fdc23bc9f4fda1033bb06} 
+\index{R\_Type::System@{R\_Type::System}!sendDeadPacket@{sendDeadPacket}}
+\index{sendDeadPacket@{sendDeadPacket}!R\_Type::System@{R\_Type::System}}
+\doxysubsubsection{\texorpdfstring{sendDeadPacket()}{sendDeadPacket()}}
+{\footnotesize\ttfamily static void R\+\_\+\+Type\+::\+System\+::send\+Dead\+Packet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{Engine\+::\+Module\+::\+INetwork\+Server}} \&}]{network\+\_\+lib,  }\item[{const std\+::size\+\_\+t}]{entity,  }\item[{const int}]{hp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{namespaceR__Type_1_1System_adfb2632a72c225848c02388151c8195b}\label{namespaceR__Type_1_1System_adfb2632a72c225848c02388151c8195b} 
+\index{R\_Type::System@{R\_Type::System}!sendPositionPacket@{sendPositionPacket}}
+\index{sendPositionPacket@{sendPositionPacket}!R\_Type::System@{R\_Type::System}}
+\doxysubsubsection{\texorpdfstring{sendPositionPacket()}{sendPositionPacket()}}
+{\footnotesize\ttfamily static void R\+\_\+\+Type\+::\+System\+::send\+Position\+Packet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{Engine\+::\+Module\+::\+INetwork\+Server}} \&}]{network\+\_\+lib,  }\item[{const std\+::size\+\_\+t}]{entity,  }\item[{const \mbox{\hyperlink{classECS_1_1Component_1_1Position}{ECS\+::\+Component\+::\+Position}} \&}]{pos,  }\item[{const \mbox{\hyperlink{classECS_1_1Component_1_1Velocity}{ECS\+::\+Component\+::\+Velocity}} \&}]{vel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{namespaceR__Type_1_1System_a6ad317b49f63e3768131da385d871a35}\label{namespaceR__Type_1_1System_a6ad317b49f63e3768131da385d871a35} 
+\index{R\_Type::System@{R\_Type::System}!shoot@{shoot}}
+\index{shoot@{shoot}!R\_Type::System@{R\_Type::System}}
+\doxysubsubsection{\texorpdfstring{shoot()}{shoot()}}
+{\footnotesize\ttfamily static void R\+\_\+\+Type\+::\+System\+::shoot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&}]{r,  }\item[{const \mbox{\hyperlink{classECS_1_1Component_1_1Position}{ECS\+::\+Component\+::\+Position}} \&}]{position,  }\item[{const \mbox{\hyperlink{classECS_1_1Component_1_1Velocity}{ECS\+::\+Component\+::\+Velocity}} \&}]{cam\+\_\+velocity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+

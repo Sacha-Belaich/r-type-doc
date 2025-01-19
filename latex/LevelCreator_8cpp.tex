@@ -1,0 +1,49 @@
+\doxysection{server/src/systems/\+Level\+Creator.cpp File Reference}
+\hypertarget{LevelCreator_8cpp}{}\label{LevelCreator_8cpp}\index{server/src/systems/LevelCreator.cpp@{server/src/systems/LevelCreator.cpp}}
+{\ttfamily \#include "{}Level\+Creator.\+hpp"{}}\newline
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$Indexed\+Zipper.\+hpp$>$}\newline
+{\ttfamily \#include $<$INetwork\+Server.\+hpp$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$Zipper.\+hpp$>$}\newline
+{\ttfamily \#include $<$components/\+Health.\+hpp$>$}\newline
+{\ttfamily \#include $<$components/\+Hitbox\+Plan.\+hpp$>$}\newline
+{\ttfamily \#include $<$components/\+Hitbox\+Rectangle.\+hpp$>$}\newline
+{\ttfamily \#include $<$components/\+Position.\+hpp$>$}\newline
+{\ttfamily \#include $<$components/\+Velocity.\+hpp$>$}\newline
+{\ttfamily \#include "{}../components/\+Entity\+Type.\+hpp"{}}\newline
+{\ttfamily \#include "{}../src/\+Exception.\+hpp"{}}\newline
+{\ttfamily \#include "{}../src/\+Core.\+hpp"{}}\newline
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceR__Type}{R\+\_\+\+Type}}
+\item 
+namespace \mbox{\hyperlink{namespaceR__Type_1_1System}{R\+\_\+\+Type\+::\+System}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{LevelCreator_8cpp_a95a5811f9ff663b011433936a3a27ea2}{DIVIDE\+\_\+\+ROUND\+\_\+\+UP}}(a,  b)~((a + (b -\/ 1)) / b)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{namespaceR__Type_1_1System_a5a87dcea845b6b1f673f0cf3ffea23da}{R\+\_\+\+Type\+::\+System\+::get\+Camera\+Next\+Stop}} (const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4}{Level\+Creator\+::\+Level\+Element\+Type}} $>$ $>$ \&level, const std\+::size\+\_\+t pos\+\_\+in\+\_\+level)
+\item 
+static void \mbox{\hyperlink{namespaceR__Type_1_1System_a0938c4e33e446167f4af6f35c8fdcf0d}{R\+\_\+\+Type\+::\+System\+::camera\+\_\+handler}} (const \mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&registry, \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{Engine\+::\+Module\+::\+INetwork\+Server}} \&server, const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4}{Level\+Creator\+::\+Level\+Element\+Type}} $>$ $>$ \&level, const std\+::size\+\_\+t pos\+\_\+in\+\_\+level, \mbox{\hyperlink{classECS_1_1Component_1_1Position}{ECS\+::\+Component\+::\+Position}} \&position, \mbox{\hyperlink{classECS_1_1Component_1_1Velocity}{ECS\+::\+Component\+::\+Velocity}} \&velocity)
+\item 
+static void \mbox{\hyperlink{namespaceR__Type_1_1System_aa0fc9d2619231870b087c48981b772a4}{R\+\_\+\+Type\+::\+System\+::kill\+\_\+all\+\_\+entitys\+\_\+but\+\_\+players}} (\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&r)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{LevelCreator_8cpp_a95a5811f9ff663b011433936a3a27ea2}\label{LevelCreator_8cpp_a95a5811f9ff663b011433936a3a27ea2} 
+\index{LevelCreator.cpp@{LevelCreator.cpp}!DIVIDE\_ROUND\_UP@{DIVIDE\_ROUND\_UP}}
+\index{DIVIDE\_ROUND\_UP@{DIVIDE\_ROUND\_UP}!LevelCreator.cpp@{LevelCreator.cpp}}
+\doxysubsubsection{\texorpdfstring{DIVIDE\_ROUND\_UP}{DIVIDE\_ROUND\_UP}}
+{\footnotesize\ttfamily \#define DIVIDE\+\_\+\+ROUND\+\_\+\+UP(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b }\end{DoxyParamCaption})~((a + (b -\/ 1)) / b)}
+

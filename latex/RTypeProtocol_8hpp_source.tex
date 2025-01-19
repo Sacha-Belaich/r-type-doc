@@ -1,0 +1,155 @@
+\doxysection{RType\+Protocol.\+hpp}
+\hypertarget{RTypeProtocol_8hpp_source}{}\label{RTypeProtocol_8hpp_source}\index{includes/RTypeProtocol.hpp@{includes/RTypeProtocol.hpp}}
+\mbox{\hyperlink{RTypeProtocol_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2024}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ r-\/type}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ RTypeProtocol.hpp}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <cstddef>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ CAMERA\_SPEED\ 0}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ CAMERA\_SIZE\_WIDTH\ 1920}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ CAMERA\_SIZE\_HEIGHT\ 1080}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ TILE\_SIZE\ 50}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ PLAYER\_SPEED\ 10}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ PLAYER\_SIZE\ 30}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ PLAYER\_HEALTH\ 1}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ PLAYER\_SHOOT\_RATE\ 15}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ PLAYER\_SHOOT\_SPEED\ 5}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ PLAYER\_SHOOT\_SIZE\ 15}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ TURRET\_SHOOT\_SPEED\ 1}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ TURRET\_SHOOT\_SIZE\ 15}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#define\ TURRET\_SHOOT\_RATE\ 40}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ TURRET\_HEALTH\ 4}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ TURRET\_SIZE\ 30}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ FLY\_SPEED\ 1}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ FLY\_SIZE\ 20}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#define\ FLY\_HEALTH\ 2}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#define\ BOSS\_HEART\_SIZE\ 50}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#define\ BOSS\_HEART\_HEALTH\ 5}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#define\ BOSS\_HEART\_SHOOT\_RATE\ 60}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#define\ BOSS\_SIZE\ 50}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#define\ BOSS\_HEALTH\ 10}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#define\ BOSS\_SHOOT\_RATE\ 20}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#define\ SERVER\_TPS\ 30.0}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceR__Type}{R\_Type}}\ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{namespaceR__Type_a29a5b7feb706140364e1f796877d1420}{InputKey}}\ :\ uint8\_t\ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceR__Type_a29a5b7feb706140364e1f796877d1420abaee99e8bb2b3c314475ead672054754}{MOVE\_UP}},}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceR__Type_a29a5b7feb706140364e1f796877d1420ab0b8330814b804f21a9354e7b2f069b7}{MOVE\_DOWN}},}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceR__Type_a29a5b7feb706140364e1f796877d1420a7e87c6d5fb00ada4c2d5a01a6108dc9e}{MOVE\_LEFT}},}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceR__Type_a29a5b7feb706140364e1f796877d1420aed7d241df1b780fcb478524f1ee0db5f}{MOVE\_RIGHT}},}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceR__Type_a29a5b7feb706140364e1f796877d1420a5f17e1839f80fbd3d7c6d53066e8301b}{SHOOT}},}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceR__Type_a29a5b7feb706140364e1f796877d1420ae2d493dd20ca47b636df1f006da10d9e}{NB\_INPUTS\_KEYS}}}
+\DoxyCodeLine{00056\ \ \ \ \ \};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7da}{EntityType}}\ :\ uint8\_t\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daad7faccded865a0273b1f3e3a7131f00a}{PLAYER}},}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daa2d1bb42123fc0e990c341d1269018226}{PLAYER\_SHOOT}},}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daac382dcaac8012038a7b1e4c718847bfb}{ENEMY\_FLY}},}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daa4f6a3edcbfe26f86c946df45d1750c99}{ENEMY\_TURRET}},}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daa9a7c63ea3189e45a837c7511a1a3e921}{ENEMY\_SHOOT}},}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daa7cb17ffe5c13693d73ffa5477de5a783}{BOSS\_HEART}},}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daae0a4b62c43289c7879d4b4fd3b18d524}{BOSS}},}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daa5b4f8bc4a3ac62b012b47d66dea528e7}{WALL}},}
+\DoxyCodeLine{00067\ \ \ \ \ \};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{namespaceR__Type_a74e491cdd8a91bbba15f1e0040e474f1}{CommandIdClient}}\ :\ uint16\_t\ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceR__Type_a74e491cdd8a91bbba15f1e0040e474f1ae8a2f5658c8f1737438d85c97355416d}{CONNECT}},}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceR__Type_a74e491cdd8a91bbba15f1e0040e474f1acb14a60990487e0c14818bd4e6450993}{CLIENT\_ASK\_START\_GAME}},}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceR__Type_a74e491cdd8a91bbba15f1e0040e474f1ad1fe8895a9431b839e956c1f7065215c}{INPUT\_KEYS}},}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceR__Type_a74e491cdd8a91bbba15f1e0040e474f1a5f1cd61ce429dc4d494eec948b855c5e}{DISCONNECT}},}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceR__Type_a74e491cdd8a91bbba15f1e0040e474f1a53a056c69230aa6eed24ad14a35aca93}{SET\_READY}},}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceR__Type_a74e491cdd8a91bbba15f1e0040e474f1a0c4e4ede1c5b71f744b267f314969b06}{CLIENT\_JOIN\_ROOM}},}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceR__Type_a74e491cdd8a91bbba15f1e0040e474f1acab097802fb3560ec4315db6b12634c4}{GET\_ROOM\_LIST\_RESPONSE}},}
+\DoxyCodeLine{00077\ \ \ \ \ \};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{namespaceR__Type_a94450a4be13c826d506fb6cf6918599d}{CommandIdServer}}\ :\ uint16\_t\ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceR__Type_a94450a4be13c826d506fb6cf6918599da9e2eeaa4f49bb41dec9bcc5098801ff7}{ACCEPT\_CONNECTION}},}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceR__Type_a94450a4be13c826d506fb6cf6918599dacc05118fa04b826058323193e25bc61d}{START\_GAME}},}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceR__Type_a94450a4be13c826d506fb6cf6918599da8588c6e07a965380a244e3e6ec74abdc}{POSITION\_VELOCITY}},}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceR__Type_a94450a4be13c826d506fb6cf6918599da7c4c29723869b9992e798bdee1ce8201}{SPAWN}},}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceR__Type_a94450a4be13c826d506fb6cf6918599da87eaedcb26e6650818b6d5d80746ea80}{HIT}},}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceR__Type_a94450a4be13c826d506fb6cf6918599da8e55a9fae0266be1283e1537e305166d}{KILL}},}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceR__Type_a94450a4be13c826d506fb6cf6918599dabef1270562e0398580310609ee476a12}{CAMERA\_MOVE}},}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceR__Type_a94450a4be13c826d506fb6cf6918599da3108f8ca23cb42781457f5fd89291867}{END\_GAME}},}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceR__Type_a94450a4be13c826d506fb6cf6918599dac4a82e2bb39ab2107183a5fc32c2037e}{SERVER\_SHUTDOWN}},}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceR__Type_a94450a4be13c826d506fb6cf6918599dabbcd1f8520ca037a6e092b79a40113ee}{SERVER\_JOIN\_ROOM}},}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceR__Type_a94450a4be13c826d506fb6cf6918599daf799db3f61c90866a65fe64ec3e93af1}{ROOM\_LIST}},}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceR__Type_a94450a4be13c826d506fb6cf6918599da3decaa7ea378aeee74b4d5ad0ab67474}{ROOM\_JOINED}},}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceR__Type_a94450a4be13c826d506fb6cf6918599da4db7e4fbf3ecde431dfd1405039a2368}{ROOM\_JOIN\_FAILED}},}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceR__Type_a94450a4be13c826d506fb6cf6918599da4b2d9e71b7081894d13e8719c31352ee}{GET\_ROOM\_LIST}},}
+\DoxyCodeLine{00094\ \ \ \ \ \};}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structR__Type_1_1Empty}{Empty}}\ \{}
+\DoxyCodeLine{00097\ \ \ \ \ \};}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}}\ \{}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structR__Type_1_1Vector2i_ad4bd221a57cef004cf4f1a9771407b6a}{x}};}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structR__Type_1_1Vector2i_ae3e8493e265d42838396476d198e1f58}{y}};}
+\DoxyCodeLine{00102\ \ \ \ \ \};}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structR__Type_1_1AcceptConnection}{AcceptConnection}}\ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ std::size\_t\ \mbox{\hyperlink{structR__Type_1_1AcceptConnection_a17b190c570a415e368201c1b1fe33454}{entity\_id}};}
+\DoxyCodeLine{00105\ \ \ \ \ \};}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structR__Type_1_1SpawnEntity}{SpawnEntity}}\ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ std::size\_t\ \mbox{\hyperlink{structR__Type_1_1SpawnEntity_a3ef6b4f11f6835d0a52fdbc80b75c7a5}{entity\_id}};}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7da}{EntityType}}\ \mbox{\hyperlink{structR__Type_1_1SpawnEntity_af5b0a7d72e29473d16c06a2823e0cec7}{type}};}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}}\ \mbox{\hyperlink{structR__Type_1_1SpawnEntity_ad29286f3763cb3b5c5592e38c4223219}{position}};}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}}\ \mbox{\hyperlink{structR__Type_1_1SpawnEntity_ab78514ca5e1b510f0f8121a82e61a41e}{velocity}};}
+\DoxyCodeLine{00112\ \ \ \ \ \};}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structR__Type_1_1EntityPositionVelocity}{EntityPositionVelocity}}\ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ std::size\_t\ \mbox{\hyperlink{structR__Type_1_1EntityPositionVelocity_aa9dee85b51b59b27080ba5e7f8166ca7}{entity\_id}};}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}}\ \mbox{\hyperlink{structR__Type_1_1EntityPositionVelocity_a2bb08c3cd02b923802b4db4d34130c2f}{position}};}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}}\ \mbox{\hyperlink{structR__Type_1_1EntityPositionVelocity_aab80031e36760bf10c343a8e94c2ceb6}{velocity}};}
+\DoxyCodeLine{00118\ \ \ \ \ \};}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structR__Type_1_1Hit}{Hit}}\ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ std::size\_t\ \mbox{\hyperlink{structR__Type_1_1Hit_a327fed08ea533afc1b6bc57590b82352}{entity\_id1}};}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ std::size\_t\ \mbox{\hyperlink{structR__Type_1_1Hit_ae0e370319cd0a3800f78ee7521764595}{entity\_id2}};}
+\DoxyCodeLine{00123\ \ \ \ \ \};}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structR__Type_1_1Dead}{Dead}}\ \{}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ std::size\_t\ \mbox{\hyperlink{structR__Type_1_1Dead_a3a94a74c772534658b158730eb98a1ad}{entity\_id}};}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structR__Type_1_1Dead_a4fdbb196cdb29b4318797a79326e4c5d}{natural}};}
+\DoxyCodeLine{00128\ \ \ \ \ \};}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structR__Type_1_1CameraMove}{CameraMove}}\ \{}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}}\ \mbox{\hyperlink{structR__Type_1_1CameraMove_a108048bb55be02d71d1ccc68e9636f4c}{position}};}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}}\ \mbox{\hyperlink{structR__Type_1_1CameraMove_a9ad3d3daa630d8d4aa67b227013493d7}{velocity}};}
+\DoxyCodeLine{00132\ \ \ \ \ \};}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structR__Type_1_1PacketInputsKeys}{PacketInputsKeys}}\ \{}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structR__Type_1_1PacketInputsKeys_a36cec6f27f3e0ffd4de6d57f71f47d2c}{input\_keys}}[\mbox{\hyperlink{namespaceR__Type_a29a5b7feb706140364e1f796877d1420ae2d493dd20ca47b636df1f006da10d9e}{NB\_INPUTS\_KEYS}}];}
+\DoxyCodeLine{00136\ \ \ \ \ \};}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structR__Type_1_1SetReady}{SetReady}}\ \{}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structR__Type_1_1SetReady_a166acc4a8c722223e8faaad41069ccd8}{roomId}};}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structR__Type_1_1SetReady_aad6f0ae68cad7e9043ae6d7a6c2f9d99}{ready}};}
+\DoxyCodeLine{00141\ \ \ \ \ \};}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structR__Type_1_1RoomInfo}{RoomInfo}}\ \{}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structR__Type_1_1RoomInfo_aebc6f47e230aaac0294aa382f996b803}{roomId}};}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structR__Type_1_1RoomInfo_ad870a94e1213381e95adf4e8baf06958}{currentPlayers}};}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structR__Type_1_1RoomInfo_ac2e4cf2994988bfa071bb757646718c0}{maxPlayers}};}
+\DoxyCodeLine{00146\ \ \ \ \ \};}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \}}
+
+\end{DoxyCode}

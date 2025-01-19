@@ -1,0 +1,46 @@
+\doxysection{Audio\+Raylib.\+hpp}
+\hypertarget{AudioRaylib_8hpp_source}{}\label{AudioRaylib_8hpp_source}\index{lib/engine/modules/audio/raylib/AudioRaylib.hpp@{lib/engine/modules/audio/raylib/AudioRaylib.hpp}}
+\mbox{\hyperlink{AudioRaylib_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ **\ EPITECH\ PROJECT,\ 2024}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ **\ r-\/type}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ **\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ **\ AudioRaylib.hpp}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{AudioManager_8hpp}{../AudioManager.hpp}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IAudio_8hpp}{IAudio.hpp}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}raylib.h"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceEngine_1_1Module}{Engine::Module}}\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classEngine_1_1Module_1_1AudioRaylib}{AudioRaylib}}\ final\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classEngine_1_1Module_1_1IAudio}{IAudio}}\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEngine_1_1Module_1_1AudioRaylib_ab65fb76f500a9b8a8f6bf60108a16871}{AudioRaylib}}();}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEngine_1_1Module_1_1AudioRaylib_a00a5aa6f97a561cf6b38cc2ef971500f}{\string~AudioRaylib}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structEngine_1_1Module_1_1module__info__s}{module\_info\_t}}\ \mbox{\hyperlink{classEngine_1_1Module_1_1AudioRaylib_aa70aa32149c844824ddfc4858809402a}{getInfo}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1AudioRaylib_afa5ef13d857e1b150f1908e287c45ace}{loadModule}}(\mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core::Core}}\ \&core)\textcolor{keyword}{\ override\ }\{\}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1AudioRaylib_af1e99b780c3c90c5c54b55265c23d468}{unloadModule}}(\mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core::Core}}\ \&core)\textcolor{keyword}{\ override\ }\{\}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1AudioRaylib_a992fd636ab9ee352a55be60d189657d4}{playSFX}}(\textcolor{keyword}{const}\ std::string\ \&filePath)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1AudioRaylib_ac114298db76ca2c1d7cd88be965654ec}{stopSFX}}(\textcolor{keyword}{const}\ std::string\ \&filePath)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1AudioRaylib_ae90ec20fd505b0589bfdc2b435304ecc}{setSFXVolume}}(\textcolor{keyword}{const}\ std::string\ \&filePath,\ \textcolor{keywordtype}{float}\ volume)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1AudioRaylib_acb1259790a831e408c5a1d5230180a2a}{playMusic}}(\textcolor{keyword}{const}\ std::string\ \&filePath)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1AudioRaylib_a0749d7ceb5ecef8a0bb35c4658092af1}{stopMusic}}(\textcolor{keyword}{const}\ std::string\ \&filePath)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1AudioRaylib_a973ac5ffb2f3372e991a3124d3a04301}{pauseMusic}}(\textcolor{keyword}{const}\ std::string\ \&filePath)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1AudioRaylib_af9ecc48dabf25f72bafc907469607faa}{resumeMusic}}(\textcolor{keyword}{const}\ std::string\ \&filePath)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1AudioRaylib_a82a412c035b03cdc59ddbe2384c7b357}{setMusicVolume}}(\textcolor{keyword}{const}\ std::string\ \&filePath,\ \textcolor{keywordtype}{float}\ volume)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEngine_1_1Module_1_1AudioManager}{AudioManager<Sound>}}\ \mbox{\hyperlink{classEngine_1_1Module_1_1AudioRaylib_a0ec8fbbb2778b68e78fe7c4c90d0cfb0}{soundManager}};}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEngine_1_1Module_1_1AudioManager}{AudioManager<Music>}}\ \mbox{\hyperlink{classEngine_1_1Module_1_1AudioRaylib_ab1a9b7c4f0349a6bc4cb3d9831163a0c}{musicManager}};}
+\DoxyCodeLine{00039\ \};}
+\DoxyCodeLine{00040\ \}\ \ \textcolor{comment}{//\ namespace\ Engine::Module}}
+
+\end{DoxyCode}

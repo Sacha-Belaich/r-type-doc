@@ -1,0 +1,208 @@
+\doxysection{Engine\+::Module Namespace Reference}
+\hypertarget{namespaceEngine_1_1Module}{}\label{namespaceEngine_1_1Module}\index{Engine::Module@{Engine::Module}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceEngine_1_1Module_1_1Component}{Component}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classEngine_1_1Module_1_1ActionManager}{Action\+Manager}}
+\item 
+class \mbox{\hyperlink{classEngine_1_1Module_1_1AudioManager}{Audio\+Manager}}
+\item 
+class \mbox{\hyperlink{classEngine_1_1Module_1_1AudioRaylib}{Audio\+Raylib}}
+\item 
+class \mbox{\hyperlink{classEngine_1_1Module_1_1Circle}{Circle}}
+\item 
+interface \mbox{\hyperlink{classEngine_1_1Module_1_1IAudio}{IAudio}}
+\begin{DoxyCompactList}\small\item\em Interface for audio management in the application. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{classEngine_1_1Module_1_1IModule}{IModule}}
+\begin{DoxyCompactList}\small\item\em Interface for module integration. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkClient}{INetwork\+Client}}
+\begin{DoxyCompactList}\small\item\em Interface for managing network client functionality. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{INetwork\+Server}}
+\begin{DoxyCompactList}\small\item\em Interface for managing network server functionality. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classEngine_1_1Module_1_1Inputs}{Inputs}}
+\item 
+interface \mbox{\hyperlink{classEngine_1_1Module_1_1IPhysic}{IPhysic}}
+\begin{DoxyCompactList}\small\item\em Interface for managing physics-\/related operations in the application. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classEngine_1_1Module_1_1IShape}{IShape}}
+\item 
+struct \mbox{\hyperlink{structEngine_1_1Module_1_1module__info__s}{module\+\_\+info\+\_\+s}}
+\item 
+class \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkClient}{Network\+Client}}
+\item 
+class \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkServer}{Network\+Server}}
+\item 
+class \mbox{\hyperlink{classEngine_1_1Module_1_1Physic}{Physic}}
+\item 
+class \mbox{\hyperlink{classEngine_1_1Module_1_1Rectangle}{Rectangle}}
+\item 
+class \mbox{\hyperlink{classEngine_1_1Module_1_1Render}{Render}}
+\item 
+class \mbox{\hyperlink{classEngine_1_1Module_1_1Renderer}{Renderer}}
+\item 
+struct \mbox{\hyperlink{structEngine_1_1Module_1_1Vector2f}{Vector2f}}
+\item 
+struct \mbox{\hyperlink{structEngine_1_1Module_1_1Vector2i}{Vector2i}}
+\item 
+struct \mbox{\hyperlink{structEngine_1_1Module_1_1Vector3f}{Vector3f}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structEngine_1_1Module_1_1module__info__s}{Engine\+::\+Module\+::module\+\_\+info\+\_\+s}} \mbox{\hyperlink{namespaceEngine_1_1Module_a4f2927ec966fd747da59cf6593ae7864}{module\+\_\+info\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespaceEngine_1_1Module_a528b1d7cb7500f017a3b235045ee7d9b}{Shapes}} \{ \mbox{\hyperlink{namespaceEngine_1_1Module_a528b1d7cb7500f017a3b235045ee7d9ba318225c75f4e24e9619c9580dc31ba34}{RECTANGLE}}
+, \mbox{\hyperlink{namespaceEngine_1_1Module_a528b1d7cb7500f017a3b235045ee7d9baf1421d8fc2722cd2da6ac93e2cc13f2f}{CIRCLE}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{AudioRaylib_8cpp_ab628e42bb29ed7b1ca25e8c54aeb77d3}{LIB\+\_\+\+EXPORT}} \mbox{\hyperlink{classEngine_1_1Module_1_1IModule}{IModule}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespaceEngine_1_1Module_a0644539d8914d41c826952ff562cc263}{create\+\_\+module}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{structEngine_1_1Module_1_1Vector2f}{Vector2f}} \mbox{\hyperlink{namespaceEngine_1_1Module_a25dc7da205f03369c313531f1716abc4}{gravity}} = \{0.\+0, -\/9.\+81\}
+\item 
+const \mbox{\hyperlink{structEngine_1_1Module_1_1Vector2f}{Vector2f}} \mbox{\hyperlink{namespaceEngine_1_1Module_a26f86c81541c018663bb65cd5041b01c}{bottom\+\_\+gravity}} = \{0.\+0, 9.\+81\}
+\item 
+const \mbox{\hyperlink{structEngine_1_1Module_1_1Vector2f}{Vector2f}} \mbox{\hyperlink{namespaceEngine_1_1Module_afa7bf312ebe3605cdfd38824b7691048}{left\+\_\+gravity}} = \{-\/9.\+81, 0.\+0\}
+\item 
+const \mbox{\hyperlink{structEngine_1_1Module_1_1Vector2f}{Vector2f}} \mbox{\hyperlink{namespaceEngine_1_1Module_a9ab48ac1d3c54db0672752dc6da44471}{right\+\_\+gravity}} = \{9.\+81, 0.\+0\}
+\item 
+const \mbox{\hyperlink{structEngine_1_1Module_1_1Vector2f}{Vector2f}} \mbox{\hyperlink{namespaceEngine_1_1Module_a4a960c6a89ef07d651ce5dc0b0b88de4}{reversed\+\_\+gravity}} = \{0.\+0, 9.\+81\}
+\item 
+const \mbox{\hyperlink{structEngine_1_1Module_1_1Vector2f}{Vector2f}} \mbox{\hyperlink{namespaceEngine_1_1Module_afb8c45615ff5e51cbafc8801faa56fb6}{reversed\+\_\+bottom\+\_\+gravity}} = \{0.\+0, -\/9.\+81\}
+\item 
+const \mbox{\hyperlink{structEngine_1_1Module_1_1Vector2f}{Vector2f}} \mbox{\hyperlink{namespaceEngine_1_1Module_ac817493a7036ea4166c8a840a6b696f7}{reversed\+\_\+left\+\_\+gravity}} = \{9.\+81, 0.\+0\}
+\item 
+const \mbox{\hyperlink{structEngine_1_1Module_1_1Vector2f}{Vector2f}} \mbox{\hyperlink{namespaceEngine_1_1Module_a15093b7c9c81d62afe994a748515dcb8}{reversed\+\_\+right\+\_\+gravity}} = \{-\/9.\+81, 0.\+0\}
+\item 
+const \mbox{\hyperlink{structEngine_1_1Module_1_1Vector2f}{Vector2f}} \mbox{\hyperlink{namespaceEngine_1_1Module_a361071e7ffcb32af2acf17b1fb4e8e51}{top\+\_\+wind\+\_\+force}} = \{0.\+0, -\/10.\+0\}
+\item 
+const \mbox{\hyperlink{structEngine_1_1Module_1_1Vector2f}{Vector2f}} \mbox{\hyperlink{namespaceEngine_1_1Module_a17ebe40a1d34e113ec0051a0fe8db204}{bottom\+\_\+wind\+\_\+force}} = \{0.\+0, 10.\+0\}
+\item 
+const \mbox{\hyperlink{structEngine_1_1Module_1_1Vector2f}{Vector2f}} \mbox{\hyperlink{namespaceEngine_1_1Module_a06e75be7326879cc807da946459e4b18}{left\+\_\+wind\+\_\+force}} = \{-\/10.\+0, 0.\+0\}
+\item 
+const \mbox{\hyperlink{structEngine_1_1Module_1_1Vector2f}{Vector2f}} \mbox{\hyperlink{namespaceEngine_1_1Module_a0057b62e97676968af4ba51a827d3d6b}{right\+\_\+wind\+\_\+force}} = \{10.\+0, 0.\+0\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{namespaceEngine_1_1Module_a4f2927ec966fd747da59cf6593ae7864}\label{namespaceEngine_1_1Module_a4f2927ec966fd747da59cf6593ae7864} 
+\index{Engine::Module@{Engine::Module}!module\_info\_t@{module\_info\_t}}
+\index{module\_info\_t@{module\_info\_t}!Engine::Module@{Engine::Module}}
+\doxysubsubsection{\texorpdfstring{module\_info\_t}{module\_info\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structEngine_1_1Module_1_1module__info__s}{Engine\+::\+Module\+::module\+\_\+info\+\_\+s}} \mbox{\hyperlink{namespaceEngine_1_1Module_a4f2927ec966fd747da59cf6593ae7864}{Engine\+::\+Module\+::module\+\_\+info\+\_\+t}}}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{namespaceEngine_1_1Module_a528b1d7cb7500f017a3b235045ee7d9b}\label{namespaceEngine_1_1Module_a528b1d7cb7500f017a3b235045ee7d9b} 
+\index{Engine::Module@{Engine::Module}!Shapes@{Shapes}}
+\index{Shapes@{Shapes}!Engine::Module@{Engine::Module}}
+\doxysubsubsection{\texorpdfstring{Shapes}{Shapes}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespaceEngine_1_1Module_a528b1d7cb7500f017a3b235045ee7d9b}{Engine\+::\+Module\+::\+Shapes}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RECTANGLE@{RECTANGLE}!Engine::Module@{Engine::Module}}\index{Engine::Module@{Engine::Module}!RECTANGLE@{RECTANGLE}}}\Hypertarget{namespaceEngine_1_1Module_a528b1d7cb7500f017a3b235045ee7d9ba318225c75f4e24e9619c9580dc31ba34}\label{namespaceEngine_1_1Module_a528b1d7cb7500f017a3b235045ee7d9ba318225c75f4e24e9619c9580dc31ba34} 
+RECTANGLE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CIRCLE@{CIRCLE}!Engine::Module@{Engine::Module}}\index{Engine::Module@{Engine::Module}!CIRCLE@{CIRCLE}}}\Hypertarget{namespaceEngine_1_1Module_a528b1d7cb7500f017a3b235045ee7d9baf1421d8fc2722cd2da6ac93e2cc13f2f}\label{namespaceEngine_1_1Module_a528b1d7cb7500f017a3b235045ee7d9baf1421d8fc2722cd2da6ac93e2cc13f2f} 
+CIRCLE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceEngine_1_1Module_a0644539d8914d41c826952ff562cc263}\label{namespaceEngine_1_1Module_a0644539d8914d41c826952ff562cc263} 
+\index{Engine::Module@{Engine::Module}!create\_module@{create\_module}}
+\index{create\_module@{create\_module}!Engine::Module@{Engine::Module}}
+\doxysubsubsection{\texorpdfstring{create\_module()}{create\_module()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{AudioRaylib_8cpp_ab628e42bb29ed7b1ca25e8c54aeb77d3}{LIB\+\_\+\+EXPORT}} \mbox{\hyperlink{classEngine_1_1Module_1_1IModule}{IModule}} \texorpdfstring{$\ast$}{*} Engine\+::\+Module\+::create\+\_\+module (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespaceEngine_1_1Module_a26f86c81541c018663bb65cd5041b01c}\label{namespaceEngine_1_1Module_a26f86c81541c018663bb65cd5041b01c} 
+\index{Engine::Module@{Engine::Module}!bottom\_gravity@{bottom\_gravity}}
+\index{bottom\_gravity@{bottom\_gravity}!Engine::Module@{Engine::Module}}
+\doxysubsubsection{\texorpdfstring{bottom\_gravity}{bottom\_gravity}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structEngine_1_1Module_1_1Vector2f}{Vector2f}} Engine\+::\+Module\+::bottom\+\_\+gravity = \{0.\+0, 9.\+81\}}
+
+\Hypertarget{namespaceEngine_1_1Module_a17ebe40a1d34e113ec0051a0fe8db204}\label{namespaceEngine_1_1Module_a17ebe40a1d34e113ec0051a0fe8db204} 
+\index{Engine::Module@{Engine::Module}!bottom\_wind\_force@{bottom\_wind\_force}}
+\index{bottom\_wind\_force@{bottom\_wind\_force}!Engine::Module@{Engine::Module}}
+\doxysubsubsection{\texorpdfstring{bottom\_wind\_force}{bottom\_wind\_force}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structEngine_1_1Module_1_1Vector2f}{Vector2f}} Engine\+::\+Module\+::bottom\+\_\+wind\+\_\+force = \{0.\+0, 10.\+0\}}
+
+\Hypertarget{namespaceEngine_1_1Module_a25dc7da205f03369c313531f1716abc4}\label{namespaceEngine_1_1Module_a25dc7da205f03369c313531f1716abc4} 
+\index{Engine::Module@{Engine::Module}!gravity@{gravity}}
+\index{gravity@{gravity}!Engine::Module@{Engine::Module}}
+\doxysubsubsection{\texorpdfstring{gravity}{gravity}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structEngine_1_1Module_1_1Vector2f}{Vector2f}} Engine\+::\+Module\+::gravity = \{0.\+0, -\/9.\+81\}}
+
+\Hypertarget{namespaceEngine_1_1Module_afa7bf312ebe3605cdfd38824b7691048}\label{namespaceEngine_1_1Module_afa7bf312ebe3605cdfd38824b7691048} 
+\index{Engine::Module@{Engine::Module}!left\_gravity@{left\_gravity}}
+\index{left\_gravity@{left\_gravity}!Engine::Module@{Engine::Module}}
+\doxysubsubsection{\texorpdfstring{left\_gravity}{left\_gravity}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structEngine_1_1Module_1_1Vector2f}{Vector2f}} Engine\+::\+Module\+::left\+\_\+gravity = \{-\/9.\+81, 0.\+0\}}
+
+\Hypertarget{namespaceEngine_1_1Module_a06e75be7326879cc807da946459e4b18}\label{namespaceEngine_1_1Module_a06e75be7326879cc807da946459e4b18} 
+\index{Engine::Module@{Engine::Module}!left\_wind\_force@{left\_wind\_force}}
+\index{left\_wind\_force@{left\_wind\_force}!Engine::Module@{Engine::Module}}
+\doxysubsubsection{\texorpdfstring{left\_wind\_force}{left\_wind\_force}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structEngine_1_1Module_1_1Vector2f}{Vector2f}} Engine\+::\+Module\+::left\+\_\+wind\+\_\+force = \{-\/10.\+0, 0.\+0\}}
+
+\Hypertarget{namespaceEngine_1_1Module_afb8c45615ff5e51cbafc8801faa56fb6}\label{namespaceEngine_1_1Module_afb8c45615ff5e51cbafc8801faa56fb6} 
+\index{Engine::Module@{Engine::Module}!reversed\_bottom\_gravity@{reversed\_bottom\_gravity}}
+\index{reversed\_bottom\_gravity@{reversed\_bottom\_gravity}!Engine::Module@{Engine::Module}}
+\doxysubsubsection{\texorpdfstring{reversed\_bottom\_gravity}{reversed\_bottom\_gravity}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structEngine_1_1Module_1_1Vector2f}{Vector2f}} Engine\+::\+Module\+::reversed\+\_\+bottom\+\_\+gravity = \{0.\+0, -\/9.\+81\}}
+
+\Hypertarget{namespaceEngine_1_1Module_a4a960c6a89ef07d651ce5dc0b0b88de4}\label{namespaceEngine_1_1Module_a4a960c6a89ef07d651ce5dc0b0b88de4} 
+\index{Engine::Module@{Engine::Module}!reversed\_gravity@{reversed\_gravity}}
+\index{reversed\_gravity@{reversed\_gravity}!Engine::Module@{Engine::Module}}
+\doxysubsubsection{\texorpdfstring{reversed\_gravity}{reversed\_gravity}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structEngine_1_1Module_1_1Vector2f}{Vector2f}} Engine\+::\+Module\+::reversed\+\_\+gravity = \{0.\+0, 9.\+81\}}
+
+\Hypertarget{namespaceEngine_1_1Module_ac817493a7036ea4166c8a840a6b696f7}\label{namespaceEngine_1_1Module_ac817493a7036ea4166c8a840a6b696f7} 
+\index{Engine::Module@{Engine::Module}!reversed\_left\_gravity@{reversed\_left\_gravity}}
+\index{reversed\_left\_gravity@{reversed\_left\_gravity}!Engine::Module@{Engine::Module}}
+\doxysubsubsection{\texorpdfstring{reversed\_left\_gravity}{reversed\_left\_gravity}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structEngine_1_1Module_1_1Vector2f}{Vector2f}} Engine\+::\+Module\+::reversed\+\_\+left\+\_\+gravity = \{9.\+81, 0.\+0\}}
+
+\Hypertarget{namespaceEngine_1_1Module_a15093b7c9c81d62afe994a748515dcb8}\label{namespaceEngine_1_1Module_a15093b7c9c81d62afe994a748515dcb8} 
+\index{Engine::Module@{Engine::Module}!reversed\_right\_gravity@{reversed\_right\_gravity}}
+\index{reversed\_right\_gravity@{reversed\_right\_gravity}!Engine::Module@{Engine::Module}}
+\doxysubsubsection{\texorpdfstring{reversed\_right\_gravity}{reversed\_right\_gravity}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structEngine_1_1Module_1_1Vector2f}{Vector2f}} Engine\+::\+Module\+::reversed\+\_\+right\+\_\+gravity = \{-\/9.\+81, 0.\+0\}}
+
+\Hypertarget{namespaceEngine_1_1Module_a9ab48ac1d3c54db0672752dc6da44471}\label{namespaceEngine_1_1Module_a9ab48ac1d3c54db0672752dc6da44471} 
+\index{Engine::Module@{Engine::Module}!right\_gravity@{right\_gravity}}
+\index{right\_gravity@{right\_gravity}!Engine::Module@{Engine::Module}}
+\doxysubsubsection{\texorpdfstring{right\_gravity}{right\_gravity}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structEngine_1_1Module_1_1Vector2f}{Vector2f}} Engine\+::\+Module\+::right\+\_\+gravity = \{9.\+81, 0.\+0\}}
+
+\Hypertarget{namespaceEngine_1_1Module_a0057b62e97676968af4ba51a827d3d6b}\label{namespaceEngine_1_1Module_a0057b62e97676968af4ba51a827d3d6b} 
+\index{Engine::Module@{Engine::Module}!right\_wind\_force@{right\_wind\_force}}
+\index{right\_wind\_force@{right\_wind\_force}!Engine::Module@{Engine::Module}}
+\doxysubsubsection{\texorpdfstring{right\_wind\_force}{right\_wind\_force}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structEngine_1_1Module_1_1Vector2f}{Vector2f}} Engine\+::\+Module\+::right\+\_\+wind\+\_\+force = \{10.\+0, 0.\+0\}}
+
+\Hypertarget{namespaceEngine_1_1Module_a361071e7ffcb32af2acf17b1fb4e8e51}\label{namespaceEngine_1_1Module_a361071e7ffcb32af2acf17b1fb4e8e51} 
+\index{Engine::Module@{Engine::Module}!top\_wind\_force@{top\_wind\_force}}
+\index{top\_wind\_force@{top\_wind\_force}!Engine::Module@{Engine::Module}}
+\doxysubsubsection{\texorpdfstring{top\_wind\_force}{top\_wind\_force}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structEngine_1_1Module_1_1Vector2f}{Vector2f}} Engine\+::\+Module\+::top\+\_\+wind\+\_\+force = \{0.\+0, -\/10.\+0\}}
+

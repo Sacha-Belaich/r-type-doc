@@ -1,0 +1,285 @@
+\doxysection{Graphical\+::SFMLGraphic Class Reference}
+\hypertarget{classGraphical_1_1SFMLGraphic}{}\label{classGraphical_1_1SFMLGraphic}\index{Graphical::SFMLGraphic@{Graphical::SFMLGraphic}}
+
+
+{\ttfamily \#include $<$SFMLGraphic.\+hpp$>$}
+
+Inheritance diagram for Graphical\+::SFMLGraphic\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classGraphical_1_1SFMLGraphic}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGraphical_1_1SFMLGraphic_a5bc56e2c3c63335449b8d28b04c4c71b}{SFMLGraphic}} ()
+\item 
+\mbox{\hyperlink{classGraphical_1_1SFMLGraphic_acd83460a70322e19622504d514089b28}{\texorpdfstring{$\sim$}{\string~}\+SFMLGraphic}} () override
+\item 
+\mbox{\hyperlink{namespaceGraphical_aaf527a3bc294ab26e5cc06976b0410db}{event\+\_\+t}} \mbox{\hyperlink{classGraphical_1_1SFMLGraphic_ace8dc668afa8dfd115b82611c4c223d3}{get\+Events}} () override
+\item 
+void \mbox{\hyperlink{classGraphical_1_1SFMLGraphic_ac129fb1f45337a009fdd5b34bf6f647b}{open\+Window}} (const std\+::string \&window\+\_\+name, const \mbox{\hyperlink{structGraphical_1_1Vect2i}{Vect2i}} \&win\+\_\+size) override
+\item 
+void \mbox{\hyperlink{classGraphical_1_1SFMLGraphic_a35d67d418f1dfe4da61395fdac551a79}{close\+Window}} () override
+\item 
+void \mbox{\hyperlink{classGraphical_1_1SFMLGraphic_a1caecb2a517bf00e69203aecae6026a5}{refresh\+Window}} () override
+\item 
+void \mbox{\hyperlink{classGraphical_1_1SFMLGraphic_a3e5ad06b7981a1450ad26dfc7bcd180e}{clear\+Window}} (const \mbox{\hyperlink{structGraphical_1_1Color}{Color}} \&col) override
+\item 
+void \mbox{\hyperlink{classGraphical_1_1SFMLGraphic_ae3198535cc07e167f1554e17e2f4824c}{draw\+Sprite}} (const std\+::string \&path, const \mbox{\hyperlink{structGraphical_1_1TextureRect}{Texture\+Rect}} \&texture\+\_\+rect, const \mbox{\hyperlink{structGraphical_1_1Vect2i}{Vect2i}} \&pos, const \mbox{\hyperlink{structGraphical_1_1Vect2i}{Vect2i}} \&size, int8\+\_\+t rotation) override
+\item 
+void \mbox{\hyperlink{classGraphical_1_1SFMLGraphic_af5699248a2da9856fa92b11f59e67551}{draw\+Text}} (const std\+::string \&font\+\_\+path, const std\+::string \&str, const \mbox{\hyperlink{structGraphical_1_1Vect2i}{Vect2i}} \&pos, const int \&size, int8\+\_\+t rotation, const \mbox{\hyperlink{structGraphical_1_1Color}{Color}} \&color) override
+\item 
+void \mbox{\hyperlink{classGraphical_1_1SFMLGraphic_ade734c31e506b9653f5e464bf39d753e}{load\+Shader}} (const std\+::string \&name, const std\+::optional$<$ std\+::string $>$ \&vs\+Path, const std\+::optional$<$ std\+::string $>$ \&fs\+Path) override
+\item 
+void \mbox{\hyperlink{classGraphical_1_1SFMLGraphic_ade52f7250db949d7701444fc899df9e7}{set\+Shader}} (const std\+::string \&name) override
+\item 
+void \mbox{\hyperlink{classGraphical_1_1SFMLGraphic_a088302bf846c2834e3d184183d8982f7}{stop\+Shader}} (void) override
+\item 
+void \mbox{\hyperlink{classGraphical_1_1SFMLGraphic_a477ae8ceb3c0ce981f7a79fcb6fb64c2}{draw\+Rectangle}} (const \mbox{\hyperlink{structGraphical_1_1Vect2i}{Vect2i}} \&pos, const \mbox{\hyperlink{structGraphical_1_1Vect2i}{Vect2i}} \&size, const \mbox{\hyperlink{structGraphical_1_1Color}{Color}} \&color, const int8\+\_\+t \&rotation) override
+\item 
+void \mbox{\hyperlink{classGraphical_1_1SFMLGraphic_a9671bbb169e458ae0742182a53b702e8}{draw\+Circle}} (const \mbox{\hyperlink{structGraphical_1_1Vect2i}{Vect2i}} \&pos, const int8\+\_\+t \&radius, const \mbox{\hyperlink{structGraphical_1_1Color}{Color}} \&color) override
+\item 
+void \mbox{\hyperlink{classGraphical_1_1SFMLGraphic_aaa5679b93a8e54d9240941c1acc20383}{draw\+Line}} (const \mbox{\hyperlink{structGraphical_1_1Vect2i}{Vect2i}} \&start\+Pos, const \mbox{\hyperlink{structGraphical_1_1Vect2i}{Vect2i}} \&end\+Pos, const int8\+\_\+t \&thickness, const \mbox{\hyperlink{structGraphical_1_1Color}{Color}} \&color) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classGraphical_1_1IGraphical}{Graphical\+::\+IGraphical}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classGraphical_1_1IGraphical_a1dd5b0bc167627b237e1db94243f690a}{\texorpdfstring{$\sim$}{\string~}\+IGraphical}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Render\+Window \mbox{\hyperlink{classGraphical_1_1SFMLGraphic_a02822231e2625b34a343decd60cbcf9e}{\+\_\+window}}
+\item 
+\mbox{\hyperlink{classGraphical_1_1AssetManager}{Asset\+Manager}}$<$ sf\+::\+Texture $>$ \mbox{\hyperlink{classGraphical_1_1SFMLGraphic_ad7a3a1a010f36d8dc21452059ad14bee}{texture\+Manager}}
+\item 
+\mbox{\hyperlink{classGraphical_1_1AssetManager}{Asset\+Manager}}$<$ sf\+::\+Font $>$ \mbox{\hyperlink{classGraphical_1_1SFMLGraphic_a24174f653b45e0241a0df877aac3fa62}{font\+Manager}}
+\item 
+const std\+::map$<$ sf\+::\+Keyboard\+::\+Key, \mbox{\hyperlink{namespaceGraphical_a028209aca40d8b0d34872f3297183452}{Key}} $>$ \mbox{\hyperlink{classGraphical_1_1SFMLGraphic_a0a57ccd05c95bba235901dfb9ba1bec8}{\+\_\+input\+\_\+map}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classGraphical_1_1SFMLGraphic_a5bc56e2c3c63335449b8d28b04c4c71b}\label{classGraphical_1_1SFMLGraphic_a5bc56e2c3c63335449b8d28b04c4c71b} 
+\index{Graphical::SFMLGraphic@{Graphical::SFMLGraphic}!SFMLGraphic@{SFMLGraphic}}
+\index{SFMLGraphic@{SFMLGraphic}!Graphical::SFMLGraphic@{Graphical::SFMLGraphic}}
+\doxysubsubsection{\texorpdfstring{SFMLGraphic()}{SFMLGraphic()}}
+{\footnotesize\ttfamily Graphical\+::\+SFMLGraphic\+::\+SFMLGraphic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classGraphical_1_1SFMLGraphic_acd83460a70322e19622504d514089b28}\label{classGraphical_1_1SFMLGraphic_acd83460a70322e19622504d514089b28} 
+\index{Graphical::SFMLGraphic@{Graphical::SFMLGraphic}!````~SFMLGraphic@{\texorpdfstring{$\sim$}{\string~}SFMLGraphic}}
+\index{````~SFMLGraphic@{\texorpdfstring{$\sim$}{\string~}SFMLGraphic}!Graphical::SFMLGraphic@{Graphical::SFMLGraphic}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}SFMLGraphic()}{\string~SFMLGraphic()}}
+{\footnotesize\ttfamily Graphical\+::\+SFMLGraphic\+::\texorpdfstring{$\sim$}{\string~}\+SFMLGraphic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classGraphical_1_1SFMLGraphic_a3e5ad06b7981a1450ad26dfc7bcd180e}\label{classGraphical_1_1SFMLGraphic_a3e5ad06b7981a1450ad26dfc7bcd180e} 
+\index{Graphical::SFMLGraphic@{Graphical::SFMLGraphic}!clearWindow@{clearWindow}}
+\index{clearWindow@{clearWindow}!Graphical::SFMLGraphic@{Graphical::SFMLGraphic}}
+\doxysubsubsection{\texorpdfstring{clearWindow()}{clearWindow()}}
+{\footnotesize\ttfamily void Graphical\+::\+SFMLGraphic\+::clear\+Window (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structGraphical_1_1Color}{Color}} \&}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Fill window with color 
+\begin{DoxyParams}{Parameters}
+{\em col} & color in wich the window should be filled \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classGraphical_1_1IGraphical_ae6a6b8aa388c8225eff0b0dfd6371ef3}{Graphical\+::\+IGraphical}}.
+
+\Hypertarget{classGraphical_1_1SFMLGraphic_a35d67d418f1dfe4da61395fdac551a79}\label{classGraphical_1_1SFMLGraphic_a35d67d418f1dfe4da61395fdac551a79} 
+\index{Graphical::SFMLGraphic@{Graphical::SFMLGraphic}!closeWindow@{closeWindow}}
+\index{closeWindow@{closeWindow}!Graphical::SFMLGraphic@{Graphical::SFMLGraphic}}
+\doxysubsubsection{\texorpdfstring{closeWindow()}{closeWindow()}}
+{\footnotesize\ttfamily void Graphical\+::\+SFMLGraphic\+::close\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Close the previously oppened window 
+
+Implements \mbox{\hyperlink{classGraphical_1_1IGraphical_aca3380a3cf214e29361a273dad9d5453}{Graphical\+::\+IGraphical}}.
+
+\Hypertarget{classGraphical_1_1SFMLGraphic_a9671bbb169e458ae0742182a53b702e8}\label{classGraphical_1_1SFMLGraphic_a9671bbb169e458ae0742182a53b702e8} 
+\index{Graphical::SFMLGraphic@{Graphical::SFMLGraphic}!drawCircle@{drawCircle}}
+\index{drawCircle@{drawCircle}!Graphical::SFMLGraphic@{Graphical::SFMLGraphic}}
+\doxysubsubsection{\texorpdfstring{drawCircle()}{drawCircle()}}
+{\footnotesize\ttfamily void Graphical\+::\+SFMLGraphic\+::draw\+Circle (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structGraphical_1_1Vect2i}{Vect2i}} \&}]{pos,  }\item[{const int8\+\_\+t \&}]{radius,  }\item[{const \mbox{\hyperlink{structGraphical_1_1Color}{Color}} \&}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classGraphical_1_1IGraphical_ac9c727e8f8ce625db82c1ae7e7d96498}{Graphical\+::\+IGraphical}}.
+
+\Hypertarget{classGraphical_1_1SFMLGraphic_aaa5679b93a8e54d9240941c1acc20383}\label{classGraphical_1_1SFMLGraphic_aaa5679b93a8e54d9240941c1acc20383} 
+\index{Graphical::SFMLGraphic@{Graphical::SFMLGraphic}!drawLine@{drawLine}}
+\index{drawLine@{drawLine}!Graphical::SFMLGraphic@{Graphical::SFMLGraphic}}
+\doxysubsubsection{\texorpdfstring{drawLine()}{drawLine()}}
+{\footnotesize\ttfamily void Graphical\+::\+SFMLGraphic\+::draw\+Line (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structGraphical_1_1Vect2i}{Vect2i}} \&}]{start\+Pos,  }\item[{const \mbox{\hyperlink{structGraphical_1_1Vect2i}{Vect2i}} \&}]{end\+Pos,  }\item[{const int8\+\_\+t \&}]{thickness,  }\item[{const \mbox{\hyperlink{structGraphical_1_1Color}{Color}} \&}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classGraphical_1_1IGraphical_aa119d04a0c0b2d6db0e6300186b62811}{Graphical\+::\+IGraphical}}.
+
+\Hypertarget{classGraphical_1_1SFMLGraphic_a477ae8ceb3c0ce981f7a79fcb6fb64c2}\label{classGraphical_1_1SFMLGraphic_a477ae8ceb3c0ce981f7a79fcb6fb64c2} 
+\index{Graphical::SFMLGraphic@{Graphical::SFMLGraphic}!drawRectangle@{drawRectangle}}
+\index{drawRectangle@{drawRectangle}!Graphical::SFMLGraphic@{Graphical::SFMLGraphic}}
+\doxysubsubsection{\texorpdfstring{drawRectangle()}{drawRectangle()}}
+{\footnotesize\ttfamily void Graphical\+::\+SFMLGraphic\+::draw\+Rectangle (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structGraphical_1_1Vect2i}{Vect2i}} \&}]{pos,  }\item[{const \mbox{\hyperlink{structGraphical_1_1Vect2i}{Vect2i}} \&}]{size,  }\item[{const \mbox{\hyperlink{structGraphical_1_1Color}{Color}} \&}]{color,  }\item[{const int8\+\_\+t \&}]{rotation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classGraphical_1_1IGraphical_a323493f69dc4cc4d6da7f5b9c7b3ec89}{Graphical\+::\+IGraphical}}.
+
+\Hypertarget{classGraphical_1_1SFMLGraphic_ae3198535cc07e167f1554e17e2f4824c}\label{classGraphical_1_1SFMLGraphic_ae3198535cc07e167f1554e17e2f4824c} 
+\index{Graphical::SFMLGraphic@{Graphical::SFMLGraphic}!drawSprite@{drawSprite}}
+\index{drawSprite@{drawSprite}!Graphical::SFMLGraphic@{Graphical::SFMLGraphic}}
+\doxysubsubsection{\texorpdfstring{drawSprite()}{drawSprite()}}
+{\footnotesize\ttfamily void Graphical\+::\+SFMLGraphic\+::draw\+Sprite (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path,  }\item[{const \mbox{\hyperlink{structGraphical_1_1TextureRect}{Texture\+Rect}} \&}]{texture\+\_\+rect,  }\item[{const \mbox{\hyperlink{structGraphical_1_1Vect2i}{Vect2i}} \&}]{pos,  }\item[{const \mbox{\hyperlink{structGraphical_1_1Vect2i}{Vect2i}} \&}]{size,  }\item[{int8\+\_\+t}]{rotation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Draw a sprite on the window 
+\begin{DoxyParams}{Parameters}
+{\em path} & path of the texture asset \\
+\hline
+{\em texture\+\_\+rect} & rectangle of the texture to use (any negative value will result in full texture loaded) \\
+\hline
+{\em pos} & pos were texture will be displayed \\
+\hline
+{\em size} & resize the sprite \\
+\hline
+{\em rotation} & rotation in degrees \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classGraphical_1_1IGraphical_a1dd3f37a96316263156ce3bab5ffef0d}{Graphical\+::\+IGraphical}}.
+
+\Hypertarget{classGraphical_1_1SFMLGraphic_af5699248a2da9856fa92b11f59e67551}\label{classGraphical_1_1SFMLGraphic_af5699248a2da9856fa92b11f59e67551} 
+\index{Graphical::SFMLGraphic@{Graphical::SFMLGraphic}!drawText@{drawText}}
+\index{drawText@{drawText}!Graphical::SFMLGraphic@{Graphical::SFMLGraphic}}
+\doxysubsubsection{\texorpdfstring{drawText()}{drawText()}}
+{\footnotesize\ttfamily void Graphical\+::\+SFMLGraphic\+::draw\+Text (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{font\+\_\+path,  }\item[{const std\+::string \&}]{str,  }\item[{const \mbox{\hyperlink{structGraphical_1_1Vect2i}{Vect2i}} \&}]{pos,  }\item[{const int \&}]{size,  }\item[{int8\+\_\+t}]{rotation,  }\item[{const \mbox{\hyperlink{structGraphical_1_1Color}{Color}} \&}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Draw a text on the window 
+\begin{DoxyParams}{Parameters}
+{\em font\+\_\+path} & path of the font asset \\
+\hline
+{\em str} & string to print \\
+\hline
+{\em pos} & pos were print will be displayed \\
+\hline
+{\em size} & font size \\
+\hline
+{\em rotation} & rotation in degrees \\
+\hline
+{\em color} & color of the text \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classGraphical_1_1IGraphical_ac7c5f56eecbcac7f729cfc424b1ade7d}{Graphical\+::\+IGraphical}}.
+
+\Hypertarget{classGraphical_1_1SFMLGraphic_ace8dc668afa8dfd115b82611c4c223d3}\label{classGraphical_1_1SFMLGraphic_ace8dc668afa8dfd115b82611c4c223d3} 
+\index{Graphical::SFMLGraphic@{Graphical::SFMLGraphic}!getEvents@{getEvents}}
+\index{getEvents@{getEvents}!Graphical::SFMLGraphic@{Graphical::SFMLGraphic}}
+\doxysubsubsection{\texorpdfstring{getEvents()}{getEvents()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceGraphical_aaf527a3bc294ab26e5cc06976b0410db}{event\+\_\+t}} Graphical\+::\+SFMLGraphic\+::get\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Get all usefull events \begin{DoxyReturn}{Returns}
+all players input needed by the game 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classGraphical_1_1IGraphical_aebe66c31114ad9a79490b183e5375c0b}{Graphical\+::\+IGraphical}}.
+
+\Hypertarget{classGraphical_1_1SFMLGraphic_ade734c31e506b9653f5e464bf39d753e}\label{classGraphical_1_1SFMLGraphic_ade734c31e506b9653f5e464bf39d753e} 
+\index{Graphical::SFMLGraphic@{Graphical::SFMLGraphic}!loadShader@{loadShader}}
+\index{loadShader@{loadShader}!Graphical::SFMLGraphic@{Graphical::SFMLGraphic}}
+\doxysubsubsection{\texorpdfstring{loadShader()}{loadShader()}}
+{\footnotesize\ttfamily void Graphical\+::\+SFMLGraphic\+::load\+Shader (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::optional$<$ std\+::string $>$ \&}]{vs\+Path,  }\item[{const std\+::optional$<$ std\+::string $>$ \&}]{fs\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classGraphical_1_1IGraphical_a9d5b8b26dd341ca3289ba1593e02f99c}{Graphical\+::\+IGraphical}}.
+
+\Hypertarget{classGraphical_1_1SFMLGraphic_ac129fb1f45337a009fdd5b34bf6f647b}\label{classGraphical_1_1SFMLGraphic_ac129fb1f45337a009fdd5b34bf6f647b} 
+\index{Graphical::SFMLGraphic@{Graphical::SFMLGraphic}!openWindow@{openWindow}}
+\index{openWindow@{openWindow}!Graphical::SFMLGraphic@{Graphical::SFMLGraphic}}
+\doxysubsubsection{\texorpdfstring{openWindow()}{openWindow()}}
+{\footnotesize\ttfamily void Graphical\+::\+SFMLGraphic\+::open\+Window (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{window\+\_\+name,  }\item[{const \mbox{\hyperlink{structGraphical_1_1Vect2i}{Vect2i}} \&}]{win\+\_\+size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Open a window for getting inputs and displaying sprites 
+\begin{DoxyParams}{Parameters}
+{\em window\+\_\+name} & name of the openned window \\
+\hline
+{\em win\+\_\+size} & size of the window \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classGraphical_1_1IGraphical_a36a7aea0786a1a448895b339d5edd362}{Graphical\+::\+IGraphical}}.
+
+\Hypertarget{classGraphical_1_1SFMLGraphic_a1caecb2a517bf00e69203aecae6026a5}\label{classGraphical_1_1SFMLGraphic_a1caecb2a517bf00e69203aecae6026a5} 
+\index{Graphical::SFMLGraphic@{Graphical::SFMLGraphic}!refreshWindow@{refreshWindow}}
+\index{refreshWindow@{refreshWindow}!Graphical::SFMLGraphic@{Graphical::SFMLGraphic}}
+\doxysubsubsection{\texorpdfstring{refreshWindow()}{refreshWindow()}}
+{\footnotesize\ttfamily void Graphical\+::\+SFMLGraphic\+::refresh\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+refresh window with all drawed sprites or color 
+
+Implements \mbox{\hyperlink{classGraphical_1_1IGraphical_a93caadc86b67be589fce2c9500c29051}{Graphical\+::\+IGraphical}}.
+
+\Hypertarget{classGraphical_1_1SFMLGraphic_ade52f7250db949d7701444fc899df9e7}\label{classGraphical_1_1SFMLGraphic_ade52f7250db949d7701444fc899df9e7} 
+\index{Graphical::SFMLGraphic@{Graphical::SFMLGraphic}!setShader@{setShader}}
+\index{setShader@{setShader}!Graphical::SFMLGraphic@{Graphical::SFMLGraphic}}
+\doxysubsubsection{\texorpdfstring{setShader()}{setShader()}}
+{\footnotesize\ttfamily void Graphical\+::\+SFMLGraphic\+::set\+Shader (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classGraphical_1_1IGraphical_a300836f71917f87965b8307f2c61fde6}{Graphical\+::\+IGraphical}}.
+
+\Hypertarget{classGraphical_1_1SFMLGraphic_a088302bf846c2834e3d184183d8982f7}\label{classGraphical_1_1SFMLGraphic_a088302bf846c2834e3d184183d8982f7} 
+\index{Graphical::SFMLGraphic@{Graphical::SFMLGraphic}!stopShader@{stopShader}}
+\index{stopShader@{stopShader}!Graphical::SFMLGraphic@{Graphical::SFMLGraphic}}
+\doxysubsubsection{\texorpdfstring{stopShader()}{stopShader()}}
+{\footnotesize\ttfamily void Graphical\+::\+SFMLGraphic\+::stop\+Shader (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+stops drawing using the set shader if one is being used 
+
+Implements \mbox{\hyperlink{classGraphical_1_1IGraphical_a684fc1af45372c21fd75ac64fcee7dc6}{Graphical\+::\+IGraphical}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classGraphical_1_1SFMLGraphic_a0a57ccd05c95bba235901dfb9ba1bec8}\label{classGraphical_1_1SFMLGraphic_a0a57ccd05c95bba235901dfb9ba1bec8} 
+\index{Graphical::SFMLGraphic@{Graphical::SFMLGraphic}!\_input\_map@{\_input\_map}}
+\index{\_input\_map@{\_input\_map}!Graphical::SFMLGraphic@{Graphical::SFMLGraphic}}
+\doxysubsubsection{\texorpdfstring{\_input\_map}{\_input\_map}}
+{\footnotesize\ttfamily const std\+::map$<$sf\+::\+Keyboard\+::\+Key, \mbox{\hyperlink{namespaceGraphical_a028209aca40d8b0d34872f3297183452}{Key}}$>$ Graphical\+::\+SFMLGraphic\+::\+\_\+input\+\_\+map\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classGraphical_1_1SFMLGraphic_a02822231e2625b34a343decd60cbcf9e}\label{classGraphical_1_1SFMLGraphic_a02822231e2625b34a343decd60cbcf9e} 
+\index{Graphical::SFMLGraphic@{Graphical::SFMLGraphic}!\_window@{\_window}}
+\index{\_window@{\_window}!Graphical::SFMLGraphic@{Graphical::SFMLGraphic}}
+\doxysubsubsection{\texorpdfstring{\_window}{\_window}}
+{\footnotesize\ttfamily sf\+::\+Render\+Window Graphical\+::\+SFMLGraphic\+::\+\_\+window\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classGraphical_1_1SFMLGraphic_a24174f653b45e0241a0df877aac3fa62}\label{classGraphical_1_1SFMLGraphic_a24174f653b45e0241a0df877aac3fa62} 
+\index{Graphical::SFMLGraphic@{Graphical::SFMLGraphic}!fontManager@{fontManager}}
+\index{fontManager@{fontManager}!Graphical::SFMLGraphic@{Graphical::SFMLGraphic}}
+\doxysubsubsection{\texorpdfstring{fontManager}{fontManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGraphical_1_1AssetManager}{Asset\+Manager}}$<$sf\+::\+Font$>$ Graphical\+::\+SFMLGraphic\+::font\+Manager\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classGraphical_1_1SFMLGraphic_ad7a3a1a010f36d8dc21452059ad14bee}\label{classGraphical_1_1SFMLGraphic_ad7a3a1a010f36d8dc21452059ad14bee} 
+\index{Graphical::SFMLGraphic@{Graphical::SFMLGraphic}!textureManager@{textureManager}}
+\index{textureManager@{textureManager}!Graphical::SFMLGraphic@{Graphical::SFMLGraphic}}
+\doxysubsubsection{\texorpdfstring{textureManager}{textureManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGraphical_1_1AssetManager}{Asset\+Manager}}$<$sf\+::\+Texture$>$ Graphical\+::\+SFMLGraphic\+::texture\+Manager\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/graphical/sfml\+\_\+graphic/\mbox{\hyperlink{SFMLGraphic_8hpp}{SFMLGraphic.\+hpp}}\item 
+lib/graphical/sfml\+\_\+graphic/\mbox{\hyperlink{SFMLGraphic_8cpp}{SFMLGraphic.\+cpp}}\end{DoxyCompactItemize}

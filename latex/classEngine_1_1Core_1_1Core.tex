@@ -1,0 +1,294 @@
+\doxysection{Engine\+::Core\+::Core Class Reference}
+\hypertarget{classEngine_1_1Core_1_1Core}{}\label{classEngine_1_1Core_1_1Core}\index{Engine::Core::Core@{Engine::Core::Core}}
+
+
+{\ttfamily \#include $<$Core.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEngine_1_1Core_1_1Core_a6b8abdbe2f2da78539d8e48f652ec0aa}{Core}} (bool open\+Window)
+\item 
+\mbox{\hyperlink{classEngine_1_1Core_1_1Core_ac81a2bb16d9a0cc01c30d6379a21fa1c}{\texorpdfstring{$\sim$}{\string~}\+Core}} ()
+\item 
+\mbox{\hyperlink{classEngine_1_1Core_1_1ModuleLoader}{Engine\+::\+Core\+::\+Module\+Loader}} \& \mbox{\hyperlink{classEngine_1_1Core_1_1Core_a33ab29bb435cb4b86c2d931c20d569cf}{get\+Module\+Loader}} ()
+\item 
+\mbox{\hyperlink{classEngine_1_1Debug_1_1Debug}{Debug\+::\+Debug}} \& \mbox{\hyperlink{classEngine_1_1Core_1_1Core_af8b28496b6bfb3017f95ec6496c06116}{get\+Debug}} ()
+\item 
+void \mbox{\hyperlink{classEngine_1_1Core_1_1Core_a642285529474267b44919ea280061c49}{load\+\_\+game\+\_\+modules}} (std\+::vector$<$ std\+::string $>$)
+\item 
+\mbox{\hyperlink{structEngine_1_1Core_1_1AudioConfig}{Audio\+Config}} \mbox{\hyperlink{classEngine_1_1Core_1_1Core_ac54f203f3d1c6cade11f9e80d76ab20d}{audio\+\_\+parser}} (std\+::string foldername)
+\item 
+\mbox{\hyperlink{structEngine_1_1Core_1_1EntityConfig}{Entity\+Config}} \mbox{\hyperlink{classEngine_1_1Core_1_1Core_a7823c19bcd0cdeee3f18c06e420e30c2}{entity\+\_\+parser}} (std\+::string foldername)
+\item 
+\mbox{\hyperlink{structEngine_1_1Core_1_1KeyConfig}{Key\+Config}} \mbox{\hyperlink{classEngine_1_1Core_1_1Core_a597408613cb16002234dfc87589c11d6}{key\+\_\+parser}} (std\+::string foldername)
+\item 
+\mbox{\hyperlink{structEngine_1_1Core_1_1RenderedConfig}{Rendered\+Config}} \mbox{\hyperlink{classEngine_1_1Core_1_1Core_a77272b87b1ea974069929d8bf5dd93e4}{rendered\+\_\+parser}} (std\+::string foldername)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structEngine_1_1Core_1_1MapConfig}{Map\+Config}} $>$ \mbox{\hyperlink{classEngine_1_1Core_1_1Core_a6257872fd398046abc7d0074e7c78b6b}{map\+\_\+parser}} (std\+::string foldername, std\+::vector$<$ std\+::string $>$ maps)
+\item 
+\mbox{\hyperlink{classECS_1_1Entity}{\+::\+ECS\+::\+Entity}} \mbox{\hyperlink{classEngine_1_1Core_1_1Core_a037fa89f2c8f823ac807c25dbbe8643b}{create\+\_\+objects}} (\mbox{\hyperlink{classECS_1_1Registry}{\+::\+ECS\+::\+Registry}} \&registry, int pos\+\_\+x, int pos\+\_\+y, std\+::vector$<$ \mbox{\hyperlink{structEngine_1_1Core_1_1Component}{Component}} $>$ entity\+\_\+components)
+\item 
+\mbox{\hyperlink{classECS_1_1Entity}{\+::\+ECS\+::\+Entity}} \mbox{\hyperlink{classEngine_1_1Core_1_1Core_a8ab92fe4c6bba95888ef626fa8871c0c}{create\+\_\+player}} (\mbox{\hyperlink{classECS_1_1Registry}{\+::\+ECS\+::\+Registry}} \&registry, int pos\+\_\+x, int pos\+\_\+y, \mbox{\hyperlink{structEngine_1_1Core_1_1EntityConfig}{Entity\+Config}} entity\+\_\+config)
+\item 
+\mbox{\hyperlink{classECS_1_1Entity}{\+::\+ECS\+::\+Entity}} \mbox{\hyperlink{classEngine_1_1Core_1_1Core_a4d25f02ca43392519c3270518b6c7a6c}{create\+\_\+entity}} (\mbox{\hyperlink{classECS_1_1Registry}{\+::\+ECS\+::\+Registry}} \&registry, int pos\+\_\+x, int pos\+\_\+y, std\+::vector$<$ \mbox{\hyperlink{structEngine_1_1Core_1_1Component}{Component}} $>$ entity\+\_\+components)
+\item 
+std\+::vector$<$\mbox{\hyperlink{classECS_1_1Entity}{\+::\+ECS\+::\+Entity}} $>$ \mbox{\hyperlink{classEngine_1_1Core_1_1Core_a214c11b318b35439c859507fe5dacc61}{create\+\_\+map}} (\mbox{\hyperlink{classECS_1_1Registry}{\+::\+ECS\+::\+Registry}} \&registry, \mbox{\hyperlink{structEngine_1_1Core_1_1MapConfig}{Map\+Config}} map\+\_\+config, \mbox{\hyperlink{structEngine_1_1Core_1_1EntityConfig}{Entity\+Config}} entity\+\_\+config)
+\item 
+\mbox{\hyperlink{classEngine_1_1Module_1_1Renderer}{Module\+::\+Renderer}} \& \mbox{\hyperlink{classEngine_1_1Core_1_1Core_adc2c680f52e3ff6db0250ee251b2c161}{get\+Rendered\+Lib}} ()
+\item 
+\mbox{\hyperlink{classEngine_1_1Module_1_1IAudio}{Module\+::\+IAudio}} \& \mbox{\hyperlink{classEngine_1_1Core_1_1Core_af08573e004011551f6c5754acc9bb965}{get\+Audio\+Lib}} ()
+\item 
+\mbox{\hyperlink{classEngine_1_1Module_1_1IPhysic}{Module\+::\+IPhysic}} \& \mbox{\hyperlink{classEngine_1_1Core_1_1Core_a56a8aff095d7f57903f4078b4c6cf7df}{get\+Physic\+Lib}} ()
+\item 
+\mbox{\hyperlink{classEngine_1_1Module_1_1INetworkClient}{Module\+::\+INetwork\+Client}} \& \mbox{\hyperlink{classEngine_1_1Core_1_1Core_a49d5aea22c284a1c48a26cbff630d45e}{get\+Client\+Lib}} ()
+\item 
+\mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{Module\+::\+INetwork\+Server}} \& \mbox{\hyperlink{classEngine_1_1Core_1_1Core_a9c84cb3da229e1de5d038e6ada36a6f8}{get\+Server\+Lib}} ()
+\item 
+\mbox{\hyperlink{classECS_1_1Registry}{\+::\+ECS\+::\+Registry}} \& \mbox{\hyperlink{classEngine_1_1Core_1_1Core_ae95a41cc8c576b8c759fff1c003d1a28}{get\+Registry}} ()
+\item 
+void \mbox{\hyperlink{classEngine_1_1Core_1_1Core_a160b4e202610ed6aa3354361e04e324d}{init}} ()
+\item 
+\mbox{\hyperlink{classEngine_1_1Core_1_1ECS}{ECS}} \& \mbox{\hyperlink{classEngine_1_1Core_1_1Core_a07eb4ccb088cf41f3818a55a80b903f5}{get\+ECS}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classEngine_1_1Core_1_1Core_ad51785d8ff7eabf15d0bdda392fd8ebf}{game\+\_\+parser}} (std\+::string foldername)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEngine_1_1Core_1_1ECS}{ECS}} \mbox{\hyperlink{classEngine_1_1Core_1_1Core_abc9a8279d4516e52324a46ac3cd538bc}{\+\_\+ecs}}
+\item 
+\mbox{\hyperlink{classEngine_1_1Core_1_1ModuleLoader}{Module\+Loader}} \mbox{\hyperlink{classEngine_1_1Core_1_1Core_a2fb2ccfeb7752ae735de81789c51a30c}{\+\_\+loader}}
+\item 
+\mbox{\hyperlink{classEngine_1_1Debug_1_1Debug}{Debug\+::\+Debug}} \mbox{\hyperlink{classEngine_1_1Core_1_1Core_aeb50218371649d75b5e6a758478ee34a}{\+\_\+debug}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::function$<$ void(std\+::string)$>$ $>$ \mbox{\hyperlink{classEngine_1_1Core_1_1Core_aed59081d37a6fd3ca191954e0d4d5e54}{\+\_\+konsole\+\_\+calls}}
+\item 
+bool \mbox{\hyperlink{classEngine_1_1Core_1_1Core_a84286007f06bd139e59c64e0acfc0697}{\+\_\+open\+Window}}
+\item 
+std\+::thread \mbox{\hyperlink{classEngine_1_1Core_1_1Core_ae1e8227a356eb618c88f96236f3f95eb}{\+\_\+listener}}
+\item 
+\mbox{\hyperlink{classECS_1_1Registry}{\+::\+ECS\+::\+Registry}} \mbox{\hyperlink{classEngine_1_1Core_1_1Core_accc9b8d79fdb3af7ab3c66983acfe82f}{\+\_\+registry}}
+\item 
+\mbox{\hyperlink{structEngine_1_1Core_1_1AudioConfig}{Audio\+Config}} \mbox{\hyperlink{classEngine_1_1Core_1_1Core_a0a1ccbfed2ef39a494a4f3eea327d697}{\+\_\+audio\+\_\+config}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classEngine_1_1Module_1_1IPhysic}{Module\+::\+IPhysic}} $>$ \mbox{\hyperlink{classEngine_1_1Core_1_1Core_a0b75f642319ac9445aa2d18f7e2d3221}{\+\_\+physics}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classEngine_1_1Module_1_1Renderer}{Module\+::\+Renderer}} $>$ \mbox{\hyperlink{classEngine_1_1Core_1_1Core_a3957fc476494600af7e34b58c254cdbd}{\+\_\+renderer}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classEngine_1_1Core_1_1Core_a6b8abdbe2f2da78539d8e48f652ec0aa}\label{classEngine_1_1Core_1_1Core_a6b8abdbe2f2da78539d8e48f652ec0aa} 
+\index{Engine::Core::Core@{Engine::Core::Core}!Core@{Core}}
+\index{Core@{Core}!Engine::Core::Core@{Engine::Core::Core}}
+\doxysubsubsection{\texorpdfstring{Core()}{Core()}}
+{\footnotesize\ttfamily Engine\+::\+Core\+::\+Core\+::\+Core (\begin{DoxyParamCaption}\item[{bool}]{open\+Window }\end{DoxyParamCaption})}
+
+\Hypertarget{classEngine_1_1Core_1_1Core_ac81a2bb16d9a0cc01c30d6379a21fa1c}\label{classEngine_1_1Core_1_1Core_ac81a2bb16d9a0cc01c30d6379a21fa1c} 
+\index{Engine::Core::Core@{Engine::Core::Core}!````~Core@{\texorpdfstring{$\sim$}{\string~}Core}}
+\index{````~Core@{\texorpdfstring{$\sim$}{\string~}Core}!Engine::Core::Core@{Engine::Core::Core}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Core()}{\string~Core()}}
+{\footnotesize\ttfamily Engine\+::\+Core\+::\+Core\+::\texorpdfstring{$\sim$}{\string~}\+Core (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classEngine_1_1Core_1_1Core_ac54f203f3d1c6cade11f9e80d76ab20d}\label{classEngine_1_1Core_1_1Core_ac54f203f3d1c6cade11f9e80d76ab20d} 
+\index{Engine::Core::Core@{Engine::Core::Core}!audio\_parser@{audio\_parser}}
+\index{audio\_parser@{audio\_parser}!Engine::Core::Core@{Engine::Core::Core}}
+\doxysubsubsection{\texorpdfstring{audio\_parser()}{audio\_parser()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structEngine_1_1Core_1_1AudioConfig}{Audio\+Config}} Engine\+::\+Core\+::\+Core\+::audio\+\_\+parser (\begin{DoxyParamCaption}\item[{std\+::string}]{foldername }\end{DoxyParamCaption})}
+
+\Hypertarget{classEngine_1_1Core_1_1Core_a4d25f02ca43392519c3270518b6c7a6c}\label{classEngine_1_1Core_1_1Core_a4d25f02ca43392519c3270518b6c7a6c} 
+\index{Engine::Core::Core@{Engine::Core::Core}!create\_entity@{create\_entity}}
+\index{create\_entity@{create\_entity}!Engine::Core::Core@{Engine::Core::Core}}
+\doxysubsubsection{\texorpdfstring{create\_entity()}{create\_entity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classECS_1_1Entity}{ECS\+::\+Entity}} Engine\+::\+Core\+::\+Core\+::create\+\_\+entity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classECS_1_1Registry}{\+::\+ECS\+::\+Registry}} \&}]{registry,  }\item[{int}]{pos\+\_\+x,  }\item[{int}]{pos\+\_\+y,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structEngine_1_1Core_1_1Component}{Component}} $>$}]{entity\+\_\+components }\end{DoxyParamCaption})}
+
+\Hypertarget{classEngine_1_1Core_1_1Core_a214c11b318b35439c859507fe5dacc61}\label{classEngine_1_1Core_1_1Core_a214c11b318b35439c859507fe5dacc61} 
+\index{Engine::Core::Core@{Engine::Core::Core}!create\_map@{create\_map}}
+\index{create\_map@{create\_map}!Engine::Core::Core@{Engine::Core::Core}}
+\doxysubsubsection{\texorpdfstring{create\_map()}{create\_map()}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classECS_1_1Entity}{\+::\+ECS\+::\+Entity}} $>$ Engine\+::\+Core\+::\+Core\+::create\+\_\+map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classECS_1_1Registry}{\+::\+ECS\+::\+Registry}} \&}]{registry,  }\item[{\mbox{\hyperlink{structEngine_1_1Core_1_1MapConfig}{Map\+Config}}}]{map\+\_\+config,  }\item[{\mbox{\hyperlink{structEngine_1_1Core_1_1EntityConfig}{Entity\+Config}}}]{entity\+\_\+config }\end{DoxyParamCaption})}
+
+\Hypertarget{classEngine_1_1Core_1_1Core_a037fa89f2c8f823ac807c25dbbe8643b}\label{classEngine_1_1Core_1_1Core_a037fa89f2c8f823ac807c25dbbe8643b} 
+\index{Engine::Core::Core@{Engine::Core::Core}!create\_objects@{create\_objects}}
+\index{create\_objects@{create\_objects}!Engine::Core::Core@{Engine::Core::Core}}
+\doxysubsubsection{\texorpdfstring{create\_objects()}{create\_objects()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classECS_1_1Entity}{ECS\+::\+Entity}} Engine\+::\+Core\+::\+Core\+::create\+\_\+objects (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classECS_1_1Registry}{\+::\+ECS\+::\+Registry}} \&}]{registry,  }\item[{int}]{pos\+\_\+x,  }\item[{int}]{pos\+\_\+y,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structEngine_1_1Core_1_1Component}{Component}} $>$}]{entity\+\_\+components }\end{DoxyParamCaption})}
+
+\Hypertarget{classEngine_1_1Core_1_1Core_a8ab92fe4c6bba95888ef626fa8871c0c}\label{classEngine_1_1Core_1_1Core_a8ab92fe4c6bba95888ef626fa8871c0c} 
+\index{Engine::Core::Core@{Engine::Core::Core}!create\_player@{create\_player}}
+\index{create\_player@{create\_player}!Engine::Core::Core@{Engine::Core::Core}}
+\doxysubsubsection{\texorpdfstring{create\_player()}{create\_player()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classECS_1_1Entity}{ECS\+::\+Entity}} Engine\+::\+Core\+::\+Core\+::create\+\_\+player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classECS_1_1Registry}{\+::\+ECS\+::\+Registry}} \&}]{registry,  }\item[{int}]{pos\+\_\+x,  }\item[{int}]{pos\+\_\+y,  }\item[{\mbox{\hyperlink{structEngine_1_1Core_1_1EntityConfig}{Entity\+Config}}}]{entity\+\_\+config }\end{DoxyParamCaption})}
+
+\Hypertarget{classEngine_1_1Core_1_1Core_a7823c19bcd0cdeee3f18c06e420e30c2}\label{classEngine_1_1Core_1_1Core_a7823c19bcd0cdeee3f18c06e420e30c2} 
+\index{Engine::Core::Core@{Engine::Core::Core}!entity\_parser@{entity\_parser}}
+\index{entity\_parser@{entity\_parser}!Engine::Core::Core@{Engine::Core::Core}}
+\doxysubsubsection{\texorpdfstring{entity\_parser()}{entity\_parser()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structEngine_1_1Core_1_1EntityConfig}{Entity\+Config}} Engine\+::\+Core\+::\+Core\+::entity\+\_\+parser (\begin{DoxyParamCaption}\item[{std\+::string}]{foldername }\end{DoxyParamCaption})}
+
+\Hypertarget{classEngine_1_1Core_1_1Core_ad51785d8ff7eabf15d0bdda392fd8ebf}\label{classEngine_1_1Core_1_1Core_ad51785d8ff7eabf15d0bdda392fd8ebf} 
+\index{Engine::Core::Core@{Engine::Core::Core}!game\_parser@{game\_parser}}
+\index{game\_parser@{game\_parser}!Engine::Core::Core@{Engine::Core::Core}}
+\doxysubsubsection{\texorpdfstring{game\_parser()}{game\_parser()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ Engine\+::\+Core\+::\+Core\+::game\+\_\+parser (\begin{DoxyParamCaption}\item[{std\+::string}]{foldername }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classEngine_1_1Core_1_1Core_af08573e004011551f6c5754acc9bb965}\label{classEngine_1_1Core_1_1Core_af08573e004011551f6c5754acc9bb965} 
+\index{Engine::Core::Core@{Engine::Core::Core}!getAudioLib@{getAudioLib}}
+\index{getAudioLib@{getAudioLib}!Engine::Core::Core@{Engine::Core::Core}}
+\doxysubsubsection{\texorpdfstring{getAudioLib()}{getAudioLib()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Module_1_1IAudio}{Module\+::\+IAudio}} \& Engine\+::\+Core\+::\+Core\+::get\+Audio\+Lib (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classEngine_1_1Core_1_1Core_a49d5aea22c284a1c48a26cbff630d45e}\label{classEngine_1_1Core_1_1Core_a49d5aea22c284a1c48a26cbff630d45e} 
+\index{Engine::Core::Core@{Engine::Core::Core}!getClientLib@{getClientLib}}
+\index{getClientLib@{getClientLib}!Engine::Core::Core@{Engine::Core::Core}}
+\doxysubsubsection{\texorpdfstring{getClientLib()}{getClientLib()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkClient}{Module\+::\+INetwork\+Client}} \& Engine\+::\+Core\+::\+Core\+::get\+Client\+Lib (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classEngine_1_1Core_1_1Core_af8b28496b6bfb3017f95ec6496c06116}\label{classEngine_1_1Core_1_1Core_af8b28496b6bfb3017f95ec6496c06116} 
+\index{Engine::Core::Core@{Engine::Core::Core}!getDebug@{getDebug}}
+\index{getDebug@{getDebug}!Engine::Core::Core@{Engine::Core::Core}}
+\doxysubsubsection{\texorpdfstring{getDebug()}{getDebug()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Debug_1_1Debug}{Engine\+::\+Debug\+::\+Debug}} \& Engine\+::\+Core\+::\+Core\+::get\+Debug (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classEngine_1_1Core_1_1Core_a07eb4ccb088cf41f3818a55a80b903f5}\label{classEngine_1_1Core_1_1Core_a07eb4ccb088cf41f3818a55a80b903f5} 
+\index{Engine::Core::Core@{Engine::Core::Core}!getECS@{getECS}}
+\index{getECS@{getECS}!Engine::Core::Core@{Engine::Core::Core}}
+\doxysubsubsection{\texorpdfstring{getECS()}{getECS()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Core_1_1ECS}{ECS}} \& Engine\+::\+Core\+::\+Core\+::get\+ECS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classEngine_1_1Core_1_1Core_a33ab29bb435cb4b86c2d931c20d569cf}\label{classEngine_1_1Core_1_1Core_a33ab29bb435cb4b86c2d931c20d569cf} 
+\index{Engine::Core::Core@{Engine::Core::Core}!getModuleLoader@{getModuleLoader}}
+\index{getModuleLoader@{getModuleLoader}!Engine::Core::Core@{Engine::Core::Core}}
+\doxysubsubsection{\texorpdfstring{getModuleLoader()}{getModuleLoader()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Core_1_1ModuleLoader}{Engine\+::\+Core\+::\+Module\+Loader}} \& Engine\+::\+Core\+::\+Core\+::get\+Module\+Loader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classEngine_1_1Core_1_1Core_a56a8aff095d7f57903f4078b4c6cf7df}\label{classEngine_1_1Core_1_1Core_a56a8aff095d7f57903f4078b4c6cf7df} 
+\index{Engine::Core::Core@{Engine::Core::Core}!getPhysicLib@{getPhysicLib}}
+\index{getPhysicLib@{getPhysicLib}!Engine::Core::Core@{Engine::Core::Core}}
+\doxysubsubsection{\texorpdfstring{getPhysicLib()}{getPhysicLib()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Module_1_1IPhysic}{Module\+::\+IPhysic}} \& Engine\+::\+Core\+::\+Core\+::get\+Physic\+Lib (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classEngine_1_1Core_1_1Core_ae95a41cc8c576b8c759fff1c003d1a28}\label{classEngine_1_1Core_1_1Core_ae95a41cc8c576b8c759fff1c003d1a28} 
+\index{Engine::Core::Core@{Engine::Core::Core}!getRegistry@{getRegistry}}
+\index{getRegistry@{getRegistry}!Engine::Core::Core@{Engine::Core::Core}}
+\doxysubsubsection{\texorpdfstring{getRegistry()}{getRegistry()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \& Engine\+::\+Core\+::\+Core\+::get\+Registry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classEngine_1_1Core_1_1Core_adc2c680f52e3ff6db0250ee251b2c161}\label{classEngine_1_1Core_1_1Core_adc2c680f52e3ff6db0250ee251b2c161} 
+\index{Engine::Core::Core@{Engine::Core::Core}!getRenderedLib@{getRenderedLib}}
+\index{getRenderedLib@{getRenderedLib}!Engine::Core::Core@{Engine::Core::Core}}
+\doxysubsubsection{\texorpdfstring{getRenderedLib()}{getRenderedLib()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Module_1_1Renderer}{Module\+::\+Renderer}} \& Engine\+::\+Core\+::\+Core\+::get\+Rendered\+Lib (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classEngine_1_1Core_1_1Core_a9c84cb3da229e1de5d038e6ada36a6f8}\label{classEngine_1_1Core_1_1Core_a9c84cb3da229e1de5d038e6ada36a6f8} 
+\index{Engine::Core::Core@{Engine::Core::Core}!getServerLib@{getServerLib}}
+\index{getServerLib@{getServerLib}!Engine::Core::Core@{Engine::Core::Core}}
+\doxysubsubsection{\texorpdfstring{getServerLib()}{getServerLib()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{Module\+::\+INetwork\+Server}} \& Engine\+::\+Core\+::\+Core\+::get\+Server\+Lib (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classEngine_1_1Core_1_1Core_a160b4e202610ed6aa3354361e04e324d}\label{classEngine_1_1Core_1_1Core_a160b4e202610ed6aa3354361e04e324d} 
+\index{Engine::Core::Core@{Engine::Core::Core}!init@{init}}
+\index{init@{init}!Engine::Core::Core@{Engine::Core::Core}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Engine\+::\+Core\+::\+Core\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classEngine_1_1Core_1_1Core_a597408613cb16002234dfc87589c11d6}\label{classEngine_1_1Core_1_1Core_a597408613cb16002234dfc87589c11d6} 
+\index{Engine::Core::Core@{Engine::Core::Core}!key\_parser@{key\_parser}}
+\index{key\_parser@{key\_parser}!Engine::Core::Core@{Engine::Core::Core}}
+\doxysubsubsection{\texorpdfstring{key\_parser()}{key\_parser()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structEngine_1_1Core_1_1KeyConfig}{Key\+Config}} Engine\+::\+Core\+::\+Core\+::key\+\_\+parser (\begin{DoxyParamCaption}\item[{std\+::string}]{foldername }\end{DoxyParamCaption})}
+
+\Hypertarget{classEngine_1_1Core_1_1Core_a642285529474267b44919ea280061c49}\label{classEngine_1_1Core_1_1Core_a642285529474267b44919ea280061c49} 
+\index{Engine::Core::Core@{Engine::Core::Core}!load\_game\_modules@{load\_game\_modules}}
+\index{load\_game\_modules@{load\_game\_modules}!Engine::Core::Core@{Engine::Core::Core}}
+\doxysubsubsection{\texorpdfstring{load\_game\_modules()}{load\_game\_modules()}}
+{\footnotesize\ttfamily void Engine\+::\+Core\+::\+Core\+::load\+\_\+game\+\_\+modules (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{modules\+\_\+names }\end{DoxyParamCaption})}
+
+\Hypertarget{classEngine_1_1Core_1_1Core_a6257872fd398046abc7d0074e7c78b6b}\label{classEngine_1_1Core_1_1Core_a6257872fd398046abc7d0074e7c78b6b} 
+\index{Engine::Core::Core@{Engine::Core::Core}!map\_parser@{map\_parser}}
+\index{map\_parser@{map\_parser}!Engine::Core::Core@{Engine::Core::Core}}
+\doxysubsubsection{\texorpdfstring{map\_parser()}{map\_parser()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{structEngine_1_1Core_1_1MapConfig}{Map\+Config}} $>$ Engine\+::\+Core\+::\+Core\+::map\+\_\+parser (\begin{DoxyParamCaption}\item[{std\+::string}]{foldername,  }\item[{std\+::vector$<$ std\+::string $>$}]{maps }\end{DoxyParamCaption})}
+
+\Hypertarget{classEngine_1_1Core_1_1Core_a77272b87b1ea974069929d8bf5dd93e4}\label{classEngine_1_1Core_1_1Core_a77272b87b1ea974069929d8bf5dd93e4} 
+\index{Engine::Core::Core@{Engine::Core::Core}!rendered\_parser@{rendered\_parser}}
+\index{rendered\_parser@{rendered\_parser}!Engine::Core::Core@{Engine::Core::Core}}
+\doxysubsubsection{\texorpdfstring{rendered\_parser()}{rendered\_parser()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structEngine_1_1Core_1_1RenderedConfig}{Rendered\+Config}} Engine\+::\+Core\+::\+Core\+::rendered\+\_\+parser (\begin{DoxyParamCaption}\item[{std\+::string}]{foldername }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classEngine_1_1Core_1_1Core_a0a1ccbfed2ef39a494a4f3eea327d697}\label{classEngine_1_1Core_1_1Core_a0a1ccbfed2ef39a494a4f3eea327d697} 
+\index{Engine::Core::Core@{Engine::Core::Core}!\_audio\_config@{\_audio\_config}}
+\index{\_audio\_config@{\_audio\_config}!Engine::Core::Core@{Engine::Core::Core}}
+\doxysubsubsection{\texorpdfstring{\_audio\_config}{\_audio\_config}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structEngine_1_1Core_1_1AudioConfig}{Audio\+Config}} Engine\+::\+Core\+::\+Core\+::\+\_\+audio\+\_\+config\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classEngine_1_1Core_1_1Core_aeb50218371649d75b5e6a758478ee34a}\label{classEngine_1_1Core_1_1Core_aeb50218371649d75b5e6a758478ee34a} 
+\index{Engine::Core::Core@{Engine::Core::Core}!\_debug@{\_debug}}
+\index{\_debug@{\_debug}!Engine::Core::Core@{Engine::Core::Core}}
+\doxysubsubsection{\texorpdfstring{\_debug}{\_debug}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Debug_1_1Debug}{Debug\+::\+Debug}} Engine\+::\+Core\+::\+Core\+::\+\_\+debug\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classEngine_1_1Core_1_1Core_abc9a8279d4516e52324a46ac3cd538bc}\label{classEngine_1_1Core_1_1Core_abc9a8279d4516e52324a46ac3cd538bc} 
+\index{Engine::Core::Core@{Engine::Core::Core}!\_ecs@{\_ecs}}
+\index{\_ecs@{\_ecs}!Engine::Core::Core@{Engine::Core::Core}}
+\doxysubsubsection{\texorpdfstring{\_ecs}{\_ecs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Core_1_1ECS}{ECS}} Engine\+::\+Core\+::\+Core\+::\+\_\+ecs\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classEngine_1_1Core_1_1Core_aed59081d37a6fd3ca191954e0d4d5e54}\label{classEngine_1_1Core_1_1Core_aed59081d37a6fd3ca191954e0d4d5e54} 
+\index{Engine::Core::Core@{Engine::Core::Core}!\_konsole\_calls@{\_konsole\_calls}}
+\index{\_konsole\_calls@{\_konsole\_calls}!Engine::Core::Core@{Engine::Core::Core}}
+\doxysubsubsection{\texorpdfstring{\_konsole\_calls}{\_konsole\_calls}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, std\+::function$<$void(std\+::string)$>$ $>$ Engine\+::\+Core\+::\+Core\+::\+\_\+konsole\+\_\+calls\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classEngine_1_1Core_1_1Core_ae1e8227a356eb618c88f96236f3f95eb}\label{classEngine_1_1Core_1_1Core_ae1e8227a356eb618c88f96236f3f95eb} 
+\index{Engine::Core::Core@{Engine::Core::Core}!\_listener@{\_listener}}
+\index{\_listener@{\_listener}!Engine::Core::Core@{Engine::Core::Core}}
+\doxysubsubsection{\texorpdfstring{\_listener}{\_listener}}
+{\footnotesize\ttfamily std\+::thread Engine\+::\+Core\+::\+Core\+::\+\_\+listener\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classEngine_1_1Core_1_1Core_a2fb2ccfeb7752ae735de81789c51a30c}\label{classEngine_1_1Core_1_1Core_a2fb2ccfeb7752ae735de81789c51a30c} 
+\index{Engine::Core::Core@{Engine::Core::Core}!\_loader@{\_loader}}
+\index{\_loader@{\_loader}!Engine::Core::Core@{Engine::Core::Core}}
+\doxysubsubsection{\texorpdfstring{\_loader}{\_loader}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Core_1_1ModuleLoader}{Module\+Loader}} Engine\+::\+Core\+::\+Core\+::\+\_\+loader\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classEngine_1_1Core_1_1Core_a84286007f06bd139e59c64e0acfc0697}\label{classEngine_1_1Core_1_1Core_a84286007f06bd139e59c64e0acfc0697} 
+\index{Engine::Core::Core@{Engine::Core::Core}!\_openWindow@{\_openWindow}}
+\index{\_openWindow@{\_openWindow}!Engine::Core::Core@{Engine::Core::Core}}
+\doxysubsubsection{\texorpdfstring{\_openWindow}{\_openWindow}}
+{\footnotesize\ttfamily bool Engine\+::\+Core\+::\+Core\+::\+\_\+open\+Window\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classEngine_1_1Core_1_1Core_a0b75f642319ac9445aa2d18f7e2d3221}\label{classEngine_1_1Core_1_1Core_a0b75f642319ac9445aa2d18f7e2d3221} 
+\index{Engine::Core::Core@{Engine::Core::Core}!\_physics@{\_physics}}
+\index{\_physics@{\_physics}!Engine::Core::Core@{Engine::Core::Core}}
+\doxysubsubsection{\texorpdfstring{\_physics}{\_physics}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classEngine_1_1Module_1_1IPhysic}{Module\+::\+IPhysic}}$>$ Engine\+::\+Core\+::\+Core\+::\+\_\+physics\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classEngine_1_1Core_1_1Core_accc9b8d79fdb3af7ab3c66983acfe82f}\label{classEngine_1_1Core_1_1Core_accc9b8d79fdb3af7ab3c66983acfe82f} 
+\index{Engine::Core::Core@{Engine::Core::Core}!\_registry@{\_registry}}
+\index{\_registry@{\_registry}!Engine::Core::Core@{Engine::Core::Core}}
+\doxysubsubsection{\texorpdfstring{\_registry}{\_registry}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classECS_1_1Registry}{\+::\+ECS\+::\+Registry}} Engine\+::\+Core\+::\+Core\+::\+\_\+registry\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classEngine_1_1Core_1_1Core_a3957fc476494600af7e34b58c254cdbd}\label{classEngine_1_1Core_1_1Core_a3957fc476494600af7e34b58c254cdbd} 
+\index{Engine::Core::Core@{Engine::Core::Core}!\_renderer@{\_renderer}}
+\index{\_renderer@{\_renderer}!Engine::Core::Core@{Engine::Core::Core}}
+\doxysubsubsection{\texorpdfstring{\_renderer}{\_renderer}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classEngine_1_1Module_1_1Renderer}{Module\+::\+Renderer}}$>$ Engine\+::\+Core\+::\+Core\+::\+\_\+renderer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/engine/includes/\mbox{\hyperlink{lib_2engine_2includes_2Core_8hpp}{Core.\+hpp}}\item 
+lib/engine/core/\mbox{\hyperlink{lib_2engine_2core_2Core_8cpp}{Core.\+cpp}}\end{DoxyCompactItemize}

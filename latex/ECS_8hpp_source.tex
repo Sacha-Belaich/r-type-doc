@@ -1,0 +1,49 @@
+\doxysection{ECS.\+hpp}
+\hypertarget{ECS_8hpp_source}{}\label{ECS_8hpp_source}\index{lib/engine/core/ECS.hpp@{lib/engine/core/ECS.hpp}}
+\mbox{\hyperlink{ECS_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2025}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ r-\/type}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ ecs\ encapsulation}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Registry_8hpp}{Registry.hpp}}"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceEngine_1_1Core}{Engine::Core}}\ \{}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{namespaceECS}{ECS}}\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEngine_1_1Core_1_1ECS_a160d4952697fd4008c75c021308e3163}{ECS}}();}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ Function>}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Core_1_1ECS_a54fd5ea5f7945ec5d3e93dfbdf899254}{register\_system}}(std::string\ name,\ Function\ \&\&f)\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEngine_1_1Core_1_1ECS_a09f8ff2694c4523a017968d4077231ed}{\_systems}}[name]\ =\ std::make\_pair(}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{true},\ ([f\ =\ std::forward<Function>(f)](\mbox{\hyperlink{classECS_1_1Registry}{::ECS::Registry}}\ \&reg)\ \{\ f(reg);\ \}));}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Core_1_1ECS_aeeed8750adf367d60f0db81f751f63d0}{setSystemsOrder}}(\textcolor{keyword}{const}\ std::vector<std::string>\ \&orderVector);}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ std::vector<std::string>\ \mbox{\hyperlink{classEngine_1_1Core_1_1ECS_a62bc37a327746b056bc2bfa67d811e10}{getSystemOrder}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Core_1_1ECS_a361e14fb0c0926398ad4d6f32867376b}{enableSystem}}(\textcolor{keyword}{const}\ std::string\ \&name);}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Core_1_1ECS_a3cd984e403432f3166ddb1af67c9ab79}{disableSystem}}(\textcolor{keyword}{const}\ std::string\ \&name);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classECS_1_1Registry}{::ECS::Registry}}\ \&\mbox{\hyperlink{classEngine_1_1Core_1_1ECS_afa2420b9877f6a387756b61c338d10f8}{getRegistry}}();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Core_1_1ECS_a12271bbdeb8e2a1dc7be18b372e779bb}{runSystems}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classECS_1_1Registry}{::ECS::Registry}}\ \mbox{\hyperlink{classEngine_1_1Core_1_1ECS_a34755262ea8b69ec02f6059b0a7228b4}{\_registry}};}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ std::unordered\_map<std::string,\ std::pair<bool,\ std::function<void(\mbox{\hyperlink{classECS_1_1Registry}{::ECS::Registry}}\ \&)>>>}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEngine_1_1Core_1_1ECS_a09f8ff2694c4523a017968d4077231ed}{\_systems}};}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ std::vector<std::string>\ \mbox{\hyperlink{classEngine_1_1Core_1_1ECS_ade11c6024724fabc770a0990254b3aa1}{\_system\_order}};}
+\DoxyCodeLine{00042\ \};}
+\DoxyCodeLine{00043\ \}\ \ \textcolor{comment}{//\ namespace\ Engine::Core}}
+
+\end{DoxyCode}

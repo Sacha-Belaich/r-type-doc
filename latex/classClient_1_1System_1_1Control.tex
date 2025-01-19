@@ -1,0 +1,124 @@
+\doxysection{Client\+::System\+::Control Class Reference}
+\hypertarget{classClient_1_1System_1_1Control}{}\label{classClient_1_1System_1_1Control}\index{Client::System::Control@{Client::System::Control}}
+
+
+{\ttfamily \#include $<$Control.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classClient_1_1System_1_1Control_a5ccf6dc2609b839a4b9a61c14d898abe}{Control\+Input}} \{ \newline
+\mbox{\hyperlink{classClient_1_1System_1_1Control_a5ccf6dc2609b839a4b9a61c14d898abea951c6c8162b5f9cd2d83d376d16cc771}{UP}}
+, \mbox{\hyperlink{classClient_1_1System_1_1Control_a5ccf6dc2609b839a4b9a61c14d898abea89862fdec2babe617c70f5744a883fad}{DOWN}}
+, \mbox{\hyperlink{classClient_1_1System_1_1Control_a5ccf6dc2609b839a4b9a61c14d898abea20e38bb3cad8c3ced76277f23e272f7a}{LEFT}}
+, \mbox{\hyperlink{classClient_1_1System_1_1Control_a5ccf6dc2609b839a4b9a61c14d898abea5763a50d701e0a3044d6a55a8bbb51b3}{RIGHT}}
+, \newline
+\mbox{\hyperlink{classClient_1_1System_1_1Control_a5ccf6dc2609b839a4b9a61c14d898abeacb5e25c7e3b00fbcc1eba18cde0d1e84}{SHOOT}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classClient_1_1System_1_1Control_aa86e12d1cb436c33d476cc774a954856}{run}} (\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&)
+\item 
+static std\+::pair$<$ bool, bool $>$ \mbox{\hyperlink{classClient_1_1System_1_1Control_a9c593b113bc765a3b29e89fe976586cc}{compute\+Mouse\+Clicks}} (const \mbox{\hyperlink{namespaceGraphical_aaf527a3bc294ab26e5cc06976b0410db}{Graphical\+::event\+\_\+t}} \&events)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::map$<$ \mbox{\hyperlink{namespaceGraphical_a028209aca40d8b0d34872f3297183452}{Graphical\+::\+Key}}, \mbox{\hyperlink{classClient_1_1System_1_1Control_a5ccf6dc2609b839a4b9a61c14d898abe}{Control\+Input}} $>$ \mbox{\hyperlink{classClient_1_1System_1_1Control_a333f30d09884f5445c56fdeecb7193f9}{key\+Map}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structGraphical_1_1Vect2i}{Graphical\+::\+Vect2i}} \mbox{\hyperlink{classClient_1_1System_1_1Control_a1f37dbfa892a4bea18ca3bd92a265605}{compute\+Input\+Vect}} (const \mbox{\hyperlink{namespaceGraphical_aaf527a3bc294ab26e5cc06976b0410db}{Graphical\+::event\+\_\+t}} \&)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classClient_1_1System_1_1Control_ad9becef45eae05b6abf6e2c79a4316b1}{all\+False\+Sent}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{classClient_1_1System_1_1Control_a5ccf6dc2609b839a4b9a61c14d898abe}\label{classClient_1_1System_1_1Control_a5ccf6dc2609b839a4b9a61c14d898abe} 
+\index{Client::System::Control@{Client::System::Control}!ControlInput@{ControlInput}}
+\index{ControlInput@{ControlInput}!Client::System::Control@{Client::System::Control}}
+\doxysubsubsection{\texorpdfstring{ControlInput}{ControlInput}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classClient_1_1System_1_1Control_a5ccf6dc2609b839a4b9a61c14d898abe}{Client\+::\+System\+::\+Control\+::\+Control\+Input}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UP@{UP}!Client::System::Control@{Client::System::Control}}\index{Client::System::Control@{Client::System::Control}!UP@{UP}}}\Hypertarget{classClient_1_1System_1_1Control_a5ccf6dc2609b839a4b9a61c14d898abea951c6c8162b5f9cd2d83d376d16cc771}\label{classClient_1_1System_1_1Control_a5ccf6dc2609b839a4b9a61c14d898abea951c6c8162b5f9cd2d83d376d16cc771} 
+UP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DOWN@{DOWN}!Client::System::Control@{Client::System::Control}}\index{Client::System::Control@{Client::System::Control}!DOWN@{DOWN}}}\Hypertarget{classClient_1_1System_1_1Control_a5ccf6dc2609b839a4b9a61c14d898abea89862fdec2babe617c70f5744a883fad}\label{classClient_1_1System_1_1Control_a5ccf6dc2609b839a4b9a61c14d898abea89862fdec2babe617c70f5744a883fad} 
+DOWN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LEFT@{LEFT}!Client::System::Control@{Client::System::Control}}\index{Client::System::Control@{Client::System::Control}!LEFT@{LEFT}}}\Hypertarget{classClient_1_1System_1_1Control_a5ccf6dc2609b839a4b9a61c14d898abea20e38bb3cad8c3ced76277f23e272f7a}\label{classClient_1_1System_1_1Control_a5ccf6dc2609b839a4b9a61c14d898abea20e38bb3cad8c3ced76277f23e272f7a} 
+LEFT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RIGHT@{RIGHT}!Client::System::Control@{Client::System::Control}}\index{Client::System::Control@{Client::System::Control}!RIGHT@{RIGHT}}}\Hypertarget{classClient_1_1System_1_1Control_a5ccf6dc2609b839a4b9a61c14d898abea5763a50d701e0a3044d6a55a8bbb51b3}\label{classClient_1_1System_1_1Control_a5ccf6dc2609b839a4b9a61c14d898abea5763a50d701e0a3044d6a55a8bbb51b3} 
+RIGHT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHOOT@{SHOOT}!Client::System::Control@{Client::System::Control}}\index{Client::System::Control@{Client::System::Control}!SHOOT@{SHOOT}}}\Hypertarget{classClient_1_1System_1_1Control_a5ccf6dc2609b839a4b9a61c14d898abeacb5e25c7e3b00fbcc1eba18cde0d1e84}\label{classClient_1_1System_1_1Control_a5ccf6dc2609b839a4b9a61c14d898abeacb5e25c7e3b00fbcc1eba18cde0d1e84} 
+SHOOT&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classClient_1_1System_1_1Control_a1f37dbfa892a4bea18ca3bd92a265605}\label{classClient_1_1System_1_1Control_a1f37dbfa892a4bea18ca3bd92a265605} 
+\index{Client::System::Control@{Client::System::Control}!computeInputVect@{computeInputVect}}
+\index{computeInputVect@{computeInputVect}!Client::System::Control@{Client::System::Control}}
+\doxysubsubsection{\texorpdfstring{computeInputVect()}{computeInputVect()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structGraphical_1_1Vect2i}{Graphical\+::\+Vect2i}} Client\+::\+System\+::\+Control\+::compute\+Input\+Vect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceGraphical_aaf527a3bc294ab26e5cc06976b0410db}{Graphical\+::event\+\_\+t}} \&}]{events }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{classClient_1_1System_1_1Control_a9c593b113bc765a3b29e89fe976586cc}\label{classClient_1_1System_1_1Control_a9c593b113bc765a3b29e89fe976586cc} 
+\index{Client::System::Control@{Client::System::Control}!computeMouseClicks@{computeMouseClicks}}
+\index{computeMouseClicks@{computeMouseClicks}!Client::System::Control@{Client::System::Control}}
+\doxysubsubsection{\texorpdfstring{computeMouseClicks()}{computeMouseClicks()}}
+{\footnotesize\ttfamily std\+::pair$<$ bool, bool $>$ Client\+::\+System\+::\+Control\+::compute\+Mouse\+Clicks (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceGraphical_aaf527a3bc294ab26e5cc06976b0410db}{Graphical\+::event\+\_\+t}} \&}]{events }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classClient_1_1System_1_1Control_aa86e12d1cb436c33d476cc774a954856}\label{classClient_1_1System_1_1Control_aa86e12d1cb436c33d476cc774a954856} 
+\index{Client::System::Control@{Client::System::Control}!run@{run}}
+\index{run@{run}!Client::System::Control@{Client::System::Control}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Client\+::\+System\+::\+Control\+::run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&}]{reg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classClient_1_1System_1_1Control_ad9becef45eae05b6abf6e2c79a4316b1}\label{classClient_1_1System_1_1Control_ad9becef45eae05b6abf6e2c79a4316b1} 
+\index{Client::System::Control@{Client::System::Control}!allFalseSent@{allFalseSent}}
+\index{allFalseSent@{allFalseSent}!Client::System::Control@{Client::System::Control}}
+\doxysubsubsection{\texorpdfstring{allFalseSent}{allFalseSent}}
+{\footnotesize\ttfamily bool Client\+::\+System\+::\+Control\+::all\+False\+Sent = false\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{classClient_1_1System_1_1Control_a333f30d09884f5445c56fdeecb7193f9}\label{classClient_1_1System_1_1Control_a333f30d09884f5445c56fdeecb7193f9} 
+\index{Client::System::Control@{Client::System::Control}!keyMap@{keyMap}}
+\index{keyMap@{keyMap}!Client::System::Control@{Client::System::Control}}
+\doxysubsubsection{\texorpdfstring{keyMap}{keyMap}}
+{\footnotesize\ttfamily std\+::map$<$ \mbox{\hyperlink{namespaceGraphical_a028209aca40d8b0d34872f3297183452}{Graphical\+::\+Key}}, \mbox{\hyperlink{classClient_1_1System_1_1Control_a5ccf6dc2609b839a4b9a61c14d898abe}{Control\+::\+Control\+Input}} $>$ Client\+::\+System\+::\+Control\+::key\+Map\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{namespaceGraphical_a028209aca40d8b0d34872f3297183452adfda9dbe5c01d585849db1d11e9c350e}{Graphical::Key::UpArrow}},\ \mbox{\hyperlink{classClient_1_1System_1_1Control_a5ccf6dc2609b839a4b9a61c14d898abea951c6c8162b5f9cd2d83d376d16cc771}{UP}}\},\ \ \ \ \ \{\mbox{\hyperlink{namespaceGraphical_a028209aca40d8b0d34872f3297183452aa84eae2f1937bc2d88d284d20ad8a5d8}{Graphical::Key::DownArrow}},\ \mbox{\hyperlink{classClient_1_1System_1_1Control_a5ccf6dc2609b839a4b9a61c14d898abea89862fdec2babe617c70f5744a883fad}{DOWN}}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{namespaceGraphical_a028209aca40d8b0d34872f3297183452a8e73d42820796c8124a6d9ce70070261}{Graphical::Key::LeftArrow}},\ \mbox{\hyperlink{classClient_1_1System_1_1Control_a5ccf6dc2609b839a4b9a61c14d898abea20e38bb3cad8c3ced76277f23e272f7a}{LEFT}}\},\ \{\mbox{\hyperlink{namespaceGraphical_a028209aca40d8b0d34872f3297183452a0fbc9cd35fb8a9e3698e80fd068db5da}{Graphical::Key::RightArrow}},\ \mbox{\hyperlink{classClient_1_1System_1_1Control_a5ccf6dc2609b839a4b9a61c14d898abea5763a50d701e0a3044d6a55a8bbb51b3}{RIGHT}}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{namespaceGraphical_a028209aca40d8b0d34872f3297183452a529f717cab075fad7c3ed6ba54a67779}{Graphical::Key::Z}},\ \mbox{\hyperlink{classClient_1_1System_1_1Control_a5ccf6dc2609b839a4b9a61c14d898abea951c6c8162b5f9cd2d83d376d16cc771}{UP}}\},\ \ \ \ \ \ \ \ \ \ \ \{\mbox{\hyperlink{namespaceGraphical_a028209aca40d8b0d34872f3297183452ac398661bdd0a7f880b6805630094c267}{Graphical::Key::S}},\ \mbox{\hyperlink{classClient_1_1System_1_1Control_a5ccf6dc2609b839a4b9a61c14d898abea89862fdec2babe617c70f5744a883fad}{DOWN}}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{namespaceGraphical_a028209aca40d8b0d34872f3297183452ae619555603176cf49bc16fa6e11f5eed}{Graphical::Key::Q}},\ \mbox{\hyperlink{classClient_1_1System_1_1Control_a5ccf6dc2609b839a4b9a61c14d898abea20e38bb3cad8c3ced76277f23e272f7a}{LEFT}}\},\ \ \ \ \ \ \ \ \ \{\mbox{\hyperlink{namespaceGraphical_a028209aca40d8b0d34872f3297183452a8676294234b5aeb845cab8390e553596}{Graphical::Key::D}},\ \mbox{\hyperlink{classClient_1_1System_1_1Control_a5ccf6dc2609b839a4b9a61c14d898abea5763a50d701e0a3044d6a55a8bbb51b3}{RIGHT}}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{namespaceGraphical_a028209aca40d8b0d34872f3297183452aa0cb9eac4b93375e90b7967bf6c898fb}{Graphical::Key::Space}},\ \mbox{\hyperlink{classClient_1_1System_1_1Control_a5ccf6dc2609b839a4b9a61c14d898abeacb5e25c7e3b00fbcc1eba18cde0d1e84}{SHOOT}}\},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+client/includes/systems/\mbox{\hyperlink{Control_8hpp}{Control.\+hpp}}\item 
+client/src/systems/\mbox{\hyperlink{Control_8cpp}{Control.\+cpp}}\end{DoxyCompactItemize}

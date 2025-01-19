@@ -1,0 +1,40 @@
+\doxysection{RAM.\+hpp}
+\hypertarget{RAM_8hpp_source}{}\label{RAM_8hpp_source}\index{lib/engine/core/debug/RAM.hpp@{lib/engine/core/debug/RAM.hpp}}
+\mbox{\hyperlink{RAM_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2025}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ RAM.hpp}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ RAM.hpp}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ R\_TYPE\_USAGE\_HPP}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ R\_TYPE\_USAGE\_HPP}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <sys/sysinfo.h>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceEngine_1_1Debug}{Engine::Debug}}\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classEngine_1_1Debug_1_1RAM}{RAM}}\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEngine_1_1Debug_1_1RAM_a84b353b33b7ecb86cab7556d79881f69}{RAM}}();}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEngine_1_1Debug_1_1RAM_a5862c4a52dcd77c29ad3600566286672}{\string~RAM}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Debug_1_1RAM_a5b0540d2557256a2b15467e637b531d9}{update}}();}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{classEngine_1_1Debug_1_1RAM_ac7652f2310ae2b9a7d23233b8f6c937e}{getTotalMemory}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{classEngine_1_1Debug_1_1RAM_a761b0c4354c0d5e8913b6f90c0830dc2}{getTotalUsedMemory}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{classEngine_1_1Debug_1_1RAM_a5611c35ed7299881963d27e0988b6f11}{getTotalFreeMemory}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classEngine_1_1Debug_1_1RAM_a82c6e95735050b0ee2cecd8060b712ff}{getRamPrettyPrint}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{classEngine_1_1Debug_1_1RAM_ae1676c1f191122c9bea6ab88be28c865}{\_total}};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{classEngine_1_1Debug_1_1RAM_abe199cca26637fc45c366af1a6f83779}{\_used}};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{classEngine_1_1Debug_1_1RAM_ad4775ff4a4e0b08cca6a516857d5b482}{\_free}};}
+\DoxyCodeLine{00031\ \ \ \ \ \};}
+\DoxyCodeLine{00032\ \}\ \textcolor{comment}{//\ Debug}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//R\_TYPE\_USAGE\_HPP}}
+
+\end{DoxyCode}

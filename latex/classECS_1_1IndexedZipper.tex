@@ -1,0 +1,104 @@
+\doxysection{ECS\+::Indexed\+Zipper\texorpdfstring{$<$}{<} Containers \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classECS_1_1IndexedZipper}{}\label{classECS_1_1IndexedZipper}\index{ECS::IndexedZipper$<$ Containers $>$@{ECS::IndexedZipper$<$ Containers $>$}}
+
+
+{\ttfamily \#include $<$Indexed\+Zipper.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classECS_1_1IndexedZipper_a43e0ed10489824fe432a0a7b3522b38e}{iterator}} = \mbox{\hyperlink{classECS_1_1IndexedZipperIterator}{Indexed\+Zipper\+Iterator}}$<$Containers...$>$
+\item 
+using \mbox{\hyperlink{classECS_1_1IndexedZipper_ab4da0a76f195938488ca200b13291cf6}{iterator\+\_\+tuple}} = typename \mbox{\hyperlink{classECS_1_1IndexedZipperIterator_a9fc9b6ccf05d8be16e3401eca66c05e2}{iterator\+::iterator\+\_\+tuple}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classECS_1_1IndexedZipper_ac4728c71c117ca88206dcf062ae1bfa8}{Indexed\+Zipper}} (Containers \&... cs)
+\item 
+\mbox{\hyperlink{classECS_1_1IndexedZipper_a43e0ed10489824fe432a0a7b3522b38e}{iterator}} \mbox{\hyperlink{classECS_1_1IndexedZipper_a4320598d1f76197686b587889fd3f0b3}{begin}} ()
+\item 
+\mbox{\hyperlink{classECS_1_1IndexedZipper_a43e0ed10489824fe432a0a7b3522b38e}{iterator}} \mbox{\hyperlink{classECS_1_1IndexedZipper_a22aa8566e4511e069de294dd9bc9c980}{end}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classECS_1_1IndexedZipper_ab4da0a76f195938488ca200b13291cf6}{iterator\+\_\+tuple}} \mbox{\hyperlink{classECS_1_1IndexedZipper_ac02b7f532b0509f7efaa43d67e5e48fe}{\+\_\+begin}}
+\item 
+\mbox{\hyperlink{classECS_1_1IndexedZipper_ab4da0a76f195938488ca200b13291cf6}{iterator\+\_\+tuple}} \mbox{\hyperlink{classECS_1_1IndexedZipper_ae78683b52be8881838395c4ae05d5a17}{\+\_\+end}}
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classECS_1_1IndexedZipper_ac418cd35a89da37e05cb00963a12ddf7}{\+\_\+size}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classECS_1_1IndexedZipper_a43e0ed10489824fe432a0a7b3522b38e}\label{classECS_1_1IndexedZipper_a43e0ed10489824fe432a0a7b3522b38e} 
+\index{ECS::IndexedZipper$<$ Containers $>$@{ECS::IndexedZipper$<$ Containers $>$}!iterator@{iterator}}
+\index{iterator@{iterator}!ECS::IndexedZipper$<$ Containers $>$@{ECS::IndexedZipper$<$ Containers $>$}}
+\doxysubsubsection{\texorpdfstring{iterator}{iterator}}
+{\footnotesize\ttfamily template$<$class... Containers$>$ \\
+using \mbox{\hyperlink{classECS_1_1IndexedZipper}{ECS\+::\+Indexed\+Zipper}}$<$ Containers $>$\+::iterator = \mbox{\hyperlink{classECS_1_1IndexedZipperIterator}{Indexed\+Zipper\+Iterator}}$<$Containers...$>$}
+
+\Hypertarget{classECS_1_1IndexedZipper_ab4da0a76f195938488ca200b13291cf6}\label{classECS_1_1IndexedZipper_ab4da0a76f195938488ca200b13291cf6} 
+\index{ECS::IndexedZipper$<$ Containers $>$@{ECS::IndexedZipper$<$ Containers $>$}!iterator\_tuple@{iterator\_tuple}}
+\index{iterator\_tuple@{iterator\_tuple}!ECS::IndexedZipper$<$ Containers $>$@{ECS::IndexedZipper$<$ Containers $>$}}
+\doxysubsubsection{\texorpdfstring{iterator\_tuple}{iterator\_tuple}}
+{\footnotesize\ttfamily template$<$class... Containers$>$ \\
+using \mbox{\hyperlink{classECS_1_1IndexedZipper}{ECS\+::\+Indexed\+Zipper}}$<$ Containers $>$\+::iterator\+\_\+tuple = typename \mbox{\hyperlink{classECS_1_1IndexedZipperIterator_a9fc9b6ccf05d8be16e3401eca66c05e2}{iterator\+::iterator\+\_\+tuple}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classECS_1_1IndexedZipper_ac4728c71c117ca88206dcf062ae1bfa8}\label{classECS_1_1IndexedZipper_ac4728c71c117ca88206dcf062ae1bfa8} 
+\index{ECS::IndexedZipper$<$ Containers $>$@{ECS::IndexedZipper$<$ Containers $>$}!IndexedZipper@{IndexedZipper}}
+\index{IndexedZipper@{IndexedZipper}!ECS::IndexedZipper$<$ Containers $>$@{ECS::IndexedZipper$<$ Containers $>$}}
+\doxysubsubsection{\texorpdfstring{IndexedZipper()}{IndexedZipper()}}
+{\footnotesize\ttfamily template$<$class... Containers$>$ \\
+\mbox{\hyperlink{classECS_1_1IndexedZipper}{ECS\+::\+Indexed\+Zipper}}$<$ Containers $>$\+::\+Indexed\+Zipper (\begin{DoxyParamCaption}\item[{Containers \&...}]{cs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classECS_1_1IndexedZipper_a4320598d1f76197686b587889fd3f0b3}\label{classECS_1_1IndexedZipper_a4320598d1f76197686b587889fd3f0b3} 
+\index{ECS::IndexedZipper$<$ Containers $>$@{ECS::IndexedZipper$<$ Containers $>$}!begin@{begin}}
+\index{begin@{begin}!ECS::IndexedZipper$<$ Containers $>$@{ECS::IndexedZipper$<$ Containers $>$}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily template$<$class... Containers$>$ \\
+\mbox{\hyperlink{classECS_1_1IndexedZipper_a43e0ed10489824fe432a0a7b3522b38e}{iterator}} \mbox{\hyperlink{classECS_1_1IndexedZipper}{ECS\+::\+Indexed\+Zipper}}$<$ Containers $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classECS_1_1IndexedZipper_a22aa8566e4511e069de294dd9bc9c980}\label{classECS_1_1IndexedZipper_a22aa8566e4511e069de294dd9bc9c980} 
+\index{ECS::IndexedZipper$<$ Containers $>$@{ECS::IndexedZipper$<$ Containers $>$}!end@{end}}
+\index{end@{end}!ECS::IndexedZipper$<$ Containers $>$@{ECS::IndexedZipper$<$ Containers $>$}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily template$<$class... Containers$>$ \\
+\mbox{\hyperlink{classECS_1_1IndexedZipper_a43e0ed10489824fe432a0a7b3522b38e}{iterator}} \mbox{\hyperlink{classECS_1_1IndexedZipper}{ECS\+::\+Indexed\+Zipper}}$<$ Containers $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classECS_1_1IndexedZipper_ac02b7f532b0509f7efaa43d67e5e48fe}\label{classECS_1_1IndexedZipper_ac02b7f532b0509f7efaa43d67e5e48fe} 
+\index{ECS::IndexedZipper$<$ Containers $>$@{ECS::IndexedZipper$<$ Containers $>$}!\_begin@{\_begin}}
+\index{\_begin@{\_begin}!ECS::IndexedZipper$<$ Containers $>$@{ECS::IndexedZipper$<$ Containers $>$}}
+\doxysubsubsection{\texorpdfstring{\_begin}{\_begin}}
+{\footnotesize\ttfamily template$<$class... Containers$>$ \\
+\mbox{\hyperlink{classECS_1_1IndexedZipper_ab4da0a76f195938488ca200b13291cf6}{iterator\+\_\+tuple}} \mbox{\hyperlink{classECS_1_1IndexedZipper}{ECS\+::\+Indexed\+Zipper}}$<$ Containers $>$\+::\+\_\+begin\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classECS_1_1IndexedZipper_ae78683b52be8881838395c4ae05d5a17}\label{classECS_1_1IndexedZipper_ae78683b52be8881838395c4ae05d5a17} 
+\index{ECS::IndexedZipper$<$ Containers $>$@{ECS::IndexedZipper$<$ Containers $>$}!\_end@{\_end}}
+\index{\_end@{\_end}!ECS::IndexedZipper$<$ Containers $>$@{ECS::IndexedZipper$<$ Containers $>$}}
+\doxysubsubsection{\texorpdfstring{\_end}{\_end}}
+{\footnotesize\ttfamily template$<$class... Containers$>$ \\
+\mbox{\hyperlink{classECS_1_1IndexedZipper_ab4da0a76f195938488ca200b13291cf6}{iterator\+\_\+tuple}} \mbox{\hyperlink{classECS_1_1IndexedZipper}{ECS\+::\+Indexed\+Zipper}}$<$ Containers $>$\+::\+\_\+end\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classECS_1_1IndexedZipper_ac418cd35a89da37e05cb00963a12ddf7}\label{classECS_1_1IndexedZipper_ac418cd35a89da37e05cb00963a12ddf7} 
+\index{ECS::IndexedZipper$<$ Containers $>$@{ECS::IndexedZipper$<$ Containers $>$}!\_size@{\_size}}
+\index{\_size@{\_size}!ECS::IndexedZipper$<$ Containers $>$@{ECS::IndexedZipper$<$ Containers $>$}}
+\doxysubsubsection{\texorpdfstring{\_size}{\_size}}
+{\footnotesize\ttfamily template$<$class... Containers$>$ \\
+std\+::size\+\_\+t \mbox{\hyperlink{classECS_1_1IndexedZipper}{ECS\+::\+Indexed\+Zipper}}$<$ Containers $>$\+::\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+lib/ecs/includes/\mbox{\hyperlink{IndexedZipper_8hpp}{Indexed\+Zipper.\+hpp}}\end{DoxyCompactItemize}

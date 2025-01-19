@@ -1,0 +1,37 @@
+\doxysection{Control.\+hpp}
+\hypertarget{Control_8hpp_source}{}\label{Control_8hpp_source}\index{client/includes/systems/Control.hpp@{client/includes/systems/Control.hpp}}
+\mbox{\hyperlink{Control_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2024}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ r-\/type}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ control\ system}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IGraphical_8hpp}{IGraphical.hpp}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Registry_8hpp}{Registry.hpp}}"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceClient_1_1System}{Client::System}}\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classClient_1_1System_1_1Control}{Control}}\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{classClient_1_1System_1_1Control_a5ccf6dc2609b839a4b9a61c14d898abe}{ControlInput}}\ \{\ \mbox{\hyperlink{classClient_1_1System_1_1Control_a5ccf6dc2609b839a4b9a61c14d898abea951c6c8162b5f9cd2d83d376d16cc771}{UP}},\ \mbox{\hyperlink{classClient_1_1System_1_1Control_a5ccf6dc2609b839a4b9a61c14d898abea89862fdec2babe617c70f5744a883fad}{DOWN}},\ \mbox{\hyperlink{classClient_1_1System_1_1Control_a5ccf6dc2609b839a4b9a61c14d898abea20e38bb3cad8c3ced76277f23e272f7a}{LEFT}},\ \mbox{\hyperlink{classClient_1_1System_1_1Control_a5ccf6dc2609b839a4b9a61c14d898abea5763a50d701e0a3044d6a55a8bbb51b3}{RIGHT}},\ \mbox{\hyperlink{classClient_1_1System_1_1Control_a5ccf6dc2609b839a4b9a61c14d898abeacb5e25c7e3b00fbcc1eba18cde0d1e84}{SHOOT}}\ \};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classClient_1_1System_1_1Control_aa86e12d1cb436c33d476cc774a954856}{run}}(\mbox{\hyperlink{classECS_1_1Registry}{ECS::Registry}}\ \&);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::map<Graphical::Key,\ ControlInput>\ \mbox{\hyperlink{classClient_1_1System_1_1Control_a333f30d09884f5445c56fdeecb7193f9}{keyMap}};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::pair<bool,\ bool>\ \mbox{\hyperlink{classClient_1_1System_1_1Control_a9c593b113bc765a3b29e89fe976586cc}{computeMouseClicks}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structGraphical_1_1event__s}{Graphical::event\_t}}\ \&events);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classClient_1_1System_1_1Control_ad9becef45eae05b6abf6e2c79a4316b1}{allFalseSent}};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{structGraphical_1_1Vect2i}{Graphical::Vect2i}}\ \mbox{\hyperlink{classClient_1_1System_1_1Control_a1f37dbfa892a4bea18ca3bd92a265605}{computeInputVect}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structGraphical_1_1event__s}{Graphical::event\_t}}\ \&);}
+\DoxyCodeLine{00030\ \};}
+\DoxyCodeLine{00031\ \}\ \ \textcolor{comment}{//\ namespace\ Client::System}}
+
+\end{DoxyCode}

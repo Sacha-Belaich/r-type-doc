@@ -1,0 +1,82 @@
+\doxysection{IModule.\+hpp}
+\hypertarget{IModule_8hpp_source}{}\label{IModule_8hpp_source}\index{lib/engine/includes/IModule.hpp@{lib/engine/includes/IModule.hpp}}
+\mbox{\hyperlink{IModule_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2025}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ IModules.hpp}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ IModules.hpp}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ R\_TYPE\_IMODULES\_HPP}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ R\_TYPE\_IMODULES\_HPP}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceEngine_1_1Core}{Engine::Core}}\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{class\ }Core;}
+\DoxyCodeLine{00014\ \}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceEngine_1_1Module}{Engine::Module}}\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structEngine_1_1Module_1_1module__info__s}{module\_info\_s}}\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{structEngine_1_1Module_1_1module__info__s_af5bc219b3ae8b49ea0249617ce9ceeb7}{name}};}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{structEngine_1_1Module_1_1module__info__s_a6b25a04cbb3f943967f248b31fe5dcc4}{description}};}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{structEngine_1_1Module_1_1module__info__s_a49d44e6cf56debffbd3df4e0a4b5e03d}{type}};}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Todo:\ define\ module\ parameters\ template}}
+\DoxyCodeLine{00022\ \ \ \ \ \}\ \mbox{\hyperlink{namespaceEngine_1_1Module_a4f2927ec966fd747da59cf6593ae7864}{module\_info\_t}};}
+\DoxyCodeLine{00023\ \textcolor{comment}{}}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ \ \ \ \ *\ @interface\ IModule}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Interface\ for\ module\ integration.}}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{00028\ \textcolor{comment}{\ \ \ \ \ *\ The\ IModule\ interface\ provides\ the\ necessary\ methods\ to\ implement}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ \ \ \ \ *\ a\ new\ module\ and\ integrate\ it\ into\ the\ application's\ core.\ It\ includes}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ \ \ \ \ *\ functionalities\ for\ loading,\ unloading,\ and\ retrieving\ module\ information.}}
+\DoxyCodeLine{00031\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classEngine_1_1Module_1_1IModule}{IModule}}\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{public}:\textcolor{comment}{}}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{00035\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Virtual\ destructor.}}
+\DoxyCodeLine{00036\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00037\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ Ensures\ proper\ cleanup\ of\ derived\ classes\ when\ deleted\ via\ a\ base\ class\ pointer.}}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classEngine_1_1Module_1_1IModule_a6bd5fa440d706fadbe1f806de2abd3a5}{\string~IModule}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00040\ \textcolor{comment}{}}
+\DoxyCodeLine{00041\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{00042\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Retrieve\ module\ information.}}
+\DoxyCodeLine{00043\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00044\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ This\ method\ provides\ essential\ information\ about\ the\ module,}}
+\DoxyCodeLine{00045\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ such\ as\ its\ name\ and\ description.}}
+\DoxyCodeLine{00046\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00047\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @return\ A\ structure\ containing\ the\ module's\ name\ and\ description.}}
+\DoxyCodeLine{00048\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{structEngine_1_1Module_1_1module__info__s}{module\_info\_t}}\ \mbox{\hyperlink{classEngine_1_1Module_1_1IModule_adb9199647e717948fa37f90b8ae352f8}{getInfo}}()\ =\ 0;}
+\DoxyCodeLine{00050\ \textcolor{comment}{}}
+\DoxyCodeLine{00051\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{00052\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Load\ the\ module\ into\ the\ application's\ core.}}
+\DoxyCodeLine{00053\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00054\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ This\ method\ is\ responsible\ for\ initializing\ the\ module\ and}}
+\DoxyCodeLine{00055\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ integrating\ its\ functionalities\ into\ the\ application's\ core.}}
+\DoxyCodeLine{00056\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00057\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ core\ A\ reference\ to\ the\ application's\ core.}}
+\DoxyCodeLine{00058\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ This\ is\ used\ to\ register\ the\ module's\ functionalities.}}
+\DoxyCodeLine{00059\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1IModule_ad38434ae26e3afe6b51db6df3836cfb0}{loadModule}}(\mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core::Core}}\ \&core)\ =\ 0;}
+\DoxyCodeLine{00061\ \textcolor{comment}{}}
+\DoxyCodeLine{00062\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{00063\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Unload\ the\ module\ and\ clean\ up\ its\ resources.}}
+\DoxyCodeLine{00064\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00065\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ This\ method\ is\ responsible\ for\ removing\ the\ module's\ functionalities}}
+\DoxyCodeLine{00066\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ from\ the\ application's\ core\ and\ releasing\ any\ allocated\ resources.}}
+\DoxyCodeLine{00067\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00068\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ core\ A\ reference\ to\ the\ application's\ core.}}
+\DoxyCodeLine{00069\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ This\ is\ used\ to\ unregister\ the\ module's\ functionalities.}}
+\DoxyCodeLine{00070\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1IModule_afff50ba5f4fe555a31f85b692eb1ecbb}{unloadModule}}(\mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core::Core}}\ \&core)\ =\ 0;}
+\DoxyCodeLine{00072\ \ \ \ \ \};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \}\ \ \textcolor{comment}{//\ namespace\ Engine::Module}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ R\_TYPE\_IMODULES\_HPP}}
+
+\end{DoxyCode}

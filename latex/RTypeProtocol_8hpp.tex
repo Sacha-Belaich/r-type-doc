@@ -1,0 +1,296 @@
+\doxysection{includes/\+RType\+Protocol.hpp File Reference}
+\hypertarget{RTypeProtocol_8hpp}{}\label{RTypeProtocol_8hpp}\index{includes/RTypeProtocol.hpp@{includes/RTypeProtocol.hpp}}
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include $<$cstddef$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structR__Type_1_1Empty}{R\+\_\+\+Type\+::\+Empty}}
+\item 
+struct \mbox{\hyperlink{structR__Type_1_1Vector2i}{R\+\_\+\+Type\+::\+Vector2i}}
+\item 
+struct \mbox{\hyperlink{structR__Type_1_1AcceptConnection}{R\+\_\+\+Type\+::\+Accept\+Connection}}
+\item 
+struct \mbox{\hyperlink{structR__Type_1_1SpawnEntity}{R\+\_\+\+Type\+::\+Spawn\+Entity}}
+\item 
+struct \mbox{\hyperlink{structR__Type_1_1EntityPositionVelocity}{R\+\_\+\+Type\+::\+Entity\+Position\+Velocity}}
+\item 
+struct \mbox{\hyperlink{structR__Type_1_1Hit}{R\+\_\+\+Type\+::\+Hit}}
+\item 
+struct \mbox{\hyperlink{structR__Type_1_1Dead}{R\+\_\+\+Type\+::\+Dead}}
+\item 
+struct \mbox{\hyperlink{structR__Type_1_1CameraMove}{R\+\_\+\+Type\+::\+Camera\+Move}}
+\item 
+struct \mbox{\hyperlink{structR__Type_1_1PacketInputsKeys}{R\+\_\+\+Type\+::\+Packet\+Inputs\+Keys}}
+\item 
+struct \mbox{\hyperlink{structR__Type_1_1SetReady}{R\+\_\+\+Type\+::\+Set\+Ready}}
+\item 
+struct \mbox{\hyperlink{structR__Type_1_1RoomInfo}{R\+\_\+\+Type\+::\+Room\+Info}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceR__Type}{R\+\_\+\+Type}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{RTypeProtocol_8hpp_a36b5a718ceba639224202fd1a17c99da}{CAMERA\+\_\+\+SPEED}}~0
+\item 
+\#define \mbox{\hyperlink{RTypeProtocol_8hpp_a681fdf8a5c4b6aefd912a09b07d0a837}{CAMERA\+\_\+\+SIZE\+\_\+\+WIDTH}}~1920
+\item 
+\#define \mbox{\hyperlink{RTypeProtocol_8hpp_a7ab94550e549920d32319e871e39fb4d}{CAMERA\+\_\+\+SIZE\+\_\+\+HEIGHT}}~1080
+\item 
+\#define \mbox{\hyperlink{RTypeProtocol_8hpp_a62ecd70800687eb2d625af180c4210d7}{TILE\+\_\+\+SIZE}}~50
+\item 
+\#define \mbox{\hyperlink{RTypeProtocol_8hpp_af49bad41acef45feb40939c0cf9d5d35}{PLAYER\+\_\+\+SPEED}}~10
+\item 
+\#define \mbox{\hyperlink{RTypeProtocol_8hpp_a5fac8f2cc29ea5bde30c8fa4a4daa306}{PLAYER\+\_\+\+SIZE}}~30
+\item 
+\#define \mbox{\hyperlink{RTypeProtocol_8hpp_a6b4ee6a19fc0bdf65dbdf7d77c853bd5}{PLAYER\+\_\+\+HEALTH}}~1
+\item 
+\#define \mbox{\hyperlink{RTypeProtocol_8hpp_a7e5902fca9f00ad291366ed392500e45}{PLAYER\+\_\+\+SHOOT\+\_\+\+RATE}}~15
+\item 
+\#define \mbox{\hyperlink{RTypeProtocol_8hpp_a22e5cbefdf79948c2d27c95e95c1a575}{PLAYER\+\_\+\+SHOOT\+\_\+\+SPEED}}~5
+\item 
+\#define \mbox{\hyperlink{RTypeProtocol_8hpp_af9c97b43edfce8a2151d1e30778cd057}{PLAYER\+\_\+\+SHOOT\+\_\+\+SIZE}}~15
+\item 
+\#define \mbox{\hyperlink{RTypeProtocol_8hpp_aa438abc12822547a224ec6f0b43080bc}{TURRET\+\_\+\+SHOOT\+\_\+\+SPEED}}~1
+\item 
+\#define \mbox{\hyperlink{RTypeProtocol_8hpp_a04e2098b8a77f660a445b2151dabcca1}{TURRET\+\_\+\+SHOOT\+\_\+\+SIZE}}~15
+\item 
+\#define \mbox{\hyperlink{RTypeProtocol_8hpp_a93d7cacc6d24fc237469d7c09df69240}{TURRET\+\_\+\+SHOOT\+\_\+\+RATE}}~40
+\item 
+\#define \mbox{\hyperlink{RTypeProtocol_8hpp_a6aad09c18357e9e0c330f8ceea335f4d}{TURRET\+\_\+\+HEALTH}}~4
+\item 
+\#define \mbox{\hyperlink{RTypeProtocol_8hpp_a8b3c47c95eeb5cfba7e5377ca8d63b2d}{TURRET\+\_\+\+SIZE}}~30
+\item 
+\#define \mbox{\hyperlink{RTypeProtocol_8hpp_aee3cf4d5bab77862b1dc6d22c47428fb}{FLY\+\_\+\+SPEED}}~1
+\item 
+\#define \mbox{\hyperlink{RTypeProtocol_8hpp_a8ef7fe0793de26d545f61ad29a090cb6}{FLY\+\_\+\+SIZE}}~20
+\item 
+\#define \mbox{\hyperlink{RTypeProtocol_8hpp_a5fa9687474622a5c8054700f0261321d}{FLY\+\_\+\+HEALTH}}~2
+\item 
+\#define \mbox{\hyperlink{RTypeProtocol_8hpp_a1c00d0da672f23a8a71eb39012e49526}{BOSS\+\_\+\+HEART\+\_\+\+SIZE}}~50
+\item 
+\#define \mbox{\hyperlink{RTypeProtocol_8hpp_a5673ebc48292132efeba5e58225983de}{BOSS\+\_\+\+HEART\+\_\+\+HEALTH}}~5
+\item 
+\#define \mbox{\hyperlink{RTypeProtocol_8hpp_a9511122e25f12e10cd8fa90050149ab1}{BOSS\+\_\+\+HEART\+\_\+\+SHOOT\+\_\+\+RATE}}~60
+\item 
+\#define \mbox{\hyperlink{RTypeProtocol_8hpp_a2475eeca1e71a0993922c55e86aed352}{BOSS\+\_\+\+SIZE}}~50
+\item 
+\#define \mbox{\hyperlink{RTypeProtocol_8hpp_aaf890e2530c0d96d251b932d035341de}{BOSS\+\_\+\+HEALTH}}~10
+\item 
+\#define \mbox{\hyperlink{RTypeProtocol_8hpp_a2b01bfb9c0a1b29f70377f75c950541a}{BOSS\+\_\+\+SHOOT\+\_\+\+RATE}}~20
+\item 
+\#define \mbox{\hyperlink{RTypeProtocol_8hpp_a0c7ebfe14f846d86d2580b081c09e766}{SERVER\+\_\+\+TPS}}~30.\+0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespaceR__Type_a29a5b7feb706140364e1f796877d1420}{R\+\_\+\+Type\+::\+Input\+Key}} \+: uint8\+\_\+t \{ \newline
+\mbox{\hyperlink{namespaceR__Type_a29a5b7feb706140364e1f796877d1420abaee99e8bb2b3c314475ead672054754}{R\+\_\+\+Type\+::\+MOVE\+\_\+\+UP}}
+, \mbox{\hyperlink{namespaceR__Type_a29a5b7feb706140364e1f796877d1420ab0b8330814b804f21a9354e7b2f069b7}{R\+\_\+\+Type\+::\+MOVE\+\_\+\+DOWN}}
+, \mbox{\hyperlink{namespaceR__Type_a29a5b7feb706140364e1f796877d1420a7e87c6d5fb00ada4c2d5a01a6108dc9e}{R\+\_\+\+Type\+::\+MOVE\+\_\+\+LEFT}}
+, \mbox{\hyperlink{namespaceR__Type_a29a5b7feb706140364e1f796877d1420aed7d241df1b780fcb478524f1ee0db5f}{R\+\_\+\+Type\+::\+MOVE\+\_\+\+RIGHT}}
+, \newline
+\mbox{\hyperlink{namespaceR__Type_a29a5b7feb706140364e1f796877d1420a5f17e1839f80fbd3d7c6d53066e8301b}{R\+\_\+\+Type\+::\+SHOOT}}
+, \mbox{\hyperlink{namespaceR__Type_a29a5b7feb706140364e1f796877d1420ae2d493dd20ca47b636df1f006da10d9e}{R\+\_\+\+Type\+::\+NB\+\_\+\+INPUTS\+\_\+\+KEYS}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7da}{R\+\_\+\+Type\+::\+Entity\+Type}} \+: uint8\+\_\+t \{ \newline
+\mbox{\hyperlink{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daad7faccded865a0273b1f3e3a7131f00a}{R\+\_\+\+Type\+::\+PLAYER}}
+, \mbox{\hyperlink{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daa2d1bb42123fc0e990c341d1269018226}{R\+\_\+\+Type\+::\+PLAYER\+\_\+\+SHOOT}}
+, \mbox{\hyperlink{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daac382dcaac8012038a7b1e4c718847bfb}{R\+\_\+\+Type\+::\+ENEMY\+\_\+\+FLY}}
+, \mbox{\hyperlink{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daa4f6a3edcbfe26f86c946df45d1750c99}{R\+\_\+\+Type\+::\+ENEMY\+\_\+\+TURRET}}
+, \newline
+\mbox{\hyperlink{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daa9a7c63ea3189e45a837c7511a1a3e921}{R\+\_\+\+Type\+::\+ENEMY\+\_\+\+SHOOT}}
+, \mbox{\hyperlink{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daa7cb17ffe5c13693d73ffa5477de5a783}{R\+\_\+\+Type\+::\+BOSS\+\_\+\+HEART}}
+, \mbox{\hyperlink{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daae0a4b62c43289c7879d4b4fd3b18d524}{R\+\_\+\+Type\+::\+BOSS}}
+, \mbox{\hyperlink{namespaceR__Type_a346a9b55d3c908dc95d741e0700cb7daa5b4f8bc4a3ac62b012b47d66dea528e7}{R\+\_\+\+Type\+::\+WALL}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespaceR__Type_a74e491cdd8a91bbba15f1e0040e474f1}{R\+\_\+\+Type\+::\+Command\+Id\+Client}} \+: uint16\+\_\+t \{ \newline
+\mbox{\hyperlink{namespaceR__Type_a74e491cdd8a91bbba15f1e0040e474f1ae8a2f5658c8f1737438d85c97355416d}{R\+\_\+\+Type\+::\+CONNECT}}
+, \mbox{\hyperlink{namespaceR__Type_a74e491cdd8a91bbba15f1e0040e474f1acb14a60990487e0c14818bd4e6450993}{R\+\_\+\+Type\+::\+CLIENT\+\_\+\+ASK\+\_\+\+START\+\_\+\+GAME}}
+, \mbox{\hyperlink{namespaceR__Type_a74e491cdd8a91bbba15f1e0040e474f1ad1fe8895a9431b839e956c1f7065215c}{R\+\_\+\+Type\+::\+INPUT\+\_\+\+KEYS}}
+, \mbox{\hyperlink{namespaceR__Type_a74e491cdd8a91bbba15f1e0040e474f1a5f1cd61ce429dc4d494eec948b855c5e}{R\+\_\+\+Type\+::\+DISCONNECT}}
+, \newline
+\mbox{\hyperlink{namespaceR__Type_a74e491cdd8a91bbba15f1e0040e474f1a53a056c69230aa6eed24ad14a35aca93}{R\+\_\+\+Type\+::\+SET\+\_\+\+READY}}
+, \mbox{\hyperlink{namespaceR__Type_a74e491cdd8a91bbba15f1e0040e474f1a0c4e4ede1c5b71f744b267f314969b06}{R\+\_\+\+Type\+::\+CLIENT\+\_\+\+JOIN\+\_\+\+ROOM}}
+, \mbox{\hyperlink{namespaceR__Type_a74e491cdd8a91bbba15f1e0040e474f1acab097802fb3560ec4315db6b12634c4}{R\+\_\+\+Type\+::\+GET\+\_\+\+ROOM\+\_\+\+LIST\+\_\+\+RESPONSE}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespaceR__Type_a94450a4be13c826d506fb6cf6918599d}{R\+\_\+\+Type\+::\+Command\+Id\+Server}} \+: uint16\+\_\+t \{ \newline
+\mbox{\hyperlink{namespaceR__Type_a94450a4be13c826d506fb6cf6918599da9e2eeaa4f49bb41dec9bcc5098801ff7}{R\+\_\+\+Type\+::\+ACCEPT\+\_\+\+CONNECTION}}
+, \mbox{\hyperlink{namespaceR__Type_a94450a4be13c826d506fb6cf6918599dacc05118fa04b826058323193e25bc61d}{R\+\_\+\+Type\+::\+START\+\_\+\+GAME}}
+, \mbox{\hyperlink{namespaceR__Type_a94450a4be13c826d506fb6cf6918599da8588c6e07a965380a244e3e6ec74abdc}{R\+\_\+\+Type\+::\+POSITION\+\_\+\+VELOCITY}}
+, \mbox{\hyperlink{namespaceR__Type_a94450a4be13c826d506fb6cf6918599da7c4c29723869b9992e798bdee1ce8201}{R\+\_\+\+Type\+::\+SPAWN}}
+, \newline
+\mbox{\hyperlink{namespaceR__Type_a94450a4be13c826d506fb6cf6918599da87eaedcb26e6650818b6d5d80746ea80}{R\+\_\+\+Type\+::\+HIT}}
+, \mbox{\hyperlink{namespaceR__Type_a94450a4be13c826d506fb6cf6918599da8e55a9fae0266be1283e1537e305166d}{R\+\_\+\+Type\+::\+KILL}}
+, \mbox{\hyperlink{namespaceR__Type_a94450a4be13c826d506fb6cf6918599dabef1270562e0398580310609ee476a12}{R\+\_\+\+Type\+::\+CAMERA\+\_\+\+MOVE}}
+, \mbox{\hyperlink{namespaceR__Type_a94450a4be13c826d506fb6cf6918599da3108f8ca23cb42781457f5fd89291867}{R\+\_\+\+Type\+::\+END\+\_\+\+GAME}}
+, \newline
+\mbox{\hyperlink{namespaceR__Type_a94450a4be13c826d506fb6cf6918599dac4a82e2bb39ab2107183a5fc32c2037e}{R\+\_\+\+Type\+::\+SERVER\+\_\+\+SHUTDOWN}}
+, \mbox{\hyperlink{namespaceR__Type_a94450a4be13c826d506fb6cf6918599dabbcd1f8520ca037a6e092b79a40113ee}{R\+\_\+\+Type\+::\+SERVER\+\_\+\+JOIN\+\_\+\+ROOM}}
+, \mbox{\hyperlink{namespaceR__Type_a94450a4be13c826d506fb6cf6918599daf799db3f61c90866a65fe64ec3e93af1}{R\+\_\+\+Type\+::\+ROOM\+\_\+\+LIST}}
+, \mbox{\hyperlink{namespaceR__Type_a94450a4be13c826d506fb6cf6918599da3decaa7ea378aeee74b4d5ad0ab67474}{R\+\_\+\+Type\+::\+ROOM\+\_\+\+JOINED}}
+, \newline
+\mbox{\hyperlink{namespaceR__Type_a94450a4be13c826d506fb6cf6918599da4db7e4fbf3ecde431dfd1405039a2368}{R\+\_\+\+Type\+::\+ROOM\+\_\+\+JOIN\+\_\+\+FAILED}}
+, \mbox{\hyperlink{namespaceR__Type_a94450a4be13c826d506fb6cf6918599da4b2d9e71b7081894d13e8719c31352ee}{R\+\_\+\+Type\+::\+GET\+\_\+\+ROOM\+\_\+\+LIST}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{RTypeProtocol_8hpp_aaf890e2530c0d96d251b932d035341de}\label{RTypeProtocol_8hpp_aaf890e2530c0d96d251b932d035341de} 
+\index{RTypeProtocol.hpp@{RTypeProtocol.hpp}!BOSS\_HEALTH@{BOSS\_HEALTH}}
+\index{BOSS\_HEALTH@{BOSS\_HEALTH}!RTypeProtocol.hpp@{RTypeProtocol.hpp}}
+\doxysubsubsection{\texorpdfstring{BOSS\_HEALTH}{BOSS\_HEALTH}}
+{\footnotesize\ttfamily \#define BOSS\+\_\+\+HEALTH~10}
+
+\Hypertarget{RTypeProtocol_8hpp_a5673ebc48292132efeba5e58225983de}\label{RTypeProtocol_8hpp_a5673ebc48292132efeba5e58225983de} 
+\index{RTypeProtocol.hpp@{RTypeProtocol.hpp}!BOSS\_HEART\_HEALTH@{BOSS\_HEART\_HEALTH}}
+\index{BOSS\_HEART\_HEALTH@{BOSS\_HEART\_HEALTH}!RTypeProtocol.hpp@{RTypeProtocol.hpp}}
+\doxysubsubsection{\texorpdfstring{BOSS\_HEART\_HEALTH}{BOSS\_HEART\_HEALTH}}
+{\footnotesize\ttfamily \#define BOSS\+\_\+\+HEART\+\_\+\+HEALTH~5}
+
+\Hypertarget{RTypeProtocol_8hpp_a9511122e25f12e10cd8fa90050149ab1}\label{RTypeProtocol_8hpp_a9511122e25f12e10cd8fa90050149ab1} 
+\index{RTypeProtocol.hpp@{RTypeProtocol.hpp}!BOSS\_HEART\_SHOOT\_RATE@{BOSS\_HEART\_SHOOT\_RATE}}
+\index{BOSS\_HEART\_SHOOT\_RATE@{BOSS\_HEART\_SHOOT\_RATE}!RTypeProtocol.hpp@{RTypeProtocol.hpp}}
+\doxysubsubsection{\texorpdfstring{BOSS\_HEART\_SHOOT\_RATE}{BOSS\_HEART\_SHOOT\_RATE}}
+{\footnotesize\ttfamily \#define BOSS\+\_\+\+HEART\+\_\+\+SHOOT\+\_\+\+RATE~60}
+
+\Hypertarget{RTypeProtocol_8hpp_a1c00d0da672f23a8a71eb39012e49526}\label{RTypeProtocol_8hpp_a1c00d0da672f23a8a71eb39012e49526} 
+\index{RTypeProtocol.hpp@{RTypeProtocol.hpp}!BOSS\_HEART\_SIZE@{BOSS\_HEART\_SIZE}}
+\index{BOSS\_HEART\_SIZE@{BOSS\_HEART\_SIZE}!RTypeProtocol.hpp@{RTypeProtocol.hpp}}
+\doxysubsubsection{\texorpdfstring{BOSS\_HEART\_SIZE}{BOSS\_HEART\_SIZE}}
+{\footnotesize\ttfamily \#define BOSS\+\_\+\+HEART\+\_\+\+SIZE~50}
+
+\Hypertarget{RTypeProtocol_8hpp_a2b01bfb9c0a1b29f70377f75c950541a}\label{RTypeProtocol_8hpp_a2b01bfb9c0a1b29f70377f75c950541a} 
+\index{RTypeProtocol.hpp@{RTypeProtocol.hpp}!BOSS\_SHOOT\_RATE@{BOSS\_SHOOT\_RATE}}
+\index{BOSS\_SHOOT\_RATE@{BOSS\_SHOOT\_RATE}!RTypeProtocol.hpp@{RTypeProtocol.hpp}}
+\doxysubsubsection{\texorpdfstring{BOSS\_SHOOT\_RATE}{BOSS\_SHOOT\_RATE}}
+{\footnotesize\ttfamily \#define BOSS\+\_\+\+SHOOT\+\_\+\+RATE~20}
+
+\Hypertarget{RTypeProtocol_8hpp_a2475eeca1e71a0993922c55e86aed352}\label{RTypeProtocol_8hpp_a2475eeca1e71a0993922c55e86aed352} 
+\index{RTypeProtocol.hpp@{RTypeProtocol.hpp}!BOSS\_SIZE@{BOSS\_SIZE}}
+\index{BOSS\_SIZE@{BOSS\_SIZE}!RTypeProtocol.hpp@{RTypeProtocol.hpp}}
+\doxysubsubsection{\texorpdfstring{BOSS\_SIZE}{BOSS\_SIZE}}
+{\footnotesize\ttfamily \#define BOSS\+\_\+\+SIZE~50}
+
+\Hypertarget{RTypeProtocol_8hpp_a7ab94550e549920d32319e871e39fb4d}\label{RTypeProtocol_8hpp_a7ab94550e549920d32319e871e39fb4d} 
+\index{RTypeProtocol.hpp@{RTypeProtocol.hpp}!CAMERA\_SIZE\_HEIGHT@{CAMERA\_SIZE\_HEIGHT}}
+\index{CAMERA\_SIZE\_HEIGHT@{CAMERA\_SIZE\_HEIGHT}!RTypeProtocol.hpp@{RTypeProtocol.hpp}}
+\doxysubsubsection{\texorpdfstring{CAMERA\_SIZE\_HEIGHT}{CAMERA\_SIZE\_HEIGHT}}
+{\footnotesize\ttfamily \#define CAMERA\+\_\+\+SIZE\+\_\+\+HEIGHT~1080}
+
+\Hypertarget{RTypeProtocol_8hpp_a681fdf8a5c4b6aefd912a09b07d0a837}\label{RTypeProtocol_8hpp_a681fdf8a5c4b6aefd912a09b07d0a837} 
+\index{RTypeProtocol.hpp@{RTypeProtocol.hpp}!CAMERA\_SIZE\_WIDTH@{CAMERA\_SIZE\_WIDTH}}
+\index{CAMERA\_SIZE\_WIDTH@{CAMERA\_SIZE\_WIDTH}!RTypeProtocol.hpp@{RTypeProtocol.hpp}}
+\doxysubsubsection{\texorpdfstring{CAMERA\_SIZE\_WIDTH}{CAMERA\_SIZE\_WIDTH}}
+{\footnotesize\ttfamily \#define CAMERA\+\_\+\+SIZE\+\_\+\+WIDTH~1920}
+
+\Hypertarget{RTypeProtocol_8hpp_a36b5a718ceba639224202fd1a17c99da}\label{RTypeProtocol_8hpp_a36b5a718ceba639224202fd1a17c99da} 
+\index{RTypeProtocol.hpp@{RTypeProtocol.hpp}!CAMERA\_SPEED@{CAMERA\_SPEED}}
+\index{CAMERA\_SPEED@{CAMERA\_SPEED}!RTypeProtocol.hpp@{RTypeProtocol.hpp}}
+\doxysubsubsection{\texorpdfstring{CAMERA\_SPEED}{CAMERA\_SPEED}}
+{\footnotesize\ttfamily \#define CAMERA\+\_\+\+SPEED~0}
+
+\Hypertarget{RTypeProtocol_8hpp_a5fa9687474622a5c8054700f0261321d}\label{RTypeProtocol_8hpp_a5fa9687474622a5c8054700f0261321d} 
+\index{RTypeProtocol.hpp@{RTypeProtocol.hpp}!FLY\_HEALTH@{FLY\_HEALTH}}
+\index{FLY\_HEALTH@{FLY\_HEALTH}!RTypeProtocol.hpp@{RTypeProtocol.hpp}}
+\doxysubsubsection{\texorpdfstring{FLY\_HEALTH}{FLY\_HEALTH}}
+{\footnotesize\ttfamily \#define FLY\+\_\+\+HEALTH~2}
+
+\Hypertarget{RTypeProtocol_8hpp_a8ef7fe0793de26d545f61ad29a090cb6}\label{RTypeProtocol_8hpp_a8ef7fe0793de26d545f61ad29a090cb6} 
+\index{RTypeProtocol.hpp@{RTypeProtocol.hpp}!FLY\_SIZE@{FLY\_SIZE}}
+\index{FLY\_SIZE@{FLY\_SIZE}!RTypeProtocol.hpp@{RTypeProtocol.hpp}}
+\doxysubsubsection{\texorpdfstring{FLY\_SIZE}{FLY\_SIZE}}
+{\footnotesize\ttfamily \#define FLY\+\_\+\+SIZE~20}
+
+\Hypertarget{RTypeProtocol_8hpp_aee3cf4d5bab77862b1dc6d22c47428fb}\label{RTypeProtocol_8hpp_aee3cf4d5bab77862b1dc6d22c47428fb} 
+\index{RTypeProtocol.hpp@{RTypeProtocol.hpp}!FLY\_SPEED@{FLY\_SPEED}}
+\index{FLY\_SPEED@{FLY\_SPEED}!RTypeProtocol.hpp@{RTypeProtocol.hpp}}
+\doxysubsubsection{\texorpdfstring{FLY\_SPEED}{FLY\_SPEED}}
+{\footnotesize\ttfamily \#define FLY\+\_\+\+SPEED~1}
+
+\Hypertarget{RTypeProtocol_8hpp_a6b4ee6a19fc0bdf65dbdf7d77c853bd5}\label{RTypeProtocol_8hpp_a6b4ee6a19fc0bdf65dbdf7d77c853bd5} 
+\index{RTypeProtocol.hpp@{RTypeProtocol.hpp}!PLAYER\_HEALTH@{PLAYER\_HEALTH}}
+\index{PLAYER\_HEALTH@{PLAYER\_HEALTH}!RTypeProtocol.hpp@{RTypeProtocol.hpp}}
+\doxysubsubsection{\texorpdfstring{PLAYER\_HEALTH}{PLAYER\_HEALTH}}
+{\footnotesize\ttfamily \#define PLAYER\+\_\+\+HEALTH~1}
+
+\Hypertarget{RTypeProtocol_8hpp_a7e5902fca9f00ad291366ed392500e45}\label{RTypeProtocol_8hpp_a7e5902fca9f00ad291366ed392500e45} 
+\index{RTypeProtocol.hpp@{RTypeProtocol.hpp}!PLAYER\_SHOOT\_RATE@{PLAYER\_SHOOT\_RATE}}
+\index{PLAYER\_SHOOT\_RATE@{PLAYER\_SHOOT\_RATE}!RTypeProtocol.hpp@{RTypeProtocol.hpp}}
+\doxysubsubsection{\texorpdfstring{PLAYER\_SHOOT\_RATE}{PLAYER\_SHOOT\_RATE}}
+{\footnotesize\ttfamily \#define PLAYER\+\_\+\+SHOOT\+\_\+\+RATE~15}
+
+\Hypertarget{RTypeProtocol_8hpp_af9c97b43edfce8a2151d1e30778cd057}\label{RTypeProtocol_8hpp_af9c97b43edfce8a2151d1e30778cd057} 
+\index{RTypeProtocol.hpp@{RTypeProtocol.hpp}!PLAYER\_SHOOT\_SIZE@{PLAYER\_SHOOT\_SIZE}}
+\index{PLAYER\_SHOOT\_SIZE@{PLAYER\_SHOOT\_SIZE}!RTypeProtocol.hpp@{RTypeProtocol.hpp}}
+\doxysubsubsection{\texorpdfstring{PLAYER\_SHOOT\_SIZE}{PLAYER\_SHOOT\_SIZE}}
+{\footnotesize\ttfamily \#define PLAYER\+\_\+\+SHOOT\+\_\+\+SIZE~15}
+
+\Hypertarget{RTypeProtocol_8hpp_a22e5cbefdf79948c2d27c95e95c1a575}\label{RTypeProtocol_8hpp_a22e5cbefdf79948c2d27c95e95c1a575} 
+\index{RTypeProtocol.hpp@{RTypeProtocol.hpp}!PLAYER\_SHOOT\_SPEED@{PLAYER\_SHOOT\_SPEED}}
+\index{PLAYER\_SHOOT\_SPEED@{PLAYER\_SHOOT\_SPEED}!RTypeProtocol.hpp@{RTypeProtocol.hpp}}
+\doxysubsubsection{\texorpdfstring{PLAYER\_SHOOT\_SPEED}{PLAYER\_SHOOT\_SPEED}}
+{\footnotesize\ttfamily \#define PLAYER\+\_\+\+SHOOT\+\_\+\+SPEED~5}
+
+\Hypertarget{RTypeProtocol_8hpp_a5fac8f2cc29ea5bde30c8fa4a4daa306}\label{RTypeProtocol_8hpp_a5fac8f2cc29ea5bde30c8fa4a4daa306} 
+\index{RTypeProtocol.hpp@{RTypeProtocol.hpp}!PLAYER\_SIZE@{PLAYER\_SIZE}}
+\index{PLAYER\_SIZE@{PLAYER\_SIZE}!RTypeProtocol.hpp@{RTypeProtocol.hpp}}
+\doxysubsubsection{\texorpdfstring{PLAYER\_SIZE}{PLAYER\_SIZE}}
+{\footnotesize\ttfamily \#define PLAYER\+\_\+\+SIZE~30}
+
+\Hypertarget{RTypeProtocol_8hpp_af49bad41acef45feb40939c0cf9d5d35}\label{RTypeProtocol_8hpp_af49bad41acef45feb40939c0cf9d5d35} 
+\index{RTypeProtocol.hpp@{RTypeProtocol.hpp}!PLAYER\_SPEED@{PLAYER\_SPEED}}
+\index{PLAYER\_SPEED@{PLAYER\_SPEED}!RTypeProtocol.hpp@{RTypeProtocol.hpp}}
+\doxysubsubsection{\texorpdfstring{PLAYER\_SPEED}{PLAYER\_SPEED}}
+{\footnotesize\ttfamily \#define PLAYER\+\_\+\+SPEED~10}
+
+\Hypertarget{RTypeProtocol_8hpp_a0c7ebfe14f846d86d2580b081c09e766}\label{RTypeProtocol_8hpp_a0c7ebfe14f846d86d2580b081c09e766} 
+\index{RTypeProtocol.hpp@{RTypeProtocol.hpp}!SERVER\_TPS@{SERVER\_TPS}}
+\index{SERVER\_TPS@{SERVER\_TPS}!RTypeProtocol.hpp@{RTypeProtocol.hpp}}
+\doxysubsubsection{\texorpdfstring{SERVER\_TPS}{SERVER\_TPS}}
+{\footnotesize\ttfamily \#define SERVER\+\_\+\+TPS~30.\+0}
+
+\Hypertarget{RTypeProtocol_8hpp_a62ecd70800687eb2d625af180c4210d7}\label{RTypeProtocol_8hpp_a62ecd70800687eb2d625af180c4210d7} 
+\index{RTypeProtocol.hpp@{RTypeProtocol.hpp}!TILE\_SIZE@{TILE\_SIZE}}
+\index{TILE\_SIZE@{TILE\_SIZE}!RTypeProtocol.hpp@{RTypeProtocol.hpp}}
+\doxysubsubsection{\texorpdfstring{TILE\_SIZE}{TILE\_SIZE}}
+{\footnotesize\ttfamily \#define TILE\+\_\+\+SIZE~50}
+
+\Hypertarget{RTypeProtocol_8hpp_a6aad09c18357e9e0c330f8ceea335f4d}\label{RTypeProtocol_8hpp_a6aad09c18357e9e0c330f8ceea335f4d} 
+\index{RTypeProtocol.hpp@{RTypeProtocol.hpp}!TURRET\_HEALTH@{TURRET\_HEALTH}}
+\index{TURRET\_HEALTH@{TURRET\_HEALTH}!RTypeProtocol.hpp@{RTypeProtocol.hpp}}
+\doxysubsubsection{\texorpdfstring{TURRET\_HEALTH}{TURRET\_HEALTH}}
+{\footnotesize\ttfamily \#define TURRET\+\_\+\+HEALTH~4}
+
+\Hypertarget{RTypeProtocol_8hpp_a93d7cacc6d24fc237469d7c09df69240}\label{RTypeProtocol_8hpp_a93d7cacc6d24fc237469d7c09df69240} 
+\index{RTypeProtocol.hpp@{RTypeProtocol.hpp}!TURRET\_SHOOT\_RATE@{TURRET\_SHOOT\_RATE}}
+\index{TURRET\_SHOOT\_RATE@{TURRET\_SHOOT\_RATE}!RTypeProtocol.hpp@{RTypeProtocol.hpp}}
+\doxysubsubsection{\texorpdfstring{TURRET\_SHOOT\_RATE}{TURRET\_SHOOT\_RATE}}
+{\footnotesize\ttfamily \#define TURRET\+\_\+\+SHOOT\+\_\+\+RATE~40}
+
+\Hypertarget{RTypeProtocol_8hpp_a04e2098b8a77f660a445b2151dabcca1}\label{RTypeProtocol_8hpp_a04e2098b8a77f660a445b2151dabcca1} 
+\index{RTypeProtocol.hpp@{RTypeProtocol.hpp}!TURRET\_SHOOT\_SIZE@{TURRET\_SHOOT\_SIZE}}
+\index{TURRET\_SHOOT\_SIZE@{TURRET\_SHOOT\_SIZE}!RTypeProtocol.hpp@{RTypeProtocol.hpp}}
+\doxysubsubsection{\texorpdfstring{TURRET\_SHOOT\_SIZE}{TURRET\_SHOOT\_SIZE}}
+{\footnotesize\ttfamily \#define TURRET\+\_\+\+SHOOT\+\_\+\+SIZE~15}
+
+\Hypertarget{RTypeProtocol_8hpp_aa438abc12822547a224ec6f0b43080bc}\label{RTypeProtocol_8hpp_aa438abc12822547a224ec6f0b43080bc} 
+\index{RTypeProtocol.hpp@{RTypeProtocol.hpp}!TURRET\_SHOOT\_SPEED@{TURRET\_SHOOT\_SPEED}}
+\index{TURRET\_SHOOT\_SPEED@{TURRET\_SHOOT\_SPEED}!RTypeProtocol.hpp@{RTypeProtocol.hpp}}
+\doxysubsubsection{\texorpdfstring{TURRET\_SHOOT\_SPEED}{TURRET\_SHOOT\_SPEED}}
+{\footnotesize\ttfamily \#define TURRET\+\_\+\+SHOOT\+\_\+\+SPEED~1}
+
+\Hypertarget{RTypeProtocol_8hpp_a8b3c47c95eeb5cfba7e5377ca8d63b2d}\label{RTypeProtocol_8hpp_a8b3c47c95eeb5cfba7e5377ca8d63b2d} 
+\index{RTypeProtocol.hpp@{RTypeProtocol.hpp}!TURRET\_SIZE@{TURRET\_SIZE}}
+\index{TURRET\_SIZE@{TURRET\_SIZE}!RTypeProtocol.hpp@{RTypeProtocol.hpp}}
+\doxysubsubsection{\texorpdfstring{TURRET\_SIZE}{TURRET\_SIZE}}
+{\footnotesize\ttfamily \#define TURRET\+\_\+\+SIZE~30}
+

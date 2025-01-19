@@ -1,0 +1,110 @@
+\doxysection{Engine\+::Debug\+::Debug Class Reference}
+\hypertarget{classEngine_1_1Debug_1_1Debug}{}\label{classEngine_1_1Debug_1_1Debug}\index{Engine::Debug::Debug@{Engine::Debug::Debug}}
+
+
+{\ttfamily \#include $<$Debug.\+hpp$>$}
+
+Inheritance diagram for Engine\+::Debug\+::Debug\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classEngine_1_1Debug_1_1Debug}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEngine_1_1Debug_1_1Debug_a0ad78dcb2f3741540d68505b52bf1c37}{Debug}} ()
+\item 
+\mbox{\hyperlink{classEngine_1_1Debug_1_1Debug_a7344179808c15a88a5d07810c85f47a9}{\texorpdfstring{$\sim$}{\string~}\+Debug}} ()=default
+\item 
+void \mbox{\hyperlink{classEngine_1_1Debug_1_1Debug_a608cda730f753f16f3ffa806ef893d44}{update}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classEngine_1_1Debug_1_1RAM}{Engine\+::\+Debug\+::\+RAM}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEngine_1_1Debug_1_1RAM_a84b353b33b7ecb86cab7556d79881f69}{RAM}} ()
+\item 
+\mbox{\hyperlink{classEngine_1_1Debug_1_1RAM_a5862c4a52dcd77c29ad3600566286672}{\texorpdfstring{$\sim$}{\string~}\+RAM}} ()=default
+\item 
+void \mbox{\hyperlink{classEngine_1_1Debug_1_1RAM_a5b0540d2557256a2b15467e637b531d9}{update}} ()
+\item 
+unsigned long \mbox{\hyperlink{classEngine_1_1Debug_1_1RAM_ac7652f2310ae2b9a7d23233b8f6c937e}{get\+Total\+Memory}} () const
+\item 
+unsigned long \mbox{\hyperlink{classEngine_1_1Debug_1_1RAM_a761b0c4354c0d5e8913b6f90c0830dc2}{get\+Total\+Used\+Memory}} () const
+\item 
+unsigned long \mbox{\hyperlink{classEngine_1_1Debug_1_1RAM_a5611c35ed7299881963d27e0988b6f11}{get\+Total\+Free\+Memory}} () const
+\item 
+std\+::string \mbox{\hyperlink{classEngine_1_1Debug_1_1RAM_a82c6e95735050b0ee2cecd8060b712ff}{get\+Ram\+Pretty\+Print}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classEngine_1_1Debug_1_1CPU}{Engine\+::\+Debug\+::\+CPU}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEngine_1_1Debug_1_1CPU_adfaa27c9620b7b51952af1abc4a32ba3}{CPU}} ()
+\item 
+\mbox{\hyperlink{classEngine_1_1Debug_1_1CPU_a346a365d9ce9fcd397574b0fc49a82fa}{\texorpdfstring{$\sim$}{\string~}\+CPU}} ()=default
+\item 
+void \mbox{\hyperlink{classEngine_1_1Debug_1_1CPU_a041afbf985e160a150470fa19c08a64e}{update}} ()
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structcpuInfo}{cpu\+Info}} $>$ \mbox{\hyperlink{classEngine_1_1Debug_1_1CPU_a367115298bc3202119c6d4fd2b5735f1}{get\+Cpu\+Vector\+Info}} () const
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structcoeurInfo}{coeur\+Info}} $>$ \mbox{\hyperlink{classEngine_1_1Debug_1_1CPU_a823fbb33749c7efb057b9d0a7bf13e18}{get\+Coeur\+Vector\+Info}} () const
+\item 
+std\+::string \mbox{\hyperlink{classEngine_1_1Debug_1_1CPU_a1c88f0a02a5f4861856d6edb9707ee33}{get\+Cpu\+Pretty\+Print}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole}{Engine\+::\+Debug\+::\+Konsole}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole_a26522af874f99df2c73b8e1e49ef915d}{Konsole}} ()
+\item 
+\mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole_a4e260a86e54f8fbb0bc72fe34ecb61e1}{\texorpdfstring{$\sim$}{\string~}\+Konsole}} ()
+\item 
+std\+::string \mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole_a9aacf161098162e8013bfb719b6a7c4e}{new\+Line}} () const
+\item 
+std\+::string \mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole_aab42c4f7e5de6858eb5f5152382cdd36}{print\+In\+Color}} (const std\+::string \&text, const std\+::string \&color) const
+\item 
+void \mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole_ab357a6e87ceb326cf646ae273e0925bd}{print\+In\+Terminal}} (const std\+::string \&msg, \mbox{\hyperlink{namespaceEngine_1_1Debug_ac0f1444aa94ddb33898683a4bb792a31}{Level}} level)
+\item 
+void \mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole_a4ecdc9d838716a8a75f1b515e2cd5c3f}{open\+New\+Terminal}} ()
+\item 
+void \mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole_a8dc76affd5dc4c9d7f6d51e492defa55}{start\+Listening}} ()
+\item 
+std\+::string \mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole_a8d9cd8cea60e7b54d4fec8bf5a8adc2e}{get\+Next\+Line}} ()
+\item 
+void \mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole_a21f053cfb26780a8746826e2b76ccad2}{set\+Level}} (\mbox{\hyperlink{namespaceEngine_1_1Debug_ac0f1444aa94ddb33898683a4bb792a31}{Level}} level)
+\item 
+\mbox{\hyperlink{namespaceEngine_1_1Debug_ac0f1444aa94ddb33898683a4bb792a31}{Level}} \mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole_a63dc9be50219daf72f75fdedc54454de}{get\+Level}} () const
+\item 
+void \mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole_a65134c408d7c018d1e008a08404527d8}{change\+Running}} (bool value)
+\item 
+bool \mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole_acc670c9ecf3036a172d909d58ee0419e}{is\+Running}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classEngine_1_1Debug_1_1Debug_a0ad78dcb2f3741540d68505b52bf1c37}\label{classEngine_1_1Debug_1_1Debug_a0ad78dcb2f3741540d68505b52bf1c37} 
+\index{Engine::Debug::Debug@{Engine::Debug::Debug}!Debug@{Debug}}
+\index{Debug@{Debug}!Engine::Debug::Debug@{Engine::Debug::Debug}}
+\doxysubsubsection{\texorpdfstring{Debug()}{Debug()}}
+{\footnotesize\ttfamily Engine\+::\+Debug\+::\+Debug\+::\+Debug (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classEngine_1_1Debug_1_1Debug_a7344179808c15a88a5d07810c85f47a9}\label{classEngine_1_1Debug_1_1Debug_a7344179808c15a88a5d07810c85f47a9} 
+\index{Engine::Debug::Debug@{Engine::Debug::Debug}!````~Debug@{\texorpdfstring{$\sim$}{\string~}Debug}}
+\index{````~Debug@{\texorpdfstring{$\sim$}{\string~}Debug}!Engine::Debug::Debug@{Engine::Debug::Debug}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Debug()}{\string~Debug()}}
+{\footnotesize\ttfamily Engine\+::\+Debug\+::\+Debug\+::\texorpdfstring{$\sim$}{\string~}\+Debug (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classEngine_1_1Debug_1_1Debug_a608cda730f753f16f3ffa806ef893d44}\label{classEngine_1_1Debug_1_1Debug_a608cda730f753f16f3ffa806ef893d44} 
+\index{Engine::Debug::Debug@{Engine::Debug::Debug}!update@{update}}
+\index{update@{update}!Engine::Debug::Debug@{Engine::Debug::Debug}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Engine\+::\+Debug\+::\+Debug\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/engine/core/\mbox{\hyperlink{Debug_8hpp}{Debug.\+hpp}}\item 
+lib/engine/core/\mbox{\hyperlink{Debug_8cpp}{Debug.\+cpp}}\end{DoxyCompactItemize}

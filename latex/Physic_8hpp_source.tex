@@ -1,0 +1,40 @@
+\doxysection{Physic.\+hpp}
+\hypertarget{Physic_8hpp_source}{}\label{Physic_8hpp_source}\index{lib/engine/modules/physic/includes/Physic.hpp@{lib/engine/modules/physic/includes/Physic.hpp}}
+\mbox{\hyperlink{Physic_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2024}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ r-\/type\_server}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ IGraphical.hpp}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IPhysic_8hpp}{IPhysic.hpp}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}../../ecs/includes/IndexedZipper.hpp"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IPhysic_8hpp}{IPhysic.hpp}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Registry_8hpp}{Registry.hpp}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Force_8hpp}{components/Force.hpp}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Mass_8hpp}{components/Mass.hpp}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{engine_2modules_2physic_2includes_2components_2Position_8hpp}{components/Position.hpp}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{engine_2modules_2physic_2includes_2components_2Velocity_8hpp}{components/Velocity.hpp}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceEngine_1_1Module}{Engine::Module}}\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classEngine_1_1Module_1_1Physic}{Physic}}\ final\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classEngine_1_1Module_1_1IPhysic}{IPhysic}}\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEngine_1_1Module_1_1Physic_a34497b3c785152c0cc80858ce8f5bf68}{Physic}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEngine_1_1Module_1_1Physic_aef10757ff99a5a031b1f4472402444c6}{\string~Physic}}()\ \textcolor{keyword}{override}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structEngine_1_1Module_1_1module__info__s}{module\_info\_t}}\ \mbox{\hyperlink{classEngine_1_1Module_1_1Physic_a9f6ccf01ef1414adf0cabdee72b4f32d}{getInfo}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1Physic_ac8c289a1f8291124902286f15fc31820}{loadModule}}(\mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core::Core}}\ \&core)\textcolor{keyword}{\ override\ }\{\}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1Physic_a1999c8b446bf119bb5860321de5d9312}{unloadModule}}(\mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core::Core}}\ \&core)\textcolor{keyword}{\ override\ }\{\}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1Physic_af3362b70e124a72b0823a6a23dac00a0}{apply\_force}}(\mbox{\hyperlink{classECS_1_1Registry}{ECS::Registry}}\ \&registry,\ \textcolor{keywordtype}{float}\ deltaTime)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00033\ \ \ \ \ \};}
+\DoxyCodeLine{00034\ \}}
+
+\end{DoxyCode}

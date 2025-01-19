@@ -1,0 +1,63 @@
+\doxysection{IPhysic.\+hpp}
+\hypertarget{IPhysic_8hpp_source}{}\label{IPhysic_8hpp_source}\index{lib/engine/includes/IPhysic.hpp@{lib/engine/includes/IPhysic.hpp}}
+\mbox{\hyperlink{IPhysic_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2024}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ r-\/type\_server}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ IGraphical.hpp}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IModule_8hpp}{IModule.hpp}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Registry_8hpp}{Registry.hpp}}"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceEngine_1_1Module}{Engine::Module}}\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structEngine_1_1Module_1_1Vector2i}{Vector2i}}\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structEngine_1_1Module_1_1Vector2i_acc28188a297f79242bdef2ef7da34bda}{x}},\ \mbox{\hyperlink{structEngine_1_1Module_1_1Vector2i_afeb05ad590d523fbb0b3267bcbe2c937}{y}};}
+\DoxyCodeLine{00016\ \ \ \ \ \};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structEngine_1_1Module_1_1Vector2f}{Vector2f}}\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structEngine_1_1Module_1_1Vector2f_ae329b3a382563e82bf459aef63fba875}{x}},\ \mbox{\hyperlink{structEngine_1_1Module_1_1Vector2f_ad5a4b41932abeda5ef9d49042e18ecc0}{y}};}
+\DoxyCodeLine{00020\ \ \ \ \ \};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structEngine_1_1Module_1_1Vector2f}{Vector2f}}\ \mbox{\hyperlink{namespaceEngine_1_1Module_a25dc7da205f03369c313531f1716abc4}{gravity}}\ =\ \{0.0,\ -\/9.81\};}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structEngine_1_1Module_1_1Vector2f}{Vector2f}}\ \mbox{\hyperlink{namespaceEngine_1_1Module_a26f86c81541c018663bb65cd5041b01c}{bottom\_gravity}}\ =\ \{0.0,\ 9.81\};}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structEngine_1_1Module_1_1Vector2f}{Vector2f}}\ \mbox{\hyperlink{namespaceEngine_1_1Module_afa7bf312ebe3605cdfd38824b7691048}{left\_gravity}}\ =\ \{-\/9.81,\ 0.0\};}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structEngine_1_1Module_1_1Vector2f}{Vector2f}}\ \mbox{\hyperlink{namespaceEngine_1_1Module_a9ab48ac1d3c54db0672752dc6da44471}{right\_gravity}}\ =\ \{9.81,\ 0.0\};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structEngine_1_1Module_1_1Vector2f}{Vector2f}}\ \mbox{\hyperlink{namespaceEngine_1_1Module_a4a960c6a89ef07d651ce5dc0b0b88de4}{reversed\_gravity}}\ =\ \{0.0,\ 9.81\};}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structEngine_1_1Module_1_1Vector2f}{Vector2f}}\ \mbox{\hyperlink{namespaceEngine_1_1Module_afb8c45615ff5e51cbafc8801faa56fb6}{reversed\_bottom\_gravity}}\ =\ \{0.0,\ -\/9.81\};}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structEngine_1_1Module_1_1Vector2f}{Vector2f}}\ \mbox{\hyperlink{namespaceEngine_1_1Module_ac817493a7036ea4166c8a840a6b696f7}{reversed\_left\_gravity}}\ =\ \{9.81,\ 0.0\};}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structEngine_1_1Module_1_1Vector2f}{Vector2f}}\ \mbox{\hyperlink{namespaceEngine_1_1Module_a15093b7c9c81d62afe994a748515dcb8}{reversed\_right\_gravity}}\ =\ \{-\/9.81,\ 0.0\};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structEngine_1_1Module_1_1Vector2f}{Vector2f}}\ \mbox{\hyperlink{namespaceEngine_1_1Module_a361071e7ffcb32af2acf17b1fb4e8e51}{top\_wind\_force}}\ =\ \{0.0,\ -\/10.0\};}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structEngine_1_1Module_1_1Vector2f}{Vector2f}}\ \mbox{\hyperlink{namespaceEngine_1_1Module_a17ebe40a1d34e113ec0051a0fe8db204}{bottom\_wind\_force}}\ =\ \{0.0,\ 10.0\};}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structEngine_1_1Module_1_1Vector2f}{Vector2f}}\ \mbox{\hyperlink{namespaceEngine_1_1Module_a06e75be7326879cc807da946459e4b18}{left\_wind\_force}}\ =\ \{-\/10.0,\ 0.0\};}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structEngine_1_1Module_1_1Vector2f}{Vector2f}}\ \mbox{\hyperlink{namespaceEngine_1_1Module_a0057b62e97676968af4ba51a827d3d6b}{right\_wind\_force}}\ =\ \{10.0,\ 0.0\};}
+\DoxyCodeLine{00036\ \textcolor{comment}{}}
+\DoxyCodeLine{00037\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ \ \ \ \ *\ @interface\ IPhysic}}
+\DoxyCodeLine{00039\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Interface\ for\ managing\ physics-\/related\ operations\ in\ the\ application.}}
+\DoxyCodeLine{00040\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{00041\ \textcolor{comment}{\ \ \ \ \ *\ The\ IPhysic\ interface\ provides\ a\ method\ to\ apply\ physical\ forces\ and\ update}}
+\DoxyCodeLine{00042\ \textcolor{comment}{\ \ \ \ \ *\ entities'\ states\ based\ on\ physics\ calculations.}}
+\DoxyCodeLine{00043\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classEngine_1_1Module_1_1IPhysic}{IPhysic}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classEngine_1_1Module_1_1IModule}{IModule}}\ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{public}:\textcolor{comment}{}}
+\DoxyCodeLine{00046\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{00047\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Apply\ forces\ to\ entities\ in\ the\ registry.}}
+\DoxyCodeLine{00048\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00049\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ This\ method\ updates\ the\ state\ of\ entities\ in\ the\ given\ ECS\ (Entity-\/Component-\/System)}}
+\DoxyCodeLine{00050\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ registry\ by\ applying\ physical\ forces\ over\ a\ specified\ time\ interval.}}
+\DoxyCodeLine{00051\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00052\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ registry\ A\ reference\ to\ the\ ECS\ registry\ containing\ the\ entities\ and\ their\ components.}}
+\DoxyCodeLine{00053\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ deltaTime\ The\ elapsed\ time\ since\ the\ last\ physics\ update,\ used\ for\ calculations.}}
+\DoxyCodeLine{00054\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1IPhysic_a71b4e6e4b2ab8153f68d307fc85f3858}{apply\_force}}(\mbox{\hyperlink{classECS_1_1Registry}{ECS::Registry}}\ \&registry,\ \textcolor{keywordtype}{float}\ deltaTime)\ =\ 0;}
+\DoxyCodeLine{00056\ \ \ \ \ \};}
+\DoxyCodeLine{00057\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,140 @@
+\doxysection{Engine\+::Module\+::Physic Class Reference}
+\hypertarget{classEngine_1_1Module_1_1Physic}{}\label{classEngine_1_1Module_1_1Physic}\index{Engine::Module::Physic@{Engine::Module::Physic}}
+
+
+{\ttfamily \#include $<$Physic.\+hpp$>$}
+
+Inheritance diagram for Engine\+::Module\+::Physic\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classEngine_1_1Module_1_1Physic}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEngine_1_1Module_1_1Physic_a34497b3c785152c0cc80858ce8f5bf68}{Physic}} ()=default
+\item 
+\mbox{\hyperlink{classEngine_1_1Module_1_1Physic_aef10757ff99a5a031b1f4472402444c6}{\texorpdfstring{$\sim$}{\string~}\+Physic}} () override=default
+\item 
+\mbox{\hyperlink{namespaceEngine_1_1Module_a4f2927ec966fd747da59cf6593ae7864}{module\+\_\+info\+\_\+t}} \mbox{\hyperlink{classEngine_1_1Module_1_1Physic_a9f6ccf01ef1414adf0cabdee72b4f32d}{get\+Info}} () override
+\begin{DoxyCompactList}\small\item\em Retrieve module information. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEngine_1_1Module_1_1Physic_ac8c289a1f8291124902286f15fc31820}{load\+Module}} (\mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core\+::\+Core}} \&core) override
+\begin{DoxyCompactList}\small\item\em Load the module into the application\textquotesingle{}s core. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEngine_1_1Module_1_1Physic_a1999c8b446bf119bb5860321de5d9312}{unload\+Module}} (\mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core\+::\+Core}} \&core) override
+\begin{DoxyCompactList}\small\item\em Unload the module and clean up its resources. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEngine_1_1Module_1_1Physic_af3362b70e124a72b0823a6a23dac00a0}{apply\+\_\+force}} (\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&registry, float delta\+Time) override
+\begin{DoxyCompactList}\small\item\em Apply forces to entities in the registry. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classEngine_1_1Module_1_1IModule}{Engine\+::\+Module\+::\+IModule}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classEngine_1_1Module_1_1IModule_a6bd5fa440d706fadbe1f806de2abd3a5}{\texorpdfstring{$\sim$}{\string~}\+IModule}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classEngine_1_1Module_1_1Physic_a34497b3c785152c0cc80858ce8f5bf68}\label{classEngine_1_1Module_1_1Physic_a34497b3c785152c0cc80858ce8f5bf68} 
+\index{Engine::Module::Physic@{Engine::Module::Physic}!Physic@{Physic}}
+\index{Physic@{Physic}!Engine::Module::Physic@{Engine::Module::Physic}}
+\doxysubsubsection{\texorpdfstring{Physic()}{Physic()}}
+{\footnotesize\ttfamily Engine\+::\+Module\+::\+Physic\+::\+Physic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{classEngine_1_1Module_1_1Physic_aef10757ff99a5a031b1f4472402444c6}\label{classEngine_1_1Module_1_1Physic_aef10757ff99a5a031b1f4472402444c6} 
+\index{Engine::Module::Physic@{Engine::Module::Physic}!````~Physic@{\texorpdfstring{$\sim$}{\string~}Physic}}
+\index{````~Physic@{\texorpdfstring{$\sim$}{\string~}Physic}!Engine::Module::Physic@{Engine::Module::Physic}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Physic()}{\string~Physic()}}
+{\footnotesize\ttfamily Engine\+::\+Module\+::\+Physic\+::\texorpdfstring{$\sim$}{\string~}\+Physic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classEngine_1_1Module_1_1Physic_af3362b70e124a72b0823a6a23dac00a0}\label{classEngine_1_1Module_1_1Physic_af3362b70e124a72b0823a6a23dac00a0} 
+\index{Engine::Module::Physic@{Engine::Module::Physic}!apply\_force@{apply\_force}}
+\index{apply\_force@{apply\_force}!Engine::Module::Physic@{Engine::Module::Physic}}
+\doxysubsubsection{\texorpdfstring{apply\_force()}{apply\_force()}}
+{\footnotesize\ttfamily void Engine\+::\+Module\+::\+Physic\+::apply\+\_\+force (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&}]{registry,  }\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Apply forces to entities in the registry. 
+
+This method updates the state of entities in the given \doxylink{namespaceECS}{ECS} (Entity-\/\+Component-\/\+System) registry by applying physical forces over a specified time interval.
+
+
+\begin{DoxyParams}{Parameters}
+{\em registry} & A reference to the \doxylink{namespaceECS}{ECS} registry containing the entities and their components. \\
+\hline
+{\em delta\+Time} & The elapsed time since the last physics update, used for calculations. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classEngine_1_1Module_1_1IPhysic_a71b4e6e4b2ab8153f68d307fc85f3858}{Engine\+::\+Module\+::\+IPhysic}}.
+
+\Hypertarget{classEngine_1_1Module_1_1Physic_a9f6ccf01ef1414adf0cabdee72b4f32d}\label{classEngine_1_1Module_1_1Physic_a9f6ccf01ef1414adf0cabdee72b4f32d} 
+\index{Engine::Module::Physic@{Engine::Module::Physic}!getInfo@{getInfo}}
+\index{getInfo@{getInfo}!Engine::Module::Physic@{Engine::Module::Physic}}
+\doxysubsubsection{\texorpdfstring{getInfo()}{getInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceEngine_1_1Module_a4f2927ec966fd747da59cf6593ae7864}{module\+\_\+info\+\_\+t}} Engine\+::\+Module\+::\+Physic\+::get\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Retrieve module information. 
+
+This method provides essential information about the module, such as its name and description.
+
+\begin{DoxyReturn}{Returns}
+A structure containing the module\textquotesingle{}s name and description. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classEngine_1_1Module_1_1IModule_adb9199647e717948fa37f90b8ae352f8}{Engine\+::\+Module\+::\+IModule}}.
+
+\Hypertarget{classEngine_1_1Module_1_1Physic_ac8c289a1f8291124902286f15fc31820}\label{classEngine_1_1Module_1_1Physic_ac8c289a1f8291124902286f15fc31820} 
+\index{Engine::Module::Physic@{Engine::Module::Physic}!loadModule@{loadModule}}
+\index{loadModule@{loadModule}!Engine::Module::Physic@{Engine::Module::Physic}}
+\doxysubsubsection{\texorpdfstring{loadModule()}{loadModule()}}
+{\footnotesize\ttfamily void Engine\+::\+Module\+::\+Physic\+::load\+Module (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core\+::\+Core}} \&}]{core }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Load the module into the application\textquotesingle{}s core. 
+
+This method is responsible for initializing the module and integrating its functionalities into the application\textquotesingle{}s core.
+
+
+\begin{DoxyParams}{Parameters}
+{\em core} & A reference to the application\textquotesingle{}s core. This is used to register the module\textquotesingle{}s functionalities. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classEngine_1_1Module_1_1IModule_ad38434ae26e3afe6b51db6df3836cfb0}{Engine\+::\+Module\+::\+IModule}}.
+
+\Hypertarget{classEngine_1_1Module_1_1Physic_a1999c8b446bf119bb5860321de5d9312}\label{classEngine_1_1Module_1_1Physic_a1999c8b446bf119bb5860321de5d9312} 
+\index{Engine::Module::Physic@{Engine::Module::Physic}!unloadModule@{unloadModule}}
+\index{unloadModule@{unloadModule}!Engine::Module::Physic@{Engine::Module::Physic}}
+\doxysubsubsection{\texorpdfstring{unloadModule()}{unloadModule()}}
+{\footnotesize\ttfamily void Engine\+::\+Module\+::\+Physic\+::unload\+Module (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core\+::\+Core}} \&}]{core }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Unload the module and clean up its resources. 
+
+This method is responsible for removing the module\textquotesingle{}s functionalities from the application\textquotesingle{}s core and releasing any allocated resources.
+
+
+\begin{DoxyParams}{Parameters}
+{\em core} & A reference to the application\textquotesingle{}s core. This is used to unregister the module\textquotesingle{}s functionalities. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classEngine_1_1Module_1_1IModule_afff50ba5f4fe555a31f85b692eb1ecbb}{Engine\+::\+Module\+::\+IModule}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/engine/modules/physic/includes/\mbox{\hyperlink{Physic_8hpp}{Physic.\+hpp}}\item 
+lib/engine/modules/physic/src/\mbox{\hyperlink{Physic_8cpp}{Physic.\+cpp}}\end{DoxyCompactItemize}

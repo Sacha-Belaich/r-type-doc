@@ -1,0 +1,48 @@
+\doxysection{Render.\+hpp}
+\hypertarget{client_2includes_2systems_2Render_8hpp_source}{}\label{client_2includes_2systems_2Render_8hpp_source}\index{client/includes/systems/Render.hpp@{client/includes/systems/Render.hpp}}
+\mbox{\hyperlink{client_2includes_2systems_2Render_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2024}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ Project\ Name}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ Render\ sytem\ class\ header}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IGraphical_8hpp}{IGraphical.hpp}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Registry_8hpp}{Registry.hpp}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}components/Position.hpp"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceClient_1_1System}{Client::System}}\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classClient_1_1System_1_1Render}{Render}}\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ Renders\ all\ entity\ with\ sprite\ and\ Position\ components}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @throws\ NoCameraException\ if\ no\ valid\ enabled\ Camera\ entity\ exists}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classClient_1_1System_1_1Render_ac9081709902cee1b8fa6f92a8e548ce1}{renderSprites}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classECS_1_1Registry}{ECS::Registry}}\ \&);}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Renders\ all\ entity\ with\ text\ and\ Position\ components}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @throws\ NoCameraException\ if\ no\ valid\ enabled\ Camera\ entity\ exists}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classClient_1_1System_1_1Render_a027778983060bf249a051102a7d913d8}{renderText}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classECS_1_1Registry}{ECS::Registry}}\ \&);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *@brief\ Retrieves\ active\ camera\ entity\ with\ its\ position\ and\ camera\ component}}
+\DoxyCodeLine{00028\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::pair<ECS::Component::Position,\ Graphical::Vect2i>\ \mbox{\hyperlink{classClient_1_1System_1_1Render_aa211b2c1ba0820515969b3d0d97fc78c}{getCameraInfo}}(}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classECS_1_1Registry}{ECS::Registry}}\ \&);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ simple\ rectangle\ collistion\ function\ to\ check\ if\ elment\ needs\ to\ be}}
+\DoxyCodeLine{00035\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ rendered.}}
+\DoxyCodeLine{00036\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classClient_1_1System_1_1Render_a85fa46fdda23f29e677415531cf5993f}{isOnScreen}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classECS_1_1Component_1_1Position}{ECS::Component::Position}}\ \&elementPos,}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structGraphical_1_1Vect2i}{Graphical::Vect2i}}\ \&elementSize,}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classECS_1_1Component_1_1Position}{ECS::Component::Position}}\ \&cameraPos,}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structGraphical_1_1Vect2i}{Graphical::Vect2i}}\ \&screenSize);}
+\DoxyCodeLine{00041\ \ \ \ \ \};}
+\DoxyCodeLine{00042\ \}\ \textcolor{comment}{//\ namespace\ Client::System}}
+
+\end{DoxyCode}

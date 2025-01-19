@@ -1,0 +1,74 @@
+\doxysection{Core.\+hpp}
+\hypertarget{client_2src_2Core_8hpp_source}{}\label{client_2src_2Core_8hpp_source}\index{client/src/Core.hpp@{client/src/Core.hpp}}
+\mbox{\hyperlink{client_2src_2Core_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2024}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ R\_Type}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ Core}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ CORE\_HPP\_}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ CORE\_HPP\_}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <dylib.hpp>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IGraphical_8hpp}{IGraphical.hpp}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{INetworkClient_8hpp}{INetworkClient.hpp}}"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Registry_8hpp}{Registry.hpp}}"{}}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{PacketHandler_8hpp}{PacketHandler.hpp}}"{}}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Registry_8hpp}{Registry.hpp}}"{}}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Scene_8hpp}{Scene.hpp}}"{}}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{lib_2engine_2includes_2Core_8hpp}{includes/Core.hpp}}"{}}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceR__Type}{R\_Type}}\ \{}
+\DoxyCodeLine{00026\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classR__Type_1_1Core}{Core}}\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classR__Type_1_1Core_ab39806a2554eb2c67d0763f9f2146e72}{Core}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classR__Type_1_1Core}{Core}}\ \&ref)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1Core_a9601032d14c9bb7d82400a5af2032b55}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classR__Type_1_1Core}{Core}}\ \&ref)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classR__Type_1_1Core_a474a9f67a76fcfb093fb8e2e3263b111}{\string~Core}}();}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1Core_ab7f13f91f4d07600e8128f5bda55de80}{run}}();}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classR__Type_1_1Core}{Core}}\ \&\mbox{\hyperlink{classR__Type_1_1Core_a8c98dca8dfa1a1fa4369a7b31d3b547a}{getInstance}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGraphical_1_1IGraphical}{Graphical::IGraphical}}\ \&\mbox{\hyperlink{classR__Type_1_1Core_a6b682e05b5d037065f75fc36803316d9}{getGraphLib}}();}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkClient}{Engine::Module::INetworkClient}}\ \&\mbox{\hyperlink{classR__Type_1_1Core_a869b922b6ba5489e45f5816f1a7cf9bb}{getNetworkLib}}();}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classNetwork_1_1PacketHandler}{Network::PacketHandler}}\ \&\mbox{\hyperlink{classR__Type_1_1Core_af0d14ec7054ee004d52530d36bd8d087}{getPacketHandler}}();}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classECS_1_1Registry}{ECS::Registry}}\ \&\mbox{\hyperlink{classR__Type_1_1Core_a7a4e95db4f315851e5dc34ce70507a8c}{getRegistry}}();}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1Core_ad2f6d14b126dee70d0e7b43547180327}{loadScene}}(std::string\ name);}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1Core_a256e22838a1a10034adfa5d13267563f}{closeWindow}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classR__Type_1_1Core_a1d81f00c4ed81b94ff5e73052d6306b5}{\_connectToServer}}();}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classR__Type_1_1Core_a58c50ab41af55a5ff2c40f3523a3c34f}{getSceneName}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classR__Type_1_1Core_ade332fd387ecfdb12449de284e93fbf8}{\_windowIsOpen}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1Core_aea964735ce43ac1f367dd48658ef45f7}{changeScene}}();}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ dylib\ \mbox{\hyperlink{classR__Type_1_1Core_af2af35ee5d294a445d1ce5f3b5ee3dab}{\_graph\_loader}};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Engine::Core::Core}}\ \mbox{\hyperlink{classR__Type_1_1Core_ab1d6e21794b40c688b0f0a54d704f21c}{\_core}};}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEngine_1_1Core_1_1ModuleLoader}{Engine::Core::ModuleLoader}}\ \mbox{\hyperlink{classR__Type_1_1Core_a35b9d45bdb2bf47c99cd1f5956f19cf6}{\_module\_loader}};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ std::unique\_ptr<Graphical::IGraphical>\ \mbox{\hyperlink{classR__Type_1_1Core_a6ccad8f589c7b1b0eb04bf2d73712c28}{\_graph\_lib}};}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkClient}{Engine::Module::INetworkClient}}\&\ \mbox{\hyperlink{classR__Type_1_1Core_a0698422523ebddc49b399fee8061acce}{\_network\_lib}};}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ std::unordered\_map<std::string,\ Engine::Scene>\ \mbox{\hyperlink{classR__Type_1_1Core_aa24c4240527a5a4df1e6a257bebb8f48}{\_scenes}};}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classR__Type_1_1Core_aa84b97056e7d76c5dd4e47b30f163bec}{sceneName}};}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classR__Type_1_1Core_aab4fbf59f6bc4312214441c06f032e11}{newScene}};}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classNetwork_1_1PacketHandler}{Network::PacketHandler}}\ \mbox{\hyperlink{classR__Type_1_1Core_a367daa2ce3ed40bfbfee7be499e9af07}{\_packet\_handler}};}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classECS_1_1Registry}{ECS::Registry}}\ \mbox{\hyperlink{classR__Type_1_1Core_aefbbf3fdfa74d1231ddcdd5c5eba5cc4}{\_registry}};}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::unique\_ptr<Core>\ \mbox{\hyperlink{classR__Type_1_1Core_a83f0c37d8bf9cd384291484483efa7e3}{\_instance}};}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ std::size\_t\ \mbox{\hyperlink{classR__Type_1_1Core_adb19870d737290e89e6290f09f330d7e}{\_my\_server\_id}}\{\};}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classR__Type_1_1Core_a21fbea4c29f09d9bb40f65431cea868a}{Core}}();}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1Core_a0af43987297c2797948866e209d03f67}{innitComponentsAndSystems}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1Core_a78bf181c77634fc28825388d89f9cfbb}{innitScenes}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1Core_af8b3d2c0f94630a9d073c896e16c5715}{setupPacketHandler}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00065\ \};}
+\DoxyCodeLine{00066\ \}\ \ \textcolor{comment}{//\ namespace\ R\_Type}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !CORE\_HPP\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

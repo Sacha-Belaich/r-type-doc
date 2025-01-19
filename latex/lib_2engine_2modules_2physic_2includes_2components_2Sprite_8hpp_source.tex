@@ -1,0 +1,37 @@
+\doxysection{Sprite.\+hpp}
+\hypertarget{lib_2engine_2modules_2physic_2includes_2components_2Sprite_8hpp_source}{}\label{lib_2engine_2modules_2physic_2includes_2components_2Sprite_8hpp_source}\index{lib/engine/modules/physic/includes/components/Sprite.hpp@{lib/engine/modules/physic/includes/components/Sprite.hpp}}
+\mbox{\hyperlink{lib_2engine_2modules_2physic_2includes_2components_2Sprite_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2024}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ r-\/type}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ Sprite\ component\ class\ header}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <cstddef>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IGraphical_8hpp}{../../../../../graphical/includes/IGraphical.hpp}}"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceEngine_1_1Module_1_1Component}{Engine::Module::Component}}\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classEngine_1_1Module_1_1Component_1_1Sprite}{Sprite}}\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classEngine_1_1Module_1_1Component_1_1Sprite_a5edf4d9c7b0b1cf76d47355cceb1160b}{Sprite}}(std::string\ texturepath\ =\ \textcolor{stringliteral}{"{}"{}},\ \textcolor{keywordtype}{bool}\ visible\ =\ \textcolor{keyword}{true},}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structGraphical_1_1TextureRect}{Graphical::TextureRect}}\ \mbox{\hyperlink{classEngine_1_1Module_1_1Component_1_1Sprite_a2605bc65afe7c5cce9b2dbe8deae2858}{textRect}}\ =\ \{0,\ 0,\ 0,\ 0\},}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structGraphical_1_1Vect2i}{Graphical::Vect2i}}\ \mbox{\hyperlink{classEngine_1_1Module_1_1Component_1_1Sprite_af8a3120e0143d7722d3085104ebc49b6}{size}}\ =\ \{0,\ 0\},\ int8\_t\ \mbox{\hyperlink{classEngine_1_1Module_1_1Component_1_1Sprite_a5e9cf5a056926cba56aab2b083bc765d}{rotation}}\ =\ 0,\ int8\_t\ layer\ =\ 0);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1Component_1_1Sprite_ae1281fabbb8b9340c63043b3a92c2bff}{log}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classEngine_1_1Module_1_1Component_1_1Sprite_af8872c7bb6d018d56f0b84be0e639a23}{\_is\_drawable}};}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structGraphical_1_1TextureRect}{Graphical::TextureRect}}\ \mbox{\hyperlink{classEngine_1_1Module_1_1Component_1_1Sprite_a5c1468167b405570bbf784bc4706ccd2}{\_textRect}};}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classEngine_1_1Module_1_1Component_1_1Sprite_ab998eaa8636f12219ed2f55ef84e284e}{\_texture}};}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structGraphical_1_1Vect2i}{Graphical::Vect2i}}\ \mbox{\hyperlink{classEngine_1_1Module_1_1Component_1_1Sprite_a6da2db112bcc53d079d6deb599893ba1}{\_size}};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ int8\_t\ \mbox{\hyperlink{classEngine_1_1Module_1_1Component_1_1Sprite_a1db0d3e6f3bc0395a3d08e7635e7ec75}{\_rotation}};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ int8\_t\ \mbox{\hyperlink{classEngine_1_1Module_1_1Component_1_1Sprite_a45b522dbb7b74913bec2fd810a827ab1}{\_layer}};}
+\DoxyCodeLine{00030\ \ \ \ \ \};}
+\DoxyCodeLine{00031\ \}\ \ \textcolor{comment}{//\ namespace\ Physic::Component}}
+
+\end{DoxyCode}

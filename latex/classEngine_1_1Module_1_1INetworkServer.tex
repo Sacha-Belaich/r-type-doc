@@ -1,0 +1,152 @@
+\doxysection{Engine\+::Module\+::INetwork\+Server Interface Reference}
+\hypertarget{classEngine_1_1Module_1_1INetworkServer}{}\label{classEngine_1_1Module_1_1INetworkServer}\index{Engine::Module::INetworkServer@{Engine::Module::INetworkServer}}
+
+
+Interface for managing network server functionality.  
+
+
+
+
+{\ttfamily \#include $<$INetwork\+Server.\+hpp$>$}
+
+Inheritance diagram for Engine\+::Module\+::INetwork\+Server\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classEngine_1_1Module_1_1INetworkServer}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer_ad88f595fc57ea53efc6c963f78cc71ce}{host}} (uint16\+\_\+t port)=0
+\begin{DoxyCompactList}\small\item\em Host a server on a specified port. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer_a6c2e5e401b1b3dd9aa4461149ea788fb}{close}} ()=0
+\begin{DoxyCompactList}\small\item\em Close all connections and release sockets. \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ std\+::pair$<$ uint16\+\_\+t, std\+::vector$<$ uint8\+\_\+t $>$ $>$ $>$ \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer_afe74f9b2d93a128bcc05b7b36148c4ff}{get\+All\+Oldest\+Packet}} ()=0
+\begin{DoxyCompactList}\small\item\em Retrieve the oldest received packets from all clients. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer_a31ecd115491ba419220adb83d71ea6b3}{send}} (uint16\+\_\+t client, const std\+::vector$<$ uint8\+\_\+t $>$ \&packet)=0
+\begin{DoxyCompactList}\small\item\em Send a packet to a specific client. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer_a96dec081b5ac197ce78ffe913d6a821b}{send\+All}} (const std\+::vector$<$ uint8\+\_\+t $>$ \&packet)=0
+\begin{DoxyCompactList}\small\item\em Send a packet to all connected clients. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classEngine_1_1Module_1_1IModule}{Engine\+::\+Module\+::\+IModule}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classEngine_1_1Module_1_1IModule_a6bd5fa440d706fadbe1f806de2abd3a5}{\texorpdfstring{$\sim$}{\string~}\+IModule}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespaceEngine_1_1Module_a4f2927ec966fd747da59cf6593ae7864}{module\+\_\+info\+\_\+t}} \mbox{\hyperlink{classEngine_1_1Module_1_1IModule_adb9199647e717948fa37f90b8ae352f8}{get\+Info}} ()=0
+\begin{DoxyCompactList}\small\item\em Retrieve module information. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEngine_1_1Module_1_1IModule_ad38434ae26e3afe6b51db6df3836cfb0}{load\+Module}} (\mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core\+::\+Core}} \&core)=0
+\begin{DoxyCompactList}\small\item\em Load the module into the application\textquotesingle{}s core. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEngine_1_1Module_1_1IModule_afff50ba5f4fe555a31f85b692eb1ecbb}{unload\+Module}} (\mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core\+::\+Core}} \&core)=0
+\begin{DoxyCompactList}\small\item\em Unload the module and clean up its resources. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for managing network server functionality. 
+
+The \doxylink{classEngine_1_1Module_1_1INetworkServer}{INetwork\+Server} interface provides methods to handle server-\/side network operations, including hosting a server, managing client connections, receiving packets, and sending messages to clients. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classEngine_1_1Module_1_1INetworkServer_a6c2e5e401b1b3dd9aa4461149ea788fb}\label{classEngine_1_1Module_1_1INetworkServer_a6c2e5e401b1b3dd9aa4461149ea788fb} 
+\index{Engine::Module::INetworkServer@{Engine::Module::INetworkServer}!close@{close}}
+\index{close@{close}!Engine::Module::INetworkServer@{Engine::Module::INetworkServer}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily virtual void Engine\+::\+Module\+::\+INetwork\+Server\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Close all connections and release sockets. 
+
+This method closes all client connections and releases the resources associated with the server\textquotesingle{}s sockets. 
+
+Implemented in \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkServer_a05ac2d295e2d1282217d3a6c2a2e92d1}{Engine\+::\+Module\+::\+Network\+Server}}.
+
+\Hypertarget{classEngine_1_1Module_1_1INetworkServer_afe74f9b2d93a128bcc05b7b36148c4ff}\label{classEngine_1_1Module_1_1INetworkServer_afe74f9b2d93a128bcc05b7b36148c4ff} 
+\index{Engine::Module::INetworkServer@{Engine::Module::INetworkServer}!getAllOldestPacket@{getAllOldestPacket}}
+\index{getAllOldestPacket@{getAllOldestPacket}!Engine::Module::INetworkServer@{Engine::Module::INetworkServer}}
+\doxysubsubsection{\texorpdfstring{getAllOldestPacket()}{getAllOldestPacket()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$ std\+::pair$<$ uint16\+\_\+t, std\+::vector$<$ uint8\+\_\+t $>$ $>$ $>$ Engine\+::\+Module\+::\+INetwork\+Server\+::get\+All\+Oldest\+Packet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Retrieve the oldest received packets from all clients. 
+
+This method fetches a list of the oldest complete packets received from each client, along with the client IDs that sent them.
+
+\begin{DoxyReturn}{Returns}
+A vector of pairs, where each pair consists of a client ID and the content of the oldest full packet sent by that client. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkServer_a6009587823345f1661106de591e3edf6}{Engine\+::\+Module\+::\+Network\+Server}}.
+
+\Hypertarget{classEngine_1_1Module_1_1INetworkServer_ad88f595fc57ea53efc6c963f78cc71ce}\label{classEngine_1_1Module_1_1INetworkServer_ad88f595fc57ea53efc6c963f78cc71ce} 
+\index{Engine::Module::INetworkServer@{Engine::Module::INetworkServer}!host@{host}}
+\index{host@{host}!Engine::Module::INetworkServer@{Engine::Module::INetworkServer}}
+\doxysubsubsection{\texorpdfstring{host()}{host()}}
+{\footnotesize\ttfamily virtual void Engine\+::\+Module\+::\+INetwork\+Server\+::host (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Host a server on a specified port. 
+
+This method starts hosting a server and begins asynchronously receiving data from connected clients.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & The port on which the server listens for incoming connections. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkServer_a1dac5b6d58541923df171f701b090476}{Engine\+::\+Module\+::\+Network\+Server}}.
+
+\Hypertarget{classEngine_1_1Module_1_1INetworkServer_a31ecd115491ba419220adb83d71ea6b3}\label{classEngine_1_1Module_1_1INetworkServer_a31ecd115491ba419220adb83d71ea6b3} 
+\index{Engine::Module::INetworkServer@{Engine::Module::INetworkServer}!send@{send}}
+\index{send@{send}!Engine::Module::INetworkServer@{Engine::Module::INetworkServer}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily virtual void Engine\+::\+Module\+::\+INetwork\+Server\+::send (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{client,  }\item[{const std\+::vector$<$ uint8\+\_\+t $>$ \&}]{packet }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Send a packet to a specific client. 
+
+This method sends a serialized packet asynchronously to the specified client.
+
+
+\begin{DoxyParams}{Parameters}
+{\em client} & The ID of the client to which the message is sent. \\
+\hline
+{\em packet} & A vector containing the serialized packet to send. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkServer_a1038b5aa8b515094facffe4210034a8c}{Engine\+::\+Module\+::\+Network\+Server}}.
+
+\Hypertarget{classEngine_1_1Module_1_1INetworkServer_a96dec081b5ac197ce78ffe913d6a821b}\label{classEngine_1_1Module_1_1INetworkServer_a96dec081b5ac197ce78ffe913d6a821b} 
+\index{Engine::Module::INetworkServer@{Engine::Module::INetworkServer}!sendAll@{sendAll}}
+\index{sendAll@{sendAll}!Engine::Module::INetworkServer@{Engine::Module::INetworkServer}}
+\doxysubsubsection{\texorpdfstring{sendAll()}{sendAll()}}
+{\footnotesize\ttfamily virtual void Engine\+::\+Module\+::\+INetwork\+Server\+::send\+All (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint8\+\_\+t $>$ \&}]{packet }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Send a packet to all connected clients. 
+
+This method sends a serialized packet asynchronously to all clients currently connected to the server.
+
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & A vector containing the serialized packet to send. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkServer_a0529dc98852b587563ea110ec3009170}{Engine\+::\+Module\+::\+Network\+Server}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+lib/engine/includes/\mbox{\hyperlink{INetworkServer_8hpp}{INetwork\+Server.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,243 @@
+\doxysection{Network\+::Packet Class Reference}
+\hypertarget{classNetwork_1_1Packet}{}\label{classNetwork_1_1Packet}\index{Network::Packet@{Network::Packet}}
+
+
+Represents a network packet capable of serialization and deserialization.  
+
+
+
+
+{\ttfamily \#include $<$Packet.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classNetwork_1_1Packet_aa3a08801d3f2e55dc69f50e4b95b699e}{byte}} = uint8\+\_\+t
+\begin{DoxyCompactList}\small\item\em Type alias for a byte. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classNetwork_1_1Packet_aefab1397e43a0b74458726b0362554ad}{Packet}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classNetwork_1_1Packet_a540d171e0dd0a046e727fda6a2c2e6ab}{Packet}} (const std\+::vector$<$ \mbox{\hyperlink{classNetwork_1_1Packet_aa3a08801d3f2e55dc69f50e4b95b699e}{byte}} $>$ \&data)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classNetwork_1_1Packet}{Packet} from raw data. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Payload\+Type $>$ }\\\mbox{\hyperlink{classNetwork_1_1Packet_a7cf25cc5a07345aa910e89770e8dd40d}{Packet}} (const Payload\+Type \&payload, const uint16\+\_\+t command\+Id)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classNetwork_1_1Packet}{Packet} with a payload and command ID. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classNetwork_1_1Packet_aa3a08801d3f2e55dc69f50e4b95b699e}{byte}} $>$ \mbox{\hyperlink{classNetwork_1_1Packet_abacd1c31e4eec2fb87a7adafaa1798ee}{serialize}} ()
+\begin{DoxyCompactList}\small\item\em Serializes the packet into a vector of bytes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNetwork_1_1Packet_ae24e8f080a27c7755314d5d776050cde}{update\+Timestamp}} ()
+\begin{DoxyCompactList}\small\item\em Updates the timestamp of the packet to the current time. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{classNetwork_1_1Packet_a5f5677ea5f759693a75168225cff2c84}{get\+Timestamp}} () const
+\begin{DoxyCompactList}\small\item\em Gets the timestamp of the packet. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{classNetwork_1_1Packet_a4918c4913c652187da6866e57eee184f}{get\+Command\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Gets the command ID of the packet. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Payload\+Type $>$ }\\Payload\+Type \mbox{\hyperlink{classNetwork_1_1Packet_ab8650997af20ad9a39a3dedd07dfbd53}{get\+Payload}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the payload from the packet. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\static void \mbox{\hyperlink{classNetwork_1_1Packet_aff2f26116cd581a7effb1a167a2c5f4b}{serialize\+Field}} (const T \&value, std\+::vector$<$ \mbox{\hyperlink{classNetwork_1_1Packet_aa3a08801d3f2e55dc69f50e4b95b699e}{byte}} $>$ \&data)
+\item 
+{\footnotesize template$<$typename T $>$ }\\static T \mbox{\hyperlink{classNetwork_1_1Packet_a04bf73f3877499d4151405d625df14ed}{deserialize\+Field}} (const std\+::vector$<$ \mbox{\hyperlink{classNetwork_1_1Packet_aa3a08801d3f2e55dc69f50e4b95b699e}{byte}} $>$ \&data, const size\+\_\+t offset)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classNetwork_1_1Packet_ad3c22fdbd92f4661f5076dc02bfbaa50}{\+\_\+timestamp}} \{\}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{classNetwork_1_1Packet_a921920f908ad6427ade811d7aa2ad373}{\+\_\+command\+Id}} \{\}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classNetwork_1_1Packet_aa8c3f8b1309f3da874276d743effa133}{\+\_\+payload\+Size}} \{\}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classNetwork_1_1Packet_aa3a08801d3f2e55dc69f50e4b95b699e}{byte}} $>$ \mbox{\hyperlink{classNetwork_1_1Packet_a77c680c8d6a9a8553ce141e7b453c3f3}{\+\_\+payload}} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a network packet capable of serialization and deserialization. 
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classNetwork_1_1Packet_aa3a08801d3f2e55dc69f50e4b95b699e}\label{classNetwork_1_1Packet_aa3a08801d3f2e55dc69f50e4b95b699e} 
+\index{Network::Packet@{Network::Packet}!byte@{byte}}
+\index{byte@{byte}!Network::Packet@{Network::Packet}}
+\doxysubsubsection{\texorpdfstring{byte}{byte}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classNetwork_1_1Packet_aa3a08801d3f2e55dc69f50e4b95b699e}{Network\+::\+Packet\+::byte}} = uint8\+\_\+t}
+
+
+
+Type alias for a byte. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classNetwork_1_1Packet_aefab1397e43a0b74458726b0362554ad}\label{classNetwork_1_1Packet_aefab1397e43a0b74458726b0362554ad} 
+\index{Network::Packet@{Network::Packet}!Packet@{Packet}}
+\index{Packet@{Packet}!Network::Packet@{Network::Packet}}
+\doxysubsubsection{\texorpdfstring{Packet()}{Packet()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Network\+::\+Packet\+::\+Packet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default constructor. 
+
+\Hypertarget{classNetwork_1_1Packet_a540d171e0dd0a046e727fda6a2c2e6ab}\label{classNetwork_1_1Packet_a540d171e0dd0a046e727fda6a2c2e6ab} 
+\index{Network::Packet@{Network::Packet}!Packet@{Packet}}
+\index{Packet@{Packet}!Network::Packet@{Network::Packet}}
+\doxysubsubsection{\texorpdfstring{Packet()}{Packet()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Network\+::\+Packet\+::\+Packet (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classNetwork_1_1Packet_aa3a08801d3f2e55dc69f50e4b95b699e}{byte}} $>$ \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructs a \doxylink{classNetwork_1_1Packet}{Packet} from raw data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & A vector of bytes represeting packet raw data received throught network \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classNetwork_1_1Packet_a7cf25cc5a07345aa910e89770e8dd40d}\label{classNetwork_1_1Packet_a7cf25cc5a07345aa910e89770e8dd40d} 
+\index{Network::Packet@{Network::Packet}!Packet@{Packet}}
+\index{Packet@{Packet}!Network::Packet@{Network::Packet}}
+\doxysubsubsection{\texorpdfstring{Packet()}{Packet()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename Payload\+Type $>$ \\
+Network\+::\+Packet\+::\+Packet (\begin{DoxyParamCaption}\item[{const Payload\+Type \&}]{payload,  }\item[{const uint16\+\_\+t}]{command\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a \doxylink{classNetwork_1_1Packet}{Packet} with a payload and command ID. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Payload\+Type} & Struct to use as data \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em payload} & The payload to be included in the packet \\
+\hline
+{\em command\+Id} & The command identifier for the packet \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classNetwork_1_1Packet_a04bf73f3877499d4151405d625df14ed}\label{classNetwork_1_1Packet_a04bf73f3877499d4151405d625df14ed} 
+\index{Network::Packet@{Network::Packet}!deserializeField@{deserializeField}}
+\index{deserializeField@{deserializeField}!Network::Packet@{Network::Packet}}
+\doxysubsubsection{\texorpdfstring{deserializeField()}{deserializeField()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static T Network\+::\+Packet\+::deserialize\+Field (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classNetwork_1_1Packet_aa3a08801d3f2e55dc69f50e4b95b699e}{byte}} $>$ \&}]{data,  }\item[{const size\+\_\+t}]{offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{classNetwork_1_1Packet_a4918c4913c652187da6866e57eee184f}\label{classNetwork_1_1Packet_a4918c4913c652187da6866e57eee184f} 
+\index{Network::Packet@{Network::Packet}!getCommandId@{getCommandId}}
+\index{getCommandId@{getCommandId}!Network::Packet@{Network::Packet}}
+\doxysubsubsection{\texorpdfstring{getCommandId()}{getCommandId()}}
+{\footnotesize\ttfamily uint16\+\_\+t Network\+::\+Packet\+::get\+Command\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the command ID of the packet. 
+
+\begin{DoxyReturn}{Returns}
+The command ID as an 16-\/bit unsigned integer. 
+\end{DoxyReturn}
+\Hypertarget{classNetwork_1_1Packet_ab8650997af20ad9a39a3dedd07dfbd53}\label{classNetwork_1_1Packet_ab8650997af20ad9a39a3dedd07dfbd53} 
+\index{Network::Packet@{Network::Packet}!getPayload@{getPayload}}
+\index{getPayload@{getPayload}!Network::Packet@{Network::Packet}}
+\doxysubsubsection{\texorpdfstring{getPayload()}{getPayload()}}
+{\footnotesize\ttfamily template$<$typename Payload\+Type $>$ \\
+Payload\+Type Network\+::\+Packet\+::get\+Payload (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves the payload from the packet. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Payload\+Type} & The type of the payload data. \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+The payload data of the specified type. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & If the payload size does not match the expected size. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classNetwork_1_1Packet_a5f5677ea5f759693a75168225cff2c84}\label{classNetwork_1_1Packet_a5f5677ea5f759693a75168225cff2c84} 
+\index{Network::Packet@{Network::Packet}!getTimestamp@{getTimestamp}}
+\index{getTimestamp@{getTimestamp}!Network::Packet@{Network::Packet}}
+\doxysubsubsection{\texorpdfstring{getTimestamp()}{getTimestamp()}}
+{\footnotesize\ttfamily uint64\+\_\+t Network\+::\+Packet\+::get\+Timestamp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the timestamp of the packet. 
+
+\begin{DoxyReturn}{Returns}
+The timestamp as a 64-\/bit unsigned integer. 
+\end{DoxyReturn}
+\Hypertarget{classNetwork_1_1Packet_abacd1c31e4eec2fb87a7adafaa1798ee}\label{classNetwork_1_1Packet_abacd1c31e4eec2fb87a7adafaa1798ee} 
+\index{Network::Packet@{Network::Packet}!serialize@{serialize}}
+\index{serialize@{serialize}!Network::Packet@{Network::Packet}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classNetwork_1_1Packet_aa3a08801d3f2e55dc69f50e4b95b699e}{Packet\+::byte}} $>$ Network\+::\+Packet\+::serialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Serializes the packet into a vector of bytes. 
+
+\begin{DoxyReturn}{Returns}
+A vector of bytes representing the serialized packet. 
+\end{DoxyReturn}
+\Hypertarget{classNetwork_1_1Packet_aff2f26116cd581a7effb1a167a2c5f4b}\label{classNetwork_1_1Packet_aff2f26116cd581a7effb1a167a2c5f4b} 
+\index{Network::Packet@{Network::Packet}!serializeField@{serializeField}}
+\index{serializeField@{serializeField}!Network::Packet@{Network::Packet}}
+\doxysubsubsection{\texorpdfstring{serializeField()}{serializeField()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static void Network\+::\+Packet\+::serialize\+Field (\begin{DoxyParamCaption}\item[{const T \&}]{value,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classNetwork_1_1Packet_aa3a08801d3f2e55dc69f50e4b95b699e}{byte}} $>$ \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{classNetwork_1_1Packet_ae24e8f080a27c7755314d5d776050cde}\label{classNetwork_1_1Packet_ae24e8f080a27c7755314d5d776050cde} 
+\index{Network::Packet@{Network::Packet}!updateTimestamp@{updateTimestamp}}
+\index{updateTimestamp@{updateTimestamp}!Network::Packet@{Network::Packet}}
+\doxysubsubsection{\texorpdfstring{updateTimestamp()}{updateTimestamp()}}
+{\footnotesize\ttfamily void Network\+::\+Packet\+::update\+Timestamp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates the timestamp of the packet to the current time. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classNetwork_1_1Packet_a921920f908ad6427ade811d7aa2ad373}\label{classNetwork_1_1Packet_a921920f908ad6427ade811d7aa2ad373} 
+\index{Network::Packet@{Network::Packet}!\_commandId@{\_commandId}}
+\index{\_commandId@{\_commandId}!Network::Packet@{Network::Packet}}
+\doxysubsubsection{\texorpdfstring{\_commandId}{\_commandId}}
+{\footnotesize\ttfamily uint16\+\_\+t Network\+::\+Packet\+::\+\_\+command\+Id \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classNetwork_1_1Packet_a77c680c8d6a9a8553ce141e7b453c3f3}\label{classNetwork_1_1Packet_a77c680c8d6a9a8553ce141e7b453c3f3} 
+\index{Network::Packet@{Network::Packet}!\_payload@{\_payload}}
+\index{\_payload@{\_payload}!Network::Packet@{Network::Packet}}
+\doxysubsubsection{\texorpdfstring{\_payload}{\_payload}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classNetwork_1_1Packet_aa3a08801d3f2e55dc69f50e4b95b699e}{byte}}$>$ Network\+::\+Packet\+::\+\_\+payload \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classNetwork_1_1Packet_aa8c3f8b1309f3da874276d743effa133}\label{classNetwork_1_1Packet_aa8c3f8b1309f3da874276d743effa133} 
+\index{Network::Packet@{Network::Packet}!\_payloadSize@{\_payloadSize}}
+\index{\_payloadSize@{\_payloadSize}!Network::Packet@{Network::Packet}}
+\doxysubsubsection{\texorpdfstring{\_payloadSize}{\_payloadSize}}
+{\footnotesize\ttfamily uint32\+\_\+t Network\+::\+Packet\+::\+\_\+payload\+Size \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classNetwork_1_1Packet_ad3c22fdbd92f4661f5076dc02bfbaa50}\label{classNetwork_1_1Packet_ad3c22fdbd92f4661f5076dc02bfbaa50} 
+\index{Network::Packet@{Network::Packet}!\_timestamp@{\_timestamp}}
+\index{\_timestamp@{\_timestamp}!Network::Packet@{Network::Packet}}
+\doxysubsubsection{\texorpdfstring{\_timestamp}{\_timestamp}}
+{\footnotesize\ttfamily uint64\+\_\+t Network\+::\+Packet\+::\+\_\+timestamp \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/network/packet\+\_\+network/\mbox{\hyperlink{Packet_8hpp}{Packet.\+hpp}}\item 
+lib/network/packet\+\_\+network/\mbox{\hyperlink{Packet_8cpp}{Packet.\+cpp}}\end{DoxyCompactItemize}

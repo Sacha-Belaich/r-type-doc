@@ -1,0 +1,167 @@
+\chapter{R-\/\+Type Project Documentation}
+\hypertarget{index}{}\label{index}\index{R-\/Type Project Documentation@{R-\/Type Project Documentation}}
+\label{index_md_README}%
+\Hypertarget{index_md_README}%
+ \hypertarget{index_autotoc_md1}{}\doxysection{\texorpdfstring{Overview}{Overview}}\label{index_autotoc_md1}
+The {\bfseries{R-\/\+Type}} project is a networked multiplayer game developed by our team of 5 developers\+: {\bfseries{Deniz}}, {\bfseries{Julien}}, {\bfseries{Dimitri}} and {\bfseries{Sacha}}. The game leverages modern C++ features and multiple powerful libraries to create an efficient and flexible architecture.\hypertarget{index_autotoc_md2}{}\doxysection{\texorpdfstring{Technologies Used}{Technologies Used}}\label{index_autotoc_md2}
+We have integrated several tools and libraries to build R-\/\+Type\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{SFML}}\+: For rendering graphics, handling window creation, and managing events.
+\item {\bfseries{Raylib}}\+: A lightweight library used as an alternative for specific graphical components.
+\item {\bfseries{Custom ASIO Wrapper}}\+: Our own wrapper around ASIO for asynchronous networking.
+\item {\bfseries{Custom \doxylink{namespaceECS}{ECS}}}\+: A bespoke Entity Component System to manage game entities and their behaviors efficiently.
+\item {\bfseries{CPM (CMake Package Manager)}}\+: For dependency management and integration of external libraries.
+\item {\bfseries{CMake}}\+: To configure, build, and compile the project.
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md4}{}\doxysection{\texorpdfstring{Architecture}{Architecture}}\label{index_autotoc_md4}
+\hypertarget{index_autotoc_md5}{}\doxysubsection{\texorpdfstring{ECS (Entity Component System)}{ECS (Entity Component System)}}\label{index_autotoc_md5}
+Our {\bfseries{\doxylink{namespaceECS}{ECS}}} implementation forms the core of the game engine, efficiently handling entities, components, and systems\+:
+\begin{DoxyItemize}
+\item {\bfseries{Entity}}\+: A unique identifier representing an object in the game world.
+\item {\bfseries{Component}}\+: Data structures that store properties for entities (e.\+g., position, velocity).
+\item {\bfseries{System}}\+: Logic that operates on entities with specific components (e.\+g., physics updates, rendering).
+\end{DoxyItemize}
+
+Example of entity creation and system logic\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classECS_1_1Registry}{ECS::Registry}}\ registry;}
+\DoxyCodeLine{\mbox{\hyperlink{classECS_1_1Entity}{ECS::Entity}}\ player\ =\ registry.\mbox{\hyperlink{classECS_1_1Registry_a34a9b460637bb8f0d33550d1b69cdfa9}{spawn\_entity}}();}
+\DoxyCodeLine{registry.\mbox{\hyperlink{classECS_1_1Registry_a4f0697bc7a4e9384d8a227bd96d7e5e7}{add\_system}}([](\mbox{\hyperlink{classECS_1_1Registry}{ECS::Registry}}\ \&reg)\ \{}
+\DoxyCodeLine{\ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Updating\ game\ logic\ for\ all\ entities."{}}\ <<\ std::endl;}
+\DoxyCodeLine{\});}
+\DoxyCodeLine{registry.\mbox{\hyperlink{classECS_1_1Registry_aab838808a3b0b33c2a890e62e11ee6c4}{run\_systems}}();}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md6}{}\doxysubsection{\texorpdfstring{Architecture Overview}{Architecture Overview}}\label{index_autotoc_md6}
+The game architecture follows a clean separation of concerns between the {\bfseries{\doxylink{namespaceClient}{Client}}}, {\bfseries{Server}}, and {\bfseries{\doxylink{namespaceECS}{ECS}}} components\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{\doxylink{namespaceClient}{Client}}}\+: Handles rendering, user input, and communication with the server.
+\item {\bfseries{Server}}\+: Manages game state, processes inputs from clients, and sends updates back to clients.
+\item {\bfseries{\doxylink{namespaceECS}{ECS}}}\+: Shared between the client and server to maintain consistent entity and system management.
+\end{DoxyItemize}
+
+{\bfseries{Key interactions\+:}}
+\begin{DoxyEnumerate}
+\item The {\bfseries{Server}} processes inputs and updates game logic using \doxylink{namespaceECS}{ECS}.
+\item The {\bfseries{\doxylink{namespaceClient}{Client}}} renders the updated game state and sends player actions to the server.
+\item Networking via our {\bfseries{Custom ASIO Wrapper}} ensures smooth communication between the client and server.
+\end{DoxyEnumerate}
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md8}{}\doxysubsection{\texorpdfstring{Networking}{Networking}}\label{index_autotoc_md8}
+Networking is powered by our {\bfseries{Custom ASIO Wrapper}}, which ensures smooth and asynchronous communication between the game server and clients\+:
+\begin{DoxyItemize}
+\item {\bfseries{Client-\/\+Server Architecture}}\+: A centralized server manages game state, while clients send inputs and receive updates.
+\item {\bfseries{Real-\/\+Time Updates}}\+: Optimized communication ensures minimal latency during gameplay.
+\item {\bfseries{Asynchronous Handling}}\+: All communication is handled asynchronously to avoid blocking operations and improve performance.
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md10}{}\doxysection{\texorpdfstring{Project Structure}{Project Structure}}\label{index_autotoc_md10}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{R-\/Type/}
+\DoxyCodeLine{├──\ build/\ \ \ \ \ \ \ \ \ \ \#\ Build\ output\ directory}
+\DoxyCodeLine{│\ \ \ ├──\ client/\ \ \ \ \ \#\ Built\ client\ binaries}
+\DoxyCodeLine{│\ \ \ ├──\ cmake/\ \ \ \ \ \ \#\ Build\ external\ libraries\ not\ rebuilt\ into\ lib\ (like\ dylib\ or\ yaml-\/cpp)}
+\DoxyCodeLine{│\ \ \ ├──\ lib/\ \ \ \ \ \ \ \ \#\ Built\ lib\ binaries}
+\DoxyCodeLine{│\ \ \ ├──\ Makefile\ \ \ \ \#\ Makefile\ for\ the\ build\ process}
+\DoxyCodeLine{│\ \ \ └──\ server/\ \ \ \ \ \#\ Built\ server\ binaries}
+\DoxyCodeLine{├──\ cmake/}
+\DoxyCodeLine{│\ \ \ ├──\ CMakeLists.txt\ \#\ Contains\ all\ the\ external\ libraries\ not\ rebuilt}
+\DoxyCodeLine{│\ \ \ └──\ CPM.cmake}
+\DoxyCodeLine{├──\ client/\ \ \ \ \ \ \ \ \ \#\ Client-\/side\ code\ and\ resources}
+\DoxyCodeLine{│\ \ \ ├──\ CMakeLists.txt}
+\DoxyCodeLine{│\ \ \ ├──\ includes/\ \ \ \#\ Client\ header\ files}
+\DoxyCodeLine{│\ \ \ │\ \ \ ├──\ components/\ \ \ \ \ \#\ ECS\ components}
+\DoxyCodeLine{│\ \ \ │\ \ \ └──\ systems/\ \ \ \ \ \ \ \ \#\ ECS\ systems}
+\DoxyCodeLine{│\ \ \ └──\ src/\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Client\ source\ files}
+\DoxyCodeLine{├──\ config/\ \ \ \ \ \ \ \ \ \#\ Folder\ containing\ all\ the\ config\ files\ for\ everything}
+\DoxyCodeLine{├──\ doc/\ \ \ \ \ \ \ \ \ \ \ \ \#\ Contains\ all\ the\ documentation\ for\ this\ project}
+\DoxyCodeLine{├──\ lib/}
+\DoxyCodeLine{│\ \ \ ├──\ client/\ \ \ \ \ \#\ Built\ client\ binaries}
+\DoxyCodeLine{│\ \ \ ├──\ server/\ \ \ \ \ \#\ Built\ server\ binaries}
+\DoxyCodeLine{│\ \ \ └──\ Makefile\ \ \ \ \#\ Makefile\ for\ the\ build\ process}
+\DoxyCodeLine{└──\ server/\ \ \ \ \ \ \ \ \ \#\ Server-\/side\ logic\ for\ managing\ game\ state}
+\DoxyCodeLine{\ \ \ \ ├──\ CMakeLists.txt}
+\DoxyCodeLine{\ \ \ \ ├──\ includes/\ \ \ \#\ Server\ header\ files}
+\DoxyCodeLine{\ \ \ \ └──\ src/\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Server\ source\ files}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md12}{}\doxysection{\texorpdfstring{Building the Project}{Building the Project}}\label{index_autotoc_md12}
+The project uses {\bfseries{CMake}} with {\bfseries{CPM}} for package management. Follow these steps to build the project\+:
+
+
+\begin{DoxyEnumerate}
+\item {\bfseries{Clone the repository}}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git\ clone\ git@github.com:EpitechPromo2027/B-\/CPP-\/500-\/PAR-\/5-\/2-\/rtype-\/deniz.uzuntok-\/husson.git\ r-\/type}
+\DoxyCodeLine{cd\ r-\/type}
+
+\end{DoxyCode}
+
+\item {\bfseries{Configure and build}}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{mkdir\ build\ \&\&\ cd\ build}
+\DoxyCodeLine{cmake\ ..\ \&\&\ cmake\ -\/-\/build\ .\ -\/-\/config\ Release\ \&\&\ cmake\ -\/-\/install\ .}
+\DoxyCodeLine{cd\ ..}
+
+\end{DoxyCode}
+
+\item {\bfseries{Run the server from root}}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./r-\/type\_server}
+
+\end{DoxyCode}
+
+\item {\bfseries{Run the client}}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./r-\/type\_client}
+
+\end{DoxyCode}
+
+\end{DoxyEnumerate}
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md14}{}\doxysection{\texorpdfstring{Team Members}{Team Members}}\label{index_autotoc_md14}
+The project is proudly developed by\+:
+\begin{DoxyItemize}
+\item {\bfseries{Deniz}}
+\item {\bfseries{Julien}}
+\item {\bfseries{Dimitri}}
+\item {\bfseries{Sacha}}
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md16}{}\doxysection{\texorpdfstring{Future Improvements}{Future Improvements}}\label{index_autotoc_md16}
+
+\begin{DoxyItemize}
+\item Enhanced multiplayer features
+\item Improved graphics and animation systems
+\item AI-\/controlled enemies
+\item Cross-\/platform support
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+
+
+Enjoy playing R-\/\+Type! 🚀
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md19}{}\doxysection{\texorpdfstring{Doxygen Documentation}{Doxygen Documentation}}\label{index_autotoc_md19}
+Our {\bfseries{Custom ASIO Wrapper}} is fully documented using {\bfseries{Doxygen}}. Please refer to the generated documentation for detailed insights into its implementation and usage.
+
+Additionally, our graphics abstraction with {\bfseries{SFML}} and {\bfseries{Raylib}} is documented to ensure easy integration and extension.
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md21}{}\doxysection{\texorpdfstring{License}{License}}\label{index_autotoc_md21}
+This project is licensed under the \href{https://github.com/EpitechPromo2027/B-CPP-500-PAR-5-2-rtype-deniz.uzuntok-husson/tree/main?tab=MIT-1-ov-file}{\texttt{ License}}. 

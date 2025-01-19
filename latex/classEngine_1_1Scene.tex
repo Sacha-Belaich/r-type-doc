@@ -1,0 +1,131 @@
+\doxysection{Engine\+::Scene Class Reference}
+\hypertarget{classEngine_1_1Scene}{}\label{classEngine_1_1Scene}\index{Engine::Scene@{Engine::Scene}}
+
+
+{\ttfamily \#include $<$Scene.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEngine_1_1Scene_a90a0a9f8a33c09856ea3d177a759fd32}{Scene}} ()=delete
+\item 
+\mbox{\hyperlink{classEngine_1_1Scene_a2bd3bf659b1d216e2d1e0335a6e8a610}{Scene}} (void(\texorpdfstring{$\ast$}{*}load\+Script)(\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&))
+\item 
+void \mbox{\hyperlink{classEngine_1_1Scene_a3e081c4b729126c52769a298d816581c}{load}} (\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&r) const
+\item 
+void \mbox{\hyperlink{classEngine_1_1Scene_a3429c20ac49dbee14ccd0f7d00c73ea1}{add\+\_\+system}} (std\+::string name)
+\item 
+void \mbox{\hyperlink{classEngine_1_1Scene_a1290cce48872ca9dc6153b4e26a8dd0e}{add\+\_\+component}} (std\+::string name)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Component $>$ }\\static void \mbox{\hyperlink{classEngine_1_1Scene_a1be546d76a967b4a03c012d35dc8d02d}{register\+Component}} (std\+::string name)
+\item 
+{\footnotesize template$<$typename Function $>$ }\\static void \mbox{\hyperlink{classEngine_1_1Scene_a08e2e75d18628a4d5d513317d91f5fec}{register\+\_\+system}} (Function \&\&f, std\+::string name)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classEngine_1_1Scene_ae7ef5d0d07c68347cb8906cac62506b1}{\+\_\+components\+List}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classEngine_1_1Scene_af0a64634cb92c43859ee8033c9a1c9c5}{\+\_\+systems\+List}}
+\item 
+void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classEngine_1_1Scene_a4c64693bf9f3794c81a91f9fcf91c0b4}{\+\_\+load\+Script}} )(\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::unordered\+\_\+map$<$ std\+::string, std\+::function$<$ void(\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&)$>$ \mbox{\hyperlink{classEngine_1_1Scene_ac9840a406a534d8910fe6e5e046faba5}{\+\_\+components}} )
+\item 
+static std\+::unordered\+\_\+map$<$ std\+::string, std\+::function$<$ void(\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&)$>$ \mbox{\hyperlink{classEngine_1_1Scene_a3a1cade3fee779464a41c16cdcf58e9d}{\+\_\+systems}} )
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classEngine_1_1Scene_a90a0a9f8a33c09856ea3d177a759fd32}\label{classEngine_1_1Scene_a90a0a9f8a33c09856ea3d177a759fd32} 
+\index{Engine::Scene@{Engine::Scene}!Scene@{Scene}}
+\index{Scene@{Scene}!Engine::Scene@{Engine::Scene}}
+\doxysubsubsection{\texorpdfstring{Scene()}{Scene()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Engine\+::\+Scene\+::\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{classEngine_1_1Scene_a2bd3bf659b1d216e2d1e0335a6e8a610}\label{classEngine_1_1Scene_a2bd3bf659b1d216e2d1e0335a6e8a610} 
+\index{Engine::Scene@{Engine::Scene}!Scene@{Scene}}
+\index{Scene@{Scene}!Engine::Scene@{Engine::Scene}}
+\doxysubsubsection{\texorpdfstring{Scene()}{Scene()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Engine\+::\+Scene\+::\+Scene (\begin{DoxyParamCaption}\item[{void(\texorpdfstring{$\ast$}{*})(\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&)}]{load\+Script }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classEngine_1_1Scene_a1290cce48872ca9dc6153b4e26a8dd0e}\label{classEngine_1_1Scene_a1290cce48872ca9dc6153b4e26a8dd0e} 
+\index{Engine::Scene@{Engine::Scene}!add\_component@{add\_component}}
+\index{add\_component@{add\_component}!Engine::Scene@{Engine::Scene}}
+\doxysubsubsection{\texorpdfstring{add\_component()}{add\_component()}}
+{\footnotesize\ttfamily void Engine\+::\+Scene\+::add\+\_\+component (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+\Hypertarget{classEngine_1_1Scene_a3429c20ac49dbee14ccd0f7d00c73ea1}\label{classEngine_1_1Scene_a3429c20ac49dbee14ccd0f7d00c73ea1} 
+\index{Engine::Scene@{Engine::Scene}!add\_system@{add\_system}}
+\index{add\_system@{add\_system}!Engine::Scene@{Engine::Scene}}
+\doxysubsubsection{\texorpdfstring{add\_system()}{add\_system()}}
+{\footnotesize\ttfamily void Engine\+::\+Scene\+::add\+\_\+system (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+\Hypertarget{classEngine_1_1Scene_a3e081c4b729126c52769a298d816581c}\label{classEngine_1_1Scene_a3e081c4b729126c52769a298d816581c} 
+\index{Engine::Scene@{Engine::Scene}!load@{load}}
+\index{load@{load}!Engine::Scene@{Engine::Scene}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily void Engine\+::\+Scene\+::load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&}]{r }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classEngine_1_1Scene_a08e2e75d18628a4d5d513317d91f5fec}\label{classEngine_1_1Scene_a08e2e75d18628a4d5d513317d91f5fec} 
+\index{Engine::Scene@{Engine::Scene}!register\_system@{register\_system}}
+\index{register\_system@{register\_system}!Engine::Scene@{Engine::Scene}}
+\doxysubsubsection{\texorpdfstring{register\_system()}{register\_system()}}
+{\footnotesize\ttfamily template$<$typename Function $>$ \\
+static void Engine\+::\+Scene\+::register\+\_\+system (\begin{DoxyParamCaption}\item[{Function \&\&}]{f,  }\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{classEngine_1_1Scene_a1be546d76a967b4a03c012d35dc8d02d}\label{classEngine_1_1Scene_a1be546d76a967b4a03c012d35dc8d02d} 
+\index{Engine::Scene@{Engine::Scene}!registerComponent@{registerComponent}}
+\index{registerComponent@{registerComponent}!Engine::Scene@{Engine::Scene}}
+\doxysubsubsection{\texorpdfstring{registerComponent()}{registerComponent()}}
+{\footnotesize\ttfamily template$<$typename Component $>$ \\
+static void Engine\+::\+Scene\+::register\+Component (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classEngine_1_1Scene_ac9840a406a534d8910fe6e5e046faba5}\label{classEngine_1_1Scene_ac9840a406a534d8910fe6e5e046faba5} 
+\index{Engine::Scene@{Engine::Scene}!\_components@{\_components}}
+\index{\_components@{\_components}!Engine::Scene@{Engine::Scene}}
+\doxysubsubsection{\texorpdfstring{\_components}{\_components}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, std\+::function$<$void(\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&)$>$ Engine\+::\+Scene\+::\+\_\+components) \hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{classEngine_1_1Scene_ae7ef5d0d07c68347cb8906cac62506b1}\label{classEngine_1_1Scene_ae7ef5d0d07c68347cb8906cac62506b1} 
+\index{Engine::Scene@{Engine::Scene}!\_componentsList@{\_componentsList}}
+\index{\_componentsList@{\_componentsList}!Engine::Scene@{Engine::Scene}}
+\doxysubsubsection{\texorpdfstring{\_componentsList}{\_componentsList}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ Engine\+::\+Scene\+::\+\_\+components\+List\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classEngine_1_1Scene_a4c64693bf9f3794c81a91f9fcf91c0b4}\label{classEngine_1_1Scene_a4c64693bf9f3794c81a91f9fcf91c0b4} 
+\index{Engine::Scene@{Engine::Scene}!\_loadScript@{\_loadScript}}
+\index{\_loadScript@{\_loadScript}!Engine::Scene@{Engine::Scene}}
+\doxysubsubsection{\texorpdfstring{\_loadScript}{\_loadScript}}
+{\footnotesize\ttfamily void(\texorpdfstring{$\ast$}{*} Engine\+::\+Scene\+::\+\_\+load\+Script) (\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&)\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classEngine_1_1Scene_a3a1cade3fee779464a41c16cdcf58e9d}\label{classEngine_1_1Scene_a3a1cade3fee779464a41c16cdcf58e9d} 
+\index{Engine::Scene@{Engine::Scene}!\_systems@{\_systems}}
+\index{\_systems@{\_systems}!Engine::Scene@{Engine::Scene}}
+\doxysubsubsection{\texorpdfstring{\_systems}{\_systems}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, std\+::function$<$void(\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&)$>$ Engine\+::\+Scene\+::\+\_\+systems) \hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{classEngine_1_1Scene_af0a64634cb92c43859ee8033c9a1c9c5}\label{classEngine_1_1Scene_af0a64634cb92c43859ee8033c9a1c9c5} 
+\index{Engine::Scene@{Engine::Scene}!\_systemsList@{\_systemsList}}
+\index{\_systemsList@{\_systemsList}!Engine::Scene@{Engine::Scene}}
+\doxysubsubsection{\texorpdfstring{\_systemsList}{\_systemsList}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ Engine\+::\+Scene\+::\+\_\+systems\+List\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+client/includes/\mbox{\hyperlink{Scene_8hpp}{Scene.\+hpp}}\item 
+client/src/\mbox{\hyperlink{Scene_8cpp}{Scene.\+cpp}}\end{DoxyCompactItemize}

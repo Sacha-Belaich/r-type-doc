@@ -1,0 +1,47 @@
+\doxysection{Camera.\+hpp}
+\hypertarget{components_2Camera_8hpp_source}{}\label{components_2Camera_8hpp_source}\index{client/includes/components/Camera.hpp@{client/includes/components/Camera.hpp}}
+\mbox{\hyperlink{components_2Camera_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2024}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ r-\/type}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ 2D\ camera\ class;}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IGraphical_8hpp}{IGraphical.hpp}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Registry_8hpp}{Registry.hpp}}"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceClient_1_1Components}{Client::Components}}\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classClient_1_1Components_1_1Camera}{Camera}}\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{public}:\textcolor{comment}{}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ Constructor}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ enabled\ only\ one\ camera\ can\ be\ enabled\ at\ a\ tiem}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ screenSize\ size\ of\ the\ rectangle\ to\ be\ rendered,\ defaults\ to\ 1920*1080}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ */}}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classClient_1_1Components_1_1Camera_a496aa0764eb4a8e721f5559787718df5}{Camera}}(\textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classClient_1_1Components_1_1Camera_a14c197ccf1212131060106d2a27c400d}{enabled}}\ =\ \textcolor{keyword}{true},\ \mbox{\hyperlink{structGraphical_1_1Vect2i}{Graphical::Vect2i}}\ \mbox{\hyperlink{classClient_1_1Components_1_1Camera_a0ba7690f77d2e6f4ce72f3582f654311}{screenSize}}\ =\ \{1920,\ 1080\});}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classClient_1_1Components_1_1Camera_a14c197ccf1212131060106d2a27c400d}{enabled}};}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structGraphical_1_1Vect2i}{Graphical::Vect2i}}\ \mbox{\hyperlink{classClient_1_1Components_1_1Camera_a0ba7690f77d2e6f4ce72f3582f654311}{screenSize}};}
+\DoxyCodeLine{00025\ \textcolor{comment}{}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ Creates\ a\ camera\ entity\ with\ all\ the\ needed\ components.\ to\ make\ it\ move\ you'll\ have\ to}}
+\DoxyCodeLine{00028\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ either\ add\ a\ velocity\ components\ or\ make\ your\ own\ system\ to\ update\ its\ position}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ r\ registry\ containing\ all\ game\ data}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ pos\ initial\ position\ of\ the\ Camera}}
+\DoxyCodeLine{00031\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ screenSize\ size\ of\ screen}}
+\DoxyCodeLine{00032\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ enabled\ tells\ the\ engine\ to\ use\ this\ camera\ only\ one\ camera\ entity\ must\ be\ enabled}}
+\DoxyCodeLine{00033\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classECS_1_1Entity}{ECS::Entity}}\ \mbox{\hyperlink{classClient_1_1Components_1_1Camera_aa70012c3b4084c2dfa07b3905b14e094}{createCamera}}(\mbox{\hyperlink{classECS_1_1Registry}{ECS::Registry}}\ \&r,\ \mbox{\hyperlink{structGraphical_1_1Vect2i}{Graphical::Vect2i}}\ pos,}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structGraphical_1_1Vect2i}{Graphical::Vect2i}}\ \mbox{\hyperlink{classClient_1_1Components_1_1Camera_a0ba7690f77d2e6f4ce72f3582f654311}{screenSize}},\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classClient_1_1Components_1_1Camera_a14c197ccf1212131060106d2a27c400d}{enabled}});}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structGraphical_1_1Vect2i}{Graphical::Vect2i}}\ \mbox{\hyperlink{classClient_1_1Components_1_1Camera_a28e4fe51ab4f3666a56169d4d5c7db18}{stop}}\ =\ \{0,\ 0\};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classClient_1_1Components_1_1Camera_a58d4226eecf055fad456d4d30b3749e3}{log}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00040\ \};}
+\DoxyCodeLine{00041\ \}\ \ \textcolor{comment}{//\ namespace\ Client::Components}}
+
+\end{DoxyCode}

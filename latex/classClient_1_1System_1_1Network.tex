@@ -1,0 +1,48 @@
+\doxysection{Client\+::System\+::Network Class Reference}
+\hypertarget{classClient_1_1System_1_1Network}{}\label{classClient_1_1System_1_1Network}\index{Client::System::Network@{Client::System::Network}}
+
+
+{\ttfamily \#include $<$Network.\+hpp$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classClient_1_1System_1_1Network_a25f43bcc62144ac9e55d65c02cebcee6}{run}} (\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&r)
+\item 
+static \mbox{\hyperlink{classECS_1_1Entity}{ECS\+::\+Entity}} \mbox{\hyperlink{classClient_1_1System_1_1Network_a5f8b5fa61cb1fe19013c7a672b177679}{get\+Entity\+From\+Server\+Id}} (\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&r, std\+::size\+\_\+t server\+\_\+id)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::unordered\+\_\+map$<$ std\+::size\+\_\+t, \mbox{\hyperlink{classECS_1_1Entity}{ECS\+::\+Entity}} $>$ \mbox{\hyperlink{classClient_1_1System_1_1Network_af46213d214dd80db5892b3c6ef264492}{\+\_\+server\+Id\+To\+Entity}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classClient_1_1System_1_1Network_a5f8b5fa61cb1fe19013c7a672b177679}\label{classClient_1_1System_1_1Network_a5f8b5fa61cb1fe19013c7a672b177679} 
+\index{Client::System::Network@{Client::System::Network}!getEntityFromServerId@{getEntityFromServerId}}
+\index{getEntityFromServerId@{getEntityFromServerId}!Client::System::Network@{Client::System::Network}}
+\doxysubsubsection{\texorpdfstring{getEntityFromServerId()}{getEntityFromServerId()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classECS_1_1Entity}{ECS\+::\+Entity}} Client\+::\+System\+::\+Network\+::get\+Entity\+From\+Server\+Id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&}]{r,  }\item[{std\+::size\+\_\+t}]{server\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classClient_1_1System_1_1Network_a25f43bcc62144ac9e55d65c02cebcee6}\label{classClient_1_1System_1_1Network_a25f43bcc62144ac9e55d65c02cebcee6} 
+\index{Client::System::Network@{Client::System::Network}!run@{run}}
+\index{run@{run}!Client::System::Network@{Client::System::Network}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Client\+::\+System\+::\+Network\+::run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classClient_1_1System_1_1Network_af46213d214dd80db5892b3c6ef264492}\label{classClient_1_1System_1_1Network_af46213d214dd80db5892b3c6ef264492} 
+\index{Client::System::Network@{Client::System::Network}!\_serverIdToEntity@{\_serverIdToEntity}}
+\index{\_serverIdToEntity@{\_serverIdToEntity}!Client::System::Network@{Client::System::Network}}
+\doxysubsubsection{\texorpdfstring{\_serverIdToEntity}{\_serverIdToEntity}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$ std\+::size\+\_\+t, \mbox{\hyperlink{classECS_1_1Entity}{ECS\+::\+Entity}} $>$ Client\+::\+System\+::\+Network\+::\+\_\+server\+Id\+To\+Entity\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+client/includes/systems/\mbox{\hyperlink{systems_2Network_8hpp}{Network.\+hpp}}\item 
+client/src/systems/\mbox{\hyperlink{systems_2Network_8cpp}{Network.\+cpp}}\end{DoxyCompactItemize}

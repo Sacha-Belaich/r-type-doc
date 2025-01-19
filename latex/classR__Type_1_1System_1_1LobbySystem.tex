@@ -1,0 +1,88 @@
+\doxysection{R\+\_\+\+Type\+::System\+::Lobby\+System Class Reference}
+\hypertarget{classR__Type_1_1System_1_1LobbySystem}{}\label{classR__Type_1_1System_1_1LobbySystem}\index{R\_Type::System::LobbySystem@{R\_Type::System::LobbySystem}}
+
+
+{\ttfamily \#include $<$Lobby\+System.\+hpp$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classR__Type_1_1System_1_1LobbySystem_a798ad1b74ac5801aca1dbc8a2cbd579b}{add\+Player}} (std\+::unordered\+\_\+map$<$ uint16\+\_\+t, std\+::optional$<$ \mbox{\hyperlink{classECS_1_1Entity}{ECS\+::\+Entity}} $>$ $>$ \&players, std\+::unordered\+\_\+map$<$ uint16\+\_\+t, bool $>$ \&ready\+Status, uint16\+\_\+t client\+Id, \mbox{\hyperlink{classECS_1_1Entity}{ECS\+::\+Entity}} entity, std\+::size\+\_\+t max\+Players)
+\item 
+static bool \mbox{\hyperlink{classR__Type_1_1System_1_1LobbySystem_ac2147c31d3e7465fa6994a0a9bbf6a30}{remove\+Player}} (std\+::unordered\+\_\+map$<$ uint16\+\_\+t, std\+::optional$<$ \mbox{\hyperlink{classECS_1_1Entity}{ECS\+::\+Entity}} $>$ $>$ \&players, std\+::unordered\+\_\+map$<$ uint16\+\_\+t, bool $>$ \&ready\+Status, uint16\+\_\+t client\+Id)
+\item 
+static void \mbox{\hyperlink{classR__Type_1_1System_1_1LobbySystem_a6b5832b621218dd9eb1f512c5b75df40}{set\+Ready}} (std\+::unordered\+\_\+map$<$ uint16\+\_\+t, bool $>$ \&ready\+Status, uint16\+\_\+t client\+Id, bool ready)
+\item 
+static bool \mbox{\hyperlink{classR__Type_1_1System_1_1LobbySystem_ac90b07512fe9db8de67f106704f9991d}{is\+Ready\+To\+Start}} (const std\+::unordered\+\_\+map$<$ uint16\+\_\+t, std\+::optional$<$ \mbox{\hyperlink{classECS_1_1Entity}{ECS\+::\+Entity}} $>$ $>$ \&players, const std\+::unordered\+\_\+map$<$ uint16\+\_\+t, bool $>$ \&ready\+Status)
+\item 
+static bool \mbox{\hyperlink{classR__Type_1_1System_1_1LobbySystem_af58414748c821647f049c9d1b5a5df7a}{start\+Game}} (std\+::unordered\+\_\+map$<$ uint16\+\_\+t, std\+::optional$<$ \mbox{\hyperlink{classECS_1_1Entity}{ECS\+::\+Entity}} $>$ $>$ \&player, std\+::unordered\+\_\+map$<$ uint16\+\_\+t, bool $>$ \&ready\+Status, bool \&game\+Started)
+\item 
+static bool \mbox{\hyperlink{classR__Type_1_1System_1_1LobbySystem_a624a6d326e5e0a8480569873bc34f98d}{can\+Add\+Player}} (const std\+::unordered\+\_\+map$<$ uint16\+\_\+t, std\+::optional$<$ \mbox{\hyperlink{classECS_1_1Entity}{ECS\+::\+Entity}} $>$ $>$ \&players, std\+::size\+\_\+t max\+Players, bool game\+Started)
+\item 
+static void \mbox{\hyperlink{classR__Type_1_1System_1_1LobbySystem_ac548846278ad219a136e4819c14f5bb6}{validate\+Lobby}} (const std\+::unordered\+\_\+map$<$ uint16\+\_\+t, std\+::optional$<$ \mbox{\hyperlink{classECS_1_1Entity}{ECS\+::\+Entity}} $>$ $>$ \&players, const std\+::unordered\+\_\+map$<$ uint16\+\_\+t, bool $>$ \&ready\+Status, std\+::size\+\_\+t max\+Players)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classR__Type_1_1System_1_1LobbySystem_a4d4d7d49c109d81ac778b633474e5f3c}{Lobby\+System}} ()=delete
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classR__Type_1_1System_1_1LobbySystem_a4d4d7d49c109d81ac778b633474e5f3c}\label{classR__Type_1_1System_1_1LobbySystem_a4d4d7d49c109d81ac778b633474e5f3c} 
+\index{R\_Type::System::LobbySystem@{R\_Type::System::LobbySystem}!LobbySystem@{LobbySystem}}
+\index{LobbySystem@{LobbySystem}!R\_Type::System::LobbySystem@{R\_Type::System::LobbySystem}}
+\doxysubsubsection{\texorpdfstring{LobbySystem()}{LobbySystem()}}
+{\footnotesize\ttfamily R\+\_\+\+Type\+::\+System\+::\+Lobby\+System\+::\+Lobby\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classR__Type_1_1System_1_1LobbySystem_a798ad1b74ac5801aca1dbc8a2cbd579b}\label{classR__Type_1_1System_1_1LobbySystem_a798ad1b74ac5801aca1dbc8a2cbd579b} 
+\index{R\_Type::System::LobbySystem@{R\_Type::System::LobbySystem}!addPlayer@{addPlayer}}
+\index{addPlayer@{addPlayer}!R\_Type::System::LobbySystem@{R\_Type::System::LobbySystem}}
+\doxysubsubsection{\texorpdfstring{addPlayer()}{addPlayer()}}
+{\footnotesize\ttfamily bool R\+\_\+\+Type\+::\+System\+::\+Lobby\+System\+::add\+Player (\begin{DoxyParamCaption}\item[{std\+::unordered\+\_\+map$<$ uint16\+\_\+t, std\+::optional$<$ \mbox{\hyperlink{classECS_1_1Entity}{ECS\+::\+Entity}} $>$ $>$ \&}]{players,  }\item[{std\+::unordered\+\_\+map$<$ uint16\+\_\+t, bool $>$ \&}]{ready\+Status,  }\item[{uint16\+\_\+t}]{client\+Id,  }\item[{\mbox{\hyperlink{classECS_1_1Entity}{ECS\+::\+Entity}}}]{entity,  }\item[{std\+::size\+\_\+t}]{max\+Players }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classR__Type_1_1System_1_1LobbySystem_a624a6d326e5e0a8480569873bc34f98d}\label{classR__Type_1_1System_1_1LobbySystem_a624a6d326e5e0a8480569873bc34f98d} 
+\index{R\_Type::System::LobbySystem@{R\_Type::System::LobbySystem}!canAddPlayer@{canAddPlayer}}
+\index{canAddPlayer@{canAddPlayer}!R\_Type::System::LobbySystem@{R\_Type::System::LobbySystem}}
+\doxysubsubsection{\texorpdfstring{canAddPlayer()}{canAddPlayer()}}
+{\footnotesize\ttfamily bool R\+\_\+\+Type\+::\+System\+::\+Lobby\+System\+::can\+Add\+Player (\begin{DoxyParamCaption}\item[{const std\+::unordered\+\_\+map$<$ uint16\+\_\+t, std\+::optional$<$ \mbox{\hyperlink{classECS_1_1Entity}{ECS\+::\+Entity}} $>$ $>$ \&}]{players,  }\item[{std\+::size\+\_\+t}]{max\+Players,  }\item[{bool}]{game\+Started }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classR__Type_1_1System_1_1LobbySystem_ac90b07512fe9db8de67f106704f9991d}\label{classR__Type_1_1System_1_1LobbySystem_ac90b07512fe9db8de67f106704f9991d} 
+\index{R\_Type::System::LobbySystem@{R\_Type::System::LobbySystem}!isReadyToStart@{isReadyToStart}}
+\index{isReadyToStart@{isReadyToStart}!R\_Type::System::LobbySystem@{R\_Type::System::LobbySystem}}
+\doxysubsubsection{\texorpdfstring{isReadyToStart()}{isReadyToStart()}}
+{\footnotesize\ttfamily bool R\+\_\+\+Type\+::\+System\+::\+Lobby\+System\+::is\+Ready\+To\+Start (\begin{DoxyParamCaption}\item[{const std\+::unordered\+\_\+map$<$ uint16\+\_\+t, std\+::optional$<$ \mbox{\hyperlink{classECS_1_1Entity}{ECS\+::\+Entity}} $>$ $>$ \&}]{players,  }\item[{const std\+::unordered\+\_\+map$<$ uint16\+\_\+t, bool $>$ \&}]{ready\+Status }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classR__Type_1_1System_1_1LobbySystem_ac2147c31d3e7465fa6994a0a9bbf6a30}\label{classR__Type_1_1System_1_1LobbySystem_ac2147c31d3e7465fa6994a0a9bbf6a30} 
+\index{R\_Type::System::LobbySystem@{R\_Type::System::LobbySystem}!removePlayer@{removePlayer}}
+\index{removePlayer@{removePlayer}!R\_Type::System::LobbySystem@{R\_Type::System::LobbySystem}}
+\doxysubsubsection{\texorpdfstring{removePlayer()}{removePlayer()}}
+{\footnotesize\ttfamily bool R\+\_\+\+Type\+::\+System\+::\+Lobby\+System\+::remove\+Player (\begin{DoxyParamCaption}\item[{std\+::unordered\+\_\+map$<$ uint16\+\_\+t, std\+::optional$<$ \mbox{\hyperlink{classECS_1_1Entity}{ECS\+::\+Entity}} $>$ $>$ \&}]{players,  }\item[{std\+::unordered\+\_\+map$<$ uint16\+\_\+t, bool $>$ \&}]{ready\+Status,  }\item[{uint16\+\_\+t}]{client\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classR__Type_1_1System_1_1LobbySystem_a6b5832b621218dd9eb1f512c5b75df40}\label{classR__Type_1_1System_1_1LobbySystem_a6b5832b621218dd9eb1f512c5b75df40} 
+\index{R\_Type::System::LobbySystem@{R\_Type::System::LobbySystem}!setReady@{setReady}}
+\index{setReady@{setReady}!R\_Type::System::LobbySystem@{R\_Type::System::LobbySystem}}
+\doxysubsubsection{\texorpdfstring{setReady()}{setReady()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+System\+::\+Lobby\+System\+::set\+Ready (\begin{DoxyParamCaption}\item[{std\+::unordered\+\_\+map$<$ uint16\+\_\+t, bool $>$ \&}]{ready\+Status,  }\item[{uint16\+\_\+t}]{client\+Id,  }\item[{bool}]{ready }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classR__Type_1_1System_1_1LobbySystem_af58414748c821647f049c9d1b5a5df7a}\label{classR__Type_1_1System_1_1LobbySystem_af58414748c821647f049c9d1b5a5df7a} 
+\index{R\_Type::System::LobbySystem@{R\_Type::System::LobbySystem}!startGame@{startGame}}
+\index{startGame@{startGame}!R\_Type::System::LobbySystem@{R\_Type::System::LobbySystem}}
+\doxysubsubsection{\texorpdfstring{startGame()}{startGame()}}
+{\footnotesize\ttfamily bool R\+\_\+\+Type\+::\+System\+::\+Lobby\+System\+::start\+Game (\begin{DoxyParamCaption}\item[{std\+::unordered\+\_\+map$<$ uint16\+\_\+t, std\+::optional$<$ \mbox{\hyperlink{classECS_1_1Entity}{ECS\+::\+Entity}} $>$ $>$ \&}]{player,  }\item[{std\+::unordered\+\_\+map$<$ uint16\+\_\+t, bool $>$ \&}]{ready\+Status,  }\item[{bool \&}]{game\+Started }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classR__Type_1_1System_1_1LobbySystem_ac548846278ad219a136e4819c14f5bb6}\label{classR__Type_1_1System_1_1LobbySystem_ac548846278ad219a136e4819c14f5bb6} 
+\index{R\_Type::System::LobbySystem@{R\_Type::System::LobbySystem}!validateLobby@{validateLobby}}
+\index{validateLobby@{validateLobby}!R\_Type::System::LobbySystem@{R\_Type::System::LobbySystem}}
+\doxysubsubsection{\texorpdfstring{validateLobby()}{validateLobby()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+System\+::\+Lobby\+System\+::validate\+Lobby (\begin{DoxyParamCaption}\item[{const std\+::unordered\+\_\+map$<$ uint16\+\_\+t, std\+::optional$<$ \mbox{\hyperlink{classECS_1_1Entity}{ECS\+::\+Entity}} $>$ $>$ \&}]{players,  }\item[{const std\+::unordered\+\_\+map$<$ uint16\+\_\+t, bool $>$ \&}]{ready\+Status,  }\item[{std\+::size\+\_\+t}]{max\+Players }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+server/src/systems/\mbox{\hyperlink{LobbySystem_8hpp}{Lobby\+System.\+hpp}}\item 
+server/src/systems/\mbox{\hyperlink{LobbySystem_8cpp}{Lobby\+System.\+cpp}}\end{DoxyCompactItemize}

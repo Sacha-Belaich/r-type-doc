@@ -1,0 +1,45 @@
+\doxysection{Renderer.\+hpp}
+\hypertarget{Renderer_8hpp_source}{}\label{Renderer_8hpp_source}\index{lib/engine/modules/renderer/includes/Renderer.hpp@{lib/engine/modules/renderer/includes/Renderer.hpp}}
+\mbox{\hyperlink{Renderer_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2025}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ Project\ Name}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ renderer\ module\ header}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ActionManager_8hpp}{ActionManager.hpp}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IGraphical_8hpp}{IGraphical.hpp}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IModule_8hpp}{IModule.hpp}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}dylib.hpp"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceEngine_1_1Core}{Engine::Core}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }Core;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceEngine_1_1Module}{Engine::Module}}\ \{}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classEngine_1_1Module_1_1Renderer}{Renderer}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classEngine_1_1Module_1_1IModule}{IModule}}\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEngine_1_1Module_1_1Renderer_aa88ed421884e13e2777f5891b7a5f464}{Renderer}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *graphLib);}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEngine_1_1Module_1_1Renderer_aeb036e55b24fbeb592738f98eff99fe5}{\string~Renderer}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGraphical_1_1IGraphical}{Graphical::IGraphical}}\ \&\mbox{\hyperlink{classEngine_1_1Module_1_1Renderer_a2b99a1c14be2f4cb95870346e8c87aee}{getGraphLib}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEngine_1_1Module_1_1ActionManager}{ActionManager}}\ \&\mbox{\hyperlink{classEngine_1_1Module_1_1Renderer_a536433938eda0a0079f68584590d1923}{getActionManager}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structEngine_1_1Module_1_1module__info__s}{module\_info\_t}}\ \mbox{\hyperlink{classEngine_1_1Module_1_1Renderer_a978f5aa16e4b4cf5ccd4c34ba1146dd5}{getInfo}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1Renderer_a5b4cbe1f2fee8cf17218f729dc7b3302}{loadModule}}(\mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core::Core}}\ \&core)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1Renderer_ad22cba4e127846eec5eb8d2a58bf40c6}{unloadModule}}(\mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core::Core}}\ \&core)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ dylib\ \mbox{\hyperlink{classEngine_1_1Module_1_1Renderer_aec4e1a4dfed70bf200623436937690f0}{\_dylib}};}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEngine_1_1Module_1_1ActionManager}{ActionManager}}\ \mbox{\hyperlink{classEngine_1_1Module_1_1Renderer_a03f12b3977f78f9ec737b1dfbba01aa8}{\_actionManager}};}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ std::unique\_ptr<Graphical::IGraphical>\ \mbox{\hyperlink{classEngine_1_1Module_1_1Renderer_a0a1d451909a69cf8cac327a892aa9952}{\_graphLib}};}
+\DoxyCodeLine{00038\ \};}
+\DoxyCodeLine{00039\ \}\ \ \textcolor{comment}{//\ namespace\ Engine::Module}}
+
+\end{DoxyCode}

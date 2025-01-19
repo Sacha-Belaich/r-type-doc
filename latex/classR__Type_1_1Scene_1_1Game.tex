@@ -1,0 +1,90 @@
+\doxysection{R\+\_\+\+Type\+::Scene\+::Game Class Reference}
+\hypertarget{classR__Type_1_1Scene_1_1Game}{}\label{classR__Type_1_1Scene_1_1Game}\index{R\_Type::Scene::Game@{R\_Type::Scene::Game}}
+
+
+{\ttfamily \#include $<$Game.\+hpp$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classR__Type_1_1Scene_1_1Game_ae8d15281f0e65af71e5695b5e4591187}{start\+Script}} (\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&r)
+\item 
+static void \mbox{\hyperlink{classR__Type_1_1Scene_1_1Game_a58ce83240caca89a5b5b815d541dfc60}{start\+Game}} (\mbox{\hyperlink{classNetwork_1_1Packet}{Network\+::\+Packet}} \&packet)
+\item 
+static void \mbox{\hyperlink{classR__Type_1_1Scene_1_1Game_a4761440e569f83cce4a55f6fde00ccb3}{handle\+Spawn}} (\mbox{\hyperlink{classNetwork_1_1Packet}{Network\+::\+Packet}} \&packet)
+\item 
+static void \mbox{\hyperlink{classR__Type_1_1Scene_1_1Game_a8712eda5a05e32a25dbdd7a539bb515b}{handle\+Hit}} (\mbox{\hyperlink{classNetwork_1_1Packet}{Network\+::\+Packet}} \&packet)
+\item 
+static void \mbox{\hyperlink{classR__Type_1_1Scene_1_1Game_a2bd7cb9587c4770704c809520a95180e}{handle\+Position\+Velocity}} (\mbox{\hyperlink{classNetwork_1_1Packet}{Network\+::\+Packet}} \&packet)
+\item 
+static void \mbox{\hyperlink{classR__Type_1_1Scene_1_1Game_ac7107dbebe66b2a266fe80ff636fc402}{handle\+Kill}} (\mbox{\hyperlink{classNetwork_1_1Packet}{Network\+::\+Packet}} \&packet)
+\item 
+static void \mbox{\hyperlink{classR__Type_1_1Scene_1_1Game_a3a16ae0d7d51f75d46ce6967aac8358c}{handle\+Shutdown}} (\mbox{\hyperlink{classNetwork_1_1Packet}{Network\+::\+Packet}} \&packet)
+\item 
+static void \mbox{\hyperlink{classR__Type_1_1Scene_1_1Game_a2ce8ead817134c73c09476a45d3c8678}{handle\+Camera\+Move}} (\mbox{\hyperlink{classNetwork_1_1Packet}{Network\+::\+Packet}} \&packet)
+\item 
+static void \mbox{\hyperlink{classR__Type_1_1Scene_1_1Game_a953d04854bdb4166244707901f11db2e}{handle\+Fire}} (\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&r, \mbox{\hyperlink{classECS_1_1Entity}{ECS\+::\+Entity}} player)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classR__Type_1_1Scene_1_1Game_a2ce8ead817134c73c09476a45d3c8678}\label{classR__Type_1_1Scene_1_1Game_a2ce8ead817134c73c09476a45d3c8678} 
+\index{R\_Type::Scene::Game@{R\_Type::Scene::Game}!handleCameraMove@{handleCameraMove}}
+\index{handleCameraMove@{handleCameraMove}!R\_Type::Scene::Game@{R\_Type::Scene::Game}}
+\doxysubsubsection{\texorpdfstring{handleCameraMove()}{handleCameraMove()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+Scene\+::\+Game\+::handle\+Camera\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNetwork_1_1Packet}{Network\+::\+Packet}} \&}]{packet }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classR__Type_1_1Scene_1_1Game_a953d04854bdb4166244707901f11db2e}\label{classR__Type_1_1Scene_1_1Game_a953d04854bdb4166244707901f11db2e} 
+\index{R\_Type::Scene::Game@{R\_Type::Scene::Game}!handleFire@{handleFire}}
+\index{handleFire@{handleFire}!R\_Type::Scene::Game@{R\_Type::Scene::Game}}
+\doxysubsubsection{\texorpdfstring{handleFire()}{handleFire()}}
+{\footnotesize\ttfamily static void R\+\_\+\+Type\+::\+Scene\+::\+Game\+::handle\+Fire (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&}]{r,  }\item[{\mbox{\hyperlink{classECS_1_1Entity}{ECS\+::\+Entity}}}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classR__Type_1_1Scene_1_1Game_a8712eda5a05e32a25dbdd7a539bb515b}\label{classR__Type_1_1Scene_1_1Game_a8712eda5a05e32a25dbdd7a539bb515b} 
+\index{R\_Type::Scene::Game@{R\_Type::Scene::Game}!handleHit@{handleHit}}
+\index{handleHit@{handleHit}!R\_Type::Scene::Game@{R\_Type::Scene::Game}}
+\doxysubsubsection{\texorpdfstring{handleHit()}{handleHit()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+Scene\+::\+Game\+::handle\+Hit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNetwork_1_1Packet}{Network\+::\+Packet}} \&}]{packet }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classR__Type_1_1Scene_1_1Game_ac7107dbebe66b2a266fe80ff636fc402}\label{classR__Type_1_1Scene_1_1Game_ac7107dbebe66b2a266fe80ff636fc402} 
+\index{R\_Type::Scene::Game@{R\_Type::Scene::Game}!handleKill@{handleKill}}
+\index{handleKill@{handleKill}!R\_Type::Scene::Game@{R\_Type::Scene::Game}}
+\doxysubsubsection{\texorpdfstring{handleKill()}{handleKill()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+Scene\+::\+Game\+::handle\+Kill (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNetwork_1_1Packet}{Network\+::\+Packet}} \&}]{packet }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classR__Type_1_1Scene_1_1Game_a2bd7cb9587c4770704c809520a95180e}\label{classR__Type_1_1Scene_1_1Game_a2bd7cb9587c4770704c809520a95180e} 
+\index{R\_Type::Scene::Game@{R\_Type::Scene::Game}!handlePositionVelocity@{handlePositionVelocity}}
+\index{handlePositionVelocity@{handlePositionVelocity}!R\_Type::Scene::Game@{R\_Type::Scene::Game}}
+\doxysubsubsection{\texorpdfstring{handlePositionVelocity()}{handlePositionVelocity()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+Scene\+::\+Game\+::handle\+Position\+Velocity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNetwork_1_1Packet}{Network\+::\+Packet}} \&}]{packet }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classR__Type_1_1Scene_1_1Game_a3a16ae0d7d51f75d46ce6967aac8358c}\label{classR__Type_1_1Scene_1_1Game_a3a16ae0d7d51f75d46ce6967aac8358c} 
+\index{R\_Type::Scene::Game@{R\_Type::Scene::Game}!handleShutdown@{handleShutdown}}
+\index{handleShutdown@{handleShutdown}!R\_Type::Scene::Game@{R\_Type::Scene::Game}}
+\doxysubsubsection{\texorpdfstring{handleShutdown()}{handleShutdown()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+Scene\+::\+Game\+::handle\+Shutdown (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNetwork_1_1Packet}{Network\+::\+Packet}} \&}]{packet }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classR__Type_1_1Scene_1_1Game_a4761440e569f83cce4a55f6fde00ccb3}\label{classR__Type_1_1Scene_1_1Game_a4761440e569f83cce4a55f6fde00ccb3} 
+\index{R\_Type::Scene::Game@{R\_Type::Scene::Game}!handleSpawn@{handleSpawn}}
+\index{handleSpawn@{handleSpawn}!R\_Type::Scene::Game@{R\_Type::Scene::Game}}
+\doxysubsubsection{\texorpdfstring{handleSpawn()}{handleSpawn()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+Scene\+::\+Game\+::handle\+Spawn (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNetwork_1_1Packet}{Network\+::\+Packet}} \&}]{packet }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classR__Type_1_1Scene_1_1Game_a58ce83240caca89a5b5b815d541dfc60}\label{classR__Type_1_1Scene_1_1Game_a58ce83240caca89a5b5b815d541dfc60} 
+\index{R\_Type::Scene::Game@{R\_Type::Scene::Game}!startGame@{startGame}}
+\index{startGame@{startGame}!R\_Type::Scene::Game@{R\_Type::Scene::Game}}
+\doxysubsubsection{\texorpdfstring{startGame()}{startGame()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+Scene\+::\+Game\+::start\+Game (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNetwork_1_1Packet}{Network\+::\+Packet}} \&}]{packet }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classR__Type_1_1Scene_1_1Game_ae8d15281f0e65af71e5695b5e4591187}\label{classR__Type_1_1Scene_1_1Game_ae8d15281f0e65af71e5695b5e4591187} 
+\index{R\_Type::Scene::Game@{R\_Type::Scene::Game}!startScript@{startScript}}
+\index{startScript@{startScript}!R\_Type::Scene::Game@{R\_Type::Scene::Game}}
+\doxysubsubsection{\texorpdfstring{startScript()}{startScript()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+Scene\+::\+Game\+::start\+Script (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+client/includes/scenes/\mbox{\hyperlink{Game_8hpp}{Game.\+hpp}}\item 
+client/src/scenes/\mbox{\hyperlink{Game_8cpp}{Game.\+cpp}}\end{DoxyCompactItemize}

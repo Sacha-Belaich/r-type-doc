@@ -1,0 +1,57 @@
+\doxysection{Level\+Creator.\+hpp}
+\hypertarget{LevelCreator_8hpp_source}{}\label{LevelCreator_8hpp_source}\index{server/src/systems/LevelCreator.hpp@{server/src/systems/LevelCreator.hpp}}
+\mbox{\hyperlink{LevelCreator_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2024}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ r-\/type}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ LevelCreator.hpp}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{INetworkServer_8hpp}{INetworkServer.hpp}}>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{Registry_8hpp}{Registry.hpp}}>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{EntityType_8hpp}{../components/EntityType.hpp}}"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceR__Type_1_1System}{R\_Type::System}}\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator}{LevelCreator}}\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4}{LevelElementType}}\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4a0cebacb80fc0c587122073c568154abc}{VOID\_ELEM\_TYPE}},}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4a3ee07b340444ffb5d1dc7537a2c7d578}{WALL}},}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4a8344b351f281c34489c5d82749090904}{PLAYER1}},}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4a2d0a038d67cebe161189f01c5aec6225}{PLAYER2}},}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4a992f76afc770f8aab0a723407409244b}{PLAYER3}},}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4ae65ea730c973cae668a800773170ec53}{PLAYER4}},}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4a93fe8e6f0a1701eede6cb4f763c7d40a}{TURRET}},}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4a2d93bb0deda760b107398851e9d26901}{BOSS}},}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4aa3f718b9542f28d215d0d56f1319c34e}{BOSS\_HEART}},}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4a578cc9691d0e7744418f0963d6fff979}{FLY}}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_abb488d4817ccc4e3631361f187193905}{run}}(\mbox{\hyperlink{classECS_1_1Registry}{ECS::Registry}}\ \&r);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_a363de8ff4ec25efae57d7e9b6a42f614}{\_load\_levels\_from\_file}}(std::vector<std::vector<std::vector<LevelElementType>>>\ \&levels);}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_a45dca501b9d8ef17cf8f1a4a5413595e}{\_spawn\_needed\_entitys}}(\mbox{\hyperlink{classECS_1_1Registry}{ECS::Registry}}\ \&r,\ \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{Engine::Module::INetworkServer}}\ \&server,\ \textcolor{keyword}{const}\ std::vector<LevelElementType>\ \&entity\_line,}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::size\_t\ pos\_in\_level);}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_a79f2c560225e5e0218675785d048e0a5}{\_load\_level}}(\mbox{\hyperlink{classECS_1_1Registry}{ECS::Registry}}\ \&r,\ \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{Engine::Module::INetworkServer}}\ \&server,\ \textcolor{keyword}{const}\ std::vector<std::vector<LevelElementType>>\ \&level,}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::size\_t\ \&pos\_in\_level);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_a7e1082b7e2cad8f0cf625c41d0b115f1}{\_spawn\_wall}}(\mbox{\hyperlink{classECS_1_1Registry}{ECS::Registry}}\ \&r,\ \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{Engine::Module::INetworkServer}}\ \&server,\ \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}}\ position);}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_a8d6fd2084cad8e8763fadb52e5998b86}{\_spawn\_turret}}(\mbox{\hyperlink{classECS_1_1Registry}{ECS::Registry}}\ \&r,\ \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{Engine::Module::INetworkServer}}\ \&server,\ \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}}\ position);}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_a19e60f60524c91cffe540c2a1065e355}{\_move\_player}}(\mbox{\hyperlink{classECS_1_1Registry}{ECS::Registry}}\ \&r,\ \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{Engine::Module::INetworkServer}}\ \&server,\ \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}}\ position,\ \textcolor{keywordtype}{short}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_ab44c565da815752f4edc2bba11b20441}{\_spawn\_boss}}(\mbox{\hyperlink{classECS_1_1Registry}{ECS::Registry}}\ \&r,\ \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{Engine::Module::INetworkServer}}\ \&server,\ \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}}\ position);}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_ab96ef8e7a055420590b88400475e94c0}{\_spawn\_boss\_heart}}(\mbox{\hyperlink{classECS_1_1Registry}{ECS::Registry}}\ \&r,\ \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{Engine::Module::INetworkServer}}\ \&server,\ \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}}\ position);}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_ab3fc9784dd7f8a04637ec6425be72b58}{\_spawn\_fly}}(\mbox{\hyperlink{classECS_1_1Registry}{ECS::Registry}}\ \&r,\ \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{Engine::Module::INetworkServer}}\ \&server,\ \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}}\ position);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::unordered\_map<char,\ LevelElementType>\ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_a2d55c79989a3333a877f5feecb162661}{\_map\_char\_elem\_type}};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::unordered\_map<\mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4}{LevelElementType}},\ std::function<void\ (\mbox{\hyperlink{classECS_1_1Registry}{ECS::Registry}}\ \&,\ \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{Engine::Module::INetworkServer}}\ \&,\ \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}})>>\ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_abb2d9c6b892cf2b4bac0dcf231994a57}{\_map\_lvl\_elem\_type}};}
+\DoxyCodeLine{00050\ \ \ \ \ \};}
+\DoxyCodeLine{00051\ \}}
+
+\end{DoxyCode}

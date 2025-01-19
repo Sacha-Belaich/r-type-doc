@@ -1,0 +1,259 @@
+\doxysection{Engine\+::Debug\+::Konsole Class Reference}
+\hypertarget{classEngine_1_1Debug_1_1Konsole}{}\label{classEngine_1_1Debug_1_1Konsole}\index{Engine::Debug::Konsole@{Engine::Debug::Konsole}}
+
+
+{\ttfamily \#include $<$Konsole.\+hpp$>$}
+
+Inheritance diagram for Engine\+::Debug\+::Konsole\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classEngine_1_1Debug_1_1Konsole}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole_a26522af874f99df2c73b8e1e49ef915d}{Konsole}} ()
+\item 
+\mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole_a4e260a86e54f8fbb0bc72fe34ecb61e1}{\texorpdfstring{$\sim$}{\string~}\+Konsole}} ()
+\item 
+std\+::string \mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole_a9aacf161098162e8013bfb719b6a7c4e}{new\+Line}} () const
+\item 
+std\+::string \mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole_aab42c4f7e5de6858eb5f5152382cdd36}{print\+In\+Color}} (const std\+::string \&text, const std\+::string \&color) const
+\item 
+void \mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole_ab357a6e87ceb326cf646ae273e0925bd}{print\+In\+Terminal}} (const std\+::string \&msg, \mbox{\hyperlink{namespaceEngine_1_1Debug_ac0f1444aa94ddb33898683a4bb792a31}{Level}} level)
+\item 
+void \mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole_a4ecdc9d838716a8a75f1b515e2cd5c3f}{open\+New\+Terminal}} ()
+\item 
+void \mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole_a8dc76affd5dc4c9d7f6d51e492defa55}{start\+Listening}} ()
+\item 
+std\+::string \mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole_a8d9cd8cea60e7b54d4fec8bf5a8adc2e}{get\+Next\+Line}} ()
+\item 
+void \mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole_a21f053cfb26780a8746826e2b76ccad2}{set\+Level}} (\mbox{\hyperlink{namespaceEngine_1_1Debug_ac0f1444aa94ddb33898683a4bb792a31}{Level}} level)
+\item 
+\mbox{\hyperlink{namespaceEngine_1_1Debug_ac0f1444aa94ddb33898683a4bb792a31}{Level}} \mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole_a63dc9be50219daf72f75fdedc54454de}{get\+Level}} () const
+\item 
+void \mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole_a65134c408d7c018d1e008a08404527d8}{change\+Running}} (bool value)
+\item 
+bool \mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole_acc670c9ecf3036a172d909d58ee0419e}{is\+Running}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole_a987b38b3dbb83cf122eef76ea7c4d91c}{OS}} \{ \mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole_a987b38b3dbb83cf122eef76ea7c4d91caaea23489ce3aa9b6406ebb28e0cda430}{Windows}}
+, \mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole_a987b38b3dbb83cf122eef76ea7c4d91caedc9f0a5a5d57797bf68e37364743831}{Linux}}
+, \mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole_a987b38b3dbb83cf122eef76ea7c4d91ca88183b946cc5f0e8c96b2e66e1c74a7e}{Unknown}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole_a987b38b3dbb83cf122eef76ea7c4d91c}{OS}} \mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole_af545b45d05cc24d2e7d7bb7b3a4a848c}{detect\+OS}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole_a5628d08d3e1662fad845af5808d04d99}{\+\_\+user}}
+\item 
+\mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole_a987b38b3dbb83cf122eef76ea7c4d91c}{OS}} \mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole_aca485a5068a0328593c39fecf9fb7805}{\+\_\+os\+Type}}
+\item 
+std\+::string \mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole_abd1247aa1a61fa2b1af02213b1749b0c}{\+\_\+input\+File}}
+\item 
+std\+::string \mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole_a0f4631f70cbf8694f1949af6792c1db3}{\+\_\+output\+File}}
+\item 
+std\+::thread \mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole_a4f1dd9d3d56db9e37a6dfb988799dc6d}{\+\_\+listener}}
+\item 
+\mbox{\hyperlink{namespaceEngine_1_1Debug_ac0f1444aa94ddb33898683a4bb792a31}{Level}} \mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole_a98e369855f61ce26f5e45467775efc45}{\+\_\+level}}
+\item 
+std\+::queue$<$ std\+::string $>$ \mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole_acd8e982d9231a4b23fbc1a048085bf44}{\+\_\+lines\+Queue}}
+\item 
+std\+::mutex \mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole_af7ed443dd41ddbdc0d550941e9824f1d}{\+\_\+queue\+Mutex}}
+\item 
+std\+::condition\+\_\+variable \mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole_a64dedfb6e02ef5a1dfc47d90413813bd}{\+\_\+condition}}
+\item 
+bool \mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole_a0d5c2f99729aa9587eb621c838ec1549}{\+\_\+is\+Running}}
+\item 
+long \mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole_a9a89871f86cc9899ab634e8040786829}{\+\_\+pid}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{classEngine_1_1Debug_1_1Konsole_a987b38b3dbb83cf122eef76ea7c4d91c}\label{classEngine_1_1Debug_1_1Konsole_a987b38b3dbb83cf122eef76ea7c4d91c} 
+\index{Engine::Debug::Konsole@{Engine::Debug::Konsole}!OS@{OS}}
+\index{OS@{OS}!Engine::Debug::Konsole@{Engine::Debug::Konsole}}
+\doxysubsubsection{\texorpdfstring{OS}{OS}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole_a987b38b3dbb83cf122eef76ea7c4d91c}{Engine\+::\+Debug\+::\+Konsole\+::\+OS}}\hspace{0.3cm}{\ttfamily [strong]}, {\ttfamily [private]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Windows@{Windows}!Engine::Debug::Konsole@{Engine::Debug::Konsole}}\index{Engine::Debug::Konsole@{Engine::Debug::Konsole}!Windows@{Windows}}}\Hypertarget{classEngine_1_1Debug_1_1Konsole_a987b38b3dbb83cf122eef76ea7c4d91caaea23489ce3aa9b6406ebb28e0cda430}\label{classEngine_1_1Debug_1_1Konsole_a987b38b3dbb83cf122eef76ea7c4d91caaea23489ce3aa9b6406ebb28e0cda430} 
+Windows&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Linux@{Linux}!Engine::Debug::Konsole@{Engine::Debug::Konsole}}\index{Engine::Debug::Konsole@{Engine::Debug::Konsole}!Linux@{Linux}}}\Hypertarget{classEngine_1_1Debug_1_1Konsole_a987b38b3dbb83cf122eef76ea7c4d91caedc9f0a5a5d57797bf68e37364743831}\label{classEngine_1_1Debug_1_1Konsole_a987b38b3dbb83cf122eef76ea7c4d91caedc9f0a5a5d57797bf68e37364743831} 
+Linux&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Unknown@{Unknown}!Engine::Debug::Konsole@{Engine::Debug::Konsole}}\index{Engine::Debug::Konsole@{Engine::Debug::Konsole}!Unknown@{Unknown}}}\Hypertarget{classEngine_1_1Debug_1_1Konsole_a987b38b3dbb83cf122eef76ea7c4d91ca88183b946cc5f0e8c96b2e66e1c74a7e}\label{classEngine_1_1Debug_1_1Konsole_a987b38b3dbb83cf122eef76ea7c4d91ca88183b946cc5f0e8c96b2e66e1c74a7e} 
+Unknown&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classEngine_1_1Debug_1_1Konsole_a26522af874f99df2c73b8e1e49ef915d}\label{classEngine_1_1Debug_1_1Konsole_a26522af874f99df2c73b8e1e49ef915d} 
+\index{Engine::Debug::Konsole@{Engine::Debug::Konsole}!Konsole@{Konsole}}
+\index{Konsole@{Konsole}!Engine::Debug::Konsole@{Engine::Debug::Konsole}}
+\doxysubsubsection{\texorpdfstring{Konsole()}{Konsole()}}
+{\footnotesize\ttfamily Engine\+::\+Debug\+::\+Konsole\+::\+Konsole (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classEngine_1_1Debug_1_1Konsole_a4e260a86e54f8fbb0bc72fe34ecb61e1}\label{classEngine_1_1Debug_1_1Konsole_a4e260a86e54f8fbb0bc72fe34ecb61e1} 
+\index{Engine::Debug::Konsole@{Engine::Debug::Konsole}!````~Konsole@{\texorpdfstring{$\sim$}{\string~}Konsole}}
+\index{````~Konsole@{\texorpdfstring{$\sim$}{\string~}Konsole}!Engine::Debug::Konsole@{Engine::Debug::Konsole}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Konsole()}{\string~Konsole()}}
+{\footnotesize\ttfamily Engine\+::\+Debug\+::\+Konsole\+::\texorpdfstring{$\sim$}{\string~}\+Konsole (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classEngine_1_1Debug_1_1Konsole_a65134c408d7c018d1e008a08404527d8}\label{classEngine_1_1Debug_1_1Konsole_a65134c408d7c018d1e008a08404527d8} 
+\index{Engine::Debug::Konsole@{Engine::Debug::Konsole}!changeRunning@{changeRunning}}
+\index{changeRunning@{changeRunning}!Engine::Debug::Konsole@{Engine::Debug::Konsole}}
+\doxysubsubsection{\texorpdfstring{changeRunning()}{changeRunning()}}
+{\footnotesize\ttfamily void Engine\+::\+Debug\+::\+Konsole\+::change\+Running (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})}
+
+\Hypertarget{classEngine_1_1Debug_1_1Konsole_af545b45d05cc24d2e7d7bb7b3a4a848c}\label{classEngine_1_1Debug_1_1Konsole_af545b45d05cc24d2e7d7bb7b3a4a848c} 
+\index{Engine::Debug::Konsole@{Engine::Debug::Konsole}!detectOS@{detectOS}}
+\index{detectOS@{detectOS}!Engine::Debug::Konsole@{Engine::Debug::Konsole}}
+\doxysubsubsection{\texorpdfstring{detectOS()}{detectOS()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole_a987b38b3dbb83cf122eef76ea7c4d91c}{Konsole\+::\+OS}} Engine\+::\+Debug\+::\+Konsole\+::detect\+OS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classEngine_1_1Debug_1_1Konsole_a63dc9be50219daf72f75fdedc54454de}\label{classEngine_1_1Debug_1_1Konsole_a63dc9be50219daf72f75fdedc54454de} 
+\index{Engine::Debug::Konsole@{Engine::Debug::Konsole}!getLevel@{getLevel}}
+\index{getLevel@{getLevel}!Engine::Debug::Konsole@{Engine::Debug::Konsole}}
+\doxysubsubsection{\texorpdfstring{getLevel()}{getLevel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceEngine_1_1Debug_ac0f1444aa94ddb33898683a4bb792a31}{Level}} Engine\+::\+Debug\+::\+Konsole\+::get\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classEngine_1_1Debug_1_1Konsole_a8d9cd8cea60e7b54d4fec8bf5a8adc2e}\label{classEngine_1_1Debug_1_1Konsole_a8d9cd8cea60e7b54d4fec8bf5a8adc2e} 
+\index{Engine::Debug::Konsole@{Engine::Debug::Konsole}!getNextLine@{getNextLine}}
+\index{getNextLine@{getNextLine}!Engine::Debug::Konsole@{Engine::Debug::Konsole}}
+\doxysubsubsection{\texorpdfstring{getNextLine()}{getNextLine()}}
+{\footnotesize\ttfamily std\+::string Engine\+::\+Debug\+::\+Konsole\+::get\+Next\+Line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classEngine_1_1Debug_1_1Konsole_acc670c9ecf3036a172d909d58ee0419e}\label{classEngine_1_1Debug_1_1Konsole_acc670c9ecf3036a172d909d58ee0419e} 
+\index{Engine::Debug::Konsole@{Engine::Debug::Konsole}!isRunning@{isRunning}}
+\index{isRunning@{isRunning}!Engine::Debug::Konsole@{Engine::Debug::Konsole}}
+\doxysubsubsection{\texorpdfstring{isRunning()}{isRunning()}}
+{\footnotesize\ttfamily bool Engine\+::\+Debug\+::\+Konsole\+::is\+Running (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classEngine_1_1Debug_1_1Konsole_a9aacf161098162e8013bfb719b6a7c4e}\label{classEngine_1_1Debug_1_1Konsole_a9aacf161098162e8013bfb719b6a7c4e} 
+\index{Engine::Debug::Konsole@{Engine::Debug::Konsole}!newLine@{newLine}}
+\index{newLine@{newLine}!Engine::Debug::Konsole@{Engine::Debug::Konsole}}
+\doxysubsubsection{\texorpdfstring{newLine()}{newLine()}}
+{\footnotesize\ttfamily std\+::string Engine\+::\+Debug\+::\+Konsole\+::new\+Line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classEngine_1_1Debug_1_1Konsole_a4ecdc9d838716a8a75f1b515e2cd5c3f}\label{classEngine_1_1Debug_1_1Konsole_a4ecdc9d838716a8a75f1b515e2cd5c3f} 
+\index{Engine::Debug::Konsole@{Engine::Debug::Konsole}!openNewTerminal@{openNewTerminal}}
+\index{openNewTerminal@{openNewTerminal}!Engine::Debug::Konsole@{Engine::Debug::Konsole}}
+\doxysubsubsection{\texorpdfstring{openNewTerminal()}{openNewTerminal()}}
+{\footnotesize\ttfamily void Engine\+::\+Debug\+::\+Konsole\+::open\+New\+Terminal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classEngine_1_1Debug_1_1Konsole_aab42c4f7e5de6858eb5f5152382cdd36}\label{classEngine_1_1Debug_1_1Konsole_aab42c4f7e5de6858eb5f5152382cdd36} 
+\index{Engine::Debug::Konsole@{Engine::Debug::Konsole}!printInColor@{printInColor}}
+\index{printInColor@{printInColor}!Engine::Debug::Konsole@{Engine::Debug::Konsole}}
+\doxysubsubsection{\texorpdfstring{printInColor()}{printInColor()}}
+{\footnotesize\ttfamily std\+::string Engine\+::\+Debug\+::\+Konsole\+::print\+In\+Color (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text,  }\item[{const std\+::string \&}]{color }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classEngine_1_1Debug_1_1Konsole_ab357a6e87ceb326cf646ae273e0925bd}\label{classEngine_1_1Debug_1_1Konsole_ab357a6e87ceb326cf646ae273e0925bd} 
+\index{Engine::Debug::Konsole@{Engine::Debug::Konsole}!printInTerminal@{printInTerminal}}
+\index{printInTerminal@{printInTerminal}!Engine::Debug::Konsole@{Engine::Debug::Konsole}}
+\doxysubsubsection{\texorpdfstring{printInTerminal()}{printInTerminal()}}
+{\footnotesize\ttfamily void Engine\+::\+Debug\+::\+Konsole\+::print\+In\+Terminal (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{msg,  }\item[{\mbox{\hyperlink{namespaceEngine_1_1Debug_ac0f1444aa94ddb33898683a4bb792a31}{Level}}}]{level }\end{DoxyParamCaption})}
+
+\Hypertarget{classEngine_1_1Debug_1_1Konsole_a21f053cfb26780a8746826e2b76ccad2}\label{classEngine_1_1Debug_1_1Konsole_a21f053cfb26780a8746826e2b76ccad2} 
+\index{Engine::Debug::Konsole@{Engine::Debug::Konsole}!setLevel@{setLevel}}
+\index{setLevel@{setLevel}!Engine::Debug::Konsole@{Engine::Debug::Konsole}}
+\doxysubsubsection{\texorpdfstring{setLevel()}{setLevel()}}
+{\footnotesize\ttfamily void Engine\+::\+Debug\+::\+Konsole\+::set\+Level (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceEngine_1_1Debug_ac0f1444aa94ddb33898683a4bb792a31}{Level}}}]{level }\end{DoxyParamCaption})}
+
+\Hypertarget{classEngine_1_1Debug_1_1Konsole_a8dc76affd5dc4c9d7f6d51e492defa55}\label{classEngine_1_1Debug_1_1Konsole_a8dc76affd5dc4c9d7f6d51e492defa55} 
+\index{Engine::Debug::Konsole@{Engine::Debug::Konsole}!startListening@{startListening}}
+\index{startListening@{startListening}!Engine::Debug::Konsole@{Engine::Debug::Konsole}}
+\doxysubsubsection{\texorpdfstring{startListening()}{startListening()}}
+{\footnotesize\ttfamily void Engine\+::\+Debug\+::\+Konsole\+::start\+Listening (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classEngine_1_1Debug_1_1Konsole_a64dedfb6e02ef5a1dfc47d90413813bd}\label{classEngine_1_1Debug_1_1Konsole_a64dedfb6e02ef5a1dfc47d90413813bd} 
+\index{Engine::Debug::Konsole@{Engine::Debug::Konsole}!\_condition@{\_condition}}
+\index{\_condition@{\_condition}!Engine::Debug::Konsole@{Engine::Debug::Konsole}}
+\doxysubsubsection{\texorpdfstring{\_condition}{\_condition}}
+{\footnotesize\ttfamily std\+::condition\+\_\+variable Engine\+::\+Debug\+::\+Konsole\+::\+\_\+condition\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classEngine_1_1Debug_1_1Konsole_abd1247aa1a61fa2b1af02213b1749b0c}\label{classEngine_1_1Debug_1_1Konsole_abd1247aa1a61fa2b1af02213b1749b0c} 
+\index{Engine::Debug::Konsole@{Engine::Debug::Konsole}!\_inputFile@{\_inputFile}}
+\index{\_inputFile@{\_inputFile}!Engine::Debug::Konsole@{Engine::Debug::Konsole}}
+\doxysubsubsection{\texorpdfstring{\_inputFile}{\_inputFile}}
+{\footnotesize\ttfamily std\+::string Engine\+::\+Debug\+::\+Konsole\+::\+\_\+input\+File\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classEngine_1_1Debug_1_1Konsole_a0d5c2f99729aa9587eb621c838ec1549}\label{classEngine_1_1Debug_1_1Konsole_a0d5c2f99729aa9587eb621c838ec1549} 
+\index{Engine::Debug::Konsole@{Engine::Debug::Konsole}!\_isRunning@{\_isRunning}}
+\index{\_isRunning@{\_isRunning}!Engine::Debug::Konsole@{Engine::Debug::Konsole}}
+\doxysubsubsection{\texorpdfstring{\_isRunning}{\_isRunning}}
+{\footnotesize\ttfamily bool Engine\+::\+Debug\+::\+Konsole\+::\+\_\+is\+Running\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classEngine_1_1Debug_1_1Konsole_a98e369855f61ce26f5e45467775efc45}\label{classEngine_1_1Debug_1_1Konsole_a98e369855f61ce26f5e45467775efc45} 
+\index{Engine::Debug::Konsole@{Engine::Debug::Konsole}!\_level@{\_level}}
+\index{\_level@{\_level}!Engine::Debug::Konsole@{Engine::Debug::Konsole}}
+\doxysubsubsection{\texorpdfstring{\_level}{\_level}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceEngine_1_1Debug_ac0f1444aa94ddb33898683a4bb792a31}{Level}} Engine\+::\+Debug\+::\+Konsole\+::\+\_\+level\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classEngine_1_1Debug_1_1Konsole_acd8e982d9231a4b23fbc1a048085bf44}\label{classEngine_1_1Debug_1_1Konsole_acd8e982d9231a4b23fbc1a048085bf44} 
+\index{Engine::Debug::Konsole@{Engine::Debug::Konsole}!\_linesQueue@{\_linesQueue}}
+\index{\_linesQueue@{\_linesQueue}!Engine::Debug::Konsole@{Engine::Debug::Konsole}}
+\doxysubsubsection{\texorpdfstring{\_linesQueue}{\_linesQueue}}
+{\footnotesize\ttfamily std\+::queue$<$std\+::string$>$ Engine\+::\+Debug\+::\+Konsole\+::\+\_\+lines\+Queue\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classEngine_1_1Debug_1_1Konsole_a4f1dd9d3d56db9e37a6dfb988799dc6d}\label{classEngine_1_1Debug_1_1Konsole_a4f1dd9d3d56db9e37a6dfb988799dc6d} 
+\index{Engine::Debug::Konsole@{Engine::Debug::Konsole}!\_listener@{\_listener}}
+\index{\_listener@{\_listener}!Engine::Debug::Konsole@{Engine::Debug::Konsole}}
+\doxysubsubsection{\texorpdfstring{\_listener}{\_listener}}
+{\footnotesize\ttfamily std\+::thread Engine\+::\+Debug\+::\+Konsole\+::\+\_\+listener\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classEngine_1_1Debug_1_1Konsole_aca485a5068a0328593c39fecf9fb7805}\label{classEngine_1_1Debug_1_1Konsole_aca485a5068a0328593c39fecf9fb7805} 
+\index{Engine::Debug::Konsole@{Engine::Debug::Konsole}!\_osType@{\_osType}}
+\index{\_osType@{\_osType}!Engine::Debug::Konsole@{Engine::Debug::Konsole}}
+\doxysubsubsection{\texorpdfstring{\_osType}{\_osType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole_a987b38b3dbb83cf122eef76ea7c4d91c}{OS}} Engine\+::\+Debug\+::\+Konsole\+::\+\_\+os\+Type\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classEngine_1_1Debug_1_1Konsole_a0f4631f70cbf8694f1949af6792c1db3}\label{classEngine_1_1Debug_1_1Konsole_a0f4631f70cbf8694f1949af6792c1db3} 
+\index{Engine::Debug::Konsole@{Engine::Debug::Konsole}!\_outputFile@{\_outputFile}}
+\index{\_outputFile@{\_outputFile}!Engine::Debug::Konsole@{Engine::Debug::Konsole}}
+\doxysubsubsection{\texorpdfstring{\_outputFile}{\_outputFile}}
+{\footnotesize\ttfamily std\+::string Engine\+::\+Debug\+::\+Konsole\+::\+\_\+output\+File\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classEngine_1_1Debug_1_1Konsole_a9a89871f86cc9899ab634e8040786829}\label{classEngine_1_1Debug_1_1Konsole_a9a89871f86cc9899ab634e8040786829} 
+\index{Engine::Debug::Konsole@{Engine::Debug::Konsole}!\_pid@{\_pid}}
+\index{\_pid@{\_pid}!Engine::Debug::Konsole@{Engine::Debug::Konsole}}
+\doxysubsubsection{\texorpdfstring{\_pid}{\_pid}}
+{\footnotesize\ttfamily long Engine\+::\+Debug\+::\+Konsole\+::\+\_\+pid\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classEngine_1_1Debug_1_1Konsole_af7ed443dd41ddbdc0d550941e9824f1d}\label{classEngine_1_1Debug_1_1Konsole_af7ed443dd41ddbdc0d550941e9824f1d} 
+\index{Engine::Debug::Konsole@{Engine::Debug::Konsole}!\_queueMutex@{\_queueMutex}}
+\index{\_queueMutex@{\_queueMutex}!Engine::Debug::Konsole@{Engine::Debug::Konsole}}
+\doxysubsubsection{\texorpdfstring{\_queueMutex}{\_queueMutex}}
+{\footnotesize\ttfamily std\+::mutex Engine\+::\+Debug\+::\+Konsole\+::\+\_\+queue\+Mutex\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classEngine_1_1Debug_1_1Konsole_a5628d08d3e1662fad845af5808d04d99}\label{classEngine_1_1Debug_1_1Konsole_a5628d08d3e1662fad845af5808d04d99} 
+\index{Engine::Debug::Konsole@{Engine::Debug::Konsole}!\_user@{\_user}}
+\index{\_user@{\_user}!Engine::Debug::Konsole@{Engine::Debug::Konsole}}
+\doxysubsubsection{\texorpdfstring{\_user}{\_user}}
+{\footnotesize\ttfamily std\+::string Engine\+::\+Debug\+::\+Konsole\+::\+\_\+user\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/engine/core/debug/\mbox{\hyperlink{Konsole_8hpp}{Konsole.\+hpp}}\item 
+lib/engine/core/debug/\mbox{\hyperlink{Konsole_8cpp}{Konsole.\+cpp}}\end{DoxyCompactItemize}

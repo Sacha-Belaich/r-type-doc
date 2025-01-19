@@ -1,0 +1,66 @@
+\doxysection{Lobby\+System.\+hpp}
+\hypertarget{LobbySystem_8hpp_source}{}\label{LobbySystem_8hpp_source}\index{server/src/systems/LobbySystem.hpp@{server/src/systems/LobbySystem.hpp}}
+\mbox{\hyperlink{LobbySystem_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2025}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ LOby}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ lobby}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ LOBBYSYSTEM\_HPP\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\ \ \ \ \#define\ LOBBYSYSTEM\_HPP\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <cstdlib>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Registry_8hpp}{Registry.hpp}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{INetworkServer_8hpp}{INetworkServer.hpp}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{PacketHandler_8hpp}{PacketHandler.hpp}}"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Registry_8hpp}{Registry.hpp}}"{}}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Registry_8hpp}{Registry.hpp}}"{}}}
+\DoxyCodeLine{00027\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceR__Type_1_1System}{R\_Type::System}}\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classR__Type_1_1System_1_1LobbySystem}{LobbySystem}}\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classR__Type_1_1System_1_1LobbySystem_a798ad1b74ac5801aca1dbc8a2cbd579b}{addPlayer}}(std::unordered\_map<uint16\_t,\ std::optional<ECS::Entity>>\&\ players,}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::unordered\_map<uint16\_t,\ bool>\&\ readyStatus,}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint16\_t\ clientId,\ \mbox{\hyperlink{classECS_1_1Entity}{ECS::Entity}}\ entity,\ std::size\_t\ maxPlayers);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classR__Type_1_1System_1_1LobbySystem_ac2147c31d3e7465fa6994a0a9bbf6a30}{removePlayer}}(std::unordered\_map<uint16\_t,\ std::optional<ECS::Entity>>\&\ players,}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::unordered\_map<uint16\_t,\ bool>\&\ readyStatus,}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint16\_t\ clientId);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1System_1_1LobbySystem_a6b5832b621218dd9eb1f512c5b75df40}{setReady}}(std::unordered\_map<uint16\_t,\ bool>\&\ readyStatus,}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint16\_t\ clientId,\ \textcolor{keywordtype}{bool}\ ready);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classR__Type_1_1System_1_1LobbySystem_ac90b07512fe9db8de67f106704f9991d}{isReadyToStart}}(\textcolor{keyword}{const}\ std::unordered\_map<uint16\_t,\ std::optional<ECS::Entity>>\&\ players,}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::unordered\_map<uint16\_t,\ bool>\&\ readyStatus);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classR__Type_1_1System_1_1LobbySystem_af58414748c821647f049c9d1b5a5df7a}{startGame}}(std::unordered\_map<uint16\_t,\ std::optional<ECS::Entity>>\&\ player,}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ std::unordered\_map<uint16\_t,\ bool>\&\ readyStatus,\ \textcolor{keywordtype}{bool}\&\ gameStarted);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classR__Type_1_1System_1_1LobbySystem_a624a6d326e5e0a8480569873bc34f98d}{canAddPlayer}}(\textcolor{keyword}{const}\ std::unordered\_map<uint16\_t,\ std::optional<ECS::Entity>>\&\ players,}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::size\_t\ maxPlayers,\ \textcolor{keywordtype}{bool}\ gameStarted);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1System_1_1LobbySystem_ac548846278ad219a136e4819c14f5bb6}{validateLobby}}(\textcolor{keyword}{const}\ std::unordered\_map<uint16\_t,\ std::optional<ECS::Entity>>\&\ players,}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::unordered\_map<uint16\_t,\ bool>\&\ readyStatus,\ std::size\_t\ maxPlayers)\ ;}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classR__Type_1_1System_1_1LobbySystem_a4d4d7d49c109d81ac778b633474e5f3c}{LobbySystem}}()\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00055\ \ \ \ \ \};}
+\DoxyCodeLine{00056\ \ \ \ \ \}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !LOBBYSYSTEM\_HPP\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

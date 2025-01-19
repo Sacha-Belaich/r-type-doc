@@ -1,0 +1,76 @@
+\doxysection{CPU.\+hpp}
+\hypertarget{CPU_8hpp_source}{}\label{CPU_8hpp_source}\index{lib/engine/core/debug/CPU.hpp@{lib/engine/core/debug/CPU.hpp}}
+\mbox{\hyperlink{CPU_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2025}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ Cpu.hpp}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ Cpu.hpp}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ R\_TYPE\_CPU\_HPP}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ R\_TYPE\_CPU\_HPP}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <cstring>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <dirent.h>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcpuInfo}{cpuInfo}}\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ std::string\ \mbox{\hyperlink{structcpuInfo_a59f74c0e396dcc7ae8834768e54786e4}{processor}};}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcpuInfo_adf2399efc9d7eb04b4eb25550bf92436}{core\_id}};}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcpuInfo_a4b9a21c576420dd584894ef224baf2c3}{cpu\_core}};}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcpuInfo_a5aff60167bff45c153ee6c5cce2349a0}{apicid}};}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcpuInfo_a83c9e918d343e14c727548139ce6e8ed}{cpu\_family}};}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structcpuInfo_af985f9e733e2a58b977f80cd4888779d}{frequency}};}
+\DoxyCodeLine{00026\ \ \ \ \ std::string\ \mbox{\hyperlink{structcpuInfo_a9444a93eb613e5ff34249514f6fc808f}{model}};}
+\DoxyCodeLine{00027\ \ \ \ \ std::string\ \mbox{\hyperlink{structcpuInfo_a2bf42bb236fdd22be608352b069cb330}{cache\_size}};}
+\DoxyCodeLine{00028\ \};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcoeurInfo}{coeurInfo}}\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ std::string\ \mbox{\hyperlink{structcoeurInfo_a932954e8887197d756e8260b95473e14}{name}};}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structcoeurInfo_ae7dc4e4771a0850ff2996f2f0c904e79}{usage}};}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcoeurInfo_abe2a427c6afc22e6cf3d2b04be939748}{threads}};}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcoeurInfo_ad03c3617aafa177371ded5fb8a9997fd}{process}};}
+\DoxyCodeLine{00035\ \};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structprev}{prev}}\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{structprev_a7206cb3e76e0f5a2d1f92df3cd149ad8}{user}};}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{structprev_aeed91bbd30377d3c2b2758d24bb7a319}{nice}};}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{structprev_a516800d49ae1df6854dc9fabb12f113c}{system}};}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{structprev_ac33d1191e51cb2c945f6975fc33f09bf}{idle}};}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{structprev_a563de8794cf4c16da8c09c7e5b2bb3f4}{iowait}};}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{structprev_a50b8dfbad08330738a81ce9bbf6b2648}{irq}};}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{structprev_aadeb2dc0d3d415ad78a6a8c98cb03271}{softirq}};}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{structprev_ac92d0d2a45833d867ce8c67945190bdd}{steal}};}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{structprev_a98d2b2f3a40ca3eae56fa452e8c8578b}{guest}};}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{structprev_a910c9cda3ac1772712454e5d6333aee0}{guest\_nice}};}
+\DoxyCodeLine{00048\ \};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceEngine_1_1Debug}{Engine::Debug}}\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classEngine_1_1Debug_1_1CPU}{CPU}}\ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEngine_1_1Debug_1_1CPU_adfaa27c9620b7b51952af1abc4a32ba3}{CPU}}();}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEngine_1_1Debug_1_1CPU_a346a365d9ce9fcd397574b0fc49a82fa}{\string~CPU}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Debug_1_1CPU_a041afbf985e160a150470fa19c08a64e}{update}}();}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ std::vector<cpuInfo>\ \mbox{\hyperlink{classEngine_1_1Debug_1_1CPU_a367115298bc3202119c6d4fd2b5735f1}{getCpuVectorInfo}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ std::vector<coeurInfo>\ \mbox{\hyperlink{classEngine_1_1Debug_1_1CPU_a823fbb33749c7efb057b9d0a7bf13e18}{getCoeurVectorInfo}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classEngine_1_1Debug_1_1CPU_a1c88f0a02a5f4861856d6edb9707ee33}{getCpuPrettyPrint}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ std::vector<cpuInfo>\ \mbox{\hyperlink{classEngine_1_1Debug_1_1CPU_a2beff65657748d5fe016ed1901c16438}{\_infos}};}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ std::vector<coeurInfo>\ \mbox{\hyperlink{classEngine_1_1Debug_1_1CPU_a10e6a940cf16e73df292b619c7962f51}{\_coeurs}};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ std::vector<struct\ prev>\ \mbox{\hyperlink{classEngine_1_1Debug_1_1CPU_af50f7482ef1632fb592a507fd53c9a7f}{\_prev}};}
+\DoxyCodeLine{00067\ \ \ \ \ \};}
+\DoxyCodeLine{00068\ \}\ \textcolor{comment}{//\ Debug}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//R\_TYPE\_CPU\_HPP}}
+
+\end{DoxyCode}

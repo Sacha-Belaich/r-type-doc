@@ -1,0 +1,96 @@
+\doxysection{Client\+::Components\+::Camera Class Reference}
+\hypertarget{classClient_1_1Components_1_1Camera}{}\label{classClient_1_1Components_1_1Camera}\index{Client::Components::Camera@{Client::Components::Camera}}
+
+
+{\ttfamily \#include $<$Camera.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classClient_1_1Components_1_1Camera_a496aa0764eb4a8e721f5559787718df5}{Camera}} (bool \mbox{\hyperlink{classClient_1_1Components_1_1Camera_a14c197ccf1212131060106d2a27c400d}{enabled}}=true, \mbox{\hyperlink{structGraphical_1_1Vect2i}{Graphical\+::\+Vect2i}} \mbox{\hyperlink{classClient_1_1Components_1_1Camera_a0ba7690f77d2e6f4ce72f3582f654311}{screen\+Size}}=\{1920, 1080\})
+\item 
+void \mbox{\hyperlink{classClient_1_1Components_1_1Camera_a58d4226eecf055fad456d4d30b3749e3}{log}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classECS_1_1Entity}{ECS\+::\+Entity}} \mbox{\hyperlink{classClient_1_1Components_1_1Camera_aa70012c3b4084c2dfa07b3905b14e094}{create\+Camera}} (\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&r, \mbox{\hyperlink{structGraphical_1_1Vect2i}{Graphical\+::\+Vect2i}} pos, \mbox{\hyperlink{structGraphical_1_1Vect2i}{Graphical\+::\+Vect2i}} \mbox{\hyperlink{classClient_1_1Components_1_1Camera_a0ba7690f77d2e6f4ce72f3582f654311}{screen\+Size}}, bool \mbox{\hyperlink{classClient_1_1Components_1_1Camera_a14c197ccf1212131060106d2a27c400d}{enabled}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classClient_1_1Components_1_1Camera_a14c197ccf1212131060106d2a27c400d}{enabled}}
+\item 
+\mbox{\hyperlink{structGraphical_1_1Vect2i}{Graphical\+::\+Vect2i}} \mbox{\hyperlink{classClient_1_1Components_1_1Camera_a0ba7690f77d2e6f4ce72f3582f654311}{screen\+Size}}
+\item 
+\mbox{\hyperlink{structGraphical_1_1Vect2i}{Graphical\+::\+Vect2i}} \mbox{\hyperlink{classClient_1_1Components_1_1Camera_a28e4fe51ab4f3666a56169d4d5c7db18}{stop}} = \{0, 0\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classClient_1_1Components_1_1Camera_a496aa0764eb4a8e721f5559787718df5}\label{classClient_1_1Components_1_1Camera_a496aa0764eb4a8e721f5559787718df5} 
+\index{Client::Components::Camera@{Client::Components::Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!Client::Components::Camera@{Client::Components::Camera}}
+\doxysubsubsection{\texorpdfstring{Camera()}{Camera()}}
+{\footnotesize\ttfamily Client\+::\+Components\+::\+Camera\+::\+Camera (\begin{DoxyParamCaption}\item[{bool}]{enabled = {\ttfamily true},  }\item[{\mbox{\hyperlink{structGraphical_1_1Vect2i}{Graphical\+::\+Vect2i}}}]{screen\+Size = {\ttfamily \{1920,~1080\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em enabled} & only one camera can be enabled at a tiem \\
+\hline
+{\em screen\+Size} & size of the rectangle to be rendered, defaults to 1920\texorpdfstring{$\ast$}{*}1080 \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classClient_1_1Components_1_1Camera_aa70012c3b4084c2dfa07b3905b14e094}\label{classClient_1_1Components_1_1Camera_aa70012c3b4084c2dfa07b3905b14e094} 
+\index{Client::Components::Camera@{Client::Components::Camera}!createCamera@{createCamera}}
+\index{createCamera@{createCamera}!Client::Components::Camera@{Client::Components::Camera}}
+\doxysubsubsection{\texorpdfstring{createCamera()}{createCamera()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classECS_1_1Entity}{ECS\+::\+Entity}} Client\+::\+Components\+::\+Camera\+::create\+Camera (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&}]{r,  }\item[{\mbox{\hyperlink{structGraphical_1_1Vect2i}{Graphical\+::\+Vect2i}}}]{pos,  }\item[{\mbox{\hyperlink{structGraphical_1_1Vect2i}{Graphical\+::\+Vect2i}}}]{screen\+Size,  }\item[{bool}]{enabled }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Creates a camera entity with all the needed components. to make it move you\textquotesingle{}ll have to either add a velocity components or make your own system to update its position 
+\begin{DoxyParams}{Parameters}
+{\em r} & registry containing all game data \\
+\hline
+{\em pos} & initial position of the \doxylink{classClient_1_1Components_1_1Camera}{Camera} \\
+\hline
+{\em screen\+Size} & size of screen \\
+\hline
+{\em enabled} & tells the engine to use this camera only one camera entity must be enabled \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classClient_1_1Components_1_1Camera_a58d4226eecf055fad456d4d30b3749e3}\label{classClient_1_1Components_1_1Camera_a58d4226eecf055fad456d4d30b3749e3} 
+\index{Client::Components::Camera@{Client::Components::Camera}!log@{log}}
+\index{log@{log}!Client::Components::Camera@{Client::Components::Camera}}
+\doxysubsubsection{\texorpdfstring{log()}{log()}}
+{\footnotesize\ttfamily void Client\+::\+Components\+::\+Camera\+::log (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classClient_1_1Components_1_1Camera_a14c197ccf1212131060106d2a27c400d}\label{classClient_1_1Components_1_1Camera_a14c197ccf1212131060106d2a27c400d} 
+\index{Client::Components::Camera@{Client::Components::Camera}!enabled@{enabled}}
+\index{enabled@{enabled}!Client::Components::Camera@{Client::Components::Camera}}
+\doxysubsubsection{\texorpdfstring{enabled}{enabled}}
+{\footnotesize\ttfamily bool Client\+::\+Components\+::\+Camera\+::enabled}
+
+\Hypertarget{classClient_1_1Components_1_1Camera_a0ba7690f77d2e6f4ce72f3582f654311}\label{classClient_1_1Components_1_1Camera_a0ba7690f77d2e6f4ce72f3582f654311} 
+\index{Client::Components::Camera@{Client::Components::Camera}!screenSize@{screenSize}}
+\index{screenSize@{screenSize}!Client::Components::Camera@{Client::Components::Camera}}
+\doxysubsubsection{\texorpdfstring{screenSize}{screenSize}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structGraphical_1_1Vect2i}{Graphical\+::\+Vect2i}} Client\+::\+Components\+::\+Camera\+::screen\+Size}
+
+\Hypertarget{classClient_1_1Components_1_1Camera_a28e4fe51ab4f3666a56169d4d5c7db18}\label{classClient_1_1Components_1_1Camera_a28e4fe51ab4f3666a56169d4d5c7db18} 
+\index{Client::Components::Camera@{Client::Components::Camera}!stop@{stop}}
+\index{stop@{stop}!Client::Components::Camera@{Client::Components::Camera}}
+\doxysubsubsection{\texorpdfstring{stop}{stop}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structGraphical_1_1Vect2i}{Graphical\+::\+Vect2i}} Client\+::\+Components\+::\+Camera\+::stop = \{0, 0\}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+client/includes/components/\mbox{\hyperlink{components_2Camera_8hpp}{Camera.\+hpp}}\item 
+client/src/components/\mbox{\hyperlink{components_2Camera_8cpp}{Camera.\+cpp}}\end{DoxyCompactItemize}

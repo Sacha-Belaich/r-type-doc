@@ -1,0 +1,117 @@
+\doxysection{Engine\+::Module\+::Rectangle Class Reference}
+\hypertarget{classEngine_1_1Module_1_1Rectangle}{}\label{classEngine_1_1Module_1_1Rectangle}\index{Engine::Module::Rectangle@{Engine::Module::Rectangle}}
+
+
+{\ttfamily \#include $<$Rectangle.\+hpp$>$}
+
+Inheritance diagram for Engine\+::Module\+::Rectangle\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classEngine_1_1Module_1_1Rectangle}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEngine_1_1Module_1_1Rectangle_a88431b85d045196324a628f388f84169}{Rectangle}} (float x, float y, float width, float height)
+\item 
+bool \mbox{\hyperlink{classEngine_1_1Module_1_1Rectangle_ae73eab5310740bf04892670bed5487e3}{check\+\_\+collision}} (const \mbox{\hyperlink{classEngine_1_1Module_1_1IShape}{IShape}} \&other) const override
+\item 
+void \mbox{\hyperlink{classEngine_1_1Module_1_1Rectangle_a8e4df29f2f6154adb182fe88b1b561a9}{log}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classEngine_1_1Module_1_1IShape}{Engine\+::\+Module\+::\+IShape}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classEngine_1_1Module_1_1IShape_ae53b61e1be388a9d60c51fa3b57cf57b}{\texorpdfstring{$\sim$}{\string~}\+IShape}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{classEngine_1_1Module_1_1Rectangle_a55f5ce1de28913c1102b9c3c2e783a9f}{\+\_\+x}}
+\item 
+float \mbox{\hyperlink{classEngine_1_1Module_1_1Rectangle_a42e77651e708536e49aa654696cab49c}{\+\_\+y}}
+\item 
+float \mbox{\hyperlink{classEngine_1_1Module_1_1Rectangle_adf6eae89dcc171d905d6d126ee2cbd77}{\+\_\+width}}
+\item 
+float \mbox{\hyperlink{classEngine_1_1Module_1_1Rectangle_a28edab240db1a3fa83ba7ca8645fd161}{\+\_\+height}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classEngine_1_1Module_1_1Rectangle_aee78ddd8ce64630c815d607fba658f0b}{check\+\_\+collision}} (const \mbox{\hyperlink{classEngine_1_1Module_1_1Circle}{Circle}} \&other)
+\item 
+bool \mbox{\hyperlink{classEngine_1_1Module_1_1Rectangle_a5aed911e6e95fe6e230833fce6fe197c}{check\+\_\+collision}} (const \mbox{\hyperlink{classEngine_1_1Module_1_1Rectangle}{Rectangle}} \&other)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classEngine_1_1Module_1_1Rectangle_a88431b85d045196324a628f388f84169}\label{classEngine_1_1Module_1_1Rectangle_a88431b85d045196324a628f388f84169} 
+\index{Engine::Module::Rectangle@{Engine::Module::Rectangle}!Rectangle@{Rectangle}}
+\index{Rectangle@{Rectangle}!Engine::Module::Rectangle@{Engine::Module::Rectangle}}
+\doxysubsubsection{\texorpdfstring{Rectangle()}{Rectangle()}}
+{\footnotesize\ttfamily Engine\+::\+Module\+::\+Rectangle\+::\+Rectangle (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{width,  }\item[{float}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classEngine_1_1Module_1_1Rectangle_aee78ddd8ce64630c815d607fba658f0b}\label{classEngine_1_1Module_1_1Rectangle_aee78ddd8ce64630c815d607fba658f0b} 
+\index{Engine::Module::Rectangle@{Engine::Module::Rectangle}!check\_collision@{check\_collision}}
+\index{check\_collision@{check\_collision}!Engine::Module::Rectangle@{Engine::Module::Rectangle}}
+\doxysubsubsection{\texorpdfstring{check\_collision()}{check\_collision()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily bool Engine\+::\+Module\+::\+Rectangle\+::check\+\_\+collision (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classEngine_1_1Module_1_1Circle}{Circle}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classEngine_1_1Module_1_1Rectangle_ae73eab5310740bf04892670bed5487e3}\label{classEngine_1_1Module_1_1Rectangle_ae73eab5310740bf04892670bed5487e3} 
+\index{Engine::Module::Rectangle@{Engine::Module::Rectangle}!check\_collision@{check\_collision}}
+\index{check\_collision@{check\_collision}!Engine::Module::Rectangle@{Engine::Module::Rectangle}}
+\doxysubsubsection{\texorpdfstring{check\_collision()}{check\_collision()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily bool Engine\+::\+Module\+::\+Rectangle\+::check\+\_\+collision (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classEngine_1_1Module_1_1IShape}{IShape}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classEngine_1_1Module_1_1IShape_a0611c701f6ddaba2d5b1c76c35f2f85b}{Engine\+::\+Module\+::\+IShape}}.
+
+\Hypertarget{classEngine_1_1Module_1_1Rectangle_a5aed911e6e95fe6e230833fce6fe197c}\label{classEngine_1_1Module_1_1Rectangle_a5aed911e6e95fe6e230833fce6fe197c} 
+\index{Engine::Module::Rectangle@{Engine::Module::Rectangle}!check\_collision@{check\_collision}}
+\index{check\_collision@{check\_collision}!Engine::Module::Rectangle@{Engine::Module::Rectangle}}
+\doxysubsubsection{\texorpdfstring{check\_collision()}{check\_collision()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily bool Engine\+::\+Module\+::\+Rectangle\+::check\+\_\+collision (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classEngine_1_1Module_1_1Rectangle}{Rectangle}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classEngine_1_1Module_1_1Rectangle_a8e4df29f2f6154adb182fe88b1b561a9}\label{classEngine_1_1Module_1_1Rectangle_a8e4df29f2f6154adb182fe88b1b561a9} 
+\index{Engine::Module::Rectangle@{Engine::Module::Rectangle}!log@{log}}
+\index{log@{log}!Engine::Module::Rectangle@{Engine::Module::Rectangle}}
+\doxysubsubsection{\texorpdfstring{log()}{log()}}
+{\footnotesize\ttfamily void Engine\+::\+Module\+::\+Rectangle\+::log (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classEngine_1_1Module_1_1Rectangle_a28edab240db1a3fa83ba7ca8645fd161}\label{classEngine_1_1Module_1_1Rectangle_a28edab240db1a3fa83ba7ca8645fd161} 
+\index{Engine::Module::Rectangle@{Engine::Module::Rectangle}!\_height@{\_height}}
+\index{\_height@{\_height}!Engine::Module::Rectangle@{Engine::Module::Rectangle}}
+\doxysubsubsection{\texorpdfstring{\_height}{\_height}}
+{\footnotesize\ttfamily float Engine\+::\+Module\+::\+Rectangle\+::\+\_\+height}
+
+\Hypertarget{classEngine_1_1Module_1_1Rectangle_adf6eae89dcc171d905d6d126ee2cbd77}\label{classEngine_1_1Module_1_1Rectangle_adf6eae89dcc171d905d6d126ee2cbd77} 
+\index{Engine::Module::Rectangle@{Engine::Module::Rectangle}!\_width@{\_width}}
+\index{\_width@{\_width}!Engine::Module::Rectangle@{Engine::Module::Rectangle}}
+\doxysubsubsection{\texorpdfstring{\_width}{\_width}}
+{\footnotesize\ttfamily float Engine\+::\+Module\+::\+Rectangle\+::\+\_\+width}
+
+\Hypertarget{classEngine_1_1Module_1_1Rectangle_a55f5ce1de28913c1102b9c3c2e783a9f}\label{classEngine_1_1Module_1_1Rectangle_a55f5ce1de28913c1102b9c3c2e783a9f} 
+\index{Engine::Module::Rectangle@{Engine::Module::Rectangle}!\_x@{\_x}}
+\index{\_x@{\_x}!Engine::Module::Rectangle@{Engine::Module::Rectangle}}
+\doxysubsubsection{\texorpdfstring{\_x}{\_x}}
+{\footnotesize\ttfamily float Engine\+::\+Module\+::\+Rectangle\+::\+\_\+x}
+
+\Hypertarget{classEngine_1_1Module_1_1Rectangle_a42e77651e708536e49aa654696cab49c}\label{classEngine_1_1Module_1_1Rectangle_a42e77651e708536e49aa654696cab49c} 
+\index{Engine::Module::Rectangle@{Engine::Module::Rectangle}!\_y@{\_y}}
+\index{\_y@{\_y}!Engine::Module::Rectangle@{Engine::Module::Rectangle}}
+\doxysubsubsection{\texorpdfstring{\_y}{\_y}}
+{\footnotesize\ttfamily float Engine\+::\+Module\+::\+Rectangle\+::\+\_\+y}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/engine/modules/physic/includes/shapes/\mbox{\hyperlink{Rectangle_8hpp}{Rectangle.\+hpp}}\item 
+lib/engine/modules/physic/src/shapes/\mbox{\hyperlink{Rectangle_8cpp}{Rectangle.\+cpp}}\end{DoxyCompactItemize}

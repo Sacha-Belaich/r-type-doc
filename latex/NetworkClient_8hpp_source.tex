@@ -1,0 +1,56 @@
+\doxysection{Network\+Client.\+hpp}
+\hypertarget{NetworkClient_8hpp_source}{}\label{NetworkClient_8hpp_source}\index{lib/engine/modules/network\_client/NetworkClient.hpp@{lib/engine/modules/network\_client/NetworkClient.hpp}}
+\mbox{\hyperlink{NetworkClient_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2025}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ NetworkClient.hpp}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ NetworkClient.hpp}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ R\_TYPE\_NETWORKCLIENT\_HPP}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ R\_TYPE\_NETWORKCLIENT\_HPP}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <asio.hpp>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{INetworkClient_8hpp}{INetworkClient.hpp}}"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceEngine_1_1Module}{Engine::Module}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classEngine_1_1Module_1_1NetworkClient}{NetworkClient}}\ final\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkClient}{INetworkClient}}\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkClient_a04aea3b3e647031f397d867a422f0e9f}{NetworkClient}}();}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkClient_a3cc2c524a2fdca2cc808da1657d407b6}{\string~NetworkClient}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkClient_a3f3c526f33c8cb19bc2fec0ae18a8373}{loadModule}}(\mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core::Core}}\ \&core)\textcolor{keyword}{\ override\ }\{\}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkClient_a093fa166016b7eab1a0bd165e58c8811}{unloadModule}}(\mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core::Core}}\ \&core)\textcolor{keyword}{\ override\ }\{\}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkClient_a7ca1be4a6e62da27e62f03bd9e6f36e2}{connect}}(\textcolor{keyword}{const}\ std::string\ \&ip,\ uint16\_t\ port)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkClient_a0e69820bb5bf1cf561db7918b30070fd}{close}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ std::vector<uint8\_t>\ \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkClient_aa2f28621ca05c8ae91d0e6c243f6038f}{getOldestPacket}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkClient_a37a033617ffa025eb44fb2f0126307df}{send}}(\textcolor{keyword}{const}\ std::vector<uint8\_t>\ \&packet)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structEngine_1_1Module_1_1module__info__s}{module\_info\_t}}\ \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkClient_a6c9c30f238140071e4e8e60db774e31a}{getInfo}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkClient_a0bb48018c9123641ddd2058c322e9aa6}{\_asyncReceive}}();}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ std::thread\ \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkClient_a63979e4346638361a6d77d0f459b03bf}{\_thread}};}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ std::mutex\ \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkClient_af2860fa0ef588e199cc975adb7cca721}{\_mutex}};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ asio::io\_context\ \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkClient_a8abc1fc91169272b9be22afca45ad514}{\_context}};}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ asio::ip::udp::socket\ \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkClient_abb38f2eb2a75dd8b90244c612a844171}{\_socket}};}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ asio::ip::udp::endpoint\ \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkClient_ac61e29301c0e88b102e4874de6794778}{\_server\_endpoint}};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkClient_ae371da2efc5043f083740b0e445f6d2d}{\_packet\_start}}\ =\ \textcolor{stringliteral}{"{}PACKET\_START"{}};}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkClient_aa1040c7d983ddb127214f9128b587757}{\_packet\_end}}\ =\ \textcolor{stringliteral}{"{}PACKET\_END"{}};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ std::vector<uint8\_t>\ \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkClient_a034dac5cbfbadae6d80623122196fce5}{\_buffer}};}
+\DoxyCodeLine{00047\ \};}
+\DoxyCodeLine{00048\ \}\ \ \textcolor{comment}{//\ namespace\ Engine::Module}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ R\_TYPE\_NETWORKCLIENT\_HPP}}
+
+\end{DoxyCode}

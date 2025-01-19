@@ -1,0 +1,116 @@
+\doxysection{Engine\+::Core\+::ECS Class Reference}
+\hypertarget{classEngine_1_1Core_1_1ECS}{}\label{classEngine_1_1Core_1_1ECS}\index{Engine::Core::ECS@{Engine::Core::ECS}}
+
+
+{\ttfamily \#include $<$ECS.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEngine_1_1Core_1_1ECS_a160d4952697fd4008c75c021308e3163}{ECS}} ()
+\item 
+{\footnotesize template$<$typename Function $>$ }\\void \mbox{\hyperlink{classEngine_1_1Core_1_1ECS_a54fd5ea5f7945ec5d3e93dfbdf899254}{register\+\_\+system}} (std\+::string name, Function \&\&f)
+\item 
+void \mbox{\hyperlink{classEngine_1_1Core_1_1ECS_aeeed8750adf367d60f0db81f751f63d0}{set\+Systems\+Order}} (const std\+::vector$<$ std\+::string $>$ \&order\+Vector)
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classEngine_1_1Core_1_1ECS_a62bc37a327746b056bc2bfa67d811e10}{get\+System\+Order}} () const
+\item 
+void \mbox{\hyperlink{classEngine_1_1Core_1_1ECS_a361e14fb0c0926398ad4d6f32867376b}{enable\+System}} (const std\+::string \&name)
+\item 
+void \mbox{\hyperlink{classEngine_1_1Core_1_1ECS_a3cd984e403432f3166ddb1af67c9ab79}{disable\+System}} (const std\+::string \&name)
+\item 
+\mbox{\hyperlink{classECS_1_1Registry}{\+::\+ECS\+::\+Registry}} \& \mbox{\hyperlink{classEngine_1_1Core_1_1ECS_afa2420b9877f6a387756b61c338d10f8}{get\+Registry}} ()
+\item 
+void \mbox{\hyperlink{classEngine_1_1Core_1_1ECS_a12271bbdeb8e2a1dc7be18b372e779bb}{run\+Systems}} (void)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classECS_1_1Registry}{\+::\+ECS\+::\+Registry}} \mbox{\hyperlink{classEngine_1_1Core_1_1ECS_a34755262ea8b69ec02f6059b0a7228b4}{\+\_\+registry}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::pair$<$ bool, std\+::function$<$ void(\mbox{\hyperlink{classECS_1_1Registry}{\+::\+ECS\+::\+Registry}} \&)$>$ $>$ \mbox{\hyperlink{classEngine_1_1Core_1_1ECS_a09f8ff2694c4523a017968d4077231ed}{\+\_\+systems}} )
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classEngine_1_1Core_1_1ECS_ade11c6024724fabc770a0990254b3aa1}{\+\_\+system\+\_\+order}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classEngine_1_1Core_1_1ECS_a160d4952697fd4008c75c021308e3163}\label{classEngine_1_1Core_1_1ECS_a160d4952697fd4008c75c021308e3163} 
+\index{Engine::Core::ECS@{Engine::Core::ECS}!ECS@{ECS}}
+\index{ECS@{ECS}!Engine::Core::ECS@{Engine::Core::ECS}}
+\doxysubsubsection{\texorpdfstring{ECS()}{ECS()}}
+{\footnotesize\ttfamily Engine\+::\+Core\+::\+ECS\+::\+ECS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classEngine_1_1Core_1_1ECS_a3cd984e403432f3166ddb1af67c9ab79}\label{classEngine_1_1Core_1_1ECS_a3cd984e403432f3166ddb1af67c9ab79} 
+\index{Engine::Core::ECS@{Engine::Core::ECS}!disableSystem@{disableSystem}}
+\index{disableSystem@{disableSystem}!Engine::Core::ECS@{Engine::Core::ECS}}
+\doxysubsubsection{\texorpdfstring{disableSystem()}{disableSystem()}}
+{\footnotesize\ttfamily void Engine\+::\+Core\+::\+ECS\+::disable\+System (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+\Hypertarget{classEngine_1_1Core_1_1ECS_a361e14fb0c0926398ad4d6f32867376b}\label{classEngine_1_1Core_1_1ECS_a361e14fb0c0926398ad4d6f32867376b} 
+\index{Engine::Core::ECS@{Engine::Core::ECS}!enableSystem@{enableSystem}}
+\index{enableSystem@{enableSystem}!Engine::Core::ECS@{Engine::Core::ECS}}
+\doxysubsubsection{\texorpdfstring{enableSystem()}{enableSystem()}}
+{\footnotesize\ttfamily void Engine\+::\+Core\+::\+ECS\+::enable\+System (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+\Hypertarget{classEngine_1_1Core_1_1ECS_afa2420b9877f6a387756b61c338d10f8}\label{classEngine_1_1Core_1_1ECS_afa2420b9877f6a387756b61c338d10f8} 
+\index{Engine::Core::ECS@{Engine::Core::ECS}!getRegistry@{getRegistry}}
+\index{getRegistry@{getRegistry}!Engine::Core::ECS@{Engine::Core::ECS}}
+\doxysubsubsection{\texorpdfstring{getRegistry()}{getRegistry()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \& Engine\+::\+Core\+::\+ECS\+::get\+Registry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classEngine_1_1Core_1_1ECS_a62bc37a327746b056bc2bfa67d811e10}\label{classEngine_1_1Core_1_1ECS_a62bc37a327746b056bc2bfa67d811e10} 
+\index{Engine::Core::ECS@{Engine::Core::ECS}!getSystemOrder@{getSystemOrder}}
+\index{getSystemOrder@{getSystemOrder}!Engine::Core::ECS@{Engine::Core::ECS}}
+\doxysubsubsection{\texorpdfstring{getSystemOrder()}{getSystemOrder()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ Engine\+::\+Core\+::\+ECS\+::get\+System\+Order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classEngine_1_1Core_1_1ECS_a54fd5ea5f7945ec5d3e93dfbdf899254}\label{classEngine_1_1Core_1_1ECS_a54fd5ea5f7945ec5d3e93dfbdf899254} 
+\index{Engine::Core::ECS@{Engine::Core::ECS}!register\_system@{register\_system}}
+\index{register\_system@{register\_system}!Engine::Core::ECS@{Engine::Core::ECS}}
+\doxysubsubsection{\texorpdfstring{register\_system()}{register\_system()}}
+{\footnotesize\ttfamily template$<$typename Function $>$ \\
+void Engine\+::\+Core\+::\+ECS\+::register\+\_\+system (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{Function \&\&}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classEngine_1_1Core_1_1ECS_a12271bbdeb8e2a1dc7be18b372e779bb}\label{classEngine_1_1Core_1_1ECS_a12271bbdeb8e2a1dc7be18b372e779bb} 
+\index{Engine::Core::ECS@{Engine::Core::ECS}!runSystems@{runSystems}}
+\index{runSystems@{runSystems}!Engine::Core::ECS@{Engine::Core::ECS}}
+\doxysubsubsection{\texorpdfstring{runSystems()}{runSystems()}}
+{\footnotesize\ttfamily void Engine\+::\+Core\+::\+ECS\+::run\+Systems (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classEngine_1_1Core_1_1ECS_aeeed8750adf367d60f0db81f751f63d0}\label{classEngine_1_1Core_1_1ECS_aeeed8750adf367d60f0db81f751f63d0} 
+\index{Engine::Core::ECS@{Engine::Core::ECS}!setSystemsOrder@{setSystemsOrder}}
+\index{setSystemsOrder@{setSystemsOrder}!Engine::Core::ECS@{Engine::Core::ECS}}
+\doxysubsubsection{\texorpdfstring{setSystemsOrder()}{setSystemsOrder()}}
+{\footnotesize\ttfamily void Engine\+::\+Core\+::\+ECS\+::set\+Systems\+Order (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{order\+Vector }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classEngine_1_1Core_1_1ECS_a34755262ea8b69ec02f6059b0a7228b4}\label{classEngine_1_1Core_1_1ECS_a34755262ea8b69ec02f6059b0a7228b4} 
+\index{Engine::Core::ECS@{Engine::Core::ECS}!\_registry@{\_registry}}
+\index{\_registry@{\_registry}!Engine::Core::ECS@{Engine::Core::ECS}}
+\doxysubsubsection{\texorpdfstring{\_registry}{\_registry}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classECS_1_1Registry}{\+::\+ECS\+::\+Registry}} Engine\+::\+Core\+::\+ECS\+::\+\_\+registry\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classEngine_1_1Core_1_1ECS_ade11c6024724fabc770a0990254b3aa1}\label{classEngine_1_1Core_1_1ECS_ade11c6024724fabc770a0990254b3aa1} 
+\index{Engine::Core::ECS@{Engine::Core::ECS}!\_system\_order@{\_system\_order}}
+\index{\_system\_order@{\_system\_order}!Engine::Core::ECS@{Engine::Core::ECS}}
+\doxysubsubsection{\texorpdfstring{\_system\_order}{\_system\_order}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ Engine\+::\+Core\+::\+ECS\+::\+\_\+system\+\_\+order\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classEngine_1_1Core_1_1ECS_a09f8ff2694c4523a017968d4077231ed}\label{classEngine_1_1Core_1_1ECS_a09f8ff2694c4523a017968d4077231ed} 
+\index{Engine::Core::ECS@{Engine::Core::ECS}!\_systems@{\_systems}}
+\index{\_systems@{\_systems}!Engine::Core::ECS@{Engine::Core::ECS}}
+\doxysubsubsection{\texorpdfstring{\_systems}{\_systems}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, std\+::pair$<$bool, std\+::function$<$void(\mbox{\hyperlink{classECS_1_1Registry}{\+::\+ECS\+::\+Registry}} \&)$>$ $>$ Engine\+::\+Core\+::\+ECS\+::\+\_\+systems) \hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/engine/core/\mbox{\hyperlink{ECS_8hpp}{ECS.\+hpp}}\item 
+lib/engine/core/\mbox{\hyperlink{ECS_8cpp}{ECS.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,292 @@
+\doxysection{Room\+System Class Reference}
+\hypertarget{classRoomSystem}{}\label{classRoomSystem}\index{RoomSystem@{RoomSystem}}
+
+
+{\ttfamily \#include $<$Room\+System.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{classRoomSystem_af895995185ecb20f9c8e647d8a55ed08}{State}} \{ \mbox{\hyperlink{classRoomSystem_af895995185ecb20f9c8e647d8a55ed08a1869d56535e8b1449a6da54ff5e11f50}{WAITING}}
+, \mbox{\hyperlink{classRoomSystem_af895995185ecb20f9c8e647d8a55ed08a1315b693a1d5d4bbeb52bbfa9c23e49b}{IN\+\_\+\+GAME}}
+, \mbox{\hyperlink{classRoomSystem_af895995185ecb20f9c8e647d8a55ed08a3032bcfd5e671852750a0304cd2b024a}{ENDED}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRoomSystem_a66f31f8cfe4a03a334778b7953d7464d}{Room\+System}} (int id, size\+\_\+t max\+Players)
+\item 
+\mbox{\hyperlink{classRoomSystem_ad7f0ba73ac1be4183a7e1986f76aba7b}{\texorpdfstring{$\sim$}{\string~}\+Room\+System}} ()
+\item 
+void \mbox{\hyperlink{classRoomSystem_ace8169820a6ec4279cd92d59c0f59956}{start}} ()
+\item 
+void \mbox{\hyperlink{classRoomSystem_a00f849f16306b8359a1782630ea207ff}{stop}} ()
+\item 
+bool \mbox{\hyperlink{classRoomSystem_a68d11d81608e6cb3fac8eab091071a15}{add\+Player}} (uint16\+\_\+t client\+Id)
+\item 
+void \mbox{\hyperlink{classRoomSystem_abeaec344676ea52cdee7fb805ca448d9}{remove\+Player}} (uint16\+\_\+t client\+Id)
+\item 
+void \mbox{\hyperlink{classRoomSystem_a48017a46c586c7da9cb54e8525a2e0de}{start\+Game}} ()
+\item 
+void \mbox{\hyperlink{classRoomSystem_af85bd91c4425955bd69fb59ec95d6d20}{end\+Game}} ()
+\item 
+bool \mbox{\hyperlink{classRoomSystem_a6565cf946e8587be194622657705b788}{is\+Ready\+To\+Start}} () const
+\item 
+void \mbox{\hyperlink{classRoomSystem_a1f4fa5659f1bf01a8b86d363cb029c82}{set\+Ready}} (uint16\+\_\+t client\+Id, bool ready)
+\item 
+\mbox{\hyperlink{classRoomSystem_af895995185ecb20f9c8e647d8a55ed08}{State}} \mbox{\hyperlink{classRoomSystem_ac75562d71ad74eb69d081fcbe987d5f8}{get\+State}} () const
+\item 
+const std\+::vector$<$ uint16\+\_\+t $>$ \& \mbox{\hyperlink{classRoomSystem_a4c4baf39e047fd891e3079851c34db41}{get\+Players}} () const
+\item 
+size\+\_\+t \mbox{\hyperlink{classRoomSystem_a86eae5b2dd812477cf9e49ad0ab26b04}{get\+Max\+Players}} ()
+\item 
+bool \mbox{\hyperlink{classRoomSystem_af6b4db13607c1a4095208d4e27d95e14}{is\+Full}} () const
+\item 
+\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \& \mbox{\hyperlink{classRoomSystem_a74238f0f631843035048389aafc06e23}{get\+Registry}} ()
+\item 
+void \mbox{\hyperlink{classRoomSystem_adb62fe12c9b292e7eb35004f37997614}{broadcast\+Entity\+Update}} (\mbox{\hyperlink{classECS_1_1Entity}{ECS\+::\+Entity}} entity)
+\item 
+void \mbox{\hyperlink{classRoomSystem_afbe7c4d6fb74b7f810bab605297937fe}{broadcast\+To\+Room}} (\mbox{\hyperlink{classNetwork_1_1Packet}{Network\+::\+Packet}} \&packet)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classRoomSystem_ac1f121e475bea821bfde01c50f3aa515}{run}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classRoomSystem_a0442a4175bcc8159e2e75de64ce9ac4f}{\+\_\+id}}
+\item 
+size\+\_\+t \mbox{\hyperlink{classRoomSystem_a5b47e954e9aa12b92b9d35c9c7fca67d}{\+\_\+max\+Players}}
+\item 
+\mbox{\hyperlink{classRoomSystem_af895995185ecb20f9c8e647d8a55ed08}{State}} \mbox{\hyperlink{classRoomSystem_a3c0dae66f3900e032f2baaa6a903e73b}{\+\_\+state}}
+\item 
+std\+::atomic$<$ bool $>$ \mbox{\hyperlink{classRoomSystem_ab3d2683760ecdab1388c6a635f9892b6}{\+\_\+running}}
+\item 
+std\+::thread \mbox{\hyperlink{classRoomSystem_a66ba4faa6832af2e5ce98628d4a5f742}{\+\_\+thread}}
+\item 
+\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \mbox{\hyperlink{classRoomSystem_a5e4537c477f92b4290ab8df77ada51b7}{\+\_\+registry}}
+\item 
+std\+::vector$<$ uint16\+\_\+t $>$ \mbox{\hyperlink{classRoomSystem_a5d34235562e31e32ea5aa9a09aacd3f2}{\+\_\+players}}
+\item 
+std\+::unordered\+\_\+map$<$ uint16\+\_\+t, \mbox{\hyperlink{classECS_1_1Entity}{ECS\+::\+Entity}} $>$ \mbox{\hyperlink{classRoomSystem_af8b6e77e06b93ace6f1f46fcc32a4fb9}{\+\_\+player\+Entities}}
+\item 
+std\+::unordered\+\_\+map$<$ uint16\+\_\+t, bool $>$ \mbox{\hyperlink{classRoomSystem_ac229f163a67636207ffcab8f699d235b}{\+\_\+ready\+Status}}
+\item 
+std\+::mutex \mbox{\hyperlink{classRoomSystem_a2a8d8e5fd8a553d45e09bc528b9dee95}{\+\_\+mutex}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{Engine\+::\+Module\+::\+INetwork\+Server}} $>$ \mbox{\hyperlink{classRoomSystem_a9712ce11934c7532816812b140e1be92}{\+\_\+network\+\_\+lib}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{classRoomSystem_af895995185ecb20f9c8e647d8a55ed08}\label{classRoomSystem_af895995185ecb20f9c8e647d8a55ed08} 
+\index{RoomSystem@{RoomSystem}!State@{State}}
+\index{State@{State}!RoomSystem@{RoomSystem}}
+\doxysubsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{classRoomSystem_af895995185ecb20f9c8e647d8a55ed08}{Room\+System\+::\+State}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WAITING@{WAITING}!RoomSystem@{RoomSystem}}\index{RoomSystem@{RoomSystem}!WAITING@{WAITING}}}\Hypertarget{classRoomSystem_af895995185ecb20f9c8e647d8a55ed08a1869d56535e8b1449a6da54ff5e11f50}\label{classRoomSystem_af895995185ecb20f9c8e647d8a55ed08a1869d56535e8b1449a6da54ff5e11f50} 
+WAITING&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IN\_GAME@{IN\_GAME}!RoomSystem@{RoomSystem}}\index{RoomSystem@{RoomSystem}!IN\_GAME@{IN\_GAME}}}\Hypertarget{classRoomSystem_af895995185ecb20f9c8e647d8a55ed08a1315b693a1d5d4bbeb52bbfa9c23e49b}\label{classRoomSystem_af895995185ecb20f9c8e647d8a55ed08a1315b693a1d5d4bbeb52bbfa9c23e49b} 
+IN\+\_\+\+GAME&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ENDED@{ENDED}!RoomSystem@{RoomSystem}}\index{RoomSystem@{RoomSystem}!ENDED@{ENDED}}}\Hypertarget{classRoomSystem_af895995185ecb20f9c8e647d8a55ed08a3032bcfd5e671852750a0304cd2b024a}\label{classRoomSystem_af895995185ecb20f9c8e647d8a55ed08a3032bcfd5e671852750a0304cd2b024a} 
+ENDED&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classRoomSystem_a66f31f8cfe4a03a334778b7953d7464d}\label{classRoomSystem_a66f31f8cfe4a03a334778b7953d7464d} 
+\index{RoomSystem@{RoomSystem}!RoomSystem@{RoomSystem}}
+\index{RoomSystem@{RoomSystem}!RoomSystem@{RoomSystem}}
+\doxysubsubsection{\texorpdfstring{RoomSystem()}{RoomSystem()}}
+{\footnotesize\ttfamily Room\+System\+::\+Room\+System (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{size\+\_\+t}]{max\+Players }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classRoomSystem_ad7f0ba73ac1be4183a7e1986f76aba7b}\label{classRoomSystem_ad7f0ba73ac1be4183a7e1986f76aba7b} 
+\index{RoomSystem@{RoomSystem}!````~RoomSystem@{\texorpdfstring{$\sim$}{\string~}RoomSystem}}
+\index{````~RoomSystem@{\texorpdfstring{$\sim$}{\string~}RoomSystem}!RoomSystem@{RoomSystem}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}RoomSystem()}{\string~RoomSystem()}}
+{\footnotesize\ttfamily Room\+System\+::\texorpdfstring{$\sim$}{\string~}\+Room\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classRoomSystem_a68d11d81608e6cb3fac8eab091071a15}\label{classRoomSystem_a68d11d81608e6cb3fac8eab091071a15} 
+\index{RoomSystem@{RoomSystem}!addPlayer@{addPlayer}}
+\index{addPlayer@{addPlayer}!RoomSystem@{RoomSystem}}
+\doxysubsubsection{\texorpdfstring{addPlayer()}{addPlayer()}}
+{\footnotesize\ttfamily bool Room\+System\+::add\+Player (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{client\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classRoomSystem_adb62fe12c9b292e7eb35004f37997614}\label{classRoomSystem_adb62fe12c9b292e7eb35004f37997614} 
+\index{RoomSystem@{RoomSystem}!broadcastEntityUpdate@{broadcastEntityUpdate}}
+\index{broadcastEntityUpdate@{broadcastEntityUpdate}!RoomSystem@{RoomSystem}}
+\doxysubsubsection{\texorpdfstring{broadcastEntityUpdate()}{broadcastEntityUpdate()}}
+{\footnotesize\ttfamily void Room\+System\+::broadcast\+Entity\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classECS_1_1Entity}{ECS\+::\+Entity}}}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classRoomSystem_afbe7c4d6fb74b7f810bab605297937fe}\label{classRoomSystem_afbe7c4d6fb74b7f810bab605297937fe} 
+\index{RoomSystem@{RoomSystem}!broadcastToRoom@{broadcastToRoom}}
+\index{broadcastToRoom@{broadcastToRoom}!RoomSystem@{RoomSystem}}
+\doxysubsubsection{\texorpdfstring{broadcastToRoom()}{broadcastToRoom()}}
+{\footnotesize\ttfamily void Room\+System\+::broadcast\+To\+Room (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNetwork_1_1Packet}{Network\+::\+Packet}} \&}]{packet }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classRoomSystem_af85bd91c4425955bd69fb59ec95d6d20}\label{classRoomSystem_af85bd91c4425955bd69fb59ec95d6d20} 
+\index{RoomSystem@{RoomSystem}!endGame@{endGame}}
+\index{endGame@{endGame}!RoomSystem@{RoomSystem}}
+\doxysubsubsection{\texorpdfstring{endGame()}{endGame()}}
+{\footnotesize\ttfamily void Room\+System\+::end\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classRoomSystem_a86eae5b2dd812477cf9e49ad0ab26b04}\label{classRoomSystem_a86eae5b2dd812477cf9e49ad0ab26b04} 
+\index{RoomSystem@{RoomSystem}!getMaxPlayers@{getMaxPlayers}}
+\index{getMaxPlayers@{getMaxPlayers}!RoomSystem@{RoomSystem}}
+\doxysubsubsection{\texorpdfstring{getMaxPlayers()}{getMaxPlayers()}}
+{\footnotesize\ttfamily size\+\_\+t Room\+System\+::get\+Max\+Players (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classRoomSystem_a4c4baf39e047fd891e3079851c34db41}\label{classRoomSystem_a4c4baf39e047fd891e3079851c34db41} 
+\index{RoomSystem@{RoomSystem}!getPlayers@{getPlayers}}
+\index{getPlayers@{getPlayers}!RoomSystem@{RoomSystem}}
+\doxysubsubsection{\texorpdfstring{getPlayers()}{getPlayers()}}
+{\footnotesize\ttfamily const std\+::vector$<$ uint16\+\_\+t $>$ \& Room\+System\+::get\+Players (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classRoomSystem_a74238f0f631843035048389aafc06e23}\label{classRoomSystem_a74238f0f631843035048389aafc06e23} 
+\index{RoomSystem@{RoomSystem}!getRegistry@{getRegistry}}
+\index{getRegistry@{getRegistry}!RoomSystem@{RoomSystem}}
+\doxysubsubsection{\texorpdfstring{getRegistry()}{getRegistry()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \& Room\+System\+::get\+Registry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classRoomSystem_ac75562d71ad74eb69d081fcbe987d5f8}\label{classRoomSystem_ac75562d71ad74eb69d081fcbe987d5f8} 
+\index{RoomSystem@{RoomSystem}!getState@{getState}}
+\index{getState@{getState}!RoomSystem@{RoomSystem}}
+\doxysubsubsection{\texorpdfstring{getState()}{getState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRoomSystem_af895995185ecb20f9c8e647d8a55ed08}{State}} Room\+System\+::get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classRoomSystem_af6b4db13607c1a4095208d4e27d95e14}\label{classRoomSystem_af6b4db13607c1a4095208d4e27d95e14} 
+\index{RoomSystem@{RoomSystem}!isFull@{isFull}}
+\index{isFull@{isFull}!RoomSystem@{RoomSystem}}
+\doxysubsubsection{\texorpdfstring{isFull()}{isFull()}}
+{\footnotesize\ttfamily bool Room\+System\+::is\+Full (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classRoomSystem_a6565cf946e8587be194622657705b788}\label{classRoomSystem_a6565cf946e8587be194622657705b788} 
+\index{RoomSystem@{RoomSystem}!isReadyToStart@{isReadyToStart}}
+\index{isReadyToStart@{isReadyToStart}!RoomSystem@{RoomSystem}}
+\doxysubsubsection{\texorpdfstring{isReadyToStart()}{isReadyToStart()}}
+{\footnotesize\ttfamily bool Room\+System\+::is\+Ready\+To\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classRoomSystem_abeaec344676ea52cdee7fb805ca448d9}\label{classRoomSystem_abeaec344676ea52cdee7fb805ca448d9} 
+\index{RoomSystem@{RoomSystem}!removePlayer@{removePlayer}}
+\index{removePlayer@{removePlayer}!RoomSystem@{RoomSystem}}
+\doxysubsubsection{\texorpdfstring{removePlayer()}{removePlayer()}}
+{\footnotesize\ttfamily void Room\+System\+::remove\+Player (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{client\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classRoomSystem_ac1f121e475bea821bfde01c50f3aa515}\label{classRoomSystem_ac1f121e475bea821bfde01c50f3aa515} 
+\index{RoomSystem@{RoomSystem}!run@{run}}
+\index{run@{run}!RoomSystem@{RoomSystem}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Room\+System\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{classRoomSystem_a1f4fa5659f1bf01a8b86d363cb029c82}\label{classRoomSystem_a1f4fa5659f1bf01a8b86d363cb029c82} 
+\index{RoomSystem@{RoomSystem}!setReady@{setReady}}
+\index{setReady@{setReady}!RoomSystem@{RoomSystem}}
+\doxysubsubsection{\texorpdfstring{setReady()}{setReady()}}
+{\footnotesize\ttfamily void Room\+System\+::set\+Ready (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{client\+Id,  }\item[{bool}]{ready }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classRoomSystem_ace8169820a6ec4279cd92d59c0f59956}\label{classRoomSystem_ace8169820a6ec4279cd92d59c0f59956} 
+\index{RoomSystem@{RoomSystem}!start@{start}}
+\index{start@{start}!RoomSystem@{RoomSystem}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void Room\+System\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classRoomSystem_a48017a46c586c7da9cb54e8525a2e0de}\label{classRoomSystem_a48017a46c586c7da9cb54e8525a2e0de} 
+\index{RoomSystem@{RoomSystem}!startGame@{startGame}}
+\index{startGame@{startGame}!RoomSystem@{RoomSystem}}
+\doxysubsubsection{\texorpdfstring{startGame()}{startGame()}}
+{\footnotesize\ttfamily void Room\+System\+::start\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classRoomSystem_a00f849f16306b8359a1782630ea207ff}\label{classRoomSystem_a00f849f16306b8359a1782630ea207ff} 
+\index{RoomSystem@{RoomSystem}!stop@{stop}}
+\index{stop@{stop}!RoomSystem@{RoomSystem}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void Room\+System\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classRoomSystem_a0442a4175bcc8159e2e75de64ce9ac4f}\label{classRoomSystem_a0442a4175bcc8159e2e75de64ce9ac4f} 
+\index{RoomSystem@{RoomSystem}!\_id@{\_id}}
+\index{\_id@{\_id}!RoomSystem@{RoomSystem}}
+\doxysubsubsection{\texorpdfstring{\_id}{\_id}}
+{\footnotesize\ttfamily int Room\+System\+::\+\_\+id\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classRoomSystem_a5b47e954e9aa12b92b9d35c9c7fca67d}\label{classRoomSystem_a5b47e954e9aa12b92b9d35c9c7fca67d} 
+\index{RoomSystem@{RoomSystem}!\_maxPlayers@{\_maxPlayers}}
+\index{\_maxPlayers@{\_maxPlayers}!RoomSystem@{RoomSystem}}
+\doxysubsubsection{\texorpdfstring{\_maxPlayers}{\_maxPlayers}}
+{\footnotesize\ttfamily size\+\_\+t Room\+System\+::\+\_\+max\+Players\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classRoomSystem_a2a8d8e5fd8a553d45e09bc528b9dee95}\label{classRoomSystem_a2a8d8e5fd8a553d45e09bc528b9dee95} 
+\index{RoomSystem@{RoomSystem}!\_mutex@{\_mutex}}
+\index{\_mutex@{\_mutex}!RoomSystem@{RoomSystem}}
+\doxysubsubsection{\texorpdfstring{\_mutex}{\_mutex}}
+{\footnotesize\ttfamily std\+::mutex Room\+System\+::\+\_\+mutex\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+\Hypertarget{classRoomSystem_a9712ce11934c7532816812b140e1be92}\label{classRoomSystem_a9712ce11934c7532816812b140e1be92} 
+\index{RoomSystem@{RoomSystem}!\_network\_lib@{\_network\_lib}}
+\index{\_network\_lib@{\_network\_lib}!RoomSystem@{RoomSystem}}
+\doxysubsubsection{\texorpdfstring{\_network\_lib}{\_network\_lib}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{Engine\+::\+Module\+::\+INetwork\+Server}}$>$ Room\+System\+::\+\_\+network\+\_\+lib\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classRoomSystem_af8b6e77e06b93ace6f1f46fcc32a4fb9}\label{classRoomSystem_af8b6e77e06b93ace6f1f46fcc32a4fb9} 
+\index{RoomSystem@{RoomSystem}!\_playerEntities@{\_playerEntities}}
+\index{\_playerEntities@{\_playerEntities}!RoomSystem@{RoomSystem}}
+\doxysubsubsection{\texorpdfstring{\_playerEntities}{\_playerEntities}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$uint16\+\_\+t, \mbox{\hyperlink{classECS_1_1Entity}{ECS\+::\+Entity}}$>$ Room\+System\+::\+\_\+player\+Entities\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classRoomSystem_a5d34235562e31e32ea5aa9a09aacd3f2}\label{classRoomSystem_a5d34235562e31e32ea5aa9a09aacd3f2} 
+\index{RoomSystem@{RoomSystem}!\_players@{\_players}}
+\index{\_players@{\_players}!RoomSystem@{RoomSystem}}
+\doxysubsubsection{\texorpdfstring{\_players}{\_players}}
+{\footnotesize\ttfamily std\+::vector$<$uint16\+\_\+t$>$ Room\+System\+::\+\_\+players\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classRoomSystem_ac229f163a67636207ffcab8f699d235b}\label{classRoomSystem_ac229f163a67636207ffcab8f699d235b} 
+\index{RoomSystem@{RoomSystem}!\_readyStatus@{\_readyStatus}}
+\index{\_readyStatus@{\_readyStatus}!RoomSystem@{RoomSystem}}
+\doxysubsubsection{\texorpdfstring{\_readyStatus}{\_readyStatus}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$uint16\+\_\+t, bool$>$ Room\+System\+::\+\_\+ready\+Status\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classRoomSystem_a5e4537c477f92b4290ab8df77ada51b7}\label{classRoomSystem_a5e4537c477f92b4290ab8df77ada51b7} 
+\index{RoomSystem@{RoomSystem}!\_registry@{\_registry}}
+\index{\_registry@{\_registry}!RoomSystem@{RoomSystem}}
+\doxysubsubsection{\texorpdfstring{\_registry}{\_registry}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} Room\+System\+::\+\_\+registry\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classRoomSystem_ab3d2683760ecdab1388c6a635f9892b6}\label{classRoomSystem_ab3d2683760ecdab1388c6a635f9892b6} 
+\index{RoomSystem@{RoomSystem}!\_running@{\_running}}
+\index{\_running@{\_running}!RoomSystem@{RoomSystem}}
+\doxysubsubsection{\texorpdfstring{\_running}{\_running}}
+{\footnotesize\ttfamily std\+::atomic$<$bool$>$ Room\+System\+::\+\_\+running\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classRoomSystem_a3c0dae66f3900e032f2baaa6a903e73b}\label{classRoomSystem_a3c0dae66f3900e032f2baaa6a903e73b} 
+\index{RoomSystem@{RoomSystem}!\_state@{\_state}}
+\index{\_state@{\_state}!RoomSystem@{RoomSystem}}
+\doxysubsubsection{\texorpdfstring{\_state}{\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRoomSystem_af895995185ecb20f9c8e647d8a55ed08}{State}} Room\+System\+::\+\_\+state\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classRoomSystem_a66ba4faa6832af2e5ce98628d4a5f742}\label{classRoomSystem_a66ba4faa6832af2e5ce98628d4a5f742} 
+\index{RoomSystem@{RoomSystem}!\_thread@{\_thread}}
+\index{\_thread@{\_thread}!RoomSystem@{RoomSystem}}
+\doxysubsubsection{\texorpdfstring{\_thread}{\_thread}}
+{\footnotesize\ttfamily std\+::thread Room\+System\+::\+\_\+thread\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+server/src/systems/\mbox{\hyperlink{RoomSystem_8hpp}{Room\+System.\+hpp}}\end{DoxyCompactItemize}

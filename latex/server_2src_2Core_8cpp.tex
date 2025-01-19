@@ -1,0 +1,35 @@
+\doxysection{server/src/\+Core.cpp File Reference}
+\hypertarget{server_2src_2Core_8cpp}{}\label{server_2src_2Core_8cpp}\index{server/src/Core.cpp@{server/src/Core.cpp}}
+{\ttfamily \#include "{}Core.\+hpp"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$Zipper.\+hpp$>$}\newline
+{\ttfamily \#include $<$components/\+Health.\+hpp$>$}\newline
+{\ttfamily \#include $<$components/\+Hitbox\+Plan.\+hpp$>$}\newline
+{\ttfamily \#include $<$components/\+Hitbox\+Rectangle.\+hpp$>$}\newline
+{\ttfamily \#include $<$components/\+Position.\+hpp$>$}\newline
+{\ttfamily \#include $<$components/\+Velocity.\+hpp$>$}\newline
+{\ttfamily \#include $<$systems/\+Clock.\+hpp$>$}\newline
+{\ttfamily \#include $<$systems/\+Kill\+Entity\+Without\+Health.\+hpp$>$}\newline
+{\ttfamily \#include $<$systems/\+Position\+Velocity.\+hpp$>$}\newline
+{\ttfamily \#include "{}Registry.\+hpp"{}}\newline
+{\ttfamily \#include "{}systems/\+Logging.\+hpp"{}}\newline
+{\ttfamily \#include "{}INetwork\+Server.\+hpp"{}}\newline
+{\ttfamily \#include "{}Exception.\+hpp"{}}\newline
+{\ttfamily \#include "{}Packet.\+hpp"{}}\newline
+{\ttfamily \#include "{}RType\+Protocol.\+hpp"{}}\newline
+{\ttfamily \#include "{}components/\+Clock\+Component.\+hpp"{}}\newline
+{\ttfamily \#include "{}components/\+Client\+Inputs.\+hpp"{}}\newline
+{\ttfamily \#include "{}components/\+Entity\+Type.\+hpp"{}}\newline
+{\ttfamily \#include "{}systems/\+Handle\+Client\+Inputs.\+hpp"{}}\newline
+{\ttfamily \#include "{}systems/\+Hitbox\+Rectangle\+Collision.\+hpp"{}}\newline
+{\ttfamily \#include "{}systems/\+Level\+Creator.\+hpp"{}}\newline
+{\ttfamily \#include "{}systems/\+Network\+Receiver.\+hpp"{}}\newline
+{\ttfamily \#include "{}systems/\+Network\+Sender.\+hpp"{}}\newline
+{\ttfamily \#include "{}systems/\+Logger.\+hpp"{}}\newline
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceR__Type}{R\+\_\+\+Type}}
+\end{DoxyCompactItemize}

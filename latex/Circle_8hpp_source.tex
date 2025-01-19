@@ -1,0 +1,35 @@
+\doxysection{Circle.\+hpp}
+\hypertarget{Circle_8hpp_source}{}\label{Circle_8hpp_source}\index{lib/engine/modules/physic/includes/shapes/Circle.hpp@{lib/engine/modules/physic/includes/shapes/Circle.hpp}}
+\mbox{\hyperlink{Circle_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2024}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ physic\ engine}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ Circle.cpp}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IShape_8hpp}{../IShape.hpp}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Rectangle_8hpp}{Rectangle.hpp}}"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceEngine_1_1Module}{Engine::Module}}\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{class\ }Rectangle;}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classEngine_1_1Module_1_1Circle}{Circle}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classEngine_1_1Module_1_1IShape}{IShape}}\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classEngine_1_1Module_1_1Circle_ac10334c49ddf2bc34291d610f7bf2ccf}{\_x}},\ \mbox{\hyperlink{classEngine_1_1Module_1_1Circle_ac00fadb48ec4424e551f988de2785d47}{\_y}},\ \mbox{\hyperlink{classEngine_1_1Module_1_1Circle_a83836a22eed28325db7efc978f4c1410}{\_radius}};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEngine_1_1Module_1_1Circle_a3579b458ed54d28ca8cbc1355edd218b}{Circle}}(\textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \textcolor{keywordtype}{float}\ radius)\ :\ \mbox{\hyperlink{classEngine_1_1Module_1_1Circle_ac10334c49ddf2bc34291d610f7bf2ccf}{\_x}}(x),\ \mbox{\hyperlink{classEngine_1_1Module_1_1Circle_ac00fadb48ec4424e551f988de2785d47}{\_y}}(y),\ \mbox{\hyperlink{classEngine_1_1Module_1_1Circle_a83836a22eed28325db7efc978f4c1410}{\_radius}}(radius)\ \{\};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classEngine_1_1Module_1_1Circle_a11f31251d73d24bf769a82d5c477d217}{check\_collision}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classEngine_1_1Module_1_1IShape}{IShape}}\&\ other)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1Circle_a3c06f01f49d74309c1ab073790683ee4}{log}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classEngine_1_1Module_1_1Circle_a11f31251d73d24bf769a82d5c477d217}{check\_collision}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classEngine_1_1Module_1_1Circle}{Circle}}\&\ other);}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classEngine_1_1Module_1_1Circle_a11f31251d73d24bf769a82d5c477d217}{check\_collision}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classEngine_1_1Module_1_1Rectangle}{Rectangle}}\&\ other);}
+\DoxyCodeLine{00028\ \ \ \ \ \};}
+\DoxyCodeLine{00029\ \}}
+
+\end{DoxyCode}

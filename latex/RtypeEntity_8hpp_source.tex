@@ -1,0 +1,42 @@
+\doxysection{Rtype\+Entity.\+hpp}
+\hypertarget{RtypeEntity_8hpp_source}{}\label{RtypeEntity_8hpp_source}\index{client/includes/RtypeEntity.hpp@{client/includes/RtypeEntity.hpp}}
+\mbox{\hyperlink{RtypeEntity_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2024}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ r-\/type}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ rtype\ entity\ spawning\ functions}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <cstddef>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}Entity.hpp"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{RTypeProtocol_8hpp}{RTypeProtocol.hpp}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Registry_8hpp}{Registry.hpp}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceR__Type_1_1Entity}{R\_Type::Entity}}\ \{}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \mbox{\hyperlink{classECS_1_1Entity}{ECS::Entity}}\ \mbox{\hyperlink{namespaceR__Type_1_1Entity_a024843baf06f3a314c416dcc22f3ebdf}{createPlayer}}(\mbox{\hyperlink{classECS_1_1Registry}{ECS::Registry}}\ \&r,\ \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}}\ pos,\ std::size\_t\ server\_id);}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \mbox{\hyperlink{classECS_1_1Entity}{ECS::Entity}}\ \mbox{\hyperlink{namespaceR__Type_1_1Entity_a6849d4a82533e36a16fe27174dc50000}{createWall}}(\mbox{\hyperlink{classECS_1_1Registry}{ECS::Registry}}\ \&r,\ \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}}\ pos,\ std::size\_t\ server\_id);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \mbox{\hyperlink{classECS_1_1Entity}{ECS::Entity}}\ \mbox{\hyperlink{namespaceR__Type_1_1Entity_ac17d6eb96b17802e3b6948f6ee05587d}{createEnemyFly}}(\mbox{\hyperlink{classECS_1_1Registry}{ECS::Registry}}\ \&r,\ \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}}\ pos,\ \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}}\ vel,\ std::size\_t\ server\_id);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \mbox{\hyperlink{classECS_1_1Entity}{ECS::Entity}}\ \mbox{\hyperlink{namespaceR__Type_1_1Entity_a632e2a35b4caaf2cae9ae59e397cf7c2}{createEnemyTurret}}(\mbox{\hyperlink{classECS_1_1Registry}{ECS::Registry}}\ \&r,\ \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}}\ pos,\ std::size\_t\ server\_id);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \mbox{\hyperlink{classECS_1_1Entity}{ECS::Entity}}\ \mbox{\hyperlink{namespaceR__Type_1_1Entity_ac31caf99907c3b521f58a6c47608d0ba}{createBossHeart}}(\mbox{\hyperlink{classECS_1_1Registry}{ECS::Registry}}\ \&r,\ \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}}\ pos,\ std::size\_t\ server\_id);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \mbox{\hyperlink{classECS_1_1Entity}{ECS::Entity}}\ \mbox{\hyperlink{namespaceR__Type_1_1Entity_abbc0efaa918f9c7c8b8998d4fadb698b}{createBoss}}(\mbox{\hyperlink{classECS_1_1Registry}{ECS::Registry}}\ \&r,\ \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}}\ pos,\ std::size\_t\ server\_id);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \mbox{\hyperlink{classECS_1_1Entity}{ECS::Entity}}\ \mbox{\hyperlink{namespaceR__Type_1_1Entity_a5ba48fddc776d586239ca10d35e42321}{spawnPlayerProjectile}}(\mbox{\hyperlink{classECS_1_1Registry}{ECS::Registry}}\ \&r,\ \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}}\ pos,\ \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}}\ vel,}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::size\_t\ server\_id);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \mbox{\hyperlink{classECS_1_1Entity}{ECS::Entity}}\ \mbox{\hyperlink{namespaceR__Type_1_1Entity_a624f626236c13662f1a8120c72e96620}{spawnEnemyProjectile}}(\mbox{\hyperlink{classECS_1_1Registry}{ECS::Registry}}\ \&r,\ \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}}\ pos,\ \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}}\ vel,}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::size\_t\ server\_id);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \mbox{\hyperlink{classECS_1_1Entity}{ECS::Entity}}\ \mbox{\hyperlink{namespaceR__Type_1_1Entity_a27077c80668641a0becceaab2fcb6328}{spawnExplosion}}(\mbox{\hyperlink{classECS_1_1Registry}{ECS::Registry}}\ \&r,\ \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}}\ pos,\ \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}}\ size);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \}\ \ \textcolor{comment}{//\ namespace\ R\_Type::Entity}}
+
+\end{DoxyCode}

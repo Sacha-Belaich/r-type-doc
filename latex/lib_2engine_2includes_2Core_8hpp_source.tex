@@ -1,0 +1,162 @@
+\doxysection{Core.\+hpp}
+\hypertarget{lib_2engine_2includes_2Core_8hpp_source}{}\label{lib_2engine_2includes_2Core_8hpp_source}\index{lib/engine/includes/Core.hpp@{lib/engine/includes/Core.hpp}}
+\mbox{\hyperlink{lib_2engine_2includes_2Core_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2025}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ Core.hpp}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ Core.hpp}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ R\_TYPE\_CORE\_HPP}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ R\_TYPE\_CORE\_HPP}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <yaml-\/cpp/yaml.h>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Registry_8hpp}{../../ecs/includes/Registry.hpp}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Debug_8hpp}{../core/Debug.hpp}}"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ECS_8hpp}{../core/ECS.hpp}}"{}}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ModuleLoader_8hpp}{../core/ModuleLoader.hpp}}"{}}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IAudio_8hpp}{IAudio.hpp}}"{}}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{INetworkClient_8hpp}{INetworkClient.hpp}}"{}}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{INetworkServer_8hpp}{INetworkServer.hpp}}"{}}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IPhysic_8hpp}{IPhysic.hpp}}"{}}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Registry_8hpp}{Registry.hpp}}"{}}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Renderer_8hpp}{Renderer.hpp}}"{}}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceEngine_1_1Module}{Engine::Module}}\ \{}
+\DoxyCodeLine{00029\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classEngine_1_1Module_1_1Renderer}{Renderer}};}
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classEngine_1_1Module_1_1ActionManager}{ActionManager}};}
+\DoxyCodeLine{00031\ \}\ \ \textcolor{comment}{//\ namespace\ Engine::Module}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceEngine_1_1Core}{Engine::Core}}\ \{}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{class\ }ModuleLoader;}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structEngine_1_1Core_1_1SFX}{SFX}}\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{structEngine_1_1Core_1_1SFX_a067ea36aa22c5d61699c7db6a4d0f870}{name}};}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{structEngine_1_1Core_1_1SFX_aa756e1c0e7bdeef4000ddad3ee85f9b4}{path}};}
+\DoxyCodeLine{00040\ \};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structEngine_1_1Core_1_1Music}{Music}}\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{structEngine_1_1Core_1_1Music_a4f0c9de14d337f6d5988211d36e92e7e}{name}};}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{structEngine_1_1Core_1_1Music_aa5ec49001e7618750fc9a408c8075e73}{path}};}
+\DoxyCodeLine{00045\ \};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structEngine_1_1Core_1_1AudioConfig}{AudioConfig}}\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ std::vector<SFX>\ \mbox{\hyperlink{structEngine_1_1Core_1_1AudioConfig_ae8402d24979ef86d72e96adfef8d686f}{sfxs}};}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ std::vector<Music>\ \mbox{\hyperlink{structEngine_1_1Core_1_1AudioConfig_a82135a26def44d875227e2e88b6fd312}{musics}};}
+\DoxyCodeLine{00050\ \};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structEngine_1_1Core_1_1Component}{Component}}\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{structEngine_1_1Core_1_1Component_aab9d3e551c41fa4fe53151e63f14dd51}{component}};}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ std::map<std::string,\ std::string>\ \mbox{\hyperlink{structEngine_1_1Core_1_1Component_a0e075107bb5e0ecff4fd3e260c127004}{attributes}};}
+\DoxyCodeLine{00055\ \};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structEngine_1_1Core_1_1Entity}{Entity}}\ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{structEngine_1_1Core_1_1Entity_a9088ad8c7657aeab3db5a5d3a53080e0}{name}};}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ std::vector<Component>\ \mbox{\hyperlink{structEngine_1_1Core_1_1Entity_a1dfe136f4943c77728c64722cec96489}{components}};}
+\DoxyCodeLine{00060\ \};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structEngine_1_1Core_1_1Object}{Object}}\ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{structEngine_1_1Core_1_1Object_a5b659345d46c698ac4130cd82f7d9875}{name}};}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ std::vector<Component>\ \mbox{\hyperlink{structEngine_1_1Core_1_1Object_a2dc1b5648cde965426fb4679203c6156}{components}};}
+\DoxyCodeLine{00065\ \};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structEngine_1_1Core_1_1Player}{Player}}\ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ std::vector<Component>\ \mbox{\hyperlink{structEngine_1_1Core_1_1Player_a52094d2ba92a61c19a1335566b0f65e2}{components}};}
+\DoxyCodeLine{00069\ \};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structEngine_1_1Core_1_1EntityConfig}{EntityConfig}}\ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ std::vector<Entity>\ \mbox{\hyperlink{structEngine_1_1Core_1_1EntityConfig_a850ef145352c8e124b7f656af1fa12ba}{entities}};}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ std::vector<Object>\ \mbox{\hyperlink{structEngine_1_1Core_1_1EntityConfig_acc0af27b71605b1278bb3d0e37a9b1c3}{objects}};}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structEngine_1_1Core_1_1Player}{Player}}\ \mbox{\hyperlink{structEngine_1_1Core_1_1EntityConfig_ac565cdb71ed710450016eff40b783103}{player}};}
+\DoxyCodeLine{00075\ \};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structEngine_1_1Core_1_1KeyAction}{KeyAction}}\ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{structEngine_1_1Core_1_1KeyAction_ac7a8985af9777bbe3a7b03008e488939}{action}};}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{structEngine_1_1Core_1_1KeyAction_a761931926e73ad60b2eb3f968210b5ff}{key}};}
+\DoxyCodeLine{00080\ \};}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structEngine_1_1Core_1_1KeyConfig}{KeyConfig}}\ \{}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ std::vector<KeyAction>\ \mbox{\hyperlink{structEngine_1_1Core_1_1KeyConfig_ab4c28da06877fa970ccc43f114c56d39}{keys}};}
+\DoxyCodeLine{00084\ \};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structEngine_1_1Core_1_1RenderedConfig}{RenderedConfig}}\ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{structEngine_1_1Core_1_1RenderedConfig_a8e9730f0f6fd66a988dc5ffb3cfc647b}{library}};}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{structEngine_1_1Core_1_1RenderedConfig_a8ba9066e8100f621afc99aa7af90bbf0}{max\_framerate}};}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ std::vector<std::string>\ \mbox{\hyperlink{structEngine_1_1Core_1_1RenderedConfig_a823cd43a7a5a74930a04e37e55690934}{maps}};}
+\DoxyCodeLine{00090\ \};}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structEngine_1_1Core_1_1Symbol}{Symbol}}\ \{}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structEngine_1_1Core_1_1Symbol_ad2bcee9f3e372a1cd0a7b5a5e7d776ff}{symbol}};}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{structEngine_1_1Core_1_1Symbol_ae1dd591810900661d8d0b49a8bb85e4e}{name}};}
+\DoxyCodeLine{00095\ \};}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structEngine_1_1Core_1_1MapConfig}{MapConfig}}\ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{structEngine_1_1Core_1_1MapConfig_a7706b577c9573ec0d1a15c359ea0ca2e}{size}};}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{structEngine_1_1Core_1_1MapConfig_a8aad7aa28ce84a3b2b3f323eedb097e5}{time}};}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{structEngine_1_1Core_1_1MapConfig_a2c7ee0fbe28fd69af8e393e2e5cfe026}{max\_players}};}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ std::vector<Symbol>\ \mbox{\hyperlink{structEngine_1_1Core_1_1MapConfig_aa4fb2fe511c2bff13be5a4f1b7af3312}{symbols}};}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{structEngine_1_1Core_1_1MapConfig_afe9e003c13198975042653f32e458fe8}{level}};}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{structEngine_1_1Core_1_1MapConfig_a6052a531e92c70aa8fa1d7f661cf694b}{map}};}
+\DoxyCodeLine{00104\ \};}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core}}\ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core}}(\textcolor{keywordtype}{bool}\ openWindow);}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEngine_1_1Core_1_1Core_ac81a2bb16d9a0cc01c30d6379a21fa1c}{\string~Core}}();}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEngine_1_1Core_1_1ModuleLoader}{Engine::Core::ModuleLoader}}\ \&\mbox{\hyperlink{classEngine_1_1Core_1_1Core_a33ab29bb435cb4b86c2d931c20d569cf}{getModuleLoader}}();}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEngine_1_1Debug_1_1Debug}{Debug::Debug}}\ \&\mbox{\hyperlink{classEngine_1_1Core_1_1Core_af8b28496b6bfb3017f95ec6496c06116}{getDebug}}();}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::vector<std::string>\ \mbox{\hyperlink{classEngine_1_1Core_1_1Core_ad51785d8ff7eabf15d0bdda392fd8ebf}{game\_parser}}(std::string\ foldername);}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Core_1_1Core_a642285529474267b44919ea280061c49}{load\_game\_modules}}(std::vector<std::string>);}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structEngine_1_1Core_1_1AudioConfig}{AudioConfig}}\ \mbox{\hyperlink{classEngine_1_1Core_1_1Core_ac54f203f3d1c6cade11f9e80d76ab20d}{audio\_parser}}(std::string\ foldername);}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structEngine_1_1Core_1_1EntityConfig}{EntityConfig}}\ \mbox{\hyperlink{classEngine_1_1Core_1_1Core_a7823c19bcd0cdeee3f18c06e420e30c2}{entity\_parser}}(std::string\ foldername);}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structEngine_1_1Core_1_1KeyConfig}{KeyConfig}}\ \mbox{\hyperlink{classEngine_1_1Core_1_1Core_a597408613cb16002234dfc87589c11d6}{key\_parser}}(std::string\ foldername);}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structEngine_1_1Core_1_1RenderedConfig}{RenderedConfig}}\ \mbox{\hyperlink{classEngine_1_1Core_1_1Core_a77272b87b1ea974069929d8bf5dd93e4}{rendered\_parser}}(std::string\ foldername);}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ std::vector<MapConfig>\ \mbox{\hyperlink{classEngine_1_1Core_1_1Core_a6257872fd398046abc7d0074e7c78b6b}{map\_parser}}(std::string\ foldername,\ std::vector<std::string>\ maps);}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classECS_1_1Entity}{::ECS::Entity}}\ \mbox{\hyperlink{classEngine_1_1Core_1_1Core_a037fa89f2c8f823ac807c25dbbe8643b}{create\_objects}}(\mbox{\hyperlink{classECS_1_1Registry}{::ECS::Registry}}\ \&registry,\ \textcolor{keywordtype}{int}\ pos\_x,\ \textcolor{keywordtype}{int}\ pos\_y,}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<Component>\ entity\_components);}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classECS_1_1Entity}{::ECS::Entity}}\ \mbox{\hyperlink{classEngine_1_1Core_1_1Core_a8ab92fe4c6bba95888ef626fa8871c0c}{create\_player}}(\mbox{\hyperlink{classECS_1_1Registry}{::ECS::Registry}}\ \&registry,\ \textcolor{keywordtype}{int}\ pos\_x,\ \textcolor{keywordtype}{int}\ pos\_y,}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structEngine_1_1Core_1_1EntityConfig}{EntityConfig}}\ entity\_config);}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classECS_1_1Entity}{::ECS::Entity}}\ \mbox{\hyperlink{classEngine_1_1Core_1_1Core_a4d25f02ca43392519c3270518b6c7a6c}{create\_entity}}(\mbox{\hyperlink{classECS_1_1Registry}{::ECS::Registry}}\ \&registry,\ \textcolor{keywordtype}{int}\ pos\_x,\ \textcolor{keywordtype}{int}\ pos\_y,}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<Component>\ entity\_components);}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ std::vector<::ECS::Entity>\ \mbox{\hyperlink{classEngine_1_1Core_1_1Core_a214c11b318b35439c859507fe5dacc61}{create\_map}}(\mbox{\hyperlink{classECS_1_1Registry}{::ECS::Registry}}\ \&registry,\ \mbox{\hyperlink{structEngine_1_1Core_1_1MapConfig}{MapConfig}}\ map\_config,}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structEngine_1_1Core_1_1EntityConfig}{EntityConfig}}\ entity\_config);}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEngine_1_1Module_1_1Renderer}{Module::Renderer}}\ \&\mbox{\hyperlink{classEngine_1_1Core_1_1Core_adc2c680f52e3ff6db0250ee251b2c161}{getRenderedLib}}();}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEngine_1_1Module_1_1IAudio}{Module::IAudio}}\ \&\mbox{\hyperlink{classEngine_1_1Core_1_1Core_af08573e004011551f6c5754acc9bb965}{getAudioLib}}();}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEngine_1_1Module_1_1IPhysic}{Module::IPhysic}}\ \&\mbox{\hyperlink{classEngine_1_1Core_1_1Core_a56a8aff095d7f57903f4078b4c6cf7df}{getPhysicLib}}();}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkClient}{Module::INetworkClient}}\ \&\mbox{\hyperlink{classEngine_1_1Core_1_1Core_a49d5aea22c284a1c48a26cbff630d45e}{getClientLib}}();}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{Module::INetworkServer}}\ \&\mbox{\hyperlink{classEngine_1_1Core_1_1Core_a9c84cb3da229e1de5d038e6ada36a6f8}{getServerLib}}();}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classECS_1_1Registry}{::ECS::Registry}}\ \&\mbox{\hyperlink{classEngine_1_1Core_1_1Core_ae95a41cc8c576b8c759fff1c003d1a28}{getRegistry}}();}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Core_1_1Core_a160b4e202610ed6aa3354361e04e324d}{init}}();}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceECS}{ECS}}\ \&\mbox{\hyperlink{classEngine_1_1Core_1_1Core_a07eb4ccb088cf41f3818a55a80b903f5}{getECS}}();}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceECS}{ECS}}\ \mbox{\hyperlink{classEngine_1_1Core_1_1Core_abc9a8279d4516e52324a46ac3cd538bc}{\_ecs}};}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEngine_1_1Core_1_1ModuleLoader}{ModuleLoader}}\ \mbox{\hyperlink{classEngine_1_1Core_1_1Core_a2fb2ccfeb7752ae735de81789c51a30c}{\_loader}};}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEngine_1_1Debug_1_1Debug}{Debug::Debug}}\ \mbox{\hyperlink{classEngine_1_1Core_1_1Core_aeb50218371649d75b5e6a758478ee34a}{\_debug}};}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ std::unordered\_map<std::string,\ std::function<void(std::string)>>\ \mbox{\hyperlink{classEngine_1_1Core_1_1Core_aed59081d37a6fd3ca191954e0d4d5e54}{\_konsole\_calls}};}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classEngine_1_1Core_1_1Core_a84286007f06bd139e59c64e0acfc0697}{\_openWindow}};}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ std::thread\ \mbox{\hyperlink{classEngine_1_1Core_1_1Core_ae1e8227a356eb618c88f96236f3f95eb}{\_listener}};}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classECS_1_1Registry}{::ECS::Registry}}\ \mbox{\hyperlink{classEngine_1_1Core_1_1Core_accc9b8d79fdb3af7ab3c66983acfe82f}{\_registry}};}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structEngine_1_1Core_1_1AudioConfig}{AudioConfig}}\ \mbox{\hyperlink{classEngine_1_1Core_1_1Core_a0a1ccbfed2ef39a494a4f3eea327d697}{\_audio\_config}};}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ std::unique\_ptr<Module::IPhysic>\ \mbox{\hyperlink{classEngine_1_1Core_1_1Core_a0b75f642319ac9445aa2d18f7e2d3221}{\_physics}};}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ std::unique\_ptr<Module::Renderer>\ \mbox{\hyperlink{classEngine_1_1Core_1_1Core_a3957fc476494600af7e34b58c254cdbd}{\_renderer}};}
+\DoxyCodeLine{00153\ \};}
+\DoxyCodeLine{00154\ \}\ \ \textcolor{comment}{//\ namespace\ Engine::Core}}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ R\_TYPE\_CORE\_HPP}}
+
+\end{DoxyCode}

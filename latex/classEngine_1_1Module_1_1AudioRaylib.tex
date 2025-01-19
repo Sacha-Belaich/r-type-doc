@@ -1,0 +1,325 @@
+\doxysection{Engine\+::Module\+::Audio\+Raylib Class Reference}
+\hypertarget{classEngine_1_1Module_1_1AudioRaylib}{}\label{classEngine_1_1Module_1_1AudioRaylib}\index{Engine::Module::AudioRaylib@{Engine::Module::AudioRaylib}}
+
+
+{\ttfamily \#include $<$Audio\+Raylib.\+hpp$>$}
+
+Inheritance diagram for Engine\+::Module\+::Audio\+Raylib\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classEngine_1_1Module_1_1AudioRaylib}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEngine_1_1Module_1_1AudioRaylib_ab65fb76f500a9b8a8f6bf60108a16871}{Audio\+Raylib}} ()
+\item 
+\mbox{\hyperlink{classEngine_1_1Module_1_1AudioRaylib_a00a5aa6f97a561cf6b38cc2ef971500f}{\texorpdfstring{$\sim$}{\string~}\+Audio\+Raylib}} () override
+\item 
+\mbox{\hyperlink{namespaceEngine_1_1Module_a4f2927ec966fd747da59cf6593ae7864}{module\+\_\+info\+\_\+t}} \mbox{\hyperlink{classEngine_1_1Module_1_1AudioRaylib_aa70aa32149c844824ddfc4858809402a}{get\+Info}} () override
+\begin{DoxyCompactList}\small\item\em Retrieve module information. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEngine_1_1Module_1_1AudioRaylib_afa5ef13d857e1b150f1908e287c45ace}{load\+Module}} (\mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core\+::\+Core}} \&core) override
+\begin{DoxyCompactList}\small\item\em Load the module into the application\textquotesingle{}s core. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEngine_1_1Module_1_1AudioRaylib_af1e99b780c3c90c5c54b55265c23d468}{unload\+Module}} (\mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core\+::\+Core}} \&core) override
+\begin{DoxyCompactList}\small\item\em Unload the module and clean up its resources. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEngine_1_1Module_1_1AudioRaylib_a992fd636ab9ee352a55be60d189657d4}{play\+SFX}} (const std\+::string \&file\+Path) override
+\begin{DoxyCompactList}\small\item\em Play a sound effect. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEngine_1_1Module_1_1AudioRaylib_ac114298db76ca2c1d7cd88be965654ec}{stop\+SFX}} (const std\+::string \&file\+Path) override
+\begin{DoxyCompactList}\small\item\em Stop a sound effect. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEngine_1_1Module_1_1AudioRaylib_ae90ec20fd505b0589bfdc2b435304ecc}{set\+SFXVolume}} (const std\+::string \&file\+Path, float volume) override
+\begin{DoxyCompactList}\small\item\em Set the volume for a sound effect. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEngine_1_1Module_1_1AudioRaylib_acb1259790a831e408c5a1d5230180a2a}{play\+Music}} (const std\+::string \&file\+Path) override
+\begin{DoxyCompactList}\small\item\em Play a music track. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEngine_1_1Module_1_1AudioRaylib_a0749d7ceb5ecef8a0bb35c4658092af1}{stop\+Music}} (const std\+::string \&file\+Path) override
+\begin{DoxyCompactList}\small\item\em Stop a music track. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEngine_1_1Module_1_1AudioRaylib_a973ac5ffb2f3372e991a3124d3a04301}{pause\+Music}} (const std\+::string \&file\+Path) override
+\begin{DoxyCompactList}\small\item\em Pause a music track. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEngine_1_1Module_1_1AudioRaylib_af9ecc48dabf25f72bafc907469607faa}{resume\+Music}} (const std\+::string \&file\+Path) override
+\begin{DoxyCompactList}\small\item\em Resume a paused music track. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEngine_1_1Module_1_1AudioRaylib_a82a412c035b03cdc59ddbe2384c7b357}{set\+Music\+Volume}} (const std\+::string \&file\+Path, float volume) override
+\begin{DoxyCompactList}\small\item\em Set the volume for a music track. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classEngine_1_1Module_1_1IModule}{Engine\+::\+Module\+::\+IModule}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classEngine_1_1Module_1_1IModule_a6bd5fa440d706fadbe1f806de2abd3a5}{\texorpdfstring{$\sim$}{\string~}\+IModule}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEngine_1_1Module_1_1AudioManager}{Audio\+Manager}}$<$ Sound $>$ \mbox{\hyperlink{classEngine_1_1Module_1_1AudioRaylib_a0ec8fbbb2778b68e78fe7c4c90d0cfb0}{sound\+Manager}}
+\item 
+\mbox{\hyperlink{classEngine_1_1Module_1_1AudioManager}{Audio\+Manager}}$<$ Music $>$ \mbox{\hyperlink{classEngine_1_1Module_1_1AudioRaylib_ab1a9b7c4f0349a6bc4cb3d9831163a0c}{music\+Manager}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classEngine_1_1Module_1_1AudioRaylib_ab65fb76f500a9b8a8f6bf60108a16871}\label{classEngine_1_1Module_1_1AudioRaylib_ab65fb76f500a9b8a8f6bf60108a16871} 
+\index{Engine::Module::AudioRaylib@{Engine::Module::AudioRaylib}!AudioRaylib@{AudioRaylib}}
+\index{AudioRaylib@{AudioRaylib}!Engine::Module::AudioRaylib@{Engine::Module::AudioRaylib}}
+\doxysubsubsection{\texorpdfstring{AudioRaylib()}{AudioRaylib()}}
+{\footnotesize\ttfamily Engine\+::\+Module\+::\+Audio\+Raylib\+::\+Audio\+Raylib (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classEngine_1_1Module_1_1AudioRaylib_a00a5aa6f97a561cf6b38cc2ef971500f}\label{classEngine_1_1Module_1_1AudioRaylib_a00a5aa6f97a561cf6b38cc2ef971500f} 
+\index{Engine::Module::AudioRaylib@{Engine::Module::AudioRaylib}!````~AudioRaylib@{\texorpdfstring{$\sim$}{\string~}AudioRaylib}}
+\index{````~AudioRaylib@{\texorpdfstring{$\sim$}{\string~}AudioRaylib}!Engine::Module::AudioRaylib@{Engine::Module::AudioRaylib}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}AudioRaylib()}{\string~AudioRaylib()}}
+{\footnotesize\ttfamily Engine\+::\+Module\+::\+Audio\+Raylib\+::\texorpdfstring{$\sim$}{\string~}\+Audio\+Raylib (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classEngine_1_1Module_1_1AudioRaylib_aa70aa32149c844824ddfc4858809402a}\label{classEngine_1_1Module_1_1AudioRaylib_aa70aa32149c844824ddfc4858809402a} 
+\index{Engine::Module::AudioRaylib@{Engine::Module::AudioRaylib}!getInfo@{getInfo}}
+\index{getInfo@{getInfo}!Engine::Module::AudioRaylib@{Engine::Module::AudioRaylib}}
+\doxysubsubsection{\texorpdfstring{getInfo()}{getInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceEngine_1_1Module_a4f2927ec966fd747da59cf6593ae7864}{module\+\_\+info\+\_\+t}} Engine\+::\+Module\+::\+Audio\+Raylib\+::get\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Retrieve module information. 
+
+This method provides essential information about the module, such as its name and description.
+
+\begin{DoxyReturn}{Returns}
+A structure containing the module\textquotesingle{}s name and description. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classEngine_1_1Module_1_1IModule_adb9199647e717948fa37f90b8ae352f8}{Engine\+::\+Module\+::\+IModule}}.
+
+\Hypertarget{classEngine_1_1Module_1_1AudioRaylib_afa5ef13d857e1b150f1908e287c45ace}\label{classEngine_1_1Module_1_1AudioRaylib_afa5ef13d857e1b150f1908e287c45ace} 
+\index{Engine::Module::AudioRaylib@{Engine::Module::AudioRaylib}!loadModule@{loadModule}}
+\index{loadModule@{loadModule}!Engine::Module::AudioRaylib@{Engine::Module::AudioRaylib}}
+\doxysubsubsection{\texorpdfstring{loadModule()}{loadModule()}}
+{\footnotesize\ttfamily void Engine\+::\+Module\+::\+Audio\+Raylib\+::load\+Module (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core\+::\+Core}} \&}]{core }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Load the module into the application\textquotesingle{}s core. 
+
+This method is responsible for initializing the module and integrating its functionalities into the application\textquotesingle{}s core.
+
+
+\begin{DoxyParams}{Parameters}
+{\em core} & A reference to the application\textquotesingle{}s core. This is used to register the module\textquotesingle{}s functionalities. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classEngine_1_1Module_1_1IModule_ad38434ae26e3afe6b51db6df3836cfb0}{Engine\+::\+Module\+::\+IModule}}.
+
+\Hypertarget{classEngine_1_1Module_1_1AudioRaylib_a973ac5ffb2f3372e991a3124d3a04301}\label{classEngine_1_1Module_1_1AudioRaylib_a973ac5ffb2f3372e991a3124d3a04301} 
+\index{Engine::Module::AudioRaylib@{Engine::Module::AudioRaylib}!pauseMusic@{pauseMusic}}
+\index{pauseMusic@{pauseMusic}!Engine::Module::AudioRaylib@{Engine::Module::AudioRaylib}}
+\doxysubsubsection{\texorpdfstring{pauseMusic()}{pauseMusic()}}
+{\footnotesize\ttfamily void Engine\+::\+Module\+::\+Audio\+Raylib\+::pause\+Music (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Pause a music track. 
+
+This method pauses the playback of the specified music file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & The path to the music file to pause. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classEngine_1_1Module_1_1IAudio_af54e01e9209cc7a24a5e5e67460f524f}{Engine\+::\+Module\+::\+IAudio}}.
+
+\Hypertarget{classEngine_1_1Module_1_1AudioRaylib_acb1259790a831e408c5a1d5230180a2a}\label{classEngine_1_1Module_1_1AudioRaylib_acb1259790a831e408c5a1d5230180a2a} 
+\index{Engine::Module::AudioRaylib@{Engine::Module::AudioRaylib}!playMusic@{playMusic}}
+\index{playMusic@{playMusic}!Engine::Module::AudioRaylib@{Engine::Module::AudioRaylib}}
+\doxysubsubsection{\texorpdfstring{playMusic()}{playMusic()}}
+{\footnotesize\ttfamily void Engine\+::\+Module\+::\+Audio\+Raylib\+::play\+Music (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Play a music track. 
+
+This method starts playing the specified music file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & The path to the music file to play. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classEngine_1_1Module_1_1IAudio_a46685d789141e37a014192eed2302e4f}{Engine\+::\+Module\+::\+IAudio}}.
+
+\Hypertarget{classEngine_1_1Module_1_1AudioRaylib_a992fd636ab9ee352a55be60d189657d4}\label{classEngine_1_1Module_1_1AudioRaylib_a992fd636ab9ee352a55be60d189657d4} 
+\index{Engine::Module::AudioRaylib@{Engine::Module::AudioRaylib}!playSFX@{playSFX}}
+\index{playSFX@{playSFX}!Engine::Module::AudioRaylib@{Engine::Module::AudioRaylib}}
+\doxysubsubsection{\texorpdfstring{playSFX()}{playSFX()}}
+{\footnotesize\ttfamily void Engine\+::\+Module\+::\+Audio\+Raylib\+::play\+SFX (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Play a sound effect. 
+
+This method starts playing the specified sound effect file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & The path to the sound effect file to play. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classEngine_1_1Module_1_1IAudio_a0138e4b0136ea1e214c918d028b5e69b}{Engine\+::\+Module\+::\+IAudio}}.
+
+\Hypertarget{classEngine_1_1Module_1_1AudioRaylib_af9ecc48dabf25f72bafc907469607faa}\label{classEngine_1_1Module_1_1AudioRaylib_af9ecc48dabf25f72bafc907469607faa} 
+\index{Engine::Module::AudioRaylib@{Engine::Module::AudioRaylib}!resumeMusic@{resumeMusic}}
+\index{resumeMusic@{resumeMusic}!Engine::Module::AudioRaylib@{Engine::Module::AudioRaylib}}
+\doxysubsubsection{\texorpdfstring{resumeMusic()}{resumeMusic()}}
+{\footnotesize\ttfamily void Engine\+::\+Module\+::\+Audio\+Raylib\+::resume\+Music (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Resume a paused music track. 
+
+This method resumes the playback of the specified music file from where it was paused.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & The path to the music file to resume. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classEngine_1_1Module_1_1IAudio_ae20a0d7dd3266610bd4b3332e9a1da48}{Engine\+::\+Module\+::\+IAudio}}.
+
+\Hypertarget{classEngine_1_1Module_1_1AudioRaylib_a82a412c035b03cdc59ddbe2384c7b357}\label{classEngine_1_1Module_1_1AudioRaylib_a82a412c035b03cdc59ddbe2384c7b357} 
+\index{Engine::Module::AudioRaylib@{Engine::Module::AudioRaylib}!setMusicVolume@{setMusicVolume}}
+\index{setMusicVolume@{setMusicVolume}!Engine::Module::AudioRaylib@{Engine::Module::AudioRaylib}}
+\doxysubsubsection{\texorpdfstring{setMusicVolume()}{setMusicVolume()}}
+{\footnotesize\ttfamily void Engine\+::\+Module\+::\+Audio\+Raylib\+::set\+Music\+Volume (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Path,  }\item[{float}]{volume }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Set the volume for a music track. 
+
+This method adjusts the playback volume of the specified music file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & The path to the music file. \\
+\hline
+{\em volume} & The volume level to set (range\+: 0.\+0 to 1.\+0). \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classEngine_1_1Module_1_1IAudio_a19c61d7c8c101e41efe0d57921dadb2e}{Engine\+::\+Module\+::\+IAudio}}.
+
+\Hypertarget{classEngine_1_1Module_1_1AudioRaylib_ae90ec20fd505b0589bfdc2b435304ecc}\label{classEngine_1_1Module_1_1AudioRaylib_ae90ec20fd505b0589bfdc2b435304ecc} 
+\index{Engine::Module::AudioRaylib@{Engine::Module::AudioRaylib}!setSFXVolume@{setSFXVolume}}
+\index{setSFXVolume@{setSFXVolume}!Engine::Module::AudioRaylib@{Engine::Module::AudioRaylib}}
+\doxysubsubsection{\texorpdfstring{setSFXVolume()}{setSFXVolume()}}
+{\footnotesize\ttfamily void Engine\+::\+Module\+::\+Audio\+Raylib\+::set\+SFXVolume (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Path,  }\item[{float}]{volume }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Set the volume for a sound effect. 
+
+This method adjusts the playback volume of the specified sound effect file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & The path to the sound effect file. \\
+\hline
+{\em volume} & The volume level to set (range\+: 0.\+0 to 1.\+0). \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classEngine_1_1Module_1_1IAudio_a90623d76f617d60f61d6d3850eed4bc2}{Engine\+::\+Module\+::\+IAudio}}.
+
+\Hypertarget{classEngine_1_1Module_1_1AudioRaylib_a0749d7ceb5ecef8a0bb35c4658092af1}\label{classEngine_1_1Module_1_1AudioRaylib_a0749d7ceb5ecef8a0bb35c4658092af1} 
+\index{Engine::Module::AudioRaylib@{Engine::Module::AudioRaylib}!stopMusic@{stopMusic}}
+\index{stopMusic@{stopMusic}!Engine::Module::AudioRaylib@{Engine::Module::AudioRaylib}}
+\doxysubsubsection{\texorpdfstring{stopMusic()}{stopMusic()}}
+{\footnotesize\ttfamily void Engine\+::\+Module\+::\+Audio\+Raylib\+::stop\+Music (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Stop a music track. 
+
+This method stops the playback of the specified music file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & The path to the music file to stop. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classEngine_1_1Module_1_1IAudio_afd71a5abf0416f899cf101b0df1b5631}{Engine\+::\+Module\+::\+IAudio}}.
+
+\Hypertarget{classEngine_1_1Module_1_1AudioRaylib_ac114298db76ca2c1d7cd88be965654ec}\label{classEngine_1_1Module_1_1AudioRaylib_ac114298db76ca2c1d7cd88be965654ec} 
+\index{Engine::Module::AudioRaylib@{Engine::Module::AudioRaylib}!stopSFX@{stopSFX}}
+\index{stopSFX@{stopSFX}!Engine::Module::AudioRaylib@{Engine::Module::AudioRaylib}}
+\doxysubsubsection{\texorpdfstring{stopSFX()}{stopSFX()}}
+{\footnotesize\ttfamily void Engine\+::\+Module\+::\+Audio\+Raylib\+::stop\+SFX (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Stop a sound effect. 
+
+This method stops the playback of the specified sound effect file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & The path to the sound effect file to stop. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classEngine_1_1Module_1_1IAudio_a88cad7bd9881c2f63fe15c92e97b2b63}{Engine\+::\+Module\+::\+IAudio}}.
+
+\Hypertarget{classEngine_1_1Module_1_1AudioRaylib_af1e99b780c3c90c5c54b55265c23d468}\label{classEngine_1_1Module_1_1AudioRaylib_af1e99b780c3c90c5c54b55265c23d468} 
+\index{Engine::Module::AudioRaylib@{Engine::Module::AudioRaylib}!unloadModule@{unloadModule}}
+\index{unloadModule@{unloadModule}!Engine::Module::AudioRaylib@{Engine::Module::AudioRaylib}}
+\doxysubsubsection{\texorpdfstring{unloadModule()}{unloadModule()}}
+{\footnotesize\ttfamily void Engine\+::\+Module\+::\+Audio\+Raylib\+::unload\+Module (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core\+::\+Core}} \&}]{core }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Unload the module and clean up its resources. 
+
+This method is responsible for removing the module\textquotesingle{}s functionalities from the application\textquotesingle{}s core and releasing any allocated resources.
+
+
+\begin{DoxyParams}{Parameters}
+{\em core} & A reference to the application\textquotesingle{}s core. This is used to unregister the module\textquotesingle{}s functionalities. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classEngine_1_1Module_1_1IModule_afff50ba5f4fe555a31f85b692eb1ecbb}{Engine\+::\+Module\+::\+IModule}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classEngine_1_1Module_1_1AudioRaylib_ab1a9b7c4f0349a6bc4cb3d9831163a0c}\label{classEngine_1_1Module_1_1AudioRaylib_ab1a9b7c4f0349a6bc4cb3d9831163a0c} 
+\index{Engine::Module::AudioRaylib@{Engine::Module::AudioRaylib}!musicManager@{musicManager}}
+\index{musicManager@{musicManager}!Engine::Module::AudioRaylib@{Engine::Module::AudioRaylib}}
+\doxysubsubsection{\texorpdfstring{musicManager}{musicManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Module_1_1AudioManager}{Audio\+Manager}}$<$Music$>$ Engine\+::\+Module\+::\+Audio\+Raylib\+::music\+Manager\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classEngine_1_1Module_1_1AudioRaylib_a0ec8fbbb2778b68e78fe7c4c90d0cfb0}\label{classEngine_1_1Module_1_1AudioRaylib_a0ec8fbbb2778b68e78fe7c4c90d0cfb0} 
+\index{Engine::Module::AudioRaylib@{Engine::Module::AudioRaylib}!soundManager@{soundManager}}
+\index{soundManager@{soundManager}!Engine::Module::AudioRaylib@{Engine::Module::AudioRaylib}}
+\doxysubsubsection{\texorpdfstring{soundManager}{soundManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Module_1_1AudioManager}{Audio\+Manager}}$<$Sound$>$ Engine\+::\+Module\+::\+Audio\+Raylib\+::sound\+Manager\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/engine/modules/audio/raylib/\mbox{\hyperlink{AudioRaylib_8hpp}{Audio\+Raylib.\+hpp}}\item 
+lib/engine/modules/audio/raylib/\mbox{\hyperlink{AudioRaylib_8cpp}{Audio\+Raylib.\+cpp}}\end{DoxyCompactItemize}

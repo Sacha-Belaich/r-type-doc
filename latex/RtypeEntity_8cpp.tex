@@ -1,0 +1,42 @@
+\doxysection{client/src/\+Rtype\+Entity.cpp File Reference}
+\hypertarget{RtypeEntity_8cpp}{}\label{RtypeEntity_8cpp}\index{client/src/RtypeEntity.cpp@{client/src/RtypeEntity.cpp}}
+{\ttfamily \#include "{}Rtype\+Entity.\+hpp"{}}\newline
+{\ttfamily \#include $<$random$>$}\newline
+{\ttfamily \#include "{}Entity.\+hpp"{}}\newline
+{\ttfamily \#include "{}RType\+Protocol.\+hpp"{}}\newline
+{\ttfamily \#include "{}components/\+Life\+Duration.\+hpp"{}}\newline
+{\ttfamily \#include "{}components/\+Network.\+hpp"{}}\newline
+{\ttfamily \#include "{}components/\+Position.\+hpp"{}}\newline
+{\ttfamily \#include "{}components/\+Simple\+Animation.\+hpp"{}}\newline
+{\ttfamily \#include "{}components/\+Sprite.\+hpp"{}}\newline
+{\ttfamily \#include "{}components/\+Velocity.\+hpp"{}}\newline
+{\ttfamily \#include "{}components/\+Hitbox\+Rectangle.\+hpp"{}}\newline
+{\ttfamily \#include "{}components/\+Hitbox\+Plan.\+hpp"{}}\newline
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceR__Type}{R\+\_\+\+Type}}
+\item 
+namespace \mbox{\hyperlink{namespaceR__Type_1_1Entity}{R\+\_\+\+Type\+::\+Entity}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classECS_1_1Entity}{ECS\+::\+Entity}} \mbox{\hyperlink{namespaceR__Type_1_1Entity_a024843baf06f3a314c416dcc22f3ebdf}{R\+\_\+\+Type\+::\+Entity\+::create\+Player}} (\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&r, \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}} pos, std\+::size\+\_\+t server\+\_\+id)
+\item 
+\mbox{\hyperlink{classECS_1_1Entity}{ECS\+::\+Entity}} \mbox{\hyperlink{namespaceR__Type_1_1Entity_a6849d4a82533e36a16fe27174dc50000}{R\+\_\+\+Type\+::\+Entity\+::create\+Wall}} (\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&r, \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}} pos, std\+::size\+\_\+t server\+\_\+id)
+\item 
+\mbox{\hyperlink{classECS_1_1Entity}{ECS\+::\+Entity}} \mbox{\hyperlink{namespaceR__Type_1_1Entity_ac17d6eb96b17802e3b6948f6ee05587d}{R\+\_\+\+Type\+::\+Entity\+::create\+Enemy\+Fly}} (\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&r, \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}} pos, \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}} vel, std\+::size\+\_\+t server\+\_\+id)
+\item 
+\mbox{\hyperlink{classECS_1_1Entity}{ECS\+::\+Entity}} \mbox{\hyperlink{namespaceR__Type_1_1Entity_a632e2a35b4caaf2cae9ae59e397cf7c2}{R\+\_\+\+Type\+::\+Entity\+::create\+Enemy\+Turret}} (\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&r, \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}} pos, std\+::size\+\_\+t server\+\_\+id)
+\item 
+\mbox{\hyperlink{classECS_1_1Entity}{ECS\+::\+Entity}} \mbox{\hyperlink{namespaceR__Type_1_1Entity_ac31caf99907c3b521f58a6c47608d0ba}{R\+\_\+\+Type\+::\+Entity\+::create\+Boss\+Heart}} (\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&r, \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}} pos, std\+::size\+\_\+t server\+\_\+id)
+\item 
+\mbox{\hyperlink{classECS_1_1Entity}{ECS\+::\+Entity}} \mbox{\hyperlink{namespaceR__Type_1_1Entity_a5ba48fddc776d586239ca10d35e42321}{R\+\_\+\+Type\+::\+Entity\+::spawn\+Player\+Projectile}} (\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&r, \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}} pos, \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}} vel, std\+::size\+\_\+t server\+\_\+id)
+\item 
+\mbox{\hyperlink{classECS_1_1Entity}{ECS\+::\+Entity}} \mbox{\hyperlink{namespaceR__Type_1_1Entity_a624f626236c13662f1a8120c72e96620}{R\+\_\+\+Type\+::\+Entity\+::spawn\+Enemy\+Projectile}} (\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&r, \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}} pos, \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}} vel, std\+::size\+\_\+t server\+\_\+id)
+\item 
+\mbox{\hyperlink{classECS_1_1Entity}{ECS\+::\+Entity}} \mbox{\hyperlink{namespaceR__Type_1_1Entity_a27077c80668641a0becceaab2fcb6328}{R\+\_\+\+Type\+::\+Entity\+::spawn\+Explosion}} (\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&r, \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}} pos, \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}} size)
+\item 
+\mbox{\hyperlink{classECS_1_1Entity}{ECS\+::\+Entity}} \mbox{\hyperlink{namespaceR__Type_1_1Entity_abbc0efaa918f9c7c8b8998d4fadb698b}{R\+\_\+\+Type\+::\+Entity\+::create\+Boss}} (\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&r, \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}} pos, std\+::size\+\_\+t server\+\_\+id)
+\end{DoxyCompactItemize}

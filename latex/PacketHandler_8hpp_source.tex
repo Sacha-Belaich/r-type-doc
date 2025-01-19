@@ -1,0 +1,79 @@
+\doxysection{Packet\+Handler.\+hpp}
+\hypertarget{PacketHandler_8hpp_source}{}\label{PacketHandler_8hpp_source}\index{lib/network/packet\_network/PacketHandler.hpp@{lib/network/packet\_network/PacketHandler.hpp}}
+\mbox{\hyperlink{PacketHandler_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2024}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ r-\/type}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ PacketHandler.hpp}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Packet_8hpp}{Packet.hpp}}"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceNetwork}{Network}}\ \{\textcolor{comment}{}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ \ \ \ \ *\ @class\ PacketHandler}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Handles\ the\ callbacks\ for\ packets}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classNetwork_1_1PacketHandler}{PacketHandler}}\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{public}:\textcolor{comment}{}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Constructs\ a\ new\ PacketHandler\ object.}}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classNetwork_1_1PacketHandler_a4fb22e01fccdb9e92be25885a4562abb}{PacketHandler}}();}
+\DoxyCodeLine{00026\ \textcolor{comment}{}}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{00028\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Destroys\ the\ PacketHandler\ object.}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classNetwork_1_1PacketHandler_aa51a5a7ac9ef78bba9b28cb713b02c38}{\string~PacketHandler}}();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{comment}{}}
+\DoxyCodeLine{00033\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Registers\ a\ callback\ for\ a\ specific\ packet\ command\ ID.}}
+\DoxyCodeLine{00035\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00036\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ This\ overload\ allows\ the\ callback\ to\ access\ only\ the\ packet.}}
+\DoxyCodeLine{00037\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ command\_id\ The\ command\ ID\ to\ associate\ with\ the\ callback.}}
+\DoxyCodeLine{00039\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ callback\ A\ function\ to\ be\ invoked\ when\ a\ packet\ with\ the\ given\ command\ ID\ is\ received.}}
+\DoxyCodeLine{00040\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classNetwork_1_1PacketHandler_abcdb7d6ce3db44aed84dbb11d7c0a144}{setPacketCallback}}(uint16\_t\ command\_id,\ \textcolor{keyword}{const}\ std::function<\textcolor{keywordtype}{void}\ (\mbox{\hyperlink{classNetwork_1_1Packet}{Packet}}\ \&)>\ \&callback);}
+\DoxyCodeLine{00042\ \textcolor{comment}{}}
+\DoxyCodeLine{00043\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{00044\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Registers\ a\ callback\ for\ a\ specific\ packet\ command\ ID.}}
+\DoxyCodeLine{00045\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00046\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ This\ overload\ allows\ the\ callback\ to\ access\ the\ packet\ and\ the\ client\ ID.}}
+\DoxyCodeLine{00047\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00048\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ command\_id\ The\ command\ ID\ to\ associate\ with\ the\ callback.}}
+\DoxyCodeLine{00049\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ callback\ A\ function\ to\ be\ invoked\ when\ a\ packet\ with\ the\ given\ command\ ID\ is\ received.}}
+\DoxyCodeLine{00050\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classNetwork_1_1PacketHandler_abcdb7d6ce3db44aed84dbb11d7c0a144}{setPacketCallback}}(uint16\_t\ command\_id,\ \textcolor{keyword}{const}\ std::function<\textcolor{keywordtype}{void}\ (\mbox{\hyperlink{classNetwork_1_1Packet}{Packet}}\ \&,\ uint16\_t)>\ \&callback);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{comment}{}}
+\DoxyCodeLine{00054\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{00055\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Invokes\ the\ appropriate\ callback\ for\ the\ given\ packet.}}
+\DoxyCodeLine{00056\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00057\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ packet\ The\ packet\ to\ process.}}
+\DoxyCodeLine{00058\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classNetwork_1_1PacketHandler_aa7ab1c16489ff18b5c73097d2ef10c20}{operator()}}(\mbox{\hyperlink{classNetwork_1_1Packet}{Packet}}\ \&packet);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{comment}{}}
+\DoxyCodeLine{00062\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{00063\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Invokes\ the\ appropriate\ callback\ for\ the\ given\ packet\ and\ client\ ID.}}
+\DoxyCodeLine{00064\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00065\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ packet\ The\ packet\ to\ process.}}
+\DoxyCodeLine{00066\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ client\_id\ Client\ id\ who\ sended\ the\ packet}}
+\DoxyCodeLine{00067\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classNetwork_1_1PacketHandler_aa7ab1c16489ff18b5c73097d2ef10c20}{operator()}}(\mbox{\hyperlink{classNetwork_1_1Packet}{Packet}}\ \&packet,\ uint16\_t\ client\_id);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ std::unordered\_map<uint16\_t,\ std::function<void\ (\mbox{\hyperlink{classNetwork_1_1Packet}{Packet}}\ \&,\ uint16\_t)>>\ \mbox{\hyperlink{classNetwork_1_1PacketHandler_a0e46a4ccf1011869ea9e9ca65049de0e}{\_packet\_callbacks}};}
+\DoxyCodeLine{00072\ \ \ \ \ \};}
+\DoxyCodeLine{00073\ \}\ \textcolor{comment}{//\ Network}}
+
+\end{DoxyCode}

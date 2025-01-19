@@ -1,0 +1,77 @@
+\doxysection{Exception.\+hpp}
+\hypertarget{client_2src_2Exception_8hpp_source}{}\label{client_2src_2Exception_8hpp_source}\index{client/src/Exception.hpp@{client/src/Exception.hpp}}
+\mbox{\hyperlink{client_2src_2Exception_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2024}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ R\_Type}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ Exception}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ EXCEPTION\_HPP\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ EXCEPTION\_HPP\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <exception>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceR__Type}{R\_Type}}\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classR__Type_1_1Exception}{Exception}}\ :\ \textcolor{keyword}{public}\ std::exception\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classR__Type_1_1Exception_a3f365347526834e53017a72dd8f13720}{Exception}}(std::string\ err);}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{classR__Type_1_1Exception_af764187bc744d92261bfab0cf7762317}{what}}()\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classR__Type_1_1Exception_ae0bc667804f3e09adf4208af3fc329ce}{\_err}};}
+\DoxyCodeLine{00022\ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classR__Type_1_1NetworkException}{NetworkException}}\ final\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classR__Type_1_1Exception}{Exception}}\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classR__Type_1_1NetworkException_a3665d90cef61e060685f36bcb5909538}{NetworkException}}(\textcolor{keyword}{const}\ std::string\ \&err);}
+\DoxyCodeLine{00027\ \};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classR__Type_1_1GraphicalException}{GraphicalException}}\ final\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classR__Type_1_1Exception}{Exception}}\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classR__Type_1_1GraphicalException_a8e828ba2b0224dd46d816b7c9f900fbb}{GraphicalException}}(\textcolor{keyword}{const}\ std::string\ \&err);}
+\DoxyCodeLine{00032\ \};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classR__Type_1_1CommandException}{CommandException}}\ final\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classR__Type_1_1Exception}{Exception}}\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classR__Type_1_1CommandException_a6b02e80651a9e4e39953b2bf3129176f}{CommandException}}(\textcolor{keyword}{const}\ std::string\ \&err);}
+\DoxyCodeLine{00037\ \};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classR__Type_1_1FileException}{FileException}}\ final\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classR__Type_1_1Exception}{Exception}}\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classR__Type_1_1FileException_ac52fc687881319f4bbb83aeddc96bb0a}{FileException}}(\textcolor{keyword}{const}\ std::string\ \&err);}
+\DoxyCodeLine{00042\ \};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classR__Type_1_1NoCameraException}{NoCameraException}}\ final\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classR__Type_1_1Exception}{Exception}}\ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classR__Type_1_1NoCameraException_a1e6d34a5c2b0f317d553bcb5bd34c41c}{NoCameraException}}(\textcolor{keyword}{const}\ std::string\ \&err);}
+\DoxyCodeLine{00047\ \};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classR__Type_1_1DuplicateComponentNameException}{DuplicateComponentNameException}}\ final\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classR__Type_1_1Exception}{Exception}}\ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classR__Type_1_1DuplicateComponentNameException_a69cab93e0215a414b831e21be80a6f00}{DuplicateComponentNameException}}(\textcolor{keyword}{const}\ std::string\ \&err);}
+\DoxyCodeLine{00052\ \};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classR__Type_1_1InvalidComponentNameException}{InvalidComponentNameException}}\ final\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classR__Type_1_1Exception}{Exception}}\ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classR__Type_1_1InvalidComponentNameException_a0bf9942b616500939490b436ce1292cf}{InvalidComponentNameException}}(\textcolor{keyword}{const}\ std::string\ \&err);}
+\DoxyCodeLine{00057\ \};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classR__Type_1_1InvalidSystemNameException}{InvalidSystemNameException}}\ final\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classR__Type_1_1Exception}{Exception}}\ \{}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classR__Type_1_1InvalidSystemNameException_a2a440b51116b0d832135fb2c6faa5eb9}{InvalidSystemNameException}}(\textcolor{keyword}{const}\ std::string\ \&err);}
+\DoxyCodeLine{00062\ \};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classR__Type_1_1InvalidSceneNameException}{InvalidSceneNameException}}\ final\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classR__Type_1_1Exception}{Exception}}\ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classR__Type_1_1InvalidSceneNameException_a4b17c4ec102144c52fd274cb31021d86}{InvalidSceneNameException}}(\textcolor{keyword}{const}\ std::string\ \&err);}
+\DoxyCodeLine{00067\ \};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \}\ \ \textcolor{comment}{//\ namespace\ R\_Type}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !EXCEPTION\_HPP\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -1,0 +1,33 @@
+\doxysection{Clickable.\+hpp}
+\hypertarget{client_2includes_2components_2Clickable_8hpp_source}{}\label{client_2includes_2components_2Clickable_8hpp_source}\index{client/includes/components/Clickable.hpp@{client/includes/components/Clickable.hpp}}
+\mbox{\hyperlink{client_2includes_2components_2Clickable_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2024}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ r-\/type}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ clickable\ component\ function\ mainly\ used\ for\ ui\ elements}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IGraphical_8hpp}{IGraphical.hpp}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceClient_1_1Components}{Client::Components}}\ \{}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{namespaceClient_1_1Components_af3e51f91627c4e3f3ef7339a516e8ab4}{clickType}}\ \{\ \mbox{\hyperlink{namespaceClient_1_1Components_af3e51f91627c4e3f3ef7339a516e8ab4a173ede750e4dc9ac56d67fb9cd40136f}{LEFT}},\ \mbox{\hyperlink{namespaceClient_1_1Components_af3e51f91627c4e3f3ef7339a516e8ab4a9e2c4b74b79d06b5c54a0341dfc9ff61}{RIGHT}},\ \mbox{\hyperlink{namespaceClient_1_1Components_af3e51f91627c4e3f3ef7339a516e8ab4ab9c0abf7874b694ac6da2803627c7dc6}{BOTH}}\ \};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classClient_1_1Components_1_1Clickable}{Clickable}}\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classClient_1_1Components_1_1Clickable_a1cc5cb956c8c581c91c1af37a8f07b94}{Clickable}}(\mbox{\hyperlink{structGraphical_1_1Vect2i}{Graphical::Vect2i}}\ \mbox{\hyperlink{classClient_1_1Components_1_1Clickable_a792ce296a10afc880311ce74eea779be}{boxDim}},\ std::function<\textcolor{keywordtype}{void}(\textcolor{keywordtype}{void})>\ \mbox{\hyperlink{classClient_1_1Components_1_1Clickable_aa33ff0f5c4d67c9af142b437ff27faec}{onClick}},\ \mbox{\hyperlink{namespaceClient_1_1Components_af3e51f91627c4e3f3ef7339a516e8ab4}{clickType}}\ \mbox{\hyperlink{classClient_1_1Components_1_1Clickable_af451af8aad91f5e506339d6058eecc54}{type}});}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classClient_1_1Components_1_1Clickable_aac974bbe0275e59f0e797a1e592a4f45}{log}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structGraphical_1_1Vect2i}{Graphical::Vect2i}}\ \mbox{\hyperlink{classClient_1_1Components_1_1Clickable_a792ce296a10afc880311ce74eea779be}{boxDim}};}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ std::function<void(\textcolor{keywordtype}{void})>\ \mbox{\hyperlink{classClient_1_1Components_1_1Clickable_aa33ff0f5c4d67c9af142b437ff27faec}{onClick}};}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classClient_1_1Components_1_1Clickable_a76cca28b914dce1a36508d7388e505ea}{enabled}};}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceClient_1_1Components_af3e51f91627c4e3f3ef7339a516e8ab4}{clickType}}\ \mbox{\hyperlink{classClient_1_1Components_1_1Clickable_af451af8aad91f5e506339d6058eecc54}{type}};}
+\DoxyCodeLine{00026\ \};}
+\DoxyCodeLine{00027\ \}\ \ \textcolor{comment}{//\ namespace\ Client::Components}}
+
+\end{DoxyCode}

@@ -1,0 +1,71 @@
+\doxysection{INetwork\+Client.\+hpp}
+\hypertarget{INetworkClient_8hpp_source}{}\label{INetworkClient_8hpp_source}\index{lib/engine/includes/INetworkClient.hpp@{lib/engine/includes/INetworkClient.hpp}}
+\mbox{\hyperlink{INetworkClient_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2025}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ INetworkClient.hpp}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ INetworkClient.hpp}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ R\_TYPE\_INETWORKCLIENT\_HPP}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ R\_TYPE\_INETWORKCLIENT\_HPP}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IModule_8hpp}{IModule.hpp}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceEngine_1_1Module}{Engine::Module}}\ \{\textcolor{comment}{}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ \ \ \ \ *\ @interface\ INetworkClient}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Interface\ for\ managing\ network\ client\ functionality.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ \ \ \ \ *\ The\ INetworkClient\ interface\ provides\ methods\ to\ handle\ network\ connections,}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ \ \ \ \ *\ including\ connecting\ to\ a\ remote\ server,\ sending\ and\ receiving\ packets,\ and\ managing\ the\ connection\ lifecycle.}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classEngine_1_1Module_1_1INetworkClient}{INetworkClient}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classEngine_1_1Module_1_1IModule}{IModule}}\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{public}:\textcolor{comment}{}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Connect\ to\ a\ remote\ server.}}
+\DoxyCodeLine{00028\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ This\ method\ establishes\ a\ connection\ to\ the\ specified\ server\ and\ port,}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ and\ starts\ asynchronously\ receiving\ data.\ Incoming\ data\ is\ stored\ in\ a\ buffer.}}
+\DoxyCodeLine{00031\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00032\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ ip\ The\ IP\ address\ of\ the\ remote\ server.}}
+\DoxyCodeLine{00033\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ port\ The\ port\ on\ the\ remote\ server\ to\ connect\ to.}}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkClient_ae292860a6de9653e6d25cc7fcf337d17}{connect}}(\textcolor{keyword}{const}\ std::string\ \&ip,\ uint16\_t\ port)\ =\ 0;}
+\DoxyCodeLine{00036\ \textcolor{comment}{}}
+\DoxyCodeLine{00037\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Close\ the\ connection.}}
+\DoxyCodeLine{00039\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00040\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ This\ method\ closes\ the\ connection\ and\ releases\ the\ associated\ socket.}}
+\DoxyCodeLine{00041\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkClient_aa033db471c1c577ddcfa65ec1d6b3641}{close}}()\ =\ 0;}
+\DoxyCodeLine{00043\ \textcolor{comment}{}}
+\DoxyCodeLine{00044\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{00045\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Retrieve\ the\ oldest\ received\ packet.}}
+\DoxyCodeLine{00046\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00047\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ This\ method\ fetches\ the\ content\ of\ the\ oldest\ complete\ packet\ received}}
+\DoxyCodeLine{00048\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ from\ the\ remote\ server.}}
+\DoxyCodeLine{00049\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00050\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @return\ A\ vector\ containing\ the\ content\ of\ the\ oldest\ full\ packet.}}
+\DoxyCodeLine{00051\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::vector<uint8\_t>\ \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkClient_a188946319523bda58976076197aaf21d}{getOldestPacket}}()\ =\ 0;}
+\DoxyCodeLine{00053\ \textcolor{comment}{}}
+\DoxyCodeLine{00054\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{00055\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Send\ a\ packet\ to\ the\ connected\ endpoint.}}
+\DoxyCodeLine{00056\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00057\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ This\ method\ sends\ a\ serialized\ packet\ asynchronously\ to\ the\ currently\ connected\ server.}}
+\DoxyCodeLine{00058\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00059\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ packet\ A\ vector\ containing\ the\ serialized\ packet\ to\ send.}}
+\DoxyCodeLine{00060\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkClient_a54ef44e19971819fb47f522bc4c38637}{send}}(\textcolor{keyword}{const}\ std::vector<uint8\_t>\ \&packet)\ =\ 0;}
+\DoxyCodeLine{00062\ \ \ \ \ \};}
+\DoxyCodeLine{00063\ \}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//R\_TYPE\_INETWORKCLIENT\_HPP}}
+
+\end{DoxyCode}

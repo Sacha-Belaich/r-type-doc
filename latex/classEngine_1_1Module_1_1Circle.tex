@@ -1,0 +1,109 @@
+\doxysection{Engine\+::Module\+::Circle Class Reference}
+\hypertarget{classEngine_1_1Module_1_1Circle}{}\label{classEngine_1_1Module_1_1Circle}\index{Engine::Module::Circle@{Engine::Module::Circle}}
+
+
+{\ttfamily \#include $<$Circle.\+hpp$>$}
+
+Inheritance diagram for Engine\+::Module\+::Circle\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classEngine_1_1Module_1_1Circle}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEngine_1_1Module_1_1Circle_a3579b458ed54d28ca8cbc1355edd218b}{Circle}} (float x, float y, float radius)
+\item 
+bool \mbox{\hyperlink{classEngine_1_1Module_1_1Circle_a11f31251d73d24bf769a82d5c477d217}{check\+\_\+collision}} (const \mbox{\hyperlink{classEngine_1_1Module_1_1IShape}{IShape}} \&other) const override
+\item 
+void \mbox{\hyperlink{classEngine_1_1Module_1_1Circle_a3c06f01f49d74309c1ab073790683ee4}{log}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classEngine_1_1Module_1_1IShape}{Engine\+::\+Module\+::\+IShape}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classEngine_1_1Module_1_1IShape_ae53b61e1be388a9d60c51fa3b57cf57b}{\texorpdfstring{$\sim$}{\string~}\+IShape}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{classEngine_1_1Module_1_1Circle_ac10334c49ddf2bc34291d610f7bf2ccf}{\+\_\+x}}
+\item 
+float \mbox{\hyperlink{classEngine_1_1Module_1_1Circle_ac00fadb48ec4424e551f988de2785d47}{\+\_\+y}}
+\item 
+float \mbox{\hyperlink{classEngine_1_1Module_1_1Circle_a83836a22eed28325db7efc978f4c1410}{\+\_\+radius}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classEngine_1_1Module_1_1Circle_a084d925468cbe60e31df30e4eafdf8bf}{check\+\_\+collision}} (const \mbox{\hyperlink{classEngine_1_1Module_1_1Circle}{Circle}} \&other)
+\item 
+bool \mbox{\hyperlink{classEngine_1_1Module_1_1Circle_af6e2ed3fb525fc009856622ac121bd8d}{check\+\_\+collision}} (const \mbox{\hyperlink{classEngine_1_1Module_1_1Rectangle}{Rectangle}} \&other)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classEngine_1_1Module_1_1Circle_a3579b458ed54d28ca8cbc1355edd218b}\label{classEngine_1_1Module_1_1Circle_a3579b458ed54d28ca8cbc1355edd218b} 
+\index{Engine::Module::Circle@{Engine::Module::Circle}!Circle@{Circle}}
+\index{Circle@{Circle}!Engine::Module::Circle@{Engine::Module::Circle}}
+\doxysubsubsection{\texorpdfstring{Circle()}{Circle()}}
+{\footnotesize\ttfamily Engine\+::\+Module\+::\+Circle\+::\+Circle (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{radius }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classEngine_1_1Module_1_1Circle_a084d925468cbe60e31df30e4eafdf8bf}\label{classEngine_1_1Module_1_1Circle_a084d925468cbe60e31df30e4eafdf8bf} 
+\index{Engine::Module::Circle@{Engine::Module::Circle}!check\_collision@{check\_collision}}
+\index{check\_collision@{check\_collision}!Engine::Module::Circle@{Engine::Module::Circle}}
+\doxysubsubsection{\texorpdfstring{check\_collision()}{check\_collision()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily bool Engine\+::\+Module\+::\+Circle\+::check\+\_\+collision (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classEngine_1_1Module_1_1Circle}{Circle}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classEngine_1_1Module_1_1Circle_a11f31251d73d24bf769a82d5c477d217}\label{classEngine_1_1Module_1_1Circle_a11f31251d73d24bf769a82d5c477d217} 
+\index{Engine::Module::Circle@{Engine::Module::Circle}!check\_collision@{check\_collision}}
+\index{check\_collision@{check\_collision}!Engine::Module::Circle@{Engine::Module::Circle}}
+\doxysubsubsection{\texorpdfstring{check\_collision()}{check\_collision()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily bool Engine\+::\+Module\+::\+Circle\+::check\+\_\+collision (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classEngine_1_1Module_1_1IShape}{IShape}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classEngine_1_1Module_1_1IShape_a0611c701f6ddaba2d5b1c76c35f2f85b}{Engine\+::\+Module\+::\+IShape}}.
+
+\Hypertarget{classEngine_1_1Module_1_1Circle_af6e2ed3fb525fc009856622ac121bd8d}\label{classEngine_1_1Module_1_1Circle_af6e2ed3fb525fc009856622ac121bd8d} 
+\index{Engine::Module::Circle@{Engine::Module::Circle}!check\_collision@{check\_collision}}
+\index{check\_collision@{check\_collision}!Engine::Module::Circle@{Engine::Module::Circle}}
+\doxysubsubsection{\texorpdfstring{check\_collision()}{check\_collision()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily bool Engine\+::\+Module\+::\+Circle\+::check\+\_\+collision (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classEngine_1_1Module_1_1Rectangle}{Rectangle}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classEngine_1_1Module_1_1Circle_a3c06f01f49d74309c1ab073790683ee4}\label{classEngine_1_1Module_1_1Circle_a3c06f01f49d74309c1ab073790683ee4} 
+\index{Engine::Module::Circle@{Engine::Module::Circle}!log@{log}}
+\index{log@{log}!Engine::Module::Circle@{Engine::Module::Circle}}
+\doxysubsubsection{\texorpdfstring{log()}{log()}}
+{\footnotesize\ttfamily void Engine\+::\+Module\+::\+Circle\+::log (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classEngine_1_1Module_1_1Circle_a83836a22eed28325db7efc978f4c1410}\label{classEngine_1_1Module_1_1Circle_a83836a22eed28325db7efc978f4c1410} 
+\index{Engine::Module::Circle@{Engine::Module::Circle}!\_radius@{\_radius}}
+\index{\_radius@{\_radius}!Engine::Module::Circle@{Engine::Module::Circle}}
+\doxysubsubsection{\texorpdfstring{\_radius}{\_radius}}
+{\footnotesize\ttfamily float Engine\+::\+Module\+::\+Circle\+::\+\_\+radius}
+
+\Hypertarget{classEngine_1_1Module_1_1Circle_ac10334c49ddf2bc34291d610f7bf2ccf}\label{classEngine_1_1Module_1_1Circle_ac10334c49ddf2bc34291d610f7bf2ccf} 
+\index{Engine::Module::Circle@{Engine::Module::Circle}!\_x@{\_x}}
+\index{\_x@{\_x}!Engine::Module::Circle@{Engine::Module::Circle}}
+\doxysubsubsection{\texorpdfstring{\_x}{\_x}}
+{\footnotesize\ttfamily float Engine\+::\+Module\+::\+Circle\+::\+\_\+x}
+
+\Hypertarget{classEngine_1_1Module_1_1Circle_ac00fadb48ec4424e551f988de2785d47}\label{classEngine_1_1Module_1_1Circle_ac00fadb48ec4424e551f988de2785d47} 
+\index{Engine::Module::Circle@{Engine::Module::Circle}!\_y@{\_y}}
+\index{\_y@{\_y}!Engine::Module::Circle@{Engine::Module::Circle}}
+\doxysubsubsection{\texorpdfstring{\_y}{\_y}}
+{\footnotesize\ttfamily float Engine\+::\+Module\+::\+Circle\+::\+\_\+y}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/engine/modules/physic/includes/shapes/\mbox{\hyperlink{Circle_8hpp}{Circle.\+hpp}}\item 
+lib/engine/modules/physic/src/shapes/\mbox{\hyperlink{Circle_8cpp}{Circle.\+cpp}}\end{DoxyCompactItemize}

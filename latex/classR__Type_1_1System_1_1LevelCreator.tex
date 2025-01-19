@@ -1,0 +1,208 @@
+\doxysection{R\+\_\+\+Type\+::System\+::Level\+Creator Class Reference}
+\hypertarget{classR__Type_1_1System_1_1LevelCreator}{}\label{classR__Type_1_1System_1_1LevelCreator}\index{R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}}
+
+
+{\ttfamily \#include $<$Level\+Creator.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4}{Level\+Element\+Type}} \{ \newline
+\mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4a0cebacb80fc0c587122073c568154abc}{VOID\+\_\+\+ELEM\+\_\+\+TYPE}}
+, \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4a3ee07b340444ffb5d1dc7537a2c7d578}{WALL}}
+, \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4a8344b351f281c34489c5d82749090904}{PLAYER1}}
+, \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4a2d0a038d67cebe161189f01c5aec6225}{PLAYER2}}
+, \newline
+\mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4a992f76afc770f8aab0a723407409244b}{PLAYER3}}
+, \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4ae65ea730c973cae668a800773170ec53}{PLAYER4}}
+, \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4a93fe8e6f0a1701eede6cb4f763c7d40a}{TURRET}}
+, \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4a2d93bb0deda760b107398851e9d26901}{BOSS}}
+, \newline
+\mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4aa3f718b9542f28d215d0d56f1319c34e}{BOSS\+\_\+\+HEART}}
+, \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4a578cc9691d0e7744418f0963d6fff979}{FLY}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_abb488d4817ccc4e3631361f187193905}{run}} (\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&r)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_a363de8ff4ec25efae57d7e9b6a42f614}{\+\_\+load\+\_\+levels\+\_\+from\+\_\+file}} (std\+::vector$<$ std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4}{Level\+Element\+Type}} $>$ $>$ $>$ \&levels)
+\item 
+static void \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_a45dca501b9d8ef17cf8f1a4a5413595e}{\+\_\+spawn\+\_\+needed\+\_\+entitys}} (\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&r, \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{Engine\+::\+Module\+::\+INetwork\+Server}} \&server, const std\+::vector$<$ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4}{Level\+Element\+Type}} $>$ \&entity\+\_\+line, std\+::size\+\_\+t pos\+\_\+in\+\_\+level)
+\item 
+static void \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_a79f2c560225e5e0218675785d048e0a5}{\+\_\+load\+\_\+level}} (\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&r, \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{Engine\+::\+Module\+::\+INetwork\+Server}} \&server, const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4}{Level\+Element\+Type}} $>$ $>$ \&level, std\+::size\+\_\+t \&pos\+\_\+in\+\_\+level)
+\item 
+static void \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_a7e1082b7e2cad8f0cf625c41d0b115f1}{\+\_\+spawn\+\_\+wall}} (\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&r, \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{Engine\+::\+Module\+::\+INetwork\+Server}} \&server, \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}} position)
+\item 
+static void \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_a8d6fd2084cad8e8763fadb52e5998b86}{\+\_\+spawn\+\_\+turret}} (\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&r, \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{Engine\+::\+Module\+::\+INetwork\+Server}} \&server, \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}} position)
+\item 
+static void \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_a19e60f60524c91cffe540c2a1065e355}{\+\_\+move\+\_\+player}} (\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&r, \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{Engine\+::\+Module\+::\+INetwork\+Server}} \&server, \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}} position, short id)
+\item 
+static void \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_ab44c565da815752f4edc2bba11b20441}{\+\_\+spawn\+\_\+boss}} (\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&r, \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{Engine\+::\+Module\+::\+INetwork\+Server}} \&server, \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}} position)
+\item 
+static void \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_ab96ef8e7a055420590b88400475e94c0}{\+\_\+spawn\+\_\+boss\+\_\+heart}} (\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&r, \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{Engine\+::\+Module\+::\+INetwork\+Server}} \&server, \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}} position)
+\item 
+static void \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_ab3fc9784dd7f8a04637ec6425be72b58}{\+\_\+spawn\+\_\+fly}} (\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&r, \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{Engine\+::\+Module\+::\+INetwork\+Server}} \&server, \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}} position)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::unordered\+\_\+map$<$ char, \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4}{Level\+Element\+Type}} $>$ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_a2d55c79989a3333a877f5feecb162661}{\+\_\+map\+\_\+char\+\_\+elem\+\_\+type}}
+\item 
+static const std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4}{Level\+Element\+Type}}, std\+::function$<$ void(\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&, \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{Engine\+::\+Module\+::\+INetwork\+Server}} \&, \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}})$>$ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_abb2d9c6b892cf2b4bac0dcf231994a57}{\+\_\+map\+\_\+lvl\+\_\+elem\+\_\+type}} )
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4}\label{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4} 
+\index{R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}!LevelElementType@{LevelElementType}}
+\index{LevelElementType@{LevelElementType}!R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}}
+\doxysubsubsection{\texorpdfstring{LevelElementType}{LevelElementType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4}{R\+\_\+\+Type\+::\+System\+::\+Level\+Creator\+::\+Level\+Element\+Type}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VOID\_ELEM\_TYPE@{VOID\_ELEM\_TYPE}!R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}}\index{R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}!VOID\_ELEM\_TYPE@{VOID\_ELEM\_TYPE}}}\Hypertarget{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4a0cebacb80fc0c587122073c568154abc}\label{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4a0cebacb80fc0c587122073c568154abc} 
+VOID\+\_\+\+ELEM\+\_\+\+TYPE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WALL@{WALL}!R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}}\index{R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}!WALL@{WALL}}}\Hypertarget{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4a3ee07b340444ffb5d1dc7537a2c7d578}\label{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4a3ee07b340444ffb5d1dc7537a2c7d578} 
+WALL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PLAYER1@{PLAYER1}!R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}}\index{R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}!PLAYER1@{PLAYER1}}}\Hypertarget{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4a8344b351f281c34489c5d82749090904}\label{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4a8344b351f281c34489c5d82749090904} 
+PLAYER1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PLAYER2@{PLAYER2}!R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}}\index{R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}!PLAYER2@{PLAYER2}}}\Hypertarget{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4a2d0a038d67cebe161189f01c5aec6225}\label{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4a2d0a038d67cebe161189f01c5aec6225} 
+PLAYER2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PLAYER3@{PLAYER3}!R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}}\index{R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}!PLAYER3@{PLAYER3}}}\Hypertarget{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4a992f76afc770f8aab0a723407409244b}\label{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4a992f76afc770f8aab0a723407409244b} 
+PLAYER3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PLAYER4@{PLAYER4}!R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}}\index{R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}!PLAYER4@{PLAYER4}}}\Hypertarget{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4ae65ea730c973cae668a800773170ec53}\label{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4ae65ea730c973cae668a800773170ec53} 
+PLAYER4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TURRET@{TURRET}!R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}}\index{R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}!TURRET@{TURRET}}}\Hypertarget{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4a93fe8e6f0a1701eede6cb4f763c7d40a}\label{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4a93fe8e6f0a1701eede6cb4f763c7d40a} 
+TURRET&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BOSS@{BOSS}!R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}}\index{R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}!BOSS@{BOSS}}}\Hypertarget{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4a2d93bb0deda760b107398851e9d26901}\label{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4a2d93bb0deda760b107398851e9d26901} 
+BOSS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BOSS\_HEART@{BOSS\_HEART}!R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}}\index{R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}!BOSS\_HEART@{BOSS\_HEART}}}\Hypertarget{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4aa3f718b9542f28d215d0d56f1319c34e}\label{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4aa3f718b9542f28d215d0d56f1319c34e} 
+BOSS\+\_\+\+HEART&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FLY@{FLY}!R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}}\index{R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}!FLY@{FLY}}}\Hypertarget{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4a578cc9691d0e7744418f0963d6fff979}\label{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4a578cc9691d0e7744418f0963d6fff979} 
+FLY&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classR__Type_1_1System_1_1LevelCreator_a79f2c560225e5e0218675785d048e0a5}\label{classR__Type_1_1System_1_1LevelCreator_a79f2c560225e5e0218675785d048e0a5} 
+\index{R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}!\_load\_level@{\_load\_level}}
+\index{\_load\_level@{\_load\_level}!R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}}
+\doxysubsubsection{\texorpdfstring{\_load\_level()}{\_load\_level()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+System\+::\+Level\+Creator\+::\+\_\+load\+\_\+level (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&}]{r,  }\item[{\mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{Engine\+::\+Module\+::\+INetwork\+Server}} \&}]{server,  }\item[{const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4}{Level\+Element\+Type}} $>$ $>$ \&}]{level,  }\item[{std\+::size\+\_\+t \&}]{pos\+\_\+in\+\_\+level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{classR__Type_1_1System_1_1LevelCreator_a363de8ff4ec25efae57d7e9b6a42f614}\label{classR__Type_1_1System_1_1LevelCreator_a363de8ff4ec25efae57d7e9b6a42f614} 
+\index{R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}!\_load\_levels\_from\_file@{\_load\_levels\_from\_file}}
+\index{\_load\_levels\_from\_file@{\_load\_levels\_from\_file}!R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}}
+\doxysubsubsection{\texorpdfstring{\_load\_levels\_from\_file()}{\_load\_levels\_from\_file()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+System\+::\+Level\+Creator\+::\+\_\+load\+\_\+levels\+\_\+from\+\_\+file (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4}{Level\+Element\+Type}} $>$ $>$ $>$ \&}]{levels }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{classR__Type_1_1System_1_1LevelCreator_a19e60f60524c91cffe540c2a1065e355}\label{classR__Type_1_1System_1_1LevelCreator_a19e60f60524c91cffe540c2a1065e355} 
+\index{R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}!\_move\_player@{\_move\_player}}
+\index{\_move\_player@{\_move\_player}!R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}}
+\doxysubsubsection{\texorpdfstring{\_move\_player()}{\_move\_player()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+System\+::\+Level\+Creator\+::\+\_\+move\+\_\+player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&}]{r,  }\item[{\mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{Engine\+::\+Module\+::\+INetwork\+Server}} \&}]{server,  }\item[{\mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}}}]{position,  }\item[{short}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{classR__Type_1_1System_1_1LevelCreator_ab44c565da815752f4edc2bba11b20441}\label{classR__Type_1_1System_1_1LevelCreator_ab44c565da815752f4edc2bba11b20441} 
+\index{R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}!\_spawn\_boss@{\_spawn\_boss}}
+\index{\_spawn\_boss@{\_spawn\_boss}!R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}}
+\doxysubsubsection{\texorpdfstring{\_spawn\_boss()}{\_spawn\_boss()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+System\+::\+Level\+Creator\+::\+\_\+spawn\+\_\+boss (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&}]{r,  }\item[{\mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{Engine\+::\+Module\+::\+INetwork\+Server}} \&}]{server,  }\item[{\mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}}}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{classR__Type_1_1System_1_1LevelCreator_ab96ef8e7a055420590b88400475e94c0}\label{classR__Type_1_1System_1_1LevelCreator_ab96ef8e7a055420590b88400475e94c0} 
+\index{R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}!\_spawn\_boss\_heart@{\_spawn\_boss\_heart}}
+\index{\_spawn\_boss\_heart@{\_spawn\_boss\_heart}!R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}}
+\doxysubsubsection{\texorpdfstring{\_spawn\_boss\_heart()}{\_spawn\_boss\_heart()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+System\+::\+Level\+Creator\+::\+\_\+spawn\+\_\+boss\+\_\+heart (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&}]{r,  }\item[{\mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{Engine\+::\+Module\+::\+INetwork\+Server}} \&}]{server,  }\item[{\mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}}}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{classR__Type_1_1System_1_1LevelCreator_ab3fc9784dd7f8a04637ec6425be72b58}\label{classR__Type_1_1System_1_1LevelCreator_ab3fc9784dd7f8a04637ec6425be72b58} 
+\index{R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}!\_spawn\_fly@{\_spawn\_fly}}
+\index{\_spawn\_fly@{\_spawn\_fly}!R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}}
+\doxysubsubsection{\texorpdfstring{\_spawn\_fly()}{\_spawn\_fly()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+System\+::\+Level\+Creator\+::\+\_\+spawn\+\_\+fly (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&}]{r,  }\item[{\mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{Engine\+::\+Module\+::\+INetwork\+Server}} \&}]{server,  }\item[{\mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}}}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{classR__Type_1_1System_1_1LevelCreator_a45dca501b9d8ef17cf8f1a4a5413595e}\label{classR__Type_1_1System_1_1LevelCreator_a45dca501b9d8ef17cf8f1a4a5413595e} 
+\index{R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}!\_spawn\_needed\_entitys@{\_spawn\_needed\_entitys}}
+\index{\_spawn\_needed\_entitys@{\_spawn\_needed\_entitys}!R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}}
+\doxysubsubsection{\texorpdfstring{\_spawn\_needed\_entitys()}{\_spawn\_needed\_entitys()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+System\+::\+Level\+Creator\+::\+\_\+spawn\+\_\+needed\+\_\+entitys (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&}]{r,  }\item[{\mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{Engine\+::\+Module\+::\+INetwork\+Server}} \&}]{server,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4}{Level\+Element\+Type}} $>$ \&}]{entity\+\_\+line,  }\item[{std\+::size\+\_\+t}]{pos\+\_\+in\+\_\+level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{classR__Type_1_1System_1_1LevelCreator_a8d6fd2084cad8e8763fadb52e5998b86}\label{classR__Type_1_1System_1_1LevelCreator_a8d6fd2084cad8e8763fadb52e5998b86} 
+\index{R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}!\_spawn\_turret@{\_spawn\_turret}}
+\index{\_spawn\_turret@{\_spawn\_turret}!R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}}
+\doxysubsubsection{\texorpdfstring{\_spawn\_turret()}{\_spawn\_turret()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+System\+::\+Level\+Creator\+::\+\_\+spawn\+\_\+turret (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&}]{r,  }\item[{\mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{Engine\+::\+Module\+::\+INetwork\+Server}} \&}]{server,  }\item[{\mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}}}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{classR__Type_1_1System_1_1LevelCreator_a7e1082b7e2cad8f0cf625c41d0b115f1}\label{classR__Type_1_1System_1_1LevelCreator_a7e1082b7e2cad8f0cf625c41d0b115f1} 
+\index{R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}!\_spawn\_wall@{\_spawn\_wall}}
+\index{\_spawn\_wall@{\_spawn\_wall}!R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}}
+\doxysubsubsection{\texorpdfstring{\_spawn\_wall()}{\_spawn\_wall()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+System\+::\+Level\+Creator\+::\+\_\+spawn\+\_\+wall (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&}]{r,  }\item[{\mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{Engine\+::\+Module\+::\+INetwork\+Server}} \&}]{server,  }\item[{\mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}}}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{classR__Type_1_1System_1_1LevelCreator_abb488d4817ccc4e3631361f187193905}\label{classR__Type_1_1System_1_1LevelCreator_abb488d4817ccc4e3631361f187193905} 
+\index{R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}!run@{run}}
+\index{run@{run}!R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+System\+::\+Level\+Creator\+::run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classR__Type_1_1System_1_1LevelCreator_a2d55c79989a3333a877f5feecb162661}\label{classR__Type_1_1System_1_1LevelCreator_a2d55c79989a3333a877f5feecb162661} 
+\index{R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}!\_map\_char\_elem\_type@{\_map\_char\_elem\_type}}
+\index{\_map\_char\_elem\_type@{\_map\_char\_elem\_type}!R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}}
+\doxysubsubsection{\texorpdfstring{\_map\_char\_elem\_type}{\_map\_char\_elem\_type}}
+{\footnotesize\ttfamily const std\+::unordered\+\_\+map$<$ char, \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4}{Level\+Creator\+::\+Level\+Element\+Type}} $>$ R\+\_\+\+Type\+::\+System\+::\+Level\+Creator\+::\+\_\+map\+\_\+char\+\_\+elem\+\_\+type\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{\textcolor{charliteral}{'\ '},\ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4a0cebacb80fc0c587122073c568154abc}{VOID\_ELEM\_TYPE}}\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{\textcolor{charliteral}{'X'},\ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4a3ee07b340444ffb5d1dc7537a2c7d578}{WALL}}\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{\textcolor{charliteral}{'1'},\ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4a8344b351f281c34489c5d82749090904}{PLAYER1}}\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{\textcolor{charliteral}{'2'},\ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4a2d0a038d67cebe161189f01c5aec6225}{PLAYER2}}\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{\textcolor{charliteral}{'3'},\ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4a992f76afc770f8aab0a723407409244b}{PLAYER3}}\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{\textcolor{charliteral}{'4'},\ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4ae65ea730c973cae668a800773170ec53}{PLAYER4}}\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{\textcolor{charliteral}{'T'},\ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4a93fe8e6f0a1701eede6cb4f763c7d40a}{TURRET}}\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{\textcolor{charliteral}{'B'},\ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4a2d93bb0deda760b107398851e9d26901}{BOSS}}\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{\textcolor{charliteral}{'H'},\ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4aa3f718b9542f28d215d0d56f1319c34e}{BOSS\_HEART}}\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{\textcolor{charliteral}{'F'},\ \mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4a578cc9691d0e7744418f0963d6fff979}{FLY}}\},}
+\DoxyCodeLine{\ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classR__Type_1_1System_1_1LevelCreator_abb2d9c6b892cf2b4bac0dcf231994a57}\label{classR__Type_1_1System_1_1LevelCreator_abb2d9c6b892cf2b4bac0dcf231994a57} 
+\index{R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}!\_map\_lvl\_elem\_type@{\_map\_lvl\_elem\_type}}
+\index{\_map\_lvl\_elem\_type@{\_map\_lvl\_elem\_type}!R\_Type::System::LevelCreator@{R\_Type::System::LevelCreator}}
+\doxysubsubsection{\texorpdfstring{\_map\_lvl\_elem\_type}{\_map\_lvl\_elem\_type}}
+{\footnotesize\ttfamily const std\+::unordered\+\_\+map$<$\mbox{\hyperlink{classR__Type_1_1System_1_1LevelCreator_aece5b6912335d8e3f35fb90de7b55cf4}{Level\+Element\+Type}}, std\+::function$<$void (\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&, \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{Engine\+::\+Module\+::\+INetwork\+Server}} \&, \mbox{\hyperlink{structR__Type_1_1Vector2i}{Vector2i}})$>$ R\+\_\+\+Type\+::\+System\+::\+Level\+Creator\+::\+\_\+map\+\_\+lvl\+\_\+elem\+\_\+type) \hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+server/src/systems/\mbox{\hyperlink{LevelCreator_8hpp}{Level\+Creator.\+hpp}}\item 
+server/src/systems/\mbox{\hyperlink{LevelCreator_8cpp}{Level\+Creator.\+cpp}}\end{DoxyCompactItemize}

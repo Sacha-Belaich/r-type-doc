@@ -1,0 +1,25 @@
+\doxysection{server/src/systems/\+Network\+Sender.cpp File Reference}
+\hypertarget{NetworkSender_8cpp}{}\label{NetworkSender_8cpp}\index{server/src/systems/NetworkSender.cpp@{server/src/systems/NetworkSender.cpp}}
+{\ttfamily \#include "{}Network\+Sender.\+hpp"{}}\newline
+{\ttfamily \#include $<$components/\+Position.\+hpp$>$}\newline
+{\ttfamily \#include $<$components/\+Velocity.\+hpp$>$}\newline
+{\ttfamily \#include "{}components/\+Health.\+hpp"{}}\newline
+{\ttfamily \#include $<$systems/\+Position\+Velocity.\+hpp$>$}\newline
+{\ttfamily \#include "{}../src/\+Core.\+hpp"{}}\newline
+{\ttfamily \#include "{}../components/\+Entity\+Type.\+hpp"{}}\newline
+{\ttfamily \#include "{}Indexed\+Zipper.\+hpp"{}}\newline
+{\ttfamily \#include "{}RType\+Protocol.\+hpp"{}}\newline
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceR__Type}{R\+\_\+\+Type}}
+\item 
+namespace \mbox{\hyperlink{namespaceR__Type_1_1System}{R\+\_\+\+Type\+::\+System}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{namespaceR__Type_1_1System_adfb2632a72c225848c02388151c8195b}{R\+\_\+\+Type\+::\+System\+::send\+Position\+Packet}} (\mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{Engine\+::\+Module\+::\+INetwork\+Server}} \&network\+\_\+lib, const std\+::size\+\_\+t entity, const \mbox{\hyperlink{classECS_1_1Component_1_1Position}{ECS\+::\+Component\+::\+Position}} \&pos, const \mbox{\hyperlink{classECS_1_1Component_1_1Velocity}{ECS\+::\+Component\+::\+Velocity}} \&vel)
+\item 
+static void \mbox{\hyperlink{namespaceR__Type_1_1System_acab55258418fdc23bc9f4fda1033bb06}{R\+\_\+\+Type\+::\+System\+::send\+Dead\+Packet}} (\mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{Engine\+::\+Module\+::\+INetwork\+Server}} \&network\+\_\+lib, const std\+::size\+\_\+t entity, const int hp)
+\end{DoxyCompactItemize}

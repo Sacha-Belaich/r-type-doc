@@ -1,0 +1,59 @@
+\doxysection{Network\+Server.\+hpp}
+\hypertarget{NetworkServer_8hpp_source}{}\label{NetworkServer_8hpp_source}\index{lib/engine/modules/network\_server/NetworkServer.hpp@{lib/engine/modules/network\_server/NetworkServer.hpp}}
+\mbox{\hyperlink{NetworkServer_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2025}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ NetworkServer.hpp}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ NetworkServer.hpp}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ R\_TYPE\_NETWORKSERVER\_HPP}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ R\_TYPE\_NETWORKSERVER\_HPP}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <asio.hpp>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <ranges>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{INetworkServer_8hpp}{INetworkServer.hpp}}"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceEngine_1_1Module}{Engine::Module}}\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classEngine_1_1Module_1_1NetworkServer}{NetworkServer}}\ final\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{INetworkServer}}\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkServer_aba04f98997b52d3972de408d9d0a6bac}{NetworkServer}}();}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkServer_a007518420620351752cf9df4d8f59609}{\string~NetworkServer}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structEngine_1_1Module_1_1module__info__s}{module\_info\_t}}\ \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkServer_a5a854747c884601216166843d83b78e7}{getInfo}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkServer_ad0b1cbc11bf5738b9826a00f939d28fd}{loadModule}}(\mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core::Core}}\ \&core)\textcolor{keyword}{\ override\ }\{\}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkServer_a995f8a6f502c92396f1bfb7f01f14ac5}{unloadModule}}(\mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core::Core}}\ \&core)\textcolor{keyword}{\ override\ }\{\}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkServer_a1dac5b6d58541923df171f701b090476}{host}}(uint16\_t\ port)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkServer_a05ac2d295e2d1282217d3a6c2a2e92d1}{close}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ std::vector<std::pair<uint16\_t,\ std::vector<uint8\_t>>>\ \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkServer_a6009587823345f1661106de591e3edf6}{getAllOldestPacket}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkServer_a1038b5aa8b515094facffe4210034a8c}{send}}(uint16\_t\ client,\ \textcolor{keyword}{const}\ std::vector<uint8\_t>\ \&packet)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkServer_a0529dc98852b587563ea110ec3009170}{sendAll}}(\textcolor{keyword}{const}\ std::vector<uint8\_t>\ \&packet)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkServer_afededd277c371572d61c0a9f6cfa6a90}{\_asyncReceive}}();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ std::mutex\ \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkServer_aa1f9d5e5c072396a26b4a683b111ae72}{\_mutex}};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkServer_acff71c32fca198eabae59a0c547a755a}{\_packet\_start}}\ =\ \textcolor{stringliteral}{"{}PACKET\_START"{}};}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkServer_a2b3f305dbbfd55681182e79c65be07ff}{\_packet\_end}}\ =\ \textcolor{stringliteral}{"{}PACKET\_END"{}};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ asio::ip::udp::endpoint\ \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkServer_aeb148d59f1ef5412ecc4b5e6c5862adc}{\_tmp\_endpoint}};}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ asio::io\_context\ \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkServer_a112f942e7936eb9a7bfa060ca4aac1f8}{\_context}};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ asio::ip::udp::socket\ \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkServer_adfcbfc65473d0df3005b5078c567349f}{\_socket}};}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ std::vector<std::pair<asio::ip::udp::endpoint,\ std::vector<uint8\_t>>>\ \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkServer_ac069cff10193eae1157f2cc94b150d04}{\_clients}}\{\};}
+\DoxyCodeLine{00049\ \};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \}\ \ \textcolor{comment}{//\ namespace\ Engine::Module}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ R\_TYPE\_NETWORKSERVER\_HPP}}
+
+\end{DoxyCode}

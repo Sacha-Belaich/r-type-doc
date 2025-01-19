@@ -1,0 +1,51 @@
+\doxysection{Exception.\+hpp}
+\hypertarget{server_2src_2Exception_8hpp_source}{}\label{server_2src_2Exception_8hpp_source}\index{server/src/Exception.hpp@{server/src/Exception.hpp}}
+\mbox{\hyperlink{server_2src_2Exception_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2024}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ R\_Type}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ Exception}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ EXCEPTION\_HPP\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ EXCEPTION\_HPP\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <exception>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceR__Type}{R\_Type}}\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{class\ }Exception\ :\ \textcolor{keyword}{public}\ std::exception\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classR__Type_1_1Exception_a3f365347526834e53017a72dd8f13720}{Exception}}(std::string\ err);}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{classR__Type_1_1Exception_af764187bc744d92261bfab0cf7762317}{what}}()\ const\ noexcept\ override;}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ private:}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ std::\textcolor{keywordtype}{string}\ \mbox{\hyperlink{classR__Type_1_1Exception_ae0bc667804f3e09adf4208af3fc329ce}{\_err}};}
+\DoxyCodeLine{00022\ \ \ \ \ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ class\ \mbox{\hyperlink{classR__Type_1_1NetworkException}{NetworkException}}\ final\ :\ public\ \mbox{\hyperlink{classR__Type_1_1Exception}{Exception}}\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classR__Type_1_1NetworkException_a3665d90cef61e060685f36bcb5909538}{NetworkException}}(\textcolor{keyword}{const}\ std::string\ \&err);}
+\DoxyCodeLine{00027\ \ \ \ \ \};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classR__Type_1_1GraphicalException}{GraphicalException}}\ final\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classR__Type_1_1Exception}{Exception}}\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classR__Type_1_1GraphicalException_a8e828ba2b0224dd46d816b7c9f900fbb}{GraphicalException}}(\textcolor{keyword}{const}\ std::string\ \&err);}
+\DoxyCodeLine{00032\ \ \ \ \ \};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classR__Type_1_1CommandException}{CommandException}}\ final\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classR__Type_1_1Exception}{Exception}}\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classR__Type_1_1CommandException_a6b02e80651a9e4e39953b2bf3129176f}{CommandException}}(\textcolor{keyword}{const}\ std::string\ \&err);}
+\DoxyCodeLine{00037\ \ \ \ \ \};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classR__Type_1_1FileException}{FileException}}\ final\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classR__Type_1_1Exception}{Exception}}\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classR__Type_1_1FileException_ac52fc687881319f4bbb83aeddc96bb0a}{FileException}}(\textcolor{keyword}{const}\ std::string\ \&err);}
+\DoxyCodeLine{00042\ \ \ \ \ \};}
+\DoxyCodeLine{00043\ \}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !EXCEPTION\_HPP\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

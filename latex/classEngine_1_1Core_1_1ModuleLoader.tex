@@ -1,0 +1,93 @@
+\doxysection{Engine\+::Core\+::Module\+Loader Class Reference}
+\hypertarget{classEngine_1_1Core_1_1ModuleLoader}{}\label{classEngine_1_1Core_1_1ModuleLoader}\index{Engine::Core::ModuleLoader@{Engine::Core::ModuleLoader}}
+
+
+{\ttfamily \#include $<$Module\+Loader.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEngine_1_1Core_1_1ModuleLoader_a5193c34b054739a4e09c8bf0bc18655b}{Module\+Loader}} (const std\+::string \&module\+Folder)
+\item 
+\mbox{\hyperlink{classEngine_1_1Core_1_1ModuleLoader_a150b6ede69ac0da3bceb686b9e7b2ee6}{\texorpdfstring{$\sim$}{\string~}\+Module\+Loader}} ()=default
+\item 
+void \mbox{\hyperlink{classEngine_1_1Core_1_1ModuleLoader_a00a23ff7aac25c62712b44a380b59a25}{register\+Module}} (const std\+::string \&path)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \& \mbox{\hyperlink{classEngine_1_1Core_1_1ModuleLoader_a8af986dd129f13598422ab0cb74a927a}{load\+Module}} (const std\+::string \&name)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \& \mbox{\hyperlink{classEngine_1_1Core_1_1ModuleLoader_ace40309e13ff0d29270c05cff97ca78a}{get\+Module}} (std\+::string name)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::unique\+\_\+ptr$<$ dylib $>$ $>$ \mbox{\hyperlink{classEngine_1_1Core_1_1ModuleLoader_a3a731d91642680bc18aa5139d89f2294}{\+\_\+libraries}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classEngine_1_1Module_1_1IModule}{Engine\+::\+Module\+::\+IModule}} $>$ $>$ \mbox{\hyperlink{classEngine_1_1Core_1_1ModuleLoader_afeac18072b0631bf82ef55dbe464a248}{\+\_\+modules}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classEngine_1_1Core_1_1ModuleLoader_a82028c517d31abcf9c896f04a351e2c4}{\+\_\+loaded}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classEngine_1_1Core_1_1ModuleLoader_a5193c34b054739a4e09c8bf0bc18655b}\label{classEngine_1_1Core_1_1ModuleLoader_a5193c34b054739a4e09c8bf0bc18655b} 
+\index{Engine::Core::ModuleLoader@{Engine::Core::ModuleLoader}!ModuleLoader@{ModuleLoader}}
+\index{ModuleLoader@{ModuleLoader}!Engine::Core::ModuleLoader@{Engine::Core::ModuleLoader}}
+\doxysubsubsection{\texorpdfstring{ModuleLoader()}{ModuleLoader()}}
+{\footnotesize\ttfamily Engine\+::\+Core\+::\+Module\+Loader\+::\+Module\+Loader (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{module\+Folder }\end{DoxyParamCaption})}
+
+\Hypertarget{classEngine_1_1Core_1_1ModuleLoader_a150b6ede69ac0da3bceb686b9e7b2ee6}\label{classEngine_1_1Core_1_1ModuleLoader_a150b6ede69ac0da3bceb686b9e7b2ee6} 
+\index{Engine::Core::ModuleLoader@{Engine::Core::ModuleLoader}!````~ModuleLoader@{\texorpdfstring{$\sim$}{\string~}ModuleLoader}}
+\index{````~ModuleLoader@{\texorpdfstring{$\sim$}{\string~}ModuleLoader}!Engine::Core::ModuleLoader@{Engine::Core::ModuleLoader}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ModuleLoader()}{\string~ModuleLoader()}}
+{\footnotesize\ttfamily Engine\+::\+Core\+::\+Module\+Loader\+::\texorpdfstring{$\sim$}{\string~}\+Module\+Loader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classEngine_1_1Core_1_1ModuleLoader_ace40309e13ff0d29270c05cff97ca78a}\label{classEngine_1_1Core_1_1ModuleLoader_ace40309e13ff0d29270c05cff97ca78a} 
+\index{Engine::Core::ModuleLoader@{Engine::Core::ModuleLoader}!getModule@{getModule}}
+\index{getModule@{getModule}!Engine::Core::ModuleLoader@{Engine::Core::ModuleLoader}}
+\doxysubsubsection{\texorpdfstring{getModule()}{getModule()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \& Engine\+::\+Core\+::\+Module\+Loader\+::get\+Module (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classEngine_1_1Core_1_1ModuleLoader_a8af986dd129f13598422ab0cb74a927a}\label{classEngine_1_1Core_1_1ModuleLoader_a8af986dd129f13598422ab0cb74a927a} 
+\index{Engine::Core::ModuleLoader@{Engine::Core::ModuleLoader}!loadModule@{loadModule}}
+\index{loadModule@{loadModule}!Engine::Core::ModuleLoader@{Engine::Core::ModuleLoader}}
+\doxysubsubsection{\texorpdfstring{loadModule()}{loadModule()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \& Engine\+::\+Core\+::\+Module\+Loader\+::load\+Module (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classEngine_1_1Core_1_1ModuleLoader_a00a23ff7aac25c62712b44a380b59a25}\label{classEngine_1_1Core_1_1ModuleLoader_a00a23ff7aac25c62712b44a380b59a25} 
+\index{Engine::Core::ModuleLoader@{Engine::Core::ModuleLoader}!registerModule@{registerModule}}
+\index{registerModule@{registerModule}!Engine::Core::ModuleLoader@{Engine::Core::ModuleLoader}}
+\doxysubsubsection{\texorpdfstring{registerModule()}{registerModule()}}
+{\footnotesize\ttfamily void Engine\+::\+Core\+::\+Module\+Loader\+::register\+Module (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classEngine_1_1Core_1_1ModuleLoader_a3a731d91642680bc18aa5139d89f2294}\label{classEngine_1_1Core_1_1ModuleLoader_a3a731d91642680bc18aa5139d89f2294} 
+\index{Engine::Core::ModuleLoader@{Engine::Core::ModuleLoader}!\_libraries@{\_libraries}}
+\index{\_libraries@{\_libraries}!Engine::Core::ModuleLoader@{Engine::Core::ModuleLoader}}
+\doxysubsubsection{\texorpdfstring{\_libraries}{\_libraries}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, std\+::unique\+\_\+ptr$<$dylib$>$ $>$ Engine\+::\+Core\+::\+Module\+Loader\+::\+\_\+libraries\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classEngine_1_1Core_1_1ModuleLoader_a82028c517d31abcf9c896f04a351e2c4}\label{classEngine_1_1Core_1_1ModuleLoader_a82028c517d31abcf9c896f04a351e2c4} 
+\index{Engine::Core::ModuleLoader@{Engine::Core::ModuleLoader}!\_loaded@{\_loaded}}
+\index{\_loaded@{\_loaded}!Engine::Core::ModuleLoader@{Engine::Core::ModuleLoader}}
+\doxysubsubsection{\texorpdfstring{\_loaded}{\_loaded}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ Engine\+::\+Core\+::\+Module\+Loader\+::\+\_\+loaded\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classEngine_1_1Core_1_1ModuleLoader_afeac18072b0631bf82ef55dbe464a248}\label{classEngine_1_1Core_1_1ModuleLoader_afeac18072b0631bf82ef55dbe464a248} 
+\index{Engine::Core::ModuleLoader@{Engine::Core::ModuleLoader}!\_modules@{\_modules}}
+\index{\_modules@{\_modules}!Engine::Core::ModuleLoader@{Engine::Core::ModuleLoader}}
+\doxysubsubsection{\texorpdfstring{\_modules}{\_modules}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classEngine_1_1Module_1_1IModule}{Engine\+::\+Module\+::\+IModule}}$>$ $>$ Engine\+::\+Core\+::\+Module\+Loader\+::\+\_\+modules\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/engine/core/\mbox{\hyperlink{ModuleLoader_8hpp}{Module\+Loader.\+hpp}}\item 
+lib/engine/core/\mbox{\hyperlink{ModuleLoader_8cpp}{Module\+Loader.\+cpp}}\end{DoxyCompactItemize}

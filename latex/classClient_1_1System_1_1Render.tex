@@ -1,0 +1,53 @@
+\doxysection{Client\+::System\+::Render Class Reference}
+\hypertarget{classClient_1_1System_1_1Render}{}\label{classClient_1_1System_1_1Render}\index{Client::System::Render@{Client::System::Render}}
+
+
+{\ttfamily \#include $<$Render.\+hpp$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classClient_1_1System_1_1Render_ac9081709902cee1b8fa6f92a8e548ce1}{render\+Sprites}} (const \mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&)
+\item 
+static void \mbox{\hyperlink{classClient_1_1System_1_1Render_a027778983060bf249a051102a7d913d8}{render\+Text}} (const \mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&)
+\item 
+static std\+::pair$<$ \mbox{\hyperlink{classECS_1_1Component_1_1Position}{ECS\+::\+Component\+::\+Position}}, \mbox{\hyperlink{structGraphical_1_1Vect2i}{Graphical\+::\+Vect2i}} $>$ \mbox{\hyperlink{classClient_1_1System_1_1Render_aa211b2c1ba0820515969b3d0d97fc78c}{get\+Camera\+Info}} (const \mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classClient_1_1System_1_1Render_a85fa46fdda23f29e677415531cf5993f}{is\+On\+Screen}} (const \mbox{\hyperlink{classECS_1_1Component_1_1Position}{ECS\+::\+Component\+::\+Position}} \&element\+Pos, const \mbox{\hyperlink{structGraphical_1_1Vect2i}{Graphical\+::\+Vect2i}} \&element\+Size, const \mbox{\hyperlink{classECS_1_1Component_1_1Position}{ECS\+::\+Component\+::\+Position}} \&camera\+Pos, const \mbox{\hyperlink{structGraphical_1_1Vect2i}{Graphical\+::\+Vect2i}} \&screen\+Size)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classClient_1_1System_1_1Render_aa211b2c1ba0820515969b3d0d97fc78c}\label{classClient_1_1System_1_1Render_aa211b2c1ba0820515969b3d0d97fc78c} 
+\index{Client::System::Render@{Client::System::Render}!getCameraInfo@{getCameraInfo}}
+\index{getCameraInfo@{getCameraInfo}!Client::System::Render@{Client::System::Render}}
+\doxysubsubsection{\texorpdfstring{getCameraInfo()}{getCameraInfo()}}
+{\footnotesize\ttfamily std\+::pair$<$ \mbox{\hyperlink{classECS_1_1Component_1_1Position}{ECS\+::\+Component\+::\+Position}}, \mbox{\hyperlink{structGraphical_1_1Vect2i}{Graphical\+::\+Vect2i}} $>$ Client\+::\+System\+::\+Render\+::get\+Camera\+Info (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classClient_1_1System_1_1Render_a85fa46fdda23f29e677415531cf5993f}\label{classClient_1_1System_1_1Render_a85fa46fdda23f29e677415531cf5993f} 
+\index{Client::System::Render@{Client::System::Render}!isOnScreen@{isOnScreen}}
+\index{isOnScreen@{isOnScreen}!Client::System::Render@{Client::System::Render}}
+\doxysubsubsection{\texorpdfstring{isOnScreen()}{isOnScreen()}}
+{\footnotesize\ttfamily bool Client\+::\+System\+::\+Render\+::is\+On\+Screen (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classECS_1_1Component_1_1Position}{ECS\+::\+Component\+::\+Position}} \&}]{element\+Pos,  }\item[{const \mbox{\hyperlink{structGraphical_1_1Vect2i}{Graphical\+::\+Vect2i}} \&}]{element\+Size,  }\item[{const \mbox{\hyperlink{classECS_1_1Component_1_1Position}{ECS\+::\+Component\+::\+Position}} \&}]{camera\+Pos,  }\item[{const \mbox{\hyperlink{structGraphical_1_1Vect2i}{Graphical\+::\+Vect2i}} \&}]{screen\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{classClient_1_1System_1_1Render_ac9081709902cee1b8fa6f92a8e548ce1}\label{classClient_1_1System_1_1Render_ac9081709902cee1b8fa6f92a8e548ce1} 
+\index{Client::System::Render@{Client::System::Render}!renderSprites@{renderSprites}}
+\index{renderSprites@{renderSprites}!Client::System::Render@{Client::System::Render}}
+\doxysubsubsection{\texorpdfstring{renderSprites()}{renderSprites()}}
+{\footnotesize\ttfamily void Client\+::\+System\+::\+Render\+::render\+Sprites (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classClient_1_1System_1_1Render_a027778983060bf249a051102a7d913d8}\label{classClient_1_1System_1_1Render_a027778983060bf249a051102a7d913d8} 
+\index{Client::System::Render@{Client::System::Render}!renderText@{renderText}}
+\index{renderText@{renderText}!Client::System::Render@{Client::System::Render}}
+\doxysubsubsection{\texorpdfstring{renderText()}{renderText()}}
+{\footnotesize\ttfamily void Client\+::\+System\+::\+Render\+::render\+Text (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+client/includes/systems/\mbox{\hyperlink{client_2includes_2systems_2Render_8hpp}{Render.\+hpp}}\item 
+client/src/systems/\mbox{\hyperlink{client_2src_2systems_2Render_8cpp}{Render.\+cpp}}\end{DoxyCompactItemize}

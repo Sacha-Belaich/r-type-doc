@@ -1,0 +1,232 @@
+\doxysection{Engine\+::Module\+::IAudio Interface Reference}
+\hypertarget{classEngine_1_1Module_1_1IAudio}{}\label{classEngine_1_1Module_1_1IAudio}\index{Engine::Module::IAudio@{Engine::Module::IAudio}}
+
+
+Interface for audio management in the application.  
+
+
+
+
+{\ttfamily \#include $<$IAudio.\+hpp$>$}
+
+Inheritance diagram for Engine\+::Module\+::IAudio\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classEngine_1_1Module_1_1IAudio}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classEngine_1_1Module_1_1IAudio_a0138e4b0136ea1e214c918d028b5e69b}{play\+SFX}} (const std\+::string \&file\+Path)=0
+\begin{DoxyCompactList}\small\item\em Play a sound effect. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEngine_1_1Module_1_1IAudio_a88cad7bd9881c2f63fe15c92e97b2b63}{stop\+SFX}} (const std\+::string \&file\+Path)=0
+\begin{DoxyCompactList}\small\item\em Stop a sound effect. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEngine_1_1Module_1_1IAudio_a90623d76f617d60f61d6d3850eed4bc2}{set\+SFXVolume}} (const std\+::string \&file\+Path, float volume)=0
+\begin{DoxyCompactList}\small\item\em Set the volume for a sound effect. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEngine_1_1Module_1_1IAudio_a46685d789141e37a014192eed2302e4f}{play\+Music}} (const std\+::string \&file\+Path)=0
+\begin{DoxyCompactList}\small\item\em Play a music track. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEngine_1_1Module_1_1IAudio_afd71a5abf0416f899cf101b0df1b5631}{stop\+Music}} (const std\+::string \&file\+Path)=0
+\begin{DoxyCompactList}\small\item\em Stop a music track. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEngine_1_1Module_1_1IAudio_af54e01e9209cc7a24a5e5e67460f524f}{pause\+Music}} (const std\+::string \&file\+Path)=0
+\begin{DoxyCompactList}\small\item\em Pause a music track. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEngine_1_1Module_1_1IAudio_ae20a0d7dd3266610bd4b3332e9a1da48}{resume\+Music}} (const std\+::string \&file\+Path)=0
+\begin{DoxyCompactList}\small\item\em Resume a paused music track. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEngine_1_1Module_1_1IAudio_a19c61d7c8c101e41efe0d57921dadb2e}{set\+Music\+Volume}} (const std\+::string \&file\+Path, float volume)=0
+\begin{DoxyCompactList}\small\item\em Set the volume for a music track. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classEngine_1_1Module_1_1IModule}{Engine\+::\+Module\+::\+IModule}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classEngine_1_1Module_1_1IModule_a6bd5fa440d706fadbe1f806de2abd3a5}{\texorpdfstring{$\sim$}{\string~}\+IModule}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespaceEngine_1_1Module_a4f2927ec966fd747da59cf6593ae7864}{module\+\_\+info\+\_\+t}} \mbox{\hyperlink{classEngine_1_1Module_1_1IModule_adb9199647e717948fa37f90b8ae352f8}{get\+Info}} ()=0
+\begin{DoxyCompactList}\small\item\em Retrieve module information. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEngine_1_1Module_1_1IModule_ad38434ae26e3afe6b51db6df3836cfb0}{load\+Module}} (\mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core\+::\+Core}} \&core)=0
+\begin{DoxyCompactList}\small\item\em Load the module into the application\textquotesingle{}s core. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEngine_1_1Module_1_1IModule_afff50ba5f4fe555a31f85b692eb1ecbb}{unload\+Module}} (\mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core\+::\+Core}} \&core)=0
+\begin{DoxyCompactList}\small\item\em Unload the module and clean up its resources. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for audio management in the application. 
+
+The \doxylink{classEngine_1_1Module_1_1IAudio}{IAudio} interface provides methods for handling sound effects (SFX) and music playback, including controls for volume, playback, pause, and stop. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classEngine_1_1Module_1_1IAudio_af54e01e9209cc7a24a5e5e67460f524f}\label{classEngine_1_1Module_1_1IAudio_af54e01e9209cc7a24a5e5e67460f524f} 
+\index{Engine::Module::IAudio@{Engine::Module::IAudio}!pauseMusic@{pauseMusic}}
+\index{pauseMusic@{pauseMusic}!Engine::Module::IAudio@{Engine::Module::IAudio}}
+\doxysubsubsection{\texorpdfstring{pauseMusic()}{pauseMusic()}}
+{\footnotesize\ttfamily virtual void Engine\+::\+Module\+::\+IAudio\+::pause\+Music (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pause a music track. 
+
+This method pauses the playback of the specified music file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & The path to the music file to pause. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classEngine_1_1Module_1_1AudioRaylib_a973ac5ffb2f3372e991a3124d3a04301}{Engine\+::\+Module\+::\+Audio\+Raylib}}.
+
+\Hypertarget{classEngine_1_1Module_1_1IAudio_a46685d789141e37a014192eed2302e4f}\label{classEngine_1_1Module_1_1IAudio_a46685d789141e37a014192eed2302e4f} 
+\index{Engine::Module::IAudio@{Engine::Module::IAudio}!playMusic@{playMusic}}
+\index{playMusic@{playMusic}!Engine::Module::IAudio@{Engine::Module::IAudio}}
+\doxysubsubsection{\texorpdfstring{playMusic()}{playMusic()}}
+{\footnotesize\ttfamily virtual void Engine\+::\+Module\+::\+IAudio\+::play\+Music (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Play a music track. 
+
+This method starts playing the specified music file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & The path to the music file to play. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classEngine_1_1Module_1_1AudioRaylib_acb1259790a831e408c5a1d5230180a2a}{Engine\+::\+Module\+::\+Audio\+Raylib}}.
+
+\Hypertarget{classEngine_1_1Module_1_1IAudio_a0138e4b0136ea1e214c918d028b5e69b}\label{classEngine_1_1Module_1_1IAudio_a0138e4b0136ea1e214c918d028b5e69b} 
+\index{Engine::Module::IAudio@{Engine::Module::IAudio}!playSFX@{playSFX}}
+\index{playSFX@{playSFX}!Engine::Module::IAudio@{Engine::Module::IAudio}}
+\doxysubsubsection{\texorpdfstring{playSFX()}{playSFX()}}
+{\footnotesize\ttfamily virtual void Engine\+::\+Module\+::\+IAudio\+::play\+SFX (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Play a sound effect. 
+
+This method starts playing the specified sound effect file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & The path to the sound effect file to play. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classEngine_1_1Module_1_1AudioRaylib_a992fd636ab9ee352a55be60d189657d4}{Engine\+::\+Module\+::\+Audio\+Raylib}}.
+
+\Hypertarget{classEngine_1_1Module_1_1IAudio_ae20a0d7dd3266610bd4b3332e9a1da48}\label{classEngine_1_1Module_1_1IAudio_ae20a0d7dd3266610bd4b3332e9a1da48} 
+\index{Engine::Module::IAudio@{Engine::Module::IAudio}!resumeMusic@{resumeMusic}}
+\index{resumeMusic@{resumeMusic}!Engine::Module::IAudio@{Engine::Module::IAudio}}
+\doxysubsubsection{\texorpdfstring{resumeMusic()}{resumeMusic()}}
+{\footnotesize\ttfamily virtual void Engine\+::\+Module\+::\+IAudio\+::resume\+Music (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Resume a paused music track. 
+
+This method resumes the playback of the specified music file from where it was paused.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & The path to the music file to resume. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classEngine_1_1Module_1_1AudioRaylib_af9ecc48dabf25f72bafc907469607faa}{Engine\+::\+Module\+::\+Audio\+Raylib}}.
+
+\Hypertarget{classEngine_1_1Module_1_1IAudio_a19c61d7c8c101e41efe0d57921dadb2e}\label{classEngine_1_1Module_1_1IAudio_a19c61d7c8c101e41efe0d57921dadb2e} 
+\index{Engine::Module::IAudio@{Engine::Module::IAudio}!setMusicVolume@{setMusicVolume}}
+\index{setMusicVolume@{setMusicVolume}!Engine::Module::IAudio@{Engine::Module::IAudio}}
+\doxysubsubsection{\texorpdfstring{setMusicVolume()}{setMusicVolume()}}
+{\footnotesize\ttfamily virtual void Engine\+::\+Module\+::\+IAudio\+::set\+Music\+Volume (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Path,  }\item[{float}]{volume }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Set the volume for a music track. 
+
+This method adjusts the playback volume of the specified music file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & The path to the music file. \\
+\hline
+{\em volume} & The volume level to set (range\+: 0.\+0 to 1.\+0). \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classEngine_1_1Module_1_1AudioRaylib_a82a412c035b03cdc59ddbe2384c7b357}{Engine\+::\+Module\+::\+Audio\+Raylib}}.
+
+\Hypertarget{classEngine_1_1Module_1_1IAudio_a90623d76f617d60f61d6d3850eed4bc2}\label{classEngine_1_1Module_1_1IAudio_a90623d76f617d60f61d6d3850eed4bc2} 
+\index{Engine::Module::IAudio@{Engine::Module::IAudio}!setSFXVolume@{setSFXVolume}}
+\index{setSFXVolume@{setSFXVolume}!Engine::Module::IAudio@{Engine::Module::IAudio}}
+\doxysubsubsection{\texorpdfstring{setSFXVolume()}{setSFXVolume()}}
+{\footnotesize\ttfamily virtual void Engine\+::\+Module\+::\+IAudio\+::set\+SFXVolume (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Path,  }\item[{float}]{volume }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Set the volume for a sound effect. 
+
+This method adjusts the playback volume of the specified sound effect file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & The path to the sound effect file. \\
+\hline
+{\em volume} & The volume level to set (range\+: 0.\+0 to 1.\+0). \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classEngine_1_1Module_1_1AudioRaylib_ae90ec20fd505b0589bfdc2b435304ecc}{Engine\+::\+Module\+::\+Audio\+Raylib}}.
+
+\Hypertarget{classEngine_1_1Module_1_1IAudio_afd71a5abf0416f899cf101b0df1b5631}\label{classEngine_1_1Module_1_1IAudio_afd71a5abf0416f899cf101b0df1b5631} 
+\index{Engine::Module::IAudio@{Engine::Module::IAudio}!stopMusic@{stopMusic}}
+\index{stopMusic@{stopMusic}!Engine::Module::IAudio@{Engine::Module::IAudio}}
+\doxysubsubsection{\texorpdfstring{stopMusic()}{stopMusic()}}
+{\footnotesize\ttfamily virtual void Engine\+::\+Module\+::\+IAudio\+::stop\+Music (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Stop a music track. 
+
+This method stops the playback of the specified music file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & The path to the music file to stop. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classEngine_1_1Module_1_1AudioRaylib_a0749d7ceb5ecef8a0bb35c4658092af1}{Engine\+::\+Module\+::\+Audio\+Raylib}}.
+
+\Hypertarget{classEngine_1_1Module_1_1IAudio_a88cad7bd9881c2f63fe15c92e97b2b63}\label{classEngine_1_1Module_1_1IAudio_a88cad7bd9881c2f63fe15c92e97b2b63} 
+\index{Engine::Module::IAudio@{Engine::Module::IAudio}!stopSFX@{stopSFX}}
+\index{stopSFX@{stopSFX}!Engine::Module::IAudio@{Engine::Module::IAudio}}
+\doxysubsubsection{\texorpdfstring{stopSFX()}{stopSFX()}}
+{\footnotesize\ttfamily virtual void Engine\+::\+Module\+::\+IAudio\+::stop\+SFX (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Stop a sound effect. 
+
+This method stops the playback of the specified sound effect file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & The path to the sound effect file to stop. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classEngine_1_1Module_1_1AudioRaylib_ac114298db76ca2c1d7cd88be965654ec}{Engine\+::\+Module\+::\+Audio\+Raylib}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+lib/engine/includes/\mbox{\hyperlink{IAudio_8hpp}{IAudio.\+hpp}}\end{DoxyCompactItemize}

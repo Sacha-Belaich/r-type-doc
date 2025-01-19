@@ -1,0 +1,111 @@
+\doxysection{lib/engine/core/debug/\+Konsole.hpp File Reference}
+\hypertarget{Konsole_8hpp}{}\label{Konsole_8hpp}\index{lib/engine/core/debug/Konsole.hpp@{lib/engine/core/debug/Konsole.hpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$queue$>$}\newline
+{\ttfamily \#include $<$condition\+\_\+variable$>$}\newline
+{\ttfamily \#include $<$termios.\+h$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classEngine_1_1Debug_1_1Konsole}{Engine\+::\+Debug\+::\+Konsole}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceEngine}{Engine}}
+\item 
+namespace \mbox{\hyperlink{namespaceEngine_1_1Debug}{Engine\+::\+Debug}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{Konsole_8hpp_ab702106cf3b3e96750b6845ded4e0299}{RESET}}~"{}\textbackslash{}033\mbox{[}0m"{}
+\item 
+\#define \mbox{\hyperlink{Konsole_8hpp_a7b3b25cba33b07c303f3060fe41887f6}{BLACK}}~"{}\textbackslash{}033\mbox{[}30m"{}
+\item 
+\#define \mbox{\hyperlink{Konsole_8hpp_a8d23feea868a983c8c2b661e1e16972f}{RED}}~"{}\textbackslash{}033\mbox{[}31m"{}
+\item 
+\#define \mbox{\hyperlink{Konsole_8hpp_acfbc006ea433ad708fdee3e82996e721}{GREEN}}~"{}\textbackslash{}033\mbox{[}32m"{}
+\item 
+\#define \mbox{\hyperlink{Konsole_8hpp_abf681265909adf3d3e8116c93c0ba179}{YELLOW}}~"{}\textbackslash{}033\mbox{[}33m"{}
+\item 
+\#define \mbox{\hyperlink{Konsole_8hpp_a79d10e672abb49ad63eeaa8aaef57c38}{BLUE}}~"{}\textbackslash{}033\mbox{[}34m"{}
+\item 
+\#define \mbox{\hyperlink{Konsole_8hpp_a6f699060902f800f12aaae150f3a708e}{MAGENTA}}~"{}\textbackslash{}033\mbox{[}35m"{}
+\item 
+\#define \mbox{\hyperlink{Konsole_8hpp_ad243f93c16bc4c1d3e0a13b84421d760}{CYAN}}~"{}\textbackslash{}033\mbox{[}36m"{}
+\item 
+\#define \mbox{\hyperlink{Konsole_8hpp_a87b537f5fa5c109d3c05c13d6b18f382}{WHITE}}~"{}\textbackslash{}033\mbox{[}37m"{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespaceEngine_1_1Debug_ac0f1444aa94ddb33898683a4bb792a31}{Engine\+::\+Debug\+::\+Level}} \{ \newline
+\mbox{\hyperlink{namespaceEngine_1_1Debug_ac0f1444aa94ddb33898683a4bb792a31af6b5d54c377cfdc70ce537f3b4d8acac}{Engine\+::\+Debug\+::\+DEFAULT}}
+, \mbox{\hyperlink{namespaceEngine_1_1Debug_ac0f1444aa94ddb33898683a4bb792a31a00e1aac584968344abe207af4ccc2583}{Engine\+::\+Debug\+::\+INFO}}
+, \mbox{\hyperlink{namespaceEngine_1_1Debug_ac0f1444aa94ddb33898683a4bb792a31a66edc0506e388bc122f98f2079d97582}{Engine\+::\+Debug\+::\+WARNING}}
+, \mbox{\hyperlink{namespaceEngine_1_1Debug_ac0f1444aa94ddb33898683a4bb792a31a6ea0e96bcc43bc4be00875cdb6de54bc}{Engine\+::\+Debug\+::\+ERROR}}
+, \newline
+\mbox{\hyperlink{namespaceEngine_1_1Debug_ac0f1444aa94ddb33898683a4bb792a31a585bcb949f3eb11455d89119fcf64d69}{Engine\+::\+Debug\+::\+SPECIAL}}
+, \mbox{\hyperlink{namespaceEngine_1_1Debug_ac0f1444aa94ddb33898683a4bb792a31a17cd02ab6be56378b18ce2d94899f6e6}{Engine\+::\+Debug\+::\+MAX}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{Konsole_8hpp_a7b3b25cba33b07c303f3060fe41887f6}\label{Konsole_8hpp_a7b3b25cba33b07c303f3060fe41887f6} 
+\index{Konsole.hpp@{Konsole.hpp}!BLACK@{BLACK}}
+\index{BLACK@{BLACK}!Konsole.hpp@{Konsole.hpp}}
+\doxysubsubsection{\texorpdfstring{BLACK}{BLACK}}
+{\footnotesize\ttfamily \#define BLACK~"{}\textbackslash{}033\mbox{[}30m"{}}
+
+\Hypertarget{Konsole_8hpp_a79d10e672abb49ad63eeaa8aaef57c38}\label{Konsole_8hpp_a79d10e672abb49ad63eeaa8aaef57c38} 
+\index{Konsole.hpp@{Konsole.hpp}!BLUE@{BLUE}}
+\index{BLUE@{BLUE}!Konsole.hpp@{Konsole.hpp}}
+\doxysubsubsection{\texorpdfstring{BLUE}{BLUE}}
+{\footnotesize\ttfamily \#define BLUE~"{}\textbackslash{}033\mbox{[}34m"{}}
+
+\Hypertarget{Konsole_8hpp_ad243f93c16bc4c1d3e0a13b84421d760}\label{Konsole_8hpp_ad243f93c16bc4c1d3e0a13b84421d760} 
+\index{Konsole.hpp@{Konsole.hpp}!CYAN@{CYAN}}
+\index{CYAN@{CYAN}!Konsole.hpp@{Konsole.hpp}}
+\doxysubsubsection{\texorpdfstring{CYAN}{CYAN}}
+{\footnotesize\ttfamily \#define CYAN~"{}\textbackslash{}033\mbox{[}36m"{}}
+
+\Hypertarget{Konsole_8hpp_acfbc006ea433ad708fdee3e82996e721}\label{Konsole_8hpp_acfbc006ea433ad708fdee3e82996e721} 
+\index{Konsole.hpp@{Konsole.hpp}!GREEN@{GREEN}}
+\index{GREEN@{GREEN}!Konsole.hpp@{Konsole.hpp}}
+\doxysubsubsection{\texorpdfstring{GREEN}{GREEN}}
+{\footnotesize\ttfamily \#define GREEN~"{}\textbackslash{}033\mbox{[}32m"{}}
+
+\Hypertarget{Konsole_8hpp_a6f699060902f800f12aaae150f3a708e}\label{Konsole_8hpp_a6f699060902f800f12aaae150f3a708e} 
+\index{Konsole.hpp@{Konsole.hpp}!MAGENTA@{MAGENTA}}
+\index{MAGENTA@{MAGENTA}!Konsole.hpp@{Konsole.hpp}}
+\doxysubsubsection{\texorpdfstring{MAGENTA}{MAGENTA}}
+{\footnotesize\ttfamily \#define MAGENTA~"{}\textbackslash{}033\mbox{[}35m"{}}
+
+\Hypertarget{Konsole_8hpp_a8d23feea868a983c8c2b661e1e16972f}\label{Konsole_8hpp_a8d23feea868a983c8c2b661e1e16972f} 
+\index{Konsole.hpp@{Konsole.hpp}!RED@{RED}}
+\index{RED@{RED}!Konsole.hpp@{Konsole.hpp}}
+\doxysubsubsection{\texorpdfstring{RED}{RED}}
+{\footnotesize\ttfamily \#define RED~"{}\textbackslash{}033\mbox{[}31m"{}}
+
+\Hypertarget{Konsole_8hpp_ab702106cf3b3e96750b6845ded4e0299}\label{Konsole_8hpp_ab702106cf3b3e96750b6845ded4e0299} 
+\index{Konsole.hpp@{Konsole.hpp}!RESET@{RESET}}
+\index{RESET@{RESET}!Konsole.hpp@{Konsole.hpp}}
+\doxysubsubsection{\texorpdfstring{RESET}{RESET}}
+{\footnotesize\ttfamily \#define RESET~"{}\textbackslash{}033\mbox{[}0m"{}}
+
+\Hypertarget{Konsole_8hpp_a87b537f5fa5c109d3c05c13d6b18f382}\label{Konsole_8hpp_a87b537f5fa5c109d3c05c13d6b18f382} 
+\index{Konsole.hpp@{Konsole.hpp}!WHITE@{WHITE}}
+\index{WHITE@{WHITE}!Konsole.hpp@{Konsole.hpp}}
+\doxysubsubsection{\texorpdfstring{WHITE}{WHITE}}
+{\footnotesize\ttfamily \#define WHITE~"{}\textbackslash{}033\mbox{[}37m"{}}
+
+\Hypertarget{Konsole_8hpp_abf681265909adf3d3e8116c93c0ba179}\label{Konsole_8hpp_abf681265909adf3d3e8116c93c0ba179} 
+\index{Konsole.hpp@{Konsole.hpp}!YELLOW@{YELLOW}}
+\index{YELLOW@{YELLOW}!Konsole.hpp@{Konsole.hpp}}
+\doxysubsubsection{\texorpdfstring{YELLOW}{YELLOW}}
+{\footnotesize\ttfamily \#define YELLOW~"{}\textbackslash{}033\mbox{[}33m"{}}
+

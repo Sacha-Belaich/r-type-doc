@@ -1,0 +1,46 @@
+\doxysection{Asset\+Manager.\+hpp}
+\hypertarget{AssetManager_8hpp_source}{}\label{AssetManager_8hpp_source}\index{lib/graphical/asset\_manager/AssetManager.hpp@{lib/graphical/asset\_manager/AssetManager.hpp}}
+\mbox{\hyperlink{AssetManager_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2024}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ r-\/type}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ AssetManager.hpp}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <any>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceGraphical}{Graphical}}\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classGraphical_1_1AssetManager}{AssetManager}}\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ Function>}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classGraphical_1_1AssetManager_acc1a0036ba81438fb52fe0c49e89a2ad}{AssetManager}}(Function\ \&\&f)\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classGraphical_1_1AssetManager_abb87d98884ab5dea647c3ea17dddd2b9}{\_ctor}}\ =\ std::forward<Function>(f);}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGraphical_1_1AssetManager_a19b346c7eec85c680a05d161047d35b2}{AssetManager}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classGraphical_1_1AssetManager}{AssetManager}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGraphical_1_1AssetManager_ab24faf4844917529ef89ec1d01e135db}{AssetManager}}(\mbox{\hyperlink{classGraphical_1_1AssetManager}{AssetManager}}\ \&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceGraphical_a028209aca40d8b0d34872f3297183452a8036ece61982a8a371a9c9e8fb276093}{T}}\ \&\mbox{\hyperlink{classGraphical_1_1AssetManager_a4a004697a13548dc673294c74b3244e9}{operator[]}}(\textcolor{keyword}{const}\ std::string\ \&path)\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{classGraphical_1_1AssetManager_a02c2ea3b2b9065f9e139b380efa79782}{\_assets}}.contains(path))\ \mbox{\hyperlink{classGraphical_1_1AssetManager_ae45a0c75b2f5a012cec5764adff01ab2}{emplace}}(path);}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classGraphical_1_1AssetManager_a02c2ea3b2b9065f9e139b380efa79782}{\_assets}}[path];}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGraphical_1_1AssetManager_ae45a0c75b2f5a012cec5764adff01ab2}{emplace}}(\textcolor{keyword}{const}\ std::string\ \&path)\ \{\ \mbox{\hyperlink{classGraphical_1_1AssetManager_a02c2ea3b2b9065f9e139b380efa79782}{\_assets}}[path]\ =\ \mbox{\hyperlink{classGraphical_1_1AssetManager_abb87d98884ab5dea647c3ea17dddd2b9}{\_ctor}}(path);\ \}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGraphical_1_1AssetManager_a78fc1a12bb2258c2eef42b41f28a14e7}{destroy}}(\textcolor{keyword}{const}\ std::string\ \&path)\ \{\ \mbox{\hyperlink{classGraphical_1_1AssetManager_a02c2ea3b2b9065f9e139b380efa79782}{\_assets}}.erase(path);\ \}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ std::unordered\_map<std::string,\ T>\ \mbox{\hyperlink{classGraphical_1_1AssetManager_a02c2ea3b2b9065f9e139b380efa79782}{\_assets}};}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ std::function<\mbox{\hyperlink{namespaceGraphical_a028209aca40d8b0d34872f3297183452a8036ece61982a8a371a9c9e8fb276093}{T}}(\textcolor{keyword}{const}\ std::string\ \&)>\ \mbox{\hyperlink{classGraphical_1_1AssetManager_abb87d98884ab5dea647c3ea17dddd2b9}{\_ctor}};}
+\DoxyCodeLine{00039\ \};}
+\DoxyCodeLine{00040\ \}\ \ \textcolor{comment}{//\ namespace\ Graphical}}
+
+\end{DoxyCode}

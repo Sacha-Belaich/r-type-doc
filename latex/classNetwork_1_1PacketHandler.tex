@@ -1,0 +1,145 @@
+\doxysection{Network\+::Packet\+Handler Class Reference}
+\hypertarget{classNetwork_1_1PacketHandler}{}\label{classNetwork_1_1PacketHandler}\index{Network::PacketHandler@{Network::PacketHandler}}
+
+
+Handles the callbacks for packets.  
+
+
+
+
+{\ttfamily \#include $<$Packet\+Handler.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classNetwork_1_1PacketHandler_a4fb22e01fccdb9e92be25885a4562abb}{Packet\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classNetwork_1_1PacketHandler}{Packet\+Handler} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classNetwork_1_1PacketHandler_aa51a5a7ac9ef78bba9b28cb713b02c38}{\texorpdfstring{$\sim$}{\string~}\+Packet\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \doxylink{classNetwork_1_1PacketHandler}{Packet\+Handler} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNetwork_1_1PacketHandler_abcdb7d6ce3db44aed84dbb11d7c0a144}{set\+Packet\+Callback}} (uint16\+\_\+t command\+\_\+id, const std\+::function$<$ void(\mbox{\hyperlink{classNetwork_1_1Packet}{Packet}} \&)$>$ \&callback)
+\begin{DoxyCompactList}\small\item\em Registers a callback for a specific packet command ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNetwork_1_1PacketHandler_a5f6f742dd5c20f1d479815354974143f}{set\+Packet\+Callback}} (uint16\+\_\+t command\+\_\+id, const std\+::function$<$ void(\mbox{\hyperlink{classNetwork_1_1Packet}{Packet}} \&, uint16\+\_\+t)$>$ \&callback)
+\begin{DoxyCompactList}\small\item\em Registers a callback for a specific packet command ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNetwork_1_1PacketHandler_aa7ab1c16489ff18b5c73097d2ef10c20}{operator()}} (\mbox{\hyperlink{classNetwork_1_1Packet}{Packet}} \&packet)
+\begin{DoxyCompactList}\small\item\em Invokes the appropriate callback for the given packet. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNetwork_1_1PacketHandler_a51905a4fc5f8c4178cbe2f794e34de83}{operator()}} (\mbox{\hyperlink{classNetwork_1_1Packet}{Packet}} \&packet, uint16\+\_\+t client\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Invokes the appropriate callback for the given packet and client ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ uint16\+\_\+t, std\+::function$<$ void(\mbox{\hyperlink{classNetwork_1_1Packet}{Packet}} \&, uint16\+\_\+t)$>$ \mbox{\hyperlink{classNetwork_1_1PacketHandler_a0e46a4ccf1011869ea9e9ca65049de0e}{\+\_\+packet\+\_\+callbacks}} )
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles the callbacks for packets. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classNetwork_1_1PacketHandler_a4fb22e01fccdb9e92be25885a4562abb}\label{classNetwork_1_1PacketHandler_a4fb22e01fccdb9e92be25885a4562abb} 
+\index{Network::PacketHandler@{Network::PacketHandler}!PacketHandler@{PacketHandler}}
+\index{PacketHandler@{PacketHandler}!Network::PacketHandler@{Network::PacketHandler}}
+\doxysubsubsection{\texorpdfstring{PacketHandler()}{PacketHandler()}}
+{\footnotesize\ttfamily Network\+::\+Packet\+Handler\+::\+Packet\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Constructs a new \doxylink{classNetwork_1_1PacketHandler}{Packet\+Handler} object. 
+
+\Hypertarget{classNetwork_1_1PacketHandler_aa51a5a7ac9ef78bba9b28cb713b02c38}\label{classNetwork_1_1PacketHandler_aa51a5a7ac9ef78bba9b28cb713b02c38} 
+\index{Network::PacketHandler@{Network::PacketHandler}!````~PacketHandler@{\texorpdfstring{$\sim$}{\string~}PacketHandler}}
+\index{````~PacketHandler@{\texorpdfstring{$\sim$}{\string~}PacketHandler}!Network::PacketHandler@{Network::PacketHandler}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}PacketHandler()}{\string~PacketHandler()}}
+{\footnotesize\ttfamily Network\+::\+Packet\+Handler\+::\texorpdfstring{$\sim$}{\string~}\+Packet\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Destroys the \doxylink{classNetwork_1_1PacketHandler}{Packet\+Handler} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classNetwork_1_1PacketHandler_aa7ab1c16489ff18b5c73097d2ef10c20}\label{classNetwork_1_1PacketHandler_aa7ab1c16489ff18b5c73097d2ef10c20} 
+\index{Network::PacketHandler@{Network::PacketHandler}!operator()@{operator()}}
+\index{operator()@{operator()}!Network::PacketHandler@{Network::PacketHandler}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Network\+::\+Packet\+Handler\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNetwork_1_1Packet}{Packet}} \&}]{packet }\end{DoxyParamCaption})}
+
+
+
+Invokes the appropriate callback for the given packet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & The packet to process. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classNetwork_1_1PacketHandler_a51905a4fc5f8c4178cbe2f794e34de83}\label{classNetwork_1_1PacketHandler_a51905a4fc5f8c4178cbe2f794e34de83} 
+\index{Network::PacketHandler@{Network::PacketHandler}!operator()@{operator()}}
+\index{operator()@{operator()}!Network::PacketHandler@{Network::PacketHandler}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Network\+::\+Packet\+Handler\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNetwork_1_1Packet}{Packet}} \&}]{packet,  }\item[{uint16\+\_\+t}]{client\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Invokes the appropriate callback for the given packet and client ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & The packet to process. \\
+\hline
+{\em client\+\_\+id} & \doxylink{namespaceClient}{Client} id who sended the packet \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classNetwork_1_1PacketHandler_abcdb7d6ce3db44aed84dbb11d7c0a144}\label{classNetwork_1_1PacketHandler_abcdb7d6ce3db44aed84dbb11d7c0a144} 
+\index{Network::PacketHandler@{Network::PacketHandler}!setPacketCallback@{setPacketCallback}}
+\index{setPacketCallback@{setPacketCallback}!Network::PacketHandler@{Network::PacketHandler}}
+\doxysubsubsection{\texorpdfstring{setPacketCallback()}{setPacketCallback()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Network\+::\+Packet\+Handler\+::set\+Packet\+Callback (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{command\+\_\+id,  }\item[{const std\+::function$<$ void(\mbox{\hyperlink{classNetwork_1_1Packet}{Packet}} \&)$>$ \&}]{callback }\end{DoxyParamCaption})}
+
+
+
+Registers a callback for a specific packet command ID. 
+
+This overload allows the callback to access only the packet.
+
+
+\begin{DoxyParams}{Parameters}
+{\em command\+\_\+id} & The command ID to associate with the callback. \\
+\hline
+{\em callback} & A function to be invoked when a packet with the given command ID is received. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classNetwork_1_1PacketHandler_a5f6f742dd5c20f1d479815354974143f}\label{classNetwork_1_1PacketHandler_a5f6f742dd5c20f1d479815354974143f} 
+\index{Network::PacketHandler@{Network::PacketHandler}!setPacketCallback@{setPacketCallback}}
+\index{setPacketCallback@{setPacketCallback}!Network::PacketHandler@{Network::PacketHandler}}
+\doxysubsubsection{\texorpdfstring{setPacketCallback()}{setPacketCallback()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Network\+::\+Packet\+Handler\+::set\+Packet\+Callback (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{command\+\_\+id,  }\item[{const std\+::function$<$ void(\mbox{\hyperlink{classNetwork_1_1Packet}{Packet}} \&, uint16\+\_\+t)$>$ \&}]{callback }\end{DoxyParamCaption})}
+
+
+
+Registers a callback for a specific packet command ID. 
+
+This overload allows the callback to access the packet and the client ID.
+
+
+\begin{DoxyParams}{Parameters}
+{\em command\+\_\+id} & The command ID to associate with the callback. \\
+\hline
+{\em callback} & A function to be invoked when a packet with the given command ID is received. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classNetwork_1_1PacketHandler_a0e46a4ccf1011869ea9e9ca65049de0e}\label{classNetwork_1_1PacketHandler_a0e46a4ccf1011869ea9e9ca65049de0e} 
+\index{Network::PacketHandler@{Network::PacketHandler}!\_packet\_callbacks@{\_packet\_callbacks}}
+\index{\_packet\_callbacks@{\_packet\_callbacks}!Network::PacketHandler@{Network::PacketHandler}}
+\doxysubsubsection{\texorpdfstring{\_packet\_callbacks}{\_packet\_callbacks}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$uint16\+\_\+t, std\+::function$<$void (\mbox{\hyperlink{classNetwork_1_1Packet}{Packet}} \&, uint16\+\_\+t)$>$ Network\+::\+Packet\+Handler\+::\+\_\+packet\+\_\+callbacks) \hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/network/packet\+\_\+network/\mbox{\hyperlink{PacketHandler_8hpp}{Packet\+Handler.\+hpp}}\item 
+lib/network/packet\+\_\+network/\mbox{\hyperlink{PacketHandler_8cpp}{Packet\+Handler.\+cpp}}\end{DoxyCompactItemize}

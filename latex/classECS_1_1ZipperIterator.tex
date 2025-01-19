@@ -1,0 +1,277 @@
+\doxysection{ECS\+::Zipper\+Iterator\texorpdfstring{$<$}{<} Containers \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classECS_1_1ZipperIterator}{}\label{classECS_1_1ZipperIterator}\index{ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}}
+
+
+{\ttfamily \#include $<$Zipper\+Iterator.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Container $>$ }\\using \mbox{\hyperlink{classECS_1_1ZipperIterator_a91a127d4b674be248eb01674ee816e74}{iterator\+\_\+t}} = decltype(std\+::declval$<$Container$>$().begin())
+\item 
+{\footnotesize template$<$class Container $>$ }\\using \mbox{\hyperlink{classECS_1_1ZipperIterator_acac00405476a0976f08e286617be6a37}{it\+\_\+reference\+\_\+t}} = typename \mbox{\hyperlink{classECS_1_1ZipperIterator_a91a127d4b674be248eb01674ee816e74}{iterator\+\_\+t}}$<$Container$>$\mbox{\hyperlink{classECS_1_1ZipperIterator_a58a78af53b858f14786911cbd610f57f}{\+::reference}}
+\item 
+using \mbox{\hyperlink{classECS_1_1ZipperIterator_ae97523c7084388e12447481a174bb128}{value\+\_\+type}} = std\+::tuple$<$decltype(std\+::declval$<$\mbox{\hyperlink{classECS_1_1ZipperIterator_acac00405476a0976f08e286617be6a37}{it\+\_\+reference\+\_\+t}}$<$Containers$>$$>$().value()) \&...$>$
+\item 
+using \mbox{\hyperlink{classECS_1_1ZipperIterator_a58a78af53b858f14786911cbd610f57f}{reference}} = \mbox{\hyperlink{classECS_1_1ZipperIterator_ae97523c7084388e12447481a174bb128}{value\+\_\+type}} \&
+\item 
+using \mbox{\hyperlink{classECS_1_1ZipperIterator_acc83e562faff04348af8e8afd519fa6a}{pointer}} = \mbox{\hyperlink{classECS_1_1ZipperIterator_ae97523c7084388e12447481a174bb128}{value\+\_\+type}} \texorpdfstring{$\ast$}{*}
+\item 
+using \mbox{\hyperlink{classECS_1_1ZipperIterator_a65fffa507aa7ead1bab9153814e2a255}{difference\+\_\+type}} = std\+::size\+\_\+t
+\item 
+using \mbox{\hyperlink{classECS_1_1ZipperIterator_ad218149e9f5e540ddf37dad2c3801878}{iterator\+\_\+category}} = std\+::input\+\_\+iterator\+\_\+tag
+\item 
+using \mbox{\hyperlink{classECS_1_1ZipperIterator_acb887e2ed0227e92297d7b98c91cab09}{iterator\+\_\+tuple}} = std\+::tuple$<$\mbox{\hyperlink{classECS_1_1ZipperIterator_a91a127d4b674be248eb01674ee816e74}{iterator\+\_\+t}}$<$Containers$>$...$>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classECS_1_1ZipperIterator_ac76481a89c0a3f902dea337bf4ca7383}{Zipper\+Iterator}} (\mbox{\hyperlink{classECS_1_1ZipperIterator_acb887e2ed0227e92297d7b98c91cab09}{iterator\+\_\+tuple}} const \&it\+\_\+tuple, \mbox{\hyperlink{classECS_1_1ZipperIterator_acb887e2ed0227e92297d7b98c91cab09}{iterator\+\_\+tuple}} const \&end\+\_\+tuple, const std\+::size\+\_\+t max)
+\item 
+\mbox{\hyperlink{classECS_1_1ZipperIterator_a0ecbe9dde0343f32897f84dbd70cb1e4}{Zipper\+Iterator}} (\mbox{\hyperlink{classECS_1_1ZipperIterator}{Zipper\+Iterator}} const \&z)=default
+\item 
+\mbox{\hyperlink{classECS_1_1ZipperIterator}{Zipper\+Iterator}} \mbox{\hyperlink{classECS_1_1ZipperIterator_a6d53cc41c9e1689bc475bb2eb9bff559}{operator++}} ()
+\item 
+\mbox{\hyperlink{classECS_1_1ZipperIterator}{Zipper\+Iterator}} \mbox{\hyperlink{classECS_1_1ZipperIterator_ab084ca7afc99c0492c8d3c144e357e0a}{operator++}} (int)
+\item 
+\mbox{\hyperlink{classECS_1_1ZipperIterator_ae97523c7084388e12447481a174bb128}{value\+\_\+type}} \mbox{\hyperlink{classECS_1_1ZipperIterator_af71291c0ee28a7fd6c726de393fd323c}{operator\texorpdfstring{$\ast$}{*}}} ()
+\item 
+\mbox{\hyperlink{classECS_1_1ZipperIterator_ae97523c7084388e12447481a174bb128}{value\+\_\+type}} \mbox{\hyperlink{classECS_1_1ZipperIterator_a65e2b3d93fae7a90d464e4d6740b6962}{operator-\/$>$}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+friend \mbox{\hyperlink{classECS_1_1ZipperIterator_aa8321a3d7343d379756cda1a093d77a1}{Zipper$<$ Containers... $>$}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$std\+::size\+\_\+t... Is$>$ }\\void \mbox{\hyperlink{classECS_1_1ZipperIterator_a658b410d98378c2c2807de4e379481ca}{incr\+\_\+all}} (std\+::index\+\_\+sequence$<$ Is... $>$)
+\item 
+{\footnotesize template$<$std\+::size\+\_\+t... Is$>$ }\\bool \mbox{\hyperlink{classECS_1_1ZipperIterator_ac4e485e2398f2c09228c58e62ae592b1}{all\+\_\+set}} (std\+::index\+\_\+sequence$<$ Is... $>$)
+\item 
+{\footnotesize template$<$std\+::size\+\_\+t... Is$>$ }\\\mbox{\hyperlink{classECS_1_1ZipperIterator_ae97523c7084388e12447481a174bb128}{value\+\_\+type}} \mbox{\hyperlink{classECS_1_1ZipperIterator_a4a6221c1634b00462a62ff983e04a2c5}{to\+\_\+value}} (std\+::index\+\_\+sequence$<$ Is... $>$)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classECS_1_1ZipperIterator_acb887e2ed0227e92297d7b98c91cab09}{iterator\+\_\+tuple}} \mbox{\hyperlink{classECS_1_1ZipperIterator_a77a51ed3d57476ea59c9d9897d799225}{\+\_\+current}}
+\item 
+\mbox{\hyperlink{classECS_1_1ZipperIterator_acb887e2ed0227e92297d7b98c91cab09}{iterator\+\_\+tuple}} \mbox{\hyperlink{classECS_1_1ZipperIterator_a8a43a3c223d6b931fc23f18ba6d65ae7}{\+\_\+end}}
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classECS_1_1ZipperIterator_a6367bbf0708a6ae900d022069eac2d90}{\+\_\+max}}
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classECS_1_1ZipperIterator_a618cd15f559b6aeb3e0a8f59a56a9dff}{\+\_\+idx}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr std\+::index\+\_\+sequence\+\_\+for$<$ Containers... $>$ \mbox{\hyperlink{classECS_1_1ZipperIterator_a7ff581b4e0032cbb48d703bd66f5e9e9}{\+\_\+seq}} \{\}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classECS_1_1ZipperIterator_a5b2bddd2eb51644f6f5f6270335848cc}{operator==}} (\mbox{\hyperlink{classECS_1_1ZipperIterator}{Zipper\+Iterator}} const \&lhs, \mbox{\hyperlink{classECS_1_1ZipperIterator}{Zipper\+Iterator}} const \&rhs)
+\item 
+bool \mbox{\hyperlink{classECS_1_1ZipperIterator_a7ea9667bdbd6e42d487280a3c6456a05}{operator!=}} (\mbox{\hyperlink{classECS_1_1ZipperIterator}{Zipper\+Iterator}} const \&lhs, \mbox{\hyperlink{classECS_1_1ZipperIterator}{Zipper\+Iterator}} const \&rhs)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classECS_1_1ZipperIterator_a65fffa507aa7ead1bab9153814e2a255}\label{classECS_1_1ZipperIterator_a65fffa507aa7ead1bab9153814e2a255} 
+\index{ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}!difference\_type@{difference\_type}}
+\index{difference\_type@{difference\_type}!ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}}
+\doxysubsubsection{\texorpdfstring{difference\_type}{difference\_type}}
+{\footnotesize\ttfamily template$<$class... Containers$>$ \\
+using \mbox{\hyperlink{classECS_1_1ZipperIterator}{ECS\+::\+Zipper\+Iterator}}$<$ Containers $>$\+::difference\+\_\+type = std\+::size\+\_\+t}
+
+\Hypertarget{classECS_1_1ZipperIterator_acac00405476a0976f08e286617be6a37}\label{classECS_1_1ZipperIterator_acac00405476a0976f08e286617be6a37} 
+\index{ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}!it\_reference\_t@{it\_reference\_t}}
+\index{it\_reference\_t@{it\_reference\_t}!ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}}
+\doxysubsubsection{\texorpdfstring{it\_reference\_t}{it\_reference\_t}}
+{\footnotesize\ttfamily template$<$class... Containers$>$ \\
+template$<$class Container $>$ \\
+using \mbox{\hyperlink{classECS_1_1ZipperIterator}{ECS\+::\+Zipper\+Iterator}}$<$ Containers $>$\+::it\+\_\+reference\+\_\+t = typename \mbox{\hyperlink{classECS_1_1ZipperIterator_a91a127d4b674be248eb01674ee816e74}{iterator\+\_\+t}}$<$Container$>$\mbox{\hyperlink{classECS_1_1ZipperIterator_a58a78af53b858f14786911cbd610f57f}{\+::reference}}}
+
+\Hypertarget{classECS_1_1ZipperIterator_ad218149e9f5e540ddf37dad2c3801878}\label{classECS_1_1ZipperIterator_ad218149e9f5e540ddf37dad2c3801878} 
+\index{ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}!iterator\_category@{iterator\_category}}
+\index{iterator\_category@{iterator\_category}!ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}}
+\doxysubsubsection{\texorpdfstring{iterator\_category}{iterator\_category}}
+{\footnotesize\ttfamily template$<$class... Containers$>$ \\
+using \mbox{\hyperlink{classECS_1_1ZipperIterator}{ECS\+::\+Zipper\+Iterator}}$<$ Containers $>$\+::iterator\+\_\+category = std\+::input\+\_\+iterator\+\_\+tag}
+
+\Hypertarget{classECS_1_1ZipperIterator_a91a127d4b674be248eb01674ee816e74}\label{classECS_1_1ZipperIterator_a91a127d4b674be248eb01674ee816e74} 
+\index{ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}!iterator\_t@{iterator\_t}}
+\index{iterator\_t@{iterator\_t}!ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}}
+\doxysubsubsection{\texorpdfstring{iterator\_t}{iterator\_t}}
+{\footnotesize\ttfamily template$<$class... Containers$>$ \\
+template$<$class Container $>$ \\
+using \mbox{\hyperlink{classECS_1_1ZipperIterator}{ECS\+::\+Zipper\+Iterator}}$<$ Containers $>$\+::iterator\+\_\+t = decltype(std\+::declval$<$Container$>$().begin())}
+
+\Hypertarget{classECS_1_1ZipperIterator_acb887e2ed0227e92297d7b98c91cab09}\label{classECS_1_1ZipperIterator_acb887e2ed0227e92297d7b98c91cab09} 
+\index{ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}!iterator\_tuple@{iterator\_tuple}}
+\index{iterator\_tuple@{iterator\_tuple}!ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}}
+\doxysubsubsection{\texorpdfstring{iterator\_tuple}{iterator\_tuple}}
+{\footnotesize\ttfamily template$<$class... Containers$>$ \\
+using \mbox{\hyperlink{classECS_1_1ZipperIterator}{ECS\+::\+Zipper\+Iterator}}$<$ Containers $>$\+::iterator\+\_\+tuple = std\+::tuple$<$\mbox{\hyperlink{classECS_1_1ZipperIterator_a91a127d4b674be248eb01674ee816e74}{iterator\+\_\+t}}$<$Containers$>$...$>$}
+
+\Hypertarget{classECS_1_1ZipperIterator_acc83e562faff04348af8e8afd519fa6a}\label{classECS_1_1ZipperIterator_acc83e562faff04348af8e8afd519fa6a} 
+\index{ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}!pointer@{pointer}}
+\index{pointer@{pointer}!ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}}
+\doxysubsubsection{\texorpdfstring{pointer}{pointer}}
+{\footnotesize\ttfamily template$<$class... Containers$>$ \\
+using \mbox{\hyperlink{classECS_1_1ZipperIterator}{ECS\+::\+Zipper\+Iterator}}$<$ Containers $>$\+::pointer = \mbox{\hyperlink{classECS_1_1ZipperIterator_ae97523c7084388e12447481a174bb128}{value\+\_\+type}} \texorpdfstring{$\ast$}{*}}
+
+\Hypertarget{classECS_1_1ZipperIterator_a58a78af53b858f14786911cbd610f57f}\label{classECS_1_1ZipperIterator_a58a78af53b858f14786911cbd610f57f} 
+\index{ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}!reference@{reference}}
+\index{reference@{reference}!ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}}
+\doxysubsubsection{\texorpdfstring{reference}{reference}}
+{\footnotesize\ttfamily template$<$class... Containers$>$ \\
+using \mbox{\hyperlink{classECS_1_1ZipperIterator}{ECS\+::\+Zipper\+Iterator}}$<$ Containers $>$\+::reference = \mbox{\hyperlink{classECS_1_1ZipperIterator_ae97523c7084388e12447481a174bb128}{value\+\_\+type}} \&}
+
+\Hypertarget{classECS_1_1ZipperIterator_ae97523c7084388e12447481a174bb128}\label{classECS_1_1ZipperIterator_ae97523c7084388e12447481a174bb128} 
+\index{ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}!value\_type@{value\_type}}
+\index{value\_type@{value\_type}!ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}}
+\doxysubsubsection{\texorpdfstring{value\_type}{value\_type}}
+{\footnotesize\ttfamily template$<$class... Containers$>$ \\
+using \mbox{\hyperlink{classECS_1_1ZipperIterator}{ECS\+::\+Zipper\+Iterator}}$<$ Containers $>$\+::value\+\_\+type = std\+::tuple$<$decltype(std\+::declval$<$\mbox{\hyperlink{classECS_1_1ZipperIterator_acac00405476a0976f08e286617be6a37}{it\+\_\+reference\+\_\+t}}$<$Containers$>$$>$().value()) \&...$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classECS_1_1ZipperIterator_ac76481a89c0a3f902dea337bf4ca7383}\label{classECS_1_1ZipperIterator_ac76481a89c0a3f902dea337bf4ca7383} 
+\index{ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}!ZipperIterator@{ZipperIterator}}
+\index{ZipperIterator@{ZipperIterator}!ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}}
+\doxysubsubsection{\texorpdfstring{ZipperIterator()}{ZipperIterator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class... Containers$>$ \\
+\mbox{\hyperlink{classECS_1_1ZipperIterator}{ECS\+::\+Zipper\+Iterator}}$<$ Containers $>$\+::\+Zipper\+Iterator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classECS_1_1ZipperIterator_acb887e2ed0227e92297d7b98c91cab09}{iterator\+\_\+tuple}} const \&}]{it\+\_\+tuple,  }\item[{\mbox{\hyperlink{classECS_1_1ZipperIterator_acb887e2ed0227e92297d7b98c91cab09}{iterator\+\_\+tuple}} const \&}]{end\+\_\+tuple,  }\item[{const std\+::size\+\_\+t}]{max }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classECS_1_1ZipperIterator_a0ecbe9dde0343f32897f84dbd70cb1e4}\label{classECS_1_1ZipperIterator_a0ecbe9dde0343f32897f84dbd70cb1e4} 
+\index{ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}!ZipperIterator@{ZipperIterator}}
+\index{ZipperIterator@{ZipperIterator}!ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}}
+\doxysubsubsection{\texorpdfstring{ZipperIterator()}{ZipperIterator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class... Containers$>$ \\
+\mbox{\hyperlink{classECS_1_1ZipperIterator}{ECS\+::\+Zipper\+Iterator}}$<$ Containers $>$\+::\+Zipper\+Iterator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classECS_1_1ZipperIterator}{Zipper\+Iterator}}$<$ Containers $>$ const \&}]{z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classECS_1_1ZipperIterator_ac4e485e2398f2c09228c58e62ae592b1}\label{classECS_1_1ZipperIterator_ac4e485e2398f2c09228c58e62ae592b1} 
+\index{ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}!all\_set@{all\_set}}
+\index{all\_set@{all\_set}!ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}}
+\doxysubsubsection{\texorpdfstring{all\_set()}{all\_set()}}
+{\footnotesize\ttfamily template$<$class... Containers$>$ \\
+template$<$std\+::size\+\_\+t... Is$>$ \\
+bool \mbox{\hyperlink{classECS_1_1ZipperIterator}{ECS\+::\+Zipper\+Iterator}}$<$ Containers $>$\+::all\+\_\+set (\begin{DoxyParamCaption}\item[{std\+::index\+\_\+sequence$<$ Is... $>$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{classECS_1_1ZipperIterator_a658b410d98378c2c2807de4e379481ca}\label{classECS_1_1ZipperIterator_a658b410d98378c2c2807de4e379481ca} 
+\index{ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}!incr\_all@{incr\_all}}
+\index{incr\_all@{incr\_all}!ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}}
+\doxysubsubsection{\texorpdfstring{incr\_all()}{incr\_all()}}
+{\footnotesize\ttfamily template$<$class... Containers$>$ \\
+template$<$std\+::size\+\_\+t... Is$>$ \\
+void \mbox{\hyperlink{classECS_1_1ZipperIterator}{ECS\+::\+Zipper\+Iterator}}$<$ Containers $>$\+::incr\+\_\+all (\begin{DoxyParamCaption}\item[{std\+::index\+\_\+sequence$<$ Is... $>$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{classECS_1_1ZipperIterator_af71291c0ee28a7fd6c726de393fd323c}\label{classECS_1_1ZipperIterator_af71291c0ee28a7fd6c726de393fd323c} 
+\index{ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}}
+{\footnotesize\ttfamily template$<$class... Containers$>$ \\
+\mbox{\hyperlink{classECS_1_1ZipperIterator_ae97523c7084388e12447481a174bb128}{value\+\_\+type}} \mbox{\hyperlink{classECS_1_1ZipperIterator}{ECS\+::\+Zipper\+Iterator}}$<$ Containers $>$\+::operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classECS_1_1ZipperIterator_a6d53cc41c9e1689bc475bb2eb9bff559}\label{classECS_1_1ZipperIterator_a6d53cc41c9e1689bc475bb2eb9bff559} 
+\index{ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}!operator++@{operator++}}
+\index{operator++@{operator++}!ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class... Containers$>$ \\
+\mbox{\hyperlink{classECS_1_1ZipperIterator}{Zipper\+Iterator}} \mbox{\hyperlink{classECS_1_1ZipperIterator}{ECS\+::\+Zipper\+Iterator}}$<$ Containers $>$\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classECS_1_1ZipperIterator_ab084ca7afc99c0492c8d3c144e357e0a}\label{classECS_1_1ZipperIterator_ab084ca7afc99c0492c8d3c144e357e0a} 
+\index{ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}!operator++@{operator++}}
+\index{operator++@{operator++}!ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class... Containers$>$ \\
+\mbox{\hyperlink{classECS_1_1ZipperIterator}{Zipper\+Iterator}} \mbox{\hyperlink{classECS_1_1ZipperIterator}{ECS\+::\+Zipper\+Iterator}}$<$ Containers $>$\+::operator++ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classECS_1_1ZipperIterator_a65e2b3d93fae7a90d464e4d6740b6962}\label{classECS_1_1ZipperIterator_a65e2b3d93fae7a90d464e4d6740b6962} 
+\index{ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}}
+{\footnotesize\ttfamily template$<$class... Containers$>$ \\
+\mbox{\hyperlink{classECS_1_1ZipperIterator_ae97523c7084388e12447481a174bb128}{value\+\_\+type}} \mbox{\hyperlink{classECS_1_1ZipperIterator}{ECS\+::\+Zipper\+Iterator}}$<$ Containers $>$\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classECS_1_1ZipperIterator_a4a6221c1634b00462a62ff983e04a2c5}\label{classECS_1_1ZipperIterator_a4a6221c1634b00462a62ff983e04a2c5} 
+\index{ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}!to\_value@{to\_value}}
+\index{to\_value@{to\_value}!ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}}
+\doxysubsubsection{\texorpdfstring{to\_value()}{to\_value()}}
+{\footnotesize\ttfamily template$<$class... Containers$>$ \\
+template$<$std\+::size\+\_\+t... Is$>$ \\
+\mbox{\hyperlink{classECS_1_1ZipperIterator_ae97523c7084388e12447481a174bb128}{value\+\_\+type}} \mbox{\hyperlink{classECS_1_1ZipperIterator}{ECS\+::\+Zipper\+Iterator}}$<$ Containers $>$\+::to\+\_\+value (\begin{DoxyParamCaption}\item[{std\+::index\+\_\+sequence$<$ Is... $>$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{classECS_1_1ZipperIterator_a7ea9667bdbd6e42d487280a3c6456a05}\label{classECS_1_1ZipperIterator_a7ea9667bdbd6e42d487280a3c6456a05} 
+\index{ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}}
+\doxysubsubsection{\texorpdfstring{operator"!=}{operator!=}}
+{\footnotesize\ttfamily template$<$class... Containers$>$ \\
+bool operator!= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classECS_1_1ZipperIterator}{Zipper\+Iterator}}$<$ Containers $>$ const \&}]{lhs,  }\item[{\mbox{\hyperlink{classECS_1_1ZipperIterator}{Zipper\+Iterator}}$<$ Containers $>$ const \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\Hypertarget{classECS_1_1ZipperIterator_a5b2bddd2eb51644f6f5f6270335848cc}\label{classECS_1_1ZipperIterator_a5b2bddd2eb51644f6f5f6270335848cc} 
+\index{ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}}
+\doxysubsubsection{\texorpdfstring{operator==}{operator==}}
+{\footnotesize\ttfamily template$<$class... Containers$>$ \\
+bool operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classECS_1_1ZipperIterator}{Zipper\+Iterator}}$<$ Containers $>$ const \&}]{lhs,  }\item[{\mbox{\hyperlink{classECS_1_1ZipperIterator}{Zipper\+Iterator}}$<$ Containers $>$ const \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classECS_1_1ZipperIterator_a77a51ed3d57476ea59c9d9897d799225}\label{classECS_1_1ZipperIterator_a77a51ed3d57476ea59c9d9897d799225} 
+\index{ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}!\_current@{\_current}}
+\index{\_current@{\_current}!ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}}
+\doxysubsubsection{\texorpdfstring{\_current}{\_current}}
+{\footnotesize\ttfamily template$<$class... Containers$>$ \\
+\mbox{\hyperlink{classECS_1_1ZipperIterator_acb887e2ed0227e92297d7b98c91cab09}{iterator\+\_\+tuple}} \mbox{\hyperlink{classECS_1_1ZipperIterator}{ECS\+::\+Zipper\+Iterator}}$<$ Containers $>$\+::\+\_\+current\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classECS_1_1ZipperIterator_a8a43a3c223d6b931fc23f18ba6d65ae7}\label{classECS_1_1ZipperIterator_a8a43a3c223d6b931fc23f18ba6d65ae7} 
+\index{ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}!\_end@{\_end}}
+\index{\_end@{\_end}!ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}}
+\doxysubsubsection{\texorpdfstring{\_end}{\_end}}
+{\footnotesize\ttfamily template$<$class... Containers$>$ \\
+\mbox{\hyperlink{classECS_1_1ZipperIterator_acb887e2ed0227e92297d7b98c91cab09}{iterator\+\_\+tuple}} \mbox{\hyperlink{classECS_1_1ZipperIterator}{ECS\+::\+Zipper\+Iterator}}$<$ Containers $>$\+::\+\_\+end\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classECS_1_1ZipperIterator_a618cd15f559b6aeb3e0a8f59a56a9dff}\label{classECS_1_1ZipperIterator_a618cd15f559b6aeb3e0a8f59a56a9dff} 
+\index{ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}!\_idx@{\_idx}}
+\index{\_idx@{\_idx}!ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}}
+\doxysubsubsection{\texorpdfstring{\_idx}{\_idx}}
+{\footnotesize\ttfamily template$<$class... Containers$>$ \\
+std\+::size\+\_\+t \mbox{\hyperlink{classECS_1_1ZipperIterator}{ECS\+::\+Zipper\+Iterator}}$<$ Containers $>$\+::\+\_\+idx\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classECS_1_1ZipperIterator_a6367bbf0708a6ae900d022069eac2d90}\label{classECS_1_1ZipperIterator_a6367bbf0708a6ae900d022069eac2d90} 
+\index{ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}!\_max@{\_max}}
+\index{\_max@{\_max}!ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}}
+\doxysubsubsection{\texorpdfstring{\_max}{\_max}}
+{\footnotesize\ttfamily template$<$class... Containers$>$ \\
+std\+::size\+\_\+t \mbox{\hyperlink{classECS_1_1ZipperIterator}{ECS\+::\+Zipper\+Iterator}}$<$ Containers $>$\+::\+\_\+max\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classECS_1_1ZipperIterator_a7ff581b4e0032cbb48d703bd66f5e9e9}\label{classECS_1_1ZipperIterator_a7ff581b4e0032cbb48d703bd66f5e9e9} 
+\index{ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}!\_seq@{\_seq}}
+\index{\_seq@{\_seq}!ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}}
+\doxysubsubsection{\texorpdfstring{\_seq}{\_seq}}
+{\footnotesize\ttfamily template$<$class... Containers$>$ \\
+constexpr std\+::index\+\_\+sequence\+\_\+for$<$Containers...$>$ \mbox{\hyperlink{classECS_1_1ZipperIterator}{ECS\+::\+Zipper\+Iterator}}$<$ Containers $>$\+::\+\_\+seq \{\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [private]}}
+
+\Hypertarget{classECS_1_1ZipperIterator_aa8321a3d7343d379756cda1a093d77a1}\label{classECS_1_1ZipperIterator_aa8321a3d7343d379756cda1a093d77a1} 
+\index{ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}!Zipper$<$ Containers... $>$@{Zipper$<$ Containers... $>$}}
+\index{Zipper$<$ Containers... $>$@{Zipper$<$ Containers... $>$}!ECS::ZipperIterator$<$ Containers $>$@{ECS::ZipperIterator$<$ Containers $>$}}
+\doxysubsubsection{\texorpdfstring{Zipper$<$ Containers... $>$}{Zipper< Containers... >}}
+{\footnotesize\ttfamily template$<$class... Containers$>$ \\
+friend \mbox{\hyperlink{classECS_1_1ZipperIterator}{ECS\+::\+Zipper\+Iterator}}$<$ Containers $>$\+::\+Zipper$<$ Containers... $>$}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+lib/ecs/includes/\mbox{\hyperlink{ZipperIterator_8hpp}{Zipper\+Iterator.\+hpp}}\end{DoxyCompactItemize}

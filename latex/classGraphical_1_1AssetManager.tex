@@ -1,0 +1,100 @@
+\doxysection{Graphical\+::Asset\+Manager\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classGraphical_1_1AssetManager}{}\label{classGraphical_1_1AssetManager}\index{Graphical::AssetManager$<$ T $>$@{Graphical::AssetManager$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Asset\+Manager.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Function $>$ }\\\mbox{\hyperlink{classGraphical_1_1AssetManager_acc1a0036ba81438fb52fe0c49e89a2ad}{Asset\+Manager}} (Function \&\&f)
+\item 
+\mbox{\hyperlink{classGraphical_1_1AssetManager_a19b346c7eec85c680a05d161047d35b2}{Asset\+Manager}} (const \mbox{\hyperlink{classGraphical_1_1AssetManager}{Asset\+Manager}} \&)=delete
+\item 
+\mbox{\hyperlink{classGraphical_1_1AssetManager_ab24faf4844917529ef89ec1d01e135db}{Asset\+Manager}} (\mbox{\hyperlink{classGraphical_1_1AssetManager}{Asset\+Manager}} \&\&)=delete
+\item 
+\mbox{\hyperlink{namespaceGraphical_a028209aca40d8b0d34872f3297183452a8036ece61982a8a371a9c9e8fb276093}{T}} \& \mbox{\hyperlink{classGraphical_1_1AssetManager_a4a004697a13548dc673294c74b3244e9}{operator\mbox{[}$\,$\mbox{]}}} (const std\+::string \&path)
+\item 
+void \mbox{\hyperlink{classGraphical_1_1AssetManager_ae45a0c75b2f5a012cec5764adff01ab2}{emplace}} (const std\+::string \&path)
+\item 
+void \mbox{\hyperlink{classGraphical_1_1AssetManager_a78fc1a12bb2258c2eef42b41f28a14e7}{destroy}} (const std\+::string \&path)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{namespaceGraphical_a028209aca40d8b0d34872f3297183452a8036ece61982a8a371a9c9e8fb276093}{T}} $>$ \mbox{\hyperlink{classGraphical_1_1AssetManager_a02c2ea3b2b9065f9e139b380efa79782}{\+\_\+assets}}
+\item 
+std\+::function$<$ \mbox{\hyperlink{namespaceGraphical_a028209aca40d8b0d34872f3297183452a8036ece61982a8a371a9c9e8fb276093}{T}}(const std\+::string \&) \mbox{\hyperlink{classGraphical_1_1AssetManager_abb87d98884ab5dea647c3ea17dddd2b9}{\+\_\+ctor}} )
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classGraphical_1_1AssetManager_acc1a0036ba81438fb52fe0c49e89a2ad}\label{classGraphical_1_1AssetManager_acc1a0036ba81438fb52fe0c49e89a2ad} 
+\index{Graphical::AssetManager$<$ T $>$@{Graphical::AssetManager$<$ T $>$}!AssetManager@{AssetManager}}
+\index{AssetManager@{AssetManager}!Graphical::AssetManager$<$ T $>$@{Graphical::AssetManager$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{AssetManager()}{AssetManager()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{namespaceGraphical_a028209aca40d8b0d34872f3297183452a8036ece61982a8a371a9c9e8fb276093}{T}} $>$ \\
+template$<$typename Function $>$ \\
+\mbox{\hyperlink{classGraphical_1_1AssetManager}{Graphical\+::\+Asset\+Manager}}$<$ \mbox{\hyperlink{namespaceGraphical_a028209aca40d8b0d34872f3297183452a8036ece61982a8a371a9c9e8fb276093}{T}} $>$\+::\+Asset\+Manager (\begin{DoxyParamCaption}\item[{Function \&\&}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\Hypertarget{classGraphical_1_1AssetManager_a19b346c7eec85c680a05d161047d35b2}\label{classGraphical_1_1AssetManager_a19b346c7eec85c680a05d161047d35b2} 
+\index{Graphical::AssetManager$<$ T $>$@{Graphical::AssetManager$<$ T $>$}!AssetManager@{AssetManager}}
+\index{AssetManager@{AssetManager}!Graphical::AssetManager$<$ T $>$@{Graphical::AssetManager$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{AssetManager()}{AssetManager()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{namespaceGraphical_a028209aca40d8b0d34872f3297183452a8036ece61982a8a371a9c9e8fb276093}{T}} $>$ \\
+\mbox{\hyperlink{classGraphical_1_1AssetManager}{Graphical\+::\+Asset\+Manager}}$<$ \mbox{\hyperlink{namespaceGraphical_a028209aca40d8b0d34872f3297183452a8036ece61982a8a371a9c9e8fb276093}{T}} $>$\+::\+Asset\+Manager (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classGraphical_1_1AssetManager}{Asset\+Manager}}$<$ \mbox{\hyperlink{namespaceGraphical_a028209aca40d8b0d34872f3297183452a8036ece61982a8a371a9c9e8fb276093}{T}} $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{classGraphical_1_1AssetManager_ab24faf4844917529ef89ec1d01e135db}\label{classGraphical_1_1AssetManager_ab24faf4844917529ef89ec1d01e135db} 
+\index{Graphical::AssetManager$<$ T $>$@{Graphical::AssetManager$<$ T $>$}!AssetManager@{AssetManager}}
+\index{AssetManager@{AssetManager}!Graphical::AssetManager$<$ T $>$@{Graphical::AssetManager$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{AssetManager()}{AssetManager()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{namespaceGraphical_a028209aca40d8b0d34872f3297183452a8036ece61982a8a371a9c9e8fb276093}{T}} $>$ \\
+\mbox{\hyperlink{classGraphical_1_1AssetManager}{Graphical\+::\+Asset\+Manager}}$<$ \mbox{\hyperlink{namespaceGraphical_a028209aca40d8b0d34872f3297183452a8036ece61982a8a371a9c9e8fb276093}{T}} $>$\+::\+Asset\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGraphical_1_1AssetManager}{Asset\+Manager}}$<$ \mbox{\hyperlink{namespaceGraphical_a028209aca40d8b0d34872f3297183452a8036ece61982a8a371a9c9e8fb276093}{T}} $>$ \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classGraphical_1_1AssetManager_a78fc1a12bb2258c2eef42b41f28a14e7}\label{classGraphical_1_1AssetManager_a78fc1a12bb2258c2eef42b41f28a14e7} 
+\index{Graphical::AssetManager$<$ T $>$@{Graphical::AssetManager$<$ T $>$}!destroy@{destroy}}
+\index{destroy@{destroy}!Graphical::AssetManager$<$ T $>$@{Graphical::AssetManager$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{namespaceGraphical_a028209aca40d8b0d34872f3297183452a8036ece61982a8a371a9c9e8fb276093}{T}} $>$ \\
+void \mbox{\hyperlink{classGraphical_1_1AssetManager}{Graphical\+::\+Asset\+Manager}}$<$ \mbox{\hyperlink{namespaceGraphical_a028209aca40d8b0d34872f3297183452a8036ece61982a8a371a9c9e8fb276093}{T}} $>$\+::destroy (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classGraphical_1_1AssetManager_ae45a0c75b2f5a012cec5764adff01ab2}\label{classGraphical_1_1AssetManager_ae45a0c75b2f5a012cec5764adff01ab2} 
+\index{Graphical::AssetManager$<$ T $>$@{Graphical::AssetManager$<$ T $>$}!emplace@{emplace}}
+\index{emplace@{emplace}!Graphical::AssetManager$<$ T $>$@{Graphical::AssetManager$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{emplace()}{emplace()}}
+{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{namespaceGraphical_a028209aca40d8b0d34872f3297183452a8036ece61982a8a371a9c9e8fb276093}{T}} $>$ \\
+void \mbox{\hyperlink{classGraphical_1_1AssetManager}{Graphical\+::\+Asset\+Manager}}$<$ \mbox{\hyperlink{namespaceGraphical_a028209aca40d8b0d34872f3297183452a8036ece61982a8a371a9c9e8fb276093}{T}} $>$\+::emplace (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classGraphical_1_1AssetManager_a4a004697a13548dc673294c74b3244e9}\label{classGraphical_1_1AssetManager_a4a004697a13548dc673294c74b3244e9} 
+\index{Graphical::AssetManager$<$ T $>$@{Graphical::AssetManager$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Graphical::AssetManager$<$ T $>$@{Graphical::AssetManager$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{namespaceGraphical_a028209aca40d8b0d34872f3297183452a8036ece61982a8a371a9c9e8fb276093}{T}} $>$ \\
+\mbox{\hyperlink{namespaceGraphical_a028209aca40d8b0d34872f3297183452a8036ece61982a8a371a9c9e8fb276093}{T}} \& \mbox{\hyperlink{classGraphical_1_1AssetManager}{Graphical\+::\+Asset\+Manager}}$<$ \mbox{\hyperlink{namespaceGraphical_a028209aca40d8b0d34872f3297183452a8036ece61982a8a371a9c9e8fb276093}{T}} $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classGraphical_1_1AssetManager_a02c2ea3b2b9065f9e139b380efa79782}\label{classGraphical_1_1AssetManager_a02c2ea3b2b9065f9e139b380efa79782} 
+\index{Graphical::AssetManager$<$ T $>$@{Graphical::AssetManager$<$ T $>$}!\_assets@{\_assets}}
+\index{\_assets@{\_assets}!Graphical::AssetManager$<$ T $>$@{Graphical::AssetManager$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\_assets}{\_assets}}
+{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{namespaceGraphical_a028209aca40d8b0d34872f3297183452a8036ece61982a8a371a9c9e8fb276093}{T}} $>$ \\
+std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{namespaceGraphical_a028209aca40d8b0d34872f3297183452a8036ece61982a8a371a9c9e8fb276093}{T}}$>$ \mbox{\hyperlink{classGraphical_1_1AssetManager}{Graphical\+::\+Asset\+Manager}}$<$ \mbox{\hyperlink{namespaceGraphical_a028209aca40d8b0d34872f3297183452a8036ece61982a8a371a9c9e8fb276093}{T}} $>$\+::\+\_\+assets\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classGraphical_1_1AssetManager_abb87d98884ab5dea647c3ea17dddd2b9}\label{classGraphical_1_1AssetManager_abb87d98884ab5dea647c3ea17dddd2b9} 
+\index{Graphical::AssetManager$<$ T $>$@{Graphical::AssetManager$<$ T $>$}!\_ctor@{\_ctor}}
+\index{\_ctor@{\_ctor}!Graphical::AssetManager$<$ T $>$@{Graphical::AssetManager$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\_ctor}{\_ctor}}
+{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{namespaceGraphical_a028209aca40d8b0d34872f3297183452a8036ece61982a8a371a9c9e8fb276093}{T}} $>$ \\
+std\+::function$<$\mbox{\hyperlink{namespaceGraphical_a028209aca40d8b0d34872f3297183452a8036ece61982a8a371a9c9e8fb276093}{T}}(const std\+::string \&) \mbox{\hyperlink{classGraphical_1_1AssetManager}{Graphical\+::\+Asset\+Manager}}$<$ \mbox{\hyperlink{namespaceGraphical_a028209aca40d8b0d34872f3297183452a8036ece61982a8a371a9c9e8fb276093}{T}} $>$\+::\+\_\+ctor) \hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/graphical/asset\+\_\+manager/\mbox{\hyperlink{AssetManager_8hpp}{Asset\+Manager.\+hpp}}\item 
+lib/graphical/asset\+\_\+manager/\mbox{\hyperlink{AssetManager_8cpp}{Asset\+Manager.\+cpp}}\end{DoxyCompactItemize}

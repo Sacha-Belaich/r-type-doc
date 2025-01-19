@@ -1,0 +1,48 @@
+\doxysection{Indexed\+Zipper.\+hpp}
+\hypertarget{IndexedZipper_8hpp_source}{}\label{IndexedZipper_8hpp_source}\index{lib/ecs/includes/IndexedZipper.hpp@{lib/ecs/includes/IndexedZipper.hpp}}
+\mbox{\hyperlink{IndexedZipper_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2024}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ ecs}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ IndexedZipper.hpp}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IndexedZipperIterator_8hpp}{IndexedZipperIterator.hpp}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceECS}{ECS}}\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class}...\ Containers>}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classECS_1_1IndexedZipper}{IndexedZipper}}\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ public\ :}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classECS_1_1IndexedZipperIterator}{iterator}}\ =\ \mbox{\hyperlink{classECS_1_1IndexedZipperIterator}{IndexedZipperIterator}}<Containers...>;}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classECS_1_1IndexedZipper_ab4da0a76f195938488ca200b13291cf6}{iterator\_tuple}}\ =\ \textcolor{keyword}{typename}\ \mbox{\hyperlink{classECS_1_1IndexedZipperIterator_a9fc9b6ccf05d8be16e3401eca66c05e2}{iterator::iterator\_tuple}};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classECS_1_1IndexedZipper_ac4728c71c117ca88206dcf062ae1bfa8}{IndexedZipper}}(Containers\ \&...\ cs)}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classECS_1_1IndexedZipper_ac02b7f532b0509f7efaa43d67e5e48fe}{\_begin}}(std::make\_tuple(cs.\mbox{\hyperlink{classECS_1_1IndexedZipper_a4320598d1f76197686b587889fd3f0b3}{begin}}()...)),}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classECS_1_1IndexedZipper_ae78683b52be8881838395c4ae05d5a17}{\_end}}(std::make\_tuple(cs.\mbox{\hyperlink{classECS_1_1IndexedZipper_a22aa8566e4511e069de294dd9bc9c980}{end}}()...)),}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classECS_1_1IndexedZipper_ac418cd35a89da37e05cb00963a12ddf7}{\_size}}((std::min)(\{\textcolor{keyword}{static\_cast<}std::size\_t\textcolor{keyword}{>}(cs.size())...\}))\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classECS_1_1IndexedZipperIterator}{iterator}}\ \mbox{\hyperlink{classECS_1_1IndexedZipper_a4320598d1f76197686b587889fd3f0b3}{begin}}()\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classECS_1_1IndexedZipper_a43e0ed10489824fe432a0a7b3522b38e}{iterator}}(\mbox{\hyperlink{classECS_1_1IndexedZipper_ac02b7f532b0509f7efaa43d67e5e48fe}{\_begin}},\ \mbox{\hyperlink{classECS_1_1IndexedZipper_ae78683b52be8881838395c4ae05d5a17}{\_end}},\ \mbox{\hyperlink{classECS_1_1IndexedZipper_ac418cd35a89da37e05cb00963a12ddf7}{\_size}});}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classECS_1_1IndexedZipperIterator}{iterator}}\ \mbox{\hyperlink{classECS_1_1IndexedZipper_a22aa8566e4511e069de294dd9bc9c980}{end}}()\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ zipper\_iterator\ =\ \mbox{\hyperlink{classECS_1_1IndexedZipper_a43e0ed10489824fe432a0a7b3522b38e}{iterator}}(\mbox{\hyperlink{classECS_1_1IndexedZipper_ae78683b52be8881838395c4ae05d5a17}{\_end}},\ \mbox{\hyperlink{classECS_1_1IndexedZipper_ae78683b52be8881838395c4ae05d5a17}{\_end}},\ \mbox{\hyperlink{classECS_1_1IndexedZipper_ac418cd35a89da37e05cb00963a12ddf7}{\_size}});}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ zipper\_iterator.\_idx\ =\ \mbox{\hyperlink{classECS_1_1IndexedZipper_ac418cd35a89da37e05cb00963a12ddf7}{\_size}};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ zipper\_iterator;}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ private\ :}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classECS_1_1IndexedZipper_ab4da0a76f195938488ca200b13291cf6}{iterator\_tuple}}\ \mbox{\hyperlink{classECS_1_1IndexedZipper_ac02b7f532b0509f7efaa43d67e5e48fe}{\_begin}};}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classECS_1_1IndexedZipper_ab4da0a76f195938488ca200b13291cf6}{iterator\_tuple}}\ \mbox{\hyperlink{classECS_1_1IndexedZipper_ae78683b52be8881838395c4ae05d5a17}{\_end}};}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ std::size\_t\ \mbox{\hyperlink{classECS_1_1IndexedZipper_ac418cd35a89da37e05cb00963a12ddf7}{\_size}};}
+\DoxyCodeLine{00041\ \ \ \ \ \};}
+\DoxyCodeLine{00042\ \}}
+
+\end{DoxyCode}

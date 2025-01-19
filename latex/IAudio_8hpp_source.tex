@@ -1,0 +1,112 @@
+\doxysection{IAudio.\+hpp}
+\hypertarget{IAudio_8hpp_source}{}\label{IAudio_8hpp_source}\index{lib/engine/includes/IAudio.hpp@{lib/engine/includes/IAudio.hpp}}
+\mbox{\hyperlink{IAudio_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2025}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ IAudio.hpp}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ IAudio.hpp}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ R\_TYPE\_IAUDIO\_HPP}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ R\_TYPE\_IAUDIO\_HPP}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IModule_8hpp}{IModule.hpp}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceEngine_1_1Module}{Engine::Module}}\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structEngine_1_1Module_1_1Vector3f}{Vector3f}}\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structEngine_1_1Module_1_1Vector3f_a393dd7e4b596504a11562a9242b472e3}{x}},\ \mbox{\hyperlink{structEngine_1_1Module_1_1Vector3f_a3c164c75418539251e3ee60195115ba3}{y}},\ \mbox{\hyperlink{structEngine_1_1Module_1_1Vector3f_a99223be13c14e7949b5a2c46409c7dbd}{z}};}
+\DoxyCodeLine{00019\ \ \ \ \ \};}
+\DoxyCodeLine{00020\ \textcolor{comment}{}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ \ \ \ \ *\ @interface\ IAudio}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Interface\ for\ audio\ management\ in\ the\ application.}}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ \ \ \ \ *\ The\ IAudio\ interface\ provides\ methods\ for\ handling\ sound\ effects\ (SFX)}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ \ \ \ \ *\ and\ music\ playback,\ including\ controls\ for\ volume,\ playback,\ pause,\ and\ stop.}}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classEngine_1_1Module_1_1IAudio}{IAudio}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classEngine_1_1Module_1_1IModule}{IModule}}\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{public}:\textcolor{comment}{}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{00031\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Play\ a\ sound\ effect.}}
+\DoxyCodeLine{00032\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00033\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ This\ method\ starts\ playing\ the\ specified\ sound\ effect\ file.}}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00035\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ filePath\ The\ path\ to\ the\ sound\ effect\ file\ to\ play.}}
+\DoxyCodeLine{00036\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1IAudio_a0138e4b0136ea1e214c918d028b5e69b}{playSFX}}(\textcolor{keyword}{const}\ std::string\ \&filePath)\ =\ 0;}
+\DoxyCodeLine{00038\ \textcolor{comment}{}}
+\DoxyCodeLine{00039\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{00040\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Stop\ a\ sound\ effect.}}
+\DoxyCodeLine{00041\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00042\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ This\ method\ stops\ the\ playback\ of\ the\ specified\ sound\ effect\ file.}}
+\DoxyCodeLine{00043\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00044\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ filePath\ The\ path\ to\ the\ sound\ effect\ file\ to\ stop.}}
+\DoxyCodeLine{00045\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1IAudio_a88cad7bd9881c2f63fe15c92e97b2b63}{stopSFX}}(\textcolor{keyword}{const}\ std::string\ \&filePath)\ =\ 0;}
+\DoxyCodeLine{00047\ \textcolor{comment}{}}
+\DoxyCodeLine{00048\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{00049\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Set\ the\ volume\ for\ a\ sound\ effect.}}
+\DoxyCodeLine{00050\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00051\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ This\ method\ adjusts\ the\ playback\ volume\ of\ the\ specified\ sound\ effect\ file.}}
+\DoxyCodeLine{00052\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00053\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ filePath\ The\ path\ to\ the\ sound\ effect\ file.}}
+\DoxyCodeLine{00054\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ volume\ The\ volume\ level\ to\ set\ (range:\ 0.0\ to\ 1.0).}}
+\DoxyCodeLine{00055\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1IAudio_a90623d76f617d60f61d6d3850eed4bc2}{setSFXVolume}}(\textcolor{keyword}{const}\ std::string\ \&filePath,\ \textcolor{keywordtype}{float}\ volume)\ =\ 0;}
+\DoxyCodeLine{00057\ \textcolor{comment}{}}
+\DoxyCodeLine{00058\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{00059\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Play\ a\ music\ track.}}
+\DoxyCodeLine{00060\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00061\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ This\ method\ starts\ playing\ the\ specified\ music\ file.}}
+\DoxyCodeLine{00062\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00063\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ filePath\ The\ path\ to\ the\ music\ file\ to\ play.}}
+\DoxyCodeLine{00064\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1IAudio_a46685d789141e37a014192eed2302e4f}{playMusic}}(\textcolor{keyword}{const}\ std::string\ \&filePath)\ =\ 0;}
+\DoxyCodeLine{00066\ \textcolor{comment}{}}
+\DoxyCodeLine{00067\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{00068\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Stop\ a\ music\ track.}}
+\DoxyCodeLine{00069\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00070\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ This\ method\ stops\ the\ playback\ of\ the\ specified\ music\ file.}}
+\DoxyCodeLine{00071\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00072\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ filePath\ The\ path\ to\ the\ music\ file\ to\ stop.}}
+\DoxyCodeLine{00073\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1IAudio_afd71a5abf0416f899cf101b0df1b5631}{stopMusic}}(\textcolor{keyword}{const}\ std::string\ \&filePath)\ =\ 0;}
+\DoxyCodeLine{00075\ \textcolor{comment}{}}
+\DoxyCodeLine{00076\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{00077\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Pause\ a\ music\ track.}}
+\DoxyCodeLine{00078\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00079\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ This\ method\ pauses\ the\ playback\ of\ the\ specified\ music\ file.}}
+\DoxyCodeLine{00080\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00081\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ filePath\ The\ path\ to\ the\ music\ file\ to\ pause.}}
+\DoxyCodeLine{00082\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1IAudio_af54e01e9209cc7a24a5e5e67460f524f}{pauseMusic}}(\textcolor{keyword}{const}\ std::string\ \&filePath)\ =\ 0;}
+\DoxyCodeLine{00084\ \textcolor{comment}{}}
+\DoxyCodeLine{00085\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{00086\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Resume\ a\ paused\ music\ track.}}
+\DoxyCodeLine{00087\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00088\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ This\ method\ resumes\ the\ playback\ of\ the\ specified\ music\ file\ from\ where\ it\ was\ paused.}}
+\DoxyCodeLine{00089\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00090\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ filePath\ The\ path\ to\ the\ music\ file\ to\ resume.}}
+\DoxyCodeLine{00091\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1IAudio_ae20a0d7dd3266610bd4b3332e9a1da48}{resumeMusic}}(\textcolor{keyword}{const}\ std::string\ \&filePath)\ =\ 0;}
+\DoxyCodeLine{00093\ \textcolor{comment}{}}
+\DoxyCodeLine{00094\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{00095\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Set\ the\ volume\ for\ a\ music\ track.}}
+\DoxyCodeLine{00096\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00097\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ This\ method\ adjusts\ the\ playback\ volume\ of\ the\ specified\ music\ file.}}
+\DoxyCodeLine{00098\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00099\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ filePath\ The\ path\ to\ the\ music\ file.}}
+\DoxyCodeLine{00100\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ volume\ The\ volume\ level\ to\ set\ (range:\ 0.0\ to\ 1.0).}}
+\DoxyCodeLine{00101\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEngine_1_1Module_1_1IAudio_a19c61d7c8c101e41efe0d57921dadb2e}{setMusicVolume}}(\textcolor{keyword}{const}\ std::string\ \&filePath,\ \textcolor{keywordtype}{float}\ volume)\ =\ 0;}
+\DoxyCodeLine{00103\ \ \ \ \ \};}
+\DoxyCodeLine{00104\ \}}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//R\_TYPE\_IAUDIO\_HPP}}
+
+\end{DoxyCode}

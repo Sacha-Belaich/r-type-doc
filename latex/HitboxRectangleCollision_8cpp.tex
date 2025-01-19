@@ -1,0 +1,24 @@
+\doxysection{server/src/systems/\+Hitbox\+Rectangle\+Collision.cpp File Reference}
+\hypertarget{HitboxRectangleCollision_8cpp}{}\label{HitboxRectangleCollision_8cpp}\index{server/src/systems/HitboxRectangleCollision.cpp@{server/src/systems/HitboxRectangleCollision.cpp}}
+{\ttfamily \#include "{}Hitbox\+Rectangle\+Collision.\+hpp"{}}\newline
+{\ttfamily \#include $<$Indexed\+Zipper.\+hpp$>$}\newline
+{\ttfamily \#include $<$components/\+Health.\+hpp$>$}\newline
+{\ttfamily \#include $<$components/\+Hitbox\+Plan.\+hpp$>$}\newline
+{\ttfamily \#include $<$components/\+Hitbox\+Rectangle.\+hpp$>$}\newline
+{\ttfamily \#include $<$components/\+Position.\+hpp$>$}\newline
+{\ttfamily \#include "{}../components/\+Entity\+Type.\+hpp"{}}\newline
+{\ttfamily \#include "{}../\+Core.\+hpp"{}}\newline
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceR__Type}{R\+\_\+\+Type}}
+\item 
+namespace \mbox{\hyperlink{namespaceR__Type_1_1System}{R\+\_\+\+Type\+::\+System}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{namespaceR__Type_1_1System_afe698ef2c378aa2a8757524b83188b5a}{R\+\_\+\+Type\+::\+System\+::check\+\_\+collision}} (const \mbox{\hyperlink{classECS_1_1Component_1_1Position}{ECS\+::\+Component\+::\+Position}} \&pos1, const \mbox{\hyperlink{classECS_1_1Component_1_1HitboxRectangle}{ECS\+::\+Component\+::\+Hitbox\+Rectangle}} \&rec1, const \mbox{\hyperlink{classECS_1_1Component_1_1Position}{ECS\+::\+Component\+::\+Position}} \&pos2, const \mbox{\hyperlink{classECS_1_1Component_1_1HitboxRectangle}{ECS\+::\+Component\+::\+Hitbox\+Rectangle}} \&rec2)
+\item 
+static void \mbox{\hyperlink{namespaceR__Type_1_1System_a4753e84b49acb63906b669cef98a79cf}{R\+\_\+\+Type\+::\+System\+::remove\+\_\+out\+\_\+of\+\_\+camera\+\_\+entity}} (const \mbox{\hyperlink{classECS_1_1SparseArray}{ECS\+::\+Sparse\+Array}}$<$ \mbox{\hyperlink{classECS_1_1Component_1_1Position}{ECS\+::\+Component\+::\+Position}} $>$ \&positions, const \mbox{\hyperlink{classECS_1_1SparseArray}{ECS\+::\+Sparse\+Array}}$<$ \mbox{\hyperlink{classECS_1_1Component_1_1HitboxRectangle}{ECS\+::\+Component\+::\+Hitbox\+Rectangle}} $>$ \&hitbox\+\_\+rectangles, \mbox{\hyperlink{classECS_1_1SparseArray}{ECS\+::\+Sparse\+Array}}$<$ \mbox{\hyperlink{classECS_1_1Component_1_1Health}{ECS\+::\+Component\+::\+Health}} $>$ \&healths, const \mbox{\hyperlink{classECS_1_1SparseArray}{ECS\+::\+Sparse\+Array}}$<$ \mbox{\hyperlink{classR__Type_1_1Component_1_1EntityType}{Component\+::\+Entity\+Type}} $>$ \&entity\+\_\+types)
+\end{DoxyCompactItemize}

@@ -1,0 +1,586 @@
+\doxysection{R\+\_\+\+Type\+::Core Class Reference}
+\hypertarget{classR__Type_1_1Core}{}\label{classR__Type_1_1Core}\index{R\_Type::Core@{R\_Type::Core}}
+
+
+{\ttfamily \#include $<$Core.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classR__Type_1_1Core_ab39806a2554eb2c67d0763f9f2146e72}{Core}} (const \mbox{\hyperlink{classR__Type_1_1Core}{Core}} \&ref)=delete
+\item 
+void \mbox{\hyperlink{classR__Type_1_1Core_a9601032d14c9bb7d82400a5af2032b55}{operator=}} (const \mbox{\hyperlink{classR__Type_1_1Core}{Core}} \&ref)=delete
+\item 
+\mbox{\hyperlink{classR__Type_1_1Core_a474a9f67a76fcfb093fb8e2e3263b111}{\texorpdfstring{$\sim$}{\string~}\+Core}} ()
+\item 
+void \mbox{\hyperlink{classR__Type_1_1Core_ab7f13f91f4d07600e8128f5bda55de80}{run}} ()
+\item 
+\mbox{\hyperlink{classGraphical_1_1IGraphical}{Graphical\+::\+IGraphical}} \& \mbox{\hyperlink{classR__Type_1_1Core_a6b682e05b5d037065f75fc36803316d9}{get\+Graph\+Lib}} ()
+\item 
+\mbox{\hyperlink{classEngine_1_1Module_1_1INetworkClient}{Engine\+::\+Module\+::\+INetwork\+Client}} \& \mbox{\hyperlink{classR__Type_1_1Core_a869b922b6ba5489e45f5816f1a7cf9bb}{get\+Network\+Lib}} ()
+\item 
+\mbox{\hyperlink{classNetwork_1_1PacketHandler}{Network\+::\+Packet\+Handler}} \& \mbox{\hyperlink{classR__Type_1_1Core_af0d14ec7054ee004d52530d36bd8d087}{get\+Packet\+Handler}} ()
+\item 
+\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \& \mbox{\hyperlink{classR__Type_1_1Core_a7a4e95db4f315851e5dc34ce70507a8c}{get\+Registry}} ()
+\item 
+void \mbox{\hyperlink{classR__Type_1_1Core_ad2f6d14b126dee70d0e7b43547180327}{load\+Scene}} (std\+::string name)
+\item 
+void \mbox{\hyperlink{classR__Type_1_1Core_a256e22838a1a10034adfa5d13267563f}{close\+Window}} (void)
+\item 
+bool \mbox{\hyperlink{classR__Type_1_1Core_a1d81f00c4ed81b94ff5e73052d6306b5}{\+\_\+connect\+To\+Server}} ()
+\item 
+std\+::string \mbox{\hyperlink{classR__Type_1_1Core_a58c50ab41af55a5ff2c40f3523a3c34f}{get\+Scene\+Name}} () const
+\item 
+\mbox{\hyperlink{classR__Type_1_1Core_ab39806a2554eb2c67d0763f9f2146e72}{Core}} (const \mbox{\hyperlink{classR__Type_1_1Core}{Core}} \&ref)=delete
+\item 
+void \mbox{\hyperlink{classR__Type_1_1Core_a9601032d14c9bb7d82400a5af2032b55}{operator=}} (const \mbox{\hyperlink{classR__Type_1_1Core}{Core}} \&ref)=delete
+\item 
+\mbox{\hyperlink{classR__Type_1_1Core_a474a9f67a76fcfb093fb8e2e3263b111}{\texorpdfstring{$\sim$}{\string~}\+Core}} ()
+\item 
+\mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{Engine\+::\+Module\+::\+INetwork\+Server}} \& \mbox{\hyperlink{classR__Type_1_1Core_a46094c92f8a393a430278d466a35ca8e}{get\+Network\+Lib}} () const
+\item 
+\mbox{\hyperlink{classNetwork_1_1PacketHandler}{Network\+::\+Packet\+Handler}} \& \mbox{\hyperlink{classR__Type_1_1Core_af0d14ec7054ee004d52530d36bd8d087}{get\+Packet\+Handler}} ()
+\item 
+bool \mbox{\hyperlink{classR__Type_1_1Core_a114b8806d1703ad62b98964b0ff5154e}{is\+Game\+Started}} () const
+\item 
+std\+::optional$<$ \mbox{\hyperlink{classECS_1_1Entity}{ECS\+::\+Entity}} $>$ \mbox{\hyperlink{classR__Type_1_1Core_ab9553f923c26cfae381ff06c896ef2d8}{get\+Camera}} () const
+\item 
+void \mbox{\hyperlink{classR__Type_1_1Core_ab7f13f91f4d07600e8128f5bda55de80}{run}} ()
+\item 
+void \mbox{\hyperlink{classR__Type_1_1Core_a3e19755b91170a35fa1c6da8493f42fc}{create\+Room}} (int room\+Id, size\+\_\+t max\+Players)
+\item 
+std\+::optional$<$ \mbox{\hyperlink{classRoomSystem}{Room\+System}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classR__Type_1_1Core_a02cfa5a4bf995c2721f827deb89aff9f}{get\+Room}} (int room\+Id)
+\item 
+void \mbox{\hyperlink{classR__Type_1_1Core_a3a706e212f44632b1b3794b0314e78b8}{remove\+Room}} (int room\+Id)
+\item 
+int \mbox{\hyperlink{classR__Type_1_1Core_a3880b966c3e03d98c3f69390b5e2d346}{assign\+Room}} ()
+\item 
+void \mbox{\hyperlink{classR__Type_1_1Core_a1141f6707b7ca8a28ac8e9de9745f5e5}{handle\+Player\+Join}} (uint16\+\_\+t client\+Id, int room\+Id)
+\item 
+void \mbox{\hyperlink{classR__Type_1_1Core_a9f86078fe6ba97793a929cc40c50e5fe}{handle\+Set\+Ready}} (uint16\+\_\+t client\+Id, int room\+Id, bool ready)
+\item 
+void \mbox{\hyperlink{classR__Type_1_1Core_ac011b676f1802c2a9de517469fcb9e9a}{handle\+Player\+Disconnect}} (uint16\+\_\+t client\+Id)
+\item 
+void \mbox{\hyperlink{classR__Type_1_1Core_a9604b26ba9ab7e2a32b701df3fce6403}{notify\+Room\+List\+Update}} ()
+\begin{DoxyCompactList}\small\item\em pas touche \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classR__Type_1_1Core_a70b99cae9e8ee6198535a6311608f162}{\+\_\+send\+Room\+Info\+To\+Client}} (uint16\+\_\+t client\+Id)
+\item 
+void \mbox{\hyperlink{classR__Type_1_1Core_af4032bddd9235c17752c666643981843}{update\+Room\+Clients}} (int room\+Id, uint16\+\_\+t client\+Id, bool add)
+\item 
+std\+::vector$<$ uint16\+\_\+t $>$ \mbox{\hyperlink{classR__Type_1_1Core_a56c4194cce47fda1c794780f0e17dbb4}{get\+Clients\+In\+Room}} (int room\+Id)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classR__Type_1_1Core}{Core}} \& \mbox{\hyperlink{classR__Type_1_1Core_a8c98dca8dfa1a1fa4369a7b31d3b547a}{get\+Instance}} (void)
+\item 
+static \mbox{\hyperlink{classR__Type_1_1Core}{Core}} \& \mbox{\hyperlink{classR__Type_1_1Core_a0b48830331cb6696a2fd287d5f347f49}{get\+Instance}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classR__Type_1_1Core_aea964735ce43ac1f367dd48658ef45f7}{change\+Scene}} ()
+\item 
+\mbox{\hyperlink{classR__Type_1_1Core_a21fbea4c29f09d9bb40f65431cea868a}{Core}} ()
+\item 
+void \mbox{\hyperlink{classR__Type_1_1Core_a0af43987297c2797948866e209d03f67}{innit\+Components\+And\+Systems}} (void)
+\item 
+void \mbox{\hyperlink{classR__Type_1_1Core_a78bf181c77634fc28825388d89f9cfbb}{innit\+Scenes}} (void)
+\item 
+void \mbox{\hyperlink{classR__Type_1_1Core_af8b3d2c0f94630a9d073c896e16c5715}{setup\+Packet\+Handler}} (void)
+\item 
+\mbox{\hyperlink{classR__Type_1_1Core_a21fbea4c29f09d9bb40f65431cea868a}{Core}} ()
+\item 
+void \mbox{\hyperlink{classR__Type_1_1Core_a1f43d98e0a9468e04b97bcbda6a0445a}{\+\_\+init\+Packet\+Handling}} ()
+\item 
+void \mbox{\hyperlink{classR__Type_1_1Core_a733e861e031274019a895602839b5b69}{\+\_\+add\+Lobby\+Systems}} ()
+\item 
+void \mbox{\hyperlink{classR__Type_1_1Core_ad86257091d8d51295947e71ac20c44da}{\+\_\+add\+Game\+Systems}} ()
+\item 
+void \mbox{\hyperlink{classR__Type_1_1Core_a260513ccdac756a84bc9fab764db6c2b}{\+\_\+start\+Game}} (int room\+Id)
+\item 
+void \mbox{\hyperlink{classR__Type_1_1Core_ad662a02471565540dc485784a4f60432}{\+\_\+add\+Lobby\+Packet\+Handlers}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classR__Type_1_1Core_ade332fd387ecfdb12449de284e93fbf8}{\+\_\+window\+Is\+Open}} = true
+\item 
+dylib \mbox{\hyperlink{classR__Type_1_1Core_af2af35ee5d294a445d1ce5f3b5ee3dab}{\+\_\+graph\+\_\+loader}}
+\item 
+\mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Engine\+::\+Core\+::\+Core}} \mbox{\hyperlink{classR__Type_1_1Core_ab1d6e21794b40c688b0f0a54d704f21c}{\+\_\+core}}
+\item 
+\mbox{\hyperlink{classEngine_1_1Core_1_1ModuleLoader}{Engine\+::\+Core\+::\+Module\+Loader}} \mbox{\hyperlink{classR__Type_1_1Core_a35b9d45bdb2bf47c99cd1f5956f19cf6}{\+\_\+module\+\_\+loader}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classGraphical_1_1IGraphical}{Graphical\+::\+IGraphical}} $>$ \mbox{\hyperlink{classR__Type_1_1Core_a6ccad8f589c7b1b0eb04bf2d73712c28}{\+\_\+graph\+\_\+lib}}
+\item 
+\mbox{\hyperlink{classEngine_1_1Module_1_1INetworkClient}{Engine\+::\+Module\+::\+INetwork\+Client}} \& \mbox{\hyperlink{classR__Type_1_1Core_a0698422523ebddc49b399fee8061acce}{\+\_\+network\+\_\+lib}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{classEngine_1_1Scene}{Engine\+::\+Scene}} $>$ \mbox{\hyperlink{classR__Type_1_1Core_aa24c4240527a5a4df1e6a257bebb8f48}{\+\_\+scenes}}
+\item 
+std\+::string \mbox{\hyperlink{classR__Type_1_1Core_aa84b97056e7d76c5dd4e47b30f163bec}{scene\+Name}}
+\item 
+std\+::string \mbox{\hyperlink{classR__Type_1_1Core_aab4fbf59f6bc4312214441c06f032e11}{new\+Scene}}
+\item 
+\mbox{\hyperlink{classNetwork_1_1PacketHandler}{Network\+::\+Packet\+Handler}} \mbox{\hyperlink{classR__Type_1_1Core_a367daa2ce3ed40bfbfee7be499e9af07}{\+\_\+packet\+\_\+handler}}
+\item 
+\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \mbox{\hyperlink{classR__Type_1_1Core_aefbbf3fdfa74d1231ddcdd5c5eba5cc4}{\+\_\+registry}}
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classR__Type_1_1Core_adb19870d737290e89e6290f09f330d7e}{\+\_\+my\+\_\+server\+\_\+id}} \{\}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{Engine\+::\+Module\+::\+INetwork\+Server}} $>$ \mbox{\hyperlink{classR__Type_1_1Core_a2fbe77646efee378b865ba6313164043}{\+\_\+network\+\_\+lib}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classEngine_1_1Module_1_1IPhysic}{Engine\+::\+Module\+::\+IPhysic}} $>$ \mbox{\hyperlink{classR__Type_1_1Core_abe676f295652aaa5e314d92e847671c7}{\+\_\+physic\+\_\+lib}}
+\item 
+std\+::optional$<$ \mbox{\hyperlink{classECS_1_1Entity}{ECS\+::\+Entity}} $>$ \mbox{\hyperlink{classR__Type_1_1Core_a261a4c59acac9059e8ce61c07c6b276e}{\+\_\+camera}}
+\item 
+bool \mbox{\hyperlink{classR__Type_1_1Core_a17a9d1bb3c7db8d6d2ac91d866e64498}{\+\_\+game\+\_\+started}} = false
+\item 
+std\+::unordered\+\_\+map$<$ uint16\+\_\+t, std\+::optional$<$ \mbox{\hyperlink{classECS_1_1Entity}{ECS\+::\+Entity}} $>$ $>$ \mbox{\hyperlink{classR__Type_1_1Core_ac462335a847637bb4bd7f116e687e80a}{\+\_\+lobby\+Players}}
+\item 
+std\+::unordered\+\_\+map$<$ uint16\+\_\+t, bool $>$ \mbox{\hyperlink{classR__Type_1_1Core_a983c98e5481a2d1717b95124e2ade3ee}{\+\_\+lobby\+Ready\+Status}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::size\+\_\+t, std\+::size\+\_\+t $>$ \mbox{\hyperlink{classR__Type_1_1Core_a61a1a529b3995c7b089ace1f8f4b20ce}{\+\_\+entity\+To\+Server\+Id}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::size\+\_\+t, std\+::size\+\_\+t $>$ \mbox{\hyperlink{classR__Type_1_1Core_ade60c0ee1565b6a1b9ea8addf6f152cc}{\+\_\+server\+Id\+To\+Entity}}
+\item 
+std\+::unordered\+\_\+map$<$ int, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classRoomSystem}{Room\+System}} $>$ $>$ \mbox{\hyperlink{classR__Type_1_1Core_a4a133582571edb032a768fcaa0f7731f}{\+\_\+rooms}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::function$<$ void(std\+::string)$>$ $>$ \mbox{\hyperlink{classR__Type_1_1Core_a2705027a7dadd5b0f66cdd92b8e0e0ba}{\+\_\+konsole\+\_\+calls}}
+\item 
+std\+::unordered\+\_\+map$<$ int, std\+::vector$<$ uint16\+\_\+t $>$ $>$ \mbox{\hyperlink{classR__Type_1_1Core_a69091212721f60071b4748de56a7108f}{room\+Clients}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classR__Type_1_1Core}{Core}} $>$ \mbox{\hyperlink{classR__Type_1_1Core_a83f0c37d8bf9cd384291484483efa7e3}{\+\_\+instance}} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classR__Type_1_1Core_ab39806a2554eb2c67d0763f9f2146e72}\label{classR__Type_1_1Core_ab39806a2554eb2c67d0763f9f2146e72} 
+\index{R\_Type::Core@{R\_Type::Core}!Core@{Core}}
+\index{Core@{Core}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{Core()}{Core()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily R\+\_\+\+Type\+::\+Core\+::\+Core (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classR__Type_1_1Core}{Core}} \&}]{ref }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{classR__Type_1_1Core_a474a9f67a76fcfb093fb8e2e3263b111}\label{classR__Type_1_1Core_a474a9f67a76fcfb093fb8e2e3263b111} 
+\index{R\_Type::Core@{R\_Type::Core}!````~Core@{\texorpdfstring{$\sim$}{\string~}Core}}
+\index{````~Core@{\texorpdfstring{$\sim$}{\string~}Core}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Core()}{\string~Core()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily R\+\_\+\+Type\+::\+Core\+::\texorpdfstring{$\sim$}{\string~}\+Core (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{classR__Type_1_1Core_a21fbea4c29f09d9bb40f65431cea868a}\label{classR__Type_1_1Core_a21fbea4c29f09d9bb40f65431cea868a} 
+\index{R\_Type::Core@{R\_Type::Core}!Core@{Core}}
+\index{Core@{Core}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{Core()}{Core()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily R\+\_\+\+Type\+::\+Core\+::\+Core (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classR__Type_1_1Core_ab39806a2554eb2c67d0763f9f2146e72}\label{classR__Type_1_1Core_ab39806a2554eb2c67d0763f9f2146e72} 
+\index{R\_Type::Core@{R\_Type::Core}!Core@{Core}}
+\index{Core@{Core}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{Core()}{Core()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily R\+\_\+\+Type\+::\+Core\+::\+Core (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classR__Type_1_1Core}{Core}} \&}]{ref }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{classR__Type_1_1Core_a474a9f67a76fcfb093fb8e2e3263b111}\label{classR__Type_1_1Core_a474a9f67a76fcfb093fb8e2e3263b111} 
+\index{R\_Type::Core@{R\_Type::Core}!````~Core@{\texorpdfstring{$\sim$}{\string~}Core}}
+\index{````~Core@{\texorpdfstring{$\sim$}{\string~}Core}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Core()}{\string~Core()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily R\+\_\+\+Type\+::\+Core\+::\texorpdfstring{$\sim$}{\string~}\+Core (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classR__Type_1_1Core_a21fbea4c29f09d9bb40f65431cea868a}\label{classR__Type_1_1Core_a21fbea4c29f09d9bb40f65431cea868a} 
+\index{R\_Type::Core@{R\_Type::Core}!Core@{Core}}
+\index{Core@{Core}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{Core()}{Core()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily R\+\_\+\+Type\+::\+Core\+::\+Core (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classR__Type_1_1Core_ad86257091d8d51295947e71ac20c44da}\label{classR__Type_1_1Core_ad86257091d8d51295947e71ac20c44da} 
+\index{R\_Type::Core@{R\_Type::Core}!\_addGameSystems@{\_addGameSystems}}
+\index{\_addGameSystems@{\_addGameSystems}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{\_addGameSystems()}{\_addGameSystems()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+Core\+::\+\_\+add\+Game\+Systems (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classR__Type_1_1Core_ad662a02471565540dc485784a4f60432}\label{classR__Type_1_1Core_ad662a02471565540dc485784a4f60432} 
+\index{R\_Type::Core@{R\_Type::Core}!\_addLobbyPacketHandlers@{\_addLobbyPacketHandlers}}
+\index{\_addLobbyPacketHandlers@{\_addLobbyPacketHandlers}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{\_addLobbyPacketHandlers()}{\_addLobbyPacketHandlers()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+Core\+::\+\_\+add\+Lobby\+Packet\+Handlers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classR__Type_1_1Core_a733e861e031274019a895602839b5b69}\label{classR__Type_1_1Core_a733e861e031274019a895602839b5b69} 
+\index{R\_Type::Core@{R\_Type::Core}!\_addLobbySystems@{\_addLobbySystems}}
+\index{\_addLobbySystems@{\_addLobbySystems}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{\_addLobbySystems()}{\_addLobbySystems()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+Core\+::\+\_\+add\+Lobby\+Systems (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classR__Type_1_1Core_a1d81f00c4ed81b94ff5e73052d6306b5}\label{classR__Type_1_1Core_a1d81f00c4ed81b94ff5e73052d6306b5} 
+\index{R\_Type::Core@{R\_Type::Core}!\_connectToServer@{\_connectToServer}}
+\index{\_connectToServer@{\_connectToServer}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{\_connectToServer()}{\_connectToServer()}}
+{\footnotesize\ttfamily bool R\+\_\+\+Type\+::\+Core\+::\+\_\+connect\+To\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classR__Type_1_1Core_a1f43d98e0a9468e04b97bcbda6a0445a}\label{classR__Type_1_1Core_a1f43d98e0a9468e04b97bcbda6a0445a} 
+\index{R\_Type::Core@{R\_Type::Core}!\_initPacketHandling@{\_initPacketHandling}}
+\index{\_initPacketHandling@{\_initPacketHandling}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{\_initPacketHandling()}{\_initPacketHandling()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+Core\+::\+\_\+init\+Packet\+Handling (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classR__Type_1_1Core_a70b99cae9e8ee6198535a6311608f162}\label{classR__Type_1_1Core_a70b99cae9e8ee6198535a6311608f162} 
+\index{R\_Type::Core@{R\_Type::Core}!\_sendRoomInfoToClient@{\_sendRoomInfoToClient}}
+\index{\_sendRoomInfoToClient@{\_sendRoomInfoToClient}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{\_sendRoomInfoToClient()}{\_sendRoomInfoToClient()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+Core\+::\+\_\+send\+Room\+Info\+To\+Client (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{client\+Id }\end{DoxyParamCaption})}
+
+\Hypertarget{classR__Type_1_1Core_a260513ccdac756a84bc9fab764db6c2b}\label{classR__Type_1_1Core_a260513ccdac756a84bc9fab764db6c2b} 
+\index{R\_Type::Core@{R\_Type::Core}!\_startGame@{\_startGame}}
+\index{\_startGame@{\_startGame}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{\_startGame()}{\_startGame()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+Core\+::\+\_\+start\+Game (\begin{DoxyParamCaption}\item[{int}]{room\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classR__Type_1_1Core_a3880b966c3e03d98c3f69390b5e2d346}\label{classR__Type_1_1Core_a3880b966c3e03d98c3f69390b5e2d346} 
+\index{R\_Type::Core@{R\_Type::Core}!assignRoom@{assignRoom}}
+\index{assignRoom@{assignRoom}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{assignRoom()}{assignRoom()}}
+{\footnotesize\ttfamily int R\+\_\+\+Type\+::\+Core\+::assign\+Room (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classR__Type_1_1Core_aea964735ce43ac1f367dd48658ef45f7}\label{classR__Type_1_1Core_aea964735ce43ac1f367dd48658ef45f7} 
+\index{R\_Type::Core@{R\_Type::Core}!changeScene@{changeScene}}
+\index{changeScene@{changeScene}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{changeScene()}{changeScene()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+Core\+::change\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classR__Type_1_1Core_a256e22838a1a10034adfa5d13267563f}\label{classR__Type_1_1Core_a256e22838a1a10034adfa5d13267563f} 
+\index{R\_Type::Core@{R\_Type::Core}!closeWindow@{closeWindow}}
+\index{closeWindow@{closeWindow}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{closeWindow()}{closeWindow()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+Core\+::close\+Window (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classR__Type_1_1Core_a3e19755b91170a35fa1c6da8493f42fc}\label{classR__Type_1_1Core_a3e19755b91170a35fa1c6da8493f42fc} 
+\index{R\_Type::Core@{R\_Type::Core}!createRoom@{createRoom}}
+\index{createRoom@{createRoom}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{createRoom()}{createRoom()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+Core\+::create\+Room (\begin{DoxyParamCaption}\item[{int}]{room\+Id,  }\item[{size\+\_\+t}]{max\+Players }\end{DoxyParamCaption})}
+
+\Hypertarget{classR__Type_1_1Core_ab9553f923c26cfae381ff06c896ef2d8}\label{classR__Type_1_1Core_ab9553f923c26cfae381ff06c896ef2d8} 
+\index{R\_Type::Core@{R\_Type::Core}!getCamera@{getCamera}}
+\index{getCamera@{getCamera}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{getCamera()}{getCamera()}}
+{\footnotesize\ttfamily std\+::optional$<$ \mbox{\hyperlink{classECS_1_1Entity}{ECS\+::\+Entity}} $>$ R\+\_\+\+Type\+::\+Core\+::get\+Camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classR__Type_1_1Core_a56c4194cce47fda1c794780f0e17dbb4}\label{classR__Type_1_1Core_a56c4194cce47fda1c794780f0e17dbb4} 
+\index{R\_Type::Core@{R\_Type::Core}!getClientsInRoom@{getClientsInRoom}}
+\index{getClientsInRoom@{getClientsInRoom}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{getClientsInRoom()}{getClientsInRoom()}}
+{\footnotesize\ttfamily std\+::vector$<$ uint16\+\_\+t $>$ R\+\_\+\+Type\+::\+Core\+::get\+Clients\+In\+Room (\begin{DoxyParamCaption}\item[{int}]{room\+Id }\end{DoxyParamCaption})}
+
+\Hypertarget{classR__Type_1_1Core_a6b682e05b5d037065f75fc36803316d9}\label{classR__Type_1_1Core_a6b682e05b5d037065f75fc36803316d9} 
+\index{R\_Type::Core@{R\_Type::Core}!getGraphLib@{getGraphLib}}
+\index{getGraphLib@{getGraphLib}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{getGraphLib()}{getGraphLib()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGraphical_1_1IGraphical}{Graphical\+::\+IGraphical}} \& R\+\_\+\+Type\+::\+Core\+::get\+Graph\+Lib (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classR__Type_1_1Core_a0b48830331cb6696a2fd287d5f347f49}\label{classR__Type_1_1Core_a0b48830331cb6696a2fd287d5f347f49} 
+\index{R\_Type::Core@{R\_Type::Core}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classR__Type_1_1Core}{Core}} \& R\+\_\+\+Type\+::\+Core\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classR__Type_1_1Core_a8c98dca8dfa1a1fa4369a7b31d3b547a}\label{classR__Type_1_1Core_a8c98dca8dfa1a1fa4369a7b31d3b547a} 
+\index{R\_Type::Core@{R\_Type::Core}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classR__Type_1_1Core}{Core}} \& R\+\_\+\+Type\+::\+Core\+::get\+Instance (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classR__Type_1_1Core_a869b922b6ba5489e45f5816f1a7cf9bb}\label{classR__Type_1_1Core_a869b922b6ba5489e45f5816f1a7cf9bb} 
+\index{R\_Type::Core@{R\_Type::Core}!getNetworkLib@{getNetworkLib}}
+\index{getNetworkLib@{getNetworkLib}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{getNetworkLib()}{getNetworkLib()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkClient}{Engine\+::\+Module\+::\+INetwork\+Client}} \& R\+\_\+\+Type\+::\+Core\+::get\+Network\+Lib (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classR__Type_1_1Core_a46094c92f8a393a430278d466a35ca8e}\label{classR__Type_1_1Core_a46094c92f8a393a430278d466a35ca8e} 
+\index{R\_Type::Core@{R\_Type::Core}!getNetworkLib@{getNetworkLib}}
+\index{getNetworkLib@{getNetworkLib}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{getNetworkLib()}{getNetworkLib()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{Engine\+::\+Module\+::\+INetwork\+Server}} \& R\+\_\+\+Type\+::\+Core\+::get\+Network\+Lib (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classR__Type_1_1Core_af0d14ec7054ee004d52530d36bd8d087}\label{classR__Type_1_1Core_af0d14ec7054ee004d52530d36bd8d087} 
+\index{R\_Type::Core@{R\_Type::Core}!getPacketHandler@{getPacketHandler}}
+\index{getPacketHandler@{getPacketHandler}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{getPacketHandler()}{getPacketHandler()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classNetwork_1_1PacketHandler}{Network\+::\+Packet\+Handler}} \& R\+\_\+\+Type\+::\+Core\+::get\+Packet\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classR__Type_1_1Core_af0d14ec7054ee004d52530d36bd8d087}\label{classR__Type_1_1Core_af0d14ec7054ee004d52530d36bd8d087} 
+\index{R\_Type::Core@{R\_Type::Core}!getPacketHandler@{getPacketHandler}}
+\index{getPacketHandler@{getPacketHandler}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{getPacketHandler()}{getPacketHandler()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classNetwork_1_1PacketHandler}{Network\+::\+Packet\+Handler}} \& R\+\_\+\+Type\+::\+Core\+::get\+Packet\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classR__Type_1_1Core_a7a4e95db4f315851e5dc34ce70507a8c}\label{classR__Type_1_1Core_a7a4e95db4f315851e5dc34ce70507a8c} 
+\index{R\_Type::Core@{R\_Type::Core}!getRegistry@{getRegistry}}
+\index{getRegistry@{getRegistry}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{getRegistry()}{getRegistry()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \& R\+\_\+\+Type\+::\+Core\+::get\+Registry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classR__Type_1_1Core_a02cfa5a4bf995c2721f827deb89aff9f}\label{classR__Type_1_1Core_a02cfa5a4bf995c2721f827deb89aff9f} 
+\index{R\_Type::Core@{R\_Type::Core}!getRoom@{getRoom}}
+\index{getRoom@{getRoom}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{getRoom()}{getRoom()}}
+{\footnotesize\ttfamily std\+::optional$<$ \mbox{\hyperlink{classRoomSystem}{Room\+System}} \texorpdfstring{$\ast$}{*} $>$ R\+\_\+\+Type\+::\+Core\+::get\+Room (\begin{DoxyParamCaption}\item[{int}]{room\+Id }\end{DoxyParamCaption})}
+
+\Hypertarget{classR__Type_1_1Core_a58c50ab41af55a5ff2c40f3523a3c34f}\label{classR__Type_1_1Core_a58c50ab41af55a5ff2c40f3523a3c34f} 
+\index{R\_Type::Core@{R\_Type::Core}!getSceneName@{getSceneName}}
+\index{getSceneName@{getSceneName}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{getSceneName()}{getSceneName()}}
+{\footnotesize\ttfamily std\+::string R\+\_\+\+Type\+::\+Core\+::get\+Scene\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classR__Type_1_1Core_ac011b676f1802c2a9de517469fcb9e9a}\label{classR__Type_1_1Core_ac011b676f1802c2a9de517469fcb9e9a} 
+\index{R\_Type::Core@{R\_Type::Core}!handlePlayerDisconnect@{handlePlayerDisconnect}}
+\index{handlePlayerDisconnect@{handlePlayerDisconnect}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{handlePlayerDisconnect()}{handlePlayerDisconnect()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+Core\+::handle\+Player\+Disconnect (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{client\+Id }\end{DoxyParamCaption})}
+
+\Hypertarget{classR__Type_1_1Core_a1141f6707b7ca8a28ac8e9de9745f5e5}\label{classR__Type_1_1Core_a1141f6707b7ca8a28ac8e9de9745f5e5} 
+\index{R\_Type::Core@{R\_Type::Core}!handlePlayerJoin@{handlePlayerJoin}}
+\index{handlePlayerJoin@{handlePlayerJoin}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{handlePlayerJoin()}{handlePlayerJoin()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+Core\+::handle\+Player\+Join (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{client\+Id,  }\item[{int}]{room\+Id }\end{DoxyParamCaption})}
+
+\Hypertarget{classR__Type_1_1Core_a9f86078fe6ba97793a929cc40c50e5fe}\label{classR__Type_1_1Core_a9f86078fe6ba97793a929cc40c50e5fe} 
+\index{R\_Type::Core@{R\_Type::Core}!handleSetReady@{handleSetReady}}
+\index{handleSetReady@{handleSetReady}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{handleSetReady()}{handleSetReady()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+Core\+::handle\+Set\+Ready (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{client\+Id,  }\item[{int}]{room\+Id,  }\item[{bool}]{ready }\end{DoxyParamCaption})}
+
+\Hypertarget{classR__Type_1_1Core_a0af43987297c2797948866e209d03f67}\label{classR__Type_1_1Core_a0af43987297c2797948866e209d03f67} 
+\index{R\_Type::Core@{R\_Type::Core}!innitComponentsAndSystems@{innitComponentsAndSystems}}
+\index{innitComponentsAndSystems@{innitComponentsAndSystems}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{innitComponentsAndSystems()}{innitComponentsAndSystems()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+Core\+::innit\+Components\+And\+Systems (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classR__Type_1_1Core_a78bf181c77634fc28825388d89f9cfbb}\label{classR__Type_1_1Core_a78bf181c77634fc28825388d89f9cfbb} 
+\index{R\_Type::Core@{R\_Type::Core}!innitScenes@{innitScenes}}
+\index{innitScenes@{innitScenes}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{innitScenes()}{innitScenes()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+Core\+::innit\+Scenes (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classR__Type_1_1Core_a114b8806d1703ad62b98964b0ff5154e}\label{classR__Type_1_1Core_a114b8806d1703ad62b98964b0ff5154e} 
+\index{R\_Type::Core@{R\_Type::Core}!isGameStarted@{isGameStarted}}
+\index{isGameStarted@{isGameStarted}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{isGameStarted()}{isGameStarted()}}
+{\footnotesize\ttfamily bool R\+\_\+\+Type\+::\+Core\+::is\+Game\+Started (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classR__Type_1_1Core_ad2f6d14b126dee70d0e7b43547180327}\label{classR__Type_1_1Core_ad2f6d14b126dee70d0e7b43547180327} 
+\index{R\_Type::Core@{R\_Type::Core}!loadScene@{loadScene}}
+\index{loadScene@{loadScene}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{loadScene()}{loadScene()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+Core\+::load\+Scene (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+\Hypertarget{classR__Type_1_1Core_a9604b26ba9ab7e2a32b701df3fce6403}\label{classR__Type_1_1Core_a9604b26ba9ab7e2a32b701df3fce6403} 
+\index{R\_Type::Core@{R\_Type::Core}!notifyRoomListUpdate@{notifyRoomListUpdate}}
+\index{notifyRoomListUpdate@{notifyRoomListUpdate}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{notifyRoomListUpdate()}{notifyRoomListUpdate()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+Core\+::notify\+Room\+List\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+pas touche 
+
+\Hypertarget{classR__Type_1_1Core_a9601032d14c9bb7d82400a5af2032b55}\label{classR__Type_1_1Core_a9601032d14c9bb7d82400a5af2032b55} 
+\index{R\_Type::Core@{R\_Type::Core}!operator=@{operator=}}
+\index{operator=@{operator=}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+Core\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classR__Type_1_1Core}{Core}} \&}]{ref }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{classR__Type_1_1Core_a9601032d14c9bb7d82400a5af2032b55}\label{classR__Type_1_1Core_a9601032d14c9bb7d82400a5af2032b55} 
+\index{R\_Type::Core@{R\_Type::Core}!operator=@{operator=}}
+\index{operator=@{operator=}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+Core\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classR__Type_1_1Core}{Core}} \&}]{ref }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{classR__Type_1_1Core_a3a706e212f44632b1b3794b0314e78b8}\label{classR__Type_1_1Core_a3a706e212f44632b1b3794b0314e78b8} 
+\index{R\_Type::Core@{R\_Type::Core}!removeRoom@{removeRoom}}
+\index{removeRoom@{removeRoom}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{removeRoom()}{removeRoom()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+Core\+::remove\+Room (\begin{DoxyParamCaption}\item[{int}]{room\+Id }\end{DoxyParamCaption})}
+
+\Hypertarget{classR__Type_1_1Core_ab7f13f91f4d07600e8128f5bda55de80}\label{classR__Type_1_1Core_ab7f13f91f4d07600e8128f5bda55de80} 
+\index{R\_Type::Core@{R\_Type::Core}!run@{run}}
+\index{run@{run}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+Core\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classR__Type_1_1Core_ab7f13f91f4d07600e8128f5bda55de80}\label{classR__Type_1_1Core_ab7f13f91f4d07600e8128f5bda55de80} 
+\index{R\_Type::Core@{R\_Type::Core}!run@{run}}
+\index{run@{run}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+Core\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classR__Type_1_1Core_af8b3d2c0f94630a9d073c896e16c5715}\label{classR__Type_1_1Core_af8b3d2c0f94630a9d073c896e16c5715} 
+\index{R\_Type::Core@{R\_Type::Core}!setupPacketHandler@{setupPacketHandler}}
+\index{setupPacketHandler@{setupPacketHandler}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{setupPacketHandler()}{setupPacketHandler()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+Core\+::setup\+Packet\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classR__Type_1_1Core_af4032bddd9235c17752c666643981843}\label{classR__Type_1_1Core_af4032bddd9235c17752c666643981843} 
+\index{R\_Type::Core@{R\_Type::Core}!updateRoomClients@{updateRoomClients}}
+\index{updateRoomClients@{updateRoomClients}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{updateRoomClients()}{updateRoomClients()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+Core\+::update\+Room\+Clients (\begin{DoxyParamCaption}\item[{int}]{room\+Id,  }\item[{uint16\+\_\+t}]{client\+Id,  }\item[{bool}]{add }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classR__Type_1_1Core_a261a4c59acac9059e8ce61c07c6b276e}\label{classR__Type_1_1Core_a261a4c59acac9059e8ce61c07c6b276e} 
+\index{R\_Type::Core@{R\_Type::Core}!\_camera@{\_camera}}
+\index{\_camera@{\_camera}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{\_camera}{\_camera}}
+{\footnotesize\ttfamily std\+::optional$<$\mbox{\hyperlink{classECS_1_1Entity}{ECS\+::\+Entity}}$>$ R\+\_\+\+Type\+::\+Core\+::\+\_\+camera\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classR__Type_1_1Core_ab1d6e21794b40c688b0f0a54d704f21c}\label{classR__Type_1_1Core_ab1d6e21794b40c688b0f0a54d704f21c} 
+\index{R\_Type::Core@{R\_Type::Core}!\_core@{\_core}}
+\index{\_core@{\_core}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{\_core}{\_core}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Engine\+::\+Core\+::\+Core}} R\+\_\+\+Type\+::\+Core\+::\+\_\+core\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classR__Type_1_1Core_a61a1a529b3995c7b089ace1f8f4b20ce}\label{classR__Type_1_1Core_a61a1a529b3995c7b089ace1f8f4b20ce} 
+\index{R\_Type::Core@{R\_Type::Core}!\_entityToServerId@{\_entityToServerId}}
+\index{\_entityToServerId@{\_entityToServerId}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{\_entityToServerId}{\_entityToServerId}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::size\+\_\+t, std\+::size\+\_\+t$>$ R\+\_\+\+Type\+::\+Core\+::\+\_\+entity\+To\+Server\+Id\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classR__Type_1_1Core_a17a9d1bb3c7db8d6d2ac91d866e64498}\label{classR__Type_1_1Core_a17a9d1bb3c7db8d6d2ac91d866e64498} 
+\index{R\_Type::Core@{R\_Type::Core}!\_game\_started@{\_game\_started}}
+\index{\_game\_started@{\_game\_started}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{\_game\_started}{\_game\_started}}
+{\footnotesize\ttfamily bool R\+\_\+\+Type\+::\+Core\+::\+\_\+game\+\_\+started = false\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classR__Type_1_1Core_a6ccad8f589c7b1b0eb04bf2d73712c28}\label{classR__Type_1_1Core_a6ccad8f589c7b1b0eb04bf2d73712c28} 
+\index{R\_Type::Core@{R\_Type::Core}!\_graph\_lib@{\_graph\_lib}}
+\index{\_graph\_lib@{\_graph\_lib}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{\_graph\_lib}{\_graph\_lib}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classGraphical_1_1IGraphical}{Graphical\+::\+IGraphical}}$>$ R\+\_\+\+Type\+::\+Core\+::\+\_\+graph\+\_\+lib\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classR__Type_1_1Core_af2af35ee5d294a445d1ce5f3b5ee3dab}\label{classR__Type_1_1Core_af2af35ee5d294a445d1ce5f3b5ee3dab} 
+\index{R\_Type::Core@{R\_Type::Core}!\_graph\_loader@{\_graph\_loader}}
+\index{\_graph\_loader@{\_graph\_loader}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{\_graph\_loader}{\_graph\_loader}}
+{\footnotesize\ttfamily dylib R\+\_\+\+Type\+::\+Core\+::\+\_\+graph\+\_\+loader\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classR__Type_1_1Core_a83f0c37d8bf9cd384291484483efa7e3}\label{classR__Type_1_1Core_a83f0c37d8bf9cd384291484483efa7e3} 
+\index{R\_Type::Core@{R\_Type::Core}!\_instance@{\_instance}}
+\index{\_instance@{\_instance}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{\_instance}{\_instance}}
+{\footnotesize\ttfamily static std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classR__Type_1_1Core}{Core}} $>$ R\+\_\+\+Type\+::\+Core\+::\+\_\+instance = nullptr\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{classR__Type_1_1Core_a2705027a7dadd5b0f66cdd92b8e0e0ba}\label{classR__Type_1_1Core_a2705027a7dadd5b0f66cdd92b8e0e0ba} 
+\index{R\_Type::Core@{R\_Type::Core}!\_konsole\_calls@{\_konsole\_calls}}
+\index{\_konsole\_calls@{\_konsole\_calls}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{\_konsole\_calls}{\_konsole\_calls}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, std\+::function$<$void(std\+::string)$>$ $>$ R\+\_\+\+Type\+::\+Core\+::\+\_\+konsole\+\_\+calls\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classR__Type_1_1Core_ac462335a847637bb4bd7f116e687e80a}\label{classR__Type_1_1Core_ac462335a847637bb4bd7f116e687e80a} 
+\index{R\_Type::Core@{R\_Type::Core}!\_lobbyPlayers@{\_lobbyPlayers}}
+\index{\_lobbyPlayers@{\_lobbyPlayers}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{\_lobbyPlayers}{\_lobbyPlayers}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$uint16\+\_\+t, std\+::optional$<$\mbox{\hyperlink{classECS_1_1Entity}{ECS\+::\+Entity}}$>$ $>$ R\+\_\+\+Type\+::\+Core\+::\+\_\+lobby\+Players\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classR__Type_1_1Core_a983c98e5481a2d1717b95124e2ade3ee}\label{classR__Type_1_1Core_a983c98e5481a2d1717b95124e2ade3ee} 
+\index{R\_Type::Core@{R\_Type::Core}!\_lobbyReadyStatus@{\_lobbyReadyStatus}}
+\index{\_lobbyReadyStatus@{\_lobbyReadyStatus}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{\_lobbyReadyStatus}{\_lobbyReadyStatus}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$uint16\+\_\+t, bool$>$ R\+\_\+\+Type\+::\+Core\+::\+\_\+lobby\+Ready\+Status\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classR__Type_1_1Core_a35b9d45bdb2bf47c99cd1f5956f19cf6}\label{classR__Type_1_1Core_a35b9d45bdb2bf47c99cd1f5956f19cf6} 
+\index{R\_Type::Core@{R\_Type::Core}!\_module\_loader@{\_module\_loader}}
+\index{\_module\_loader@{\_module\_loader}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{\_module\_loader}{\_module\_loader}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Core_1_1ModuleLoader}{Engine\+::\+Core\+::\+Module\+Loader}} R\+\_\+\+Type\+::\+Core\+::\+\_\+module\+\_\+loader\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classR__Type_1_1Core_adb19870d737290e89e6290f09f330d7e}\label{classR__Type_1_1Core_adb19870d737290e89e6290f09f330d7e} 
+\index{R\_Type::Core@{R\_Type::Core}!\_my\_server\_id@{\_my\_server\_id}}
+\index{\_my\_server\_id@{\_my\_server\_id}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{\_my\_server\_id}{\_my\_server\_id}}
+{\footnotesize\ttfamily std\+::size\+\_\+t R\+\_\+\+Type\+::\+Core\+::\+\_\+my\+\_\+server\+\_\+id \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classR__Type_1_1Core_a0698422523ebddc49b399fee8061acce}\label{classR__Type_1_1Core_a0698422523ebddc49b399fee8061acce} 
+\index{R\_Type::Core@{R\_Type::Core}!\_network\_lib@{\_network\_lib}}
+\index{\_network\_lib@{\_network\_lib}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{\_network\_lib}{\_network\_lib}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkClient}{Engine\+::\+Module\+::\+INetwork\+Client}}\& R\+\_\+\+Type\+::\+Core\+::\+\_\+network\+\_\+lib\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classR__Type_1_1Core_a2fbe77646efee378b865ba6313164043}\label{classR__Type_1_1Core_a2fbe77646efee378b865ba6313164043} 
+\index{R\_Type::Core@{R\_Type::Core}!\_network\_lib@{\_network\_lib}}
+\index{\_network\_lib@{\_network\_lib}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{\_network\_lib}{\_network\_lib}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{Engine\+::\+Module\+::\+INetwork\+Server}}$>$ R\+\_\+\+Type\+::\+Core\+::\+\_\+network\+\_\+lib\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classR__Type_1_1Core_a367daa2ce3ed40bfbfee7be499e9af07}\label{classR__Type_1_1Core_a367daa2ce3ed40bfbfee7be499e9af07} 
+\index{R\_Type::Core@{R\_Type::Core}!\_packet\_handler@{\_packet\_handler}}
+\index{\_packet\_handler@{\_packet\_handler}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{\_packet\_handler}{\_packet\_handler}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classNetwork_1_1PacketHandler}{Network\+::\+Packet\+Handler}} R\+\_\+\+Type\+::\+Core\+::\+\_\+packet\+\_\+handler\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classR__Type_1_1Core_abe676f295652aaa5e314d92e847671c7}\label{classR__Type_1_1Core_abe676f295652aaa5e314d92e847671c7} 
+\index{R\_Type::Core@{R\_Type::Core}!\_physic\_lib@{\_physic\_lib}}
+\index{\_physic\_lib@{\_physic\_lib}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{\_physic\_lib}{\_physic\_lib}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classEngine_1_1Module_1_1IPhysic}{Engine\+::\+Module\+::\+IPhysic}}$>$ R\+\_\+\+Type\+::\+Core\+::\+\_\+physic\+\_\+lib\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classR__Type_1_1Core_aefbbf3fdfa74d1231ddcdd5c5eba5cc4}\label{classR__Type_1_1Core_aefbbf3fdfa74d1231ddcdd5c5eba5cc4} 
+\index{R\_Type::Core@{R\_Type::Core}!\_registry@{\_registry}}
+\index{\_registry@{\_registry}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{\_registry}{\_registry}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} R\+\_\+\+Type\+::\+Core\+::\+\_\+registry\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classR__Type_1_1Core_a4a133582571edb032a768fcaa0f7731f}\label{classR__Type_1_1Core_a4a133582571edb032a768fcaa0f7731f} 
+\index{R\_Type::Core@{R\_Type::Core}!\_rooms@{\_rooms}}
+\index{\_rooms@{\_rooms}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{\_rooms}{\_rooms}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$int, std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classRoomSystem}{Room\+System}}$>$ $>$ R\+\_\+\+Type\+::\+Core\+::\+\_\+rooms\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classR__Type_1_1Core_aa24c4240527a5a4df1e6a257bebb8f48}\label{classR__Type_1_1Core_aa24c4240527a5a4df1e6a257bebb8f48} 
+\index{R\_Type::Core@{R\_Type::Core}!\_scenes@{\_scenes}}
+\index{\_scenes@{\_scenes}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{\_scenes}{\_scenes}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{classEngine_1_1Scene}{Engine\+::\+Scene}}$>$ R\+\_\+\+Type\+::\+Core\+::\+\_\+scenes\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classR__Type_1_1Core_ade60c0ee1565b6a1b9ea8addf6f152cc}\label{classR__Type_1_1Core_ade60c0ee1565b6a1b9ea8addf6f152cc} 
+\index{R\_Type::Core@{R\_Type::Core}!\_serverIdToEntity@{\_serverIdToEntity}}
+\index{\_serverIdToEntity@{\_serverIdToEntity}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{\_serverIdToEntity}{\_serverIdToEntity}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::size\+\_\+t, std\+::size\+\_\+t$>$ R\+\_\+\+Type\+::\+Core\+::\+\_\+server\+Id\+To\+Entity\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classR__Type_1_1Core_ade332fd387ecfdb12449de284e93fbf8}\label{classR__Type_1_1Core_ade332fd387ecfdb12449de284e93fbf8} 
+\index{R\_Type::Core@{R\_Type::Core}!\_windowIsOpen@{\_windowIsOpen}}
+\index{\_windowIsOpen@{\_windowIsOpen}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{\_windowIsOpen}{\_windowIsOpen}}
+{\footnotesize\ttfamily bool R\+\_\+\+Type\+::\+Core\+::\+\_\+window\+Is\+Open = true\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classR__Type_1_1Core_aab4fbf59f6bc4312214441c06f032e11}\label{classR__Type_1_1Core_aab4fbf59f6bc4312214441c06f032e11} 
+\index{R\_Type::Core@{R\_Type::Core}!newScene@{newScene}}
+\index{newScene@{newScene}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{newScene}{newScene}}
+{\footnotesize\ttfamily std\+::string R\+\_\+\+Type\+::\+Core\+::new\+Scene\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classR__Type_1_1Core_a69091212721f60071b4748de56a7108f}\label{classR__Type_1_1Core_a69091212721f60071b4748de56a7108f} 
+\index{R\_Type::Core@{R\_Type::Core}!roomClients@{roomClients}}
+\index{roomClients@{roomClients}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{roomClients}{roomClients}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$int, std\+::vector$<$uint16\+\_\+t$>$ $>$ R\+\_\+\+Type\+::\+Core\+::room\+Clients\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classR__Type_1_1Core_aa84b97056e7d76c5dd4e47b30f163bec}\label{classR__Type_1_1Core_aa84b97056e7d76c5dd4e47b30f163bec} 
+\index{R\_Type::Core@{R\_Type::Core}!sceneName@{sceneName}}
+\index{sceneName@{sceneName}!R\_Type::Core@{R\_Type::Core}}
+\doxysubsubsection{\texorpdfstring{sceneName}{sceneName}}
+{\footnotesize\ttfamily std\+::string R\+\_\+\+Type\+::\+Core\+::scene\+Name\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+client/src/\mbox{\hyperlink{client_2src_2Core_8hpp}{Core.\+hpp}}\item 
+server/src/\mbox{\hyperlink{server_2src_2Core_8hpp}{Core.\+hpp}}\item 
+client/src/\mbox{\hyperlink{client_2src_2Core_8cpp}{Core.\+cpp}}\item 
+server/src/\mbox{\hyperlink{server_2src_2Core_8cpp}{Core.\+cpp}}\end{DoxyCompactItemize}

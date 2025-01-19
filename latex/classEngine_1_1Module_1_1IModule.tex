@@ -1,0 +1,115 @@
+\doxysection{Engine\+::Module\+::IModule Interface Reference}
+\hypertarget{classEngine_1_1Module_1_1IModule}{}\label{classEngine_1_1Module_1_1IModule}\index{Engine::Module::IModule@{Engine::Module::IModule}}
+
+
+Interface for module integration.  
+
+
+
+
+{\ttfamily \#include $<$IModule.\+hpp$>$}
+
+Inheritance diagram for Engine\+::Module\+::IModule\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.671642cm]{classEngine_1_1Module_1_1IModule}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classEngine_1_1Module_1_1IModule_a6bd5fa440d706fadbe1f806de2abd3a5}{\texorpdfstring{$\sim$}{\string~}\+IModule}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespaceEngine_1_1Module_a4f2927ec966fd747da59cf6593ae7864}{module\+\_\+info\+\_\+t}} \mbox{\hyperlink{classEngine_1_1Module_1_1IModule_adb9199647e717948fa37f90b8ae352f8}{get\+Info}} ()=0
+\begin{DoxyCompactList}\small\item\em Retrieve module information. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEngine_1_1Module_1_1IModule_ad38434ae26e3afe6b51db6df3836cfb0}{load\+Module}} (\mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core\+::\+Core}} \&core)=0
+\begin{DoxyCompactList}\small\item\em Load the module into the application\textquotesingle{}s core. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEngine_1_1Module_1_1IModule_afff50ba5f4fe555a31f85b692eb1ecbb}{unload\+Module}} (\mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core\+::\+Core}} \&core)=0
+\begin{DoxyCompactList}\small\item\em Unload the module and clean up its resources. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for module integration. 
+
+The \doxylink{classEngine_1_1Module_1_1IModule}{IModule} interface provides the necessary methods to implement a new module and integrate it into the application\textquotesingle{}s core. It includes functionalities for loading, unloading, and retrieving module information. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classEngine_1_1Module_1_1IModule_a6bd5fa440d706fadbe1f806de2abd3a5}\label{classEngine_1_1Module_1_1IModule_a6bd5fa440d706fadbe1f806de2abd3a5} 
+\index{Engine::Module::IModule@{Engine::Module::IModule}!````~IModule@{\texorpdfstring{$\sim$}{\string~}IModule}}
+\index{````~IModule@{\texorpdfstring{$\sim$}{\string~}IModule}!Engine::Module::IModule@{Engine::Module::IModule}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}IModule()}{\string~IModule()}}
+{\footnotesize\ttfamily virtual Engine\+::\+Module\+::\+IModule\+::\texorpdfstring{$\sim$}{\string~}\+IModule (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Virtual destructor. 
+
+Ensures proper cleanup of derived classes when deleted via a base class pointer. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classEngine_1_1Module_1_1IModule_adb9199647e717948fa37f90b8ae352f8}\label{classEngine_1_1Module_1_1IModule_adb9199647e717948fa37f90b8ae352f8} 
+\index{Engine::Module::IModule@{Engine::Module::IModule}!getInfo@{getInfo}}
+\index{getInfo@{getInfo}!Engine::Module::IModule@{Engine::Module::IModule}}
+\doxysubsubsection{\texorpdfstring{getInfo()}{getInfo()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespaceEngine_1_1Module_a4f2927ec966fd747da59cf6593ae7864}{module\+\_\+info\+\_\+t}} Engine\+::\+Module\+::\+IModule\+::get\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Retrieve module information. 
+
+This method provides essential information about the module, such as its name and description.
+
+\begin{DoxyReturn}{Returns}
+A structure containing the module\textquotesingle{}s name and description. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classEngine_1_1Module_1_1AudioRaylib_aa70aa32149c844824ddfc4858809402a}{Engine\+::\+Module\+::\+Audio\+Raylib}}, \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkClient_a6c9c30f238140071e4e8e60db774e31a}{Engine\+::\+Module\+::\+Network\+Client}}, \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkServer_a5a854747c884601216166843d83b78e7}{Engine\+::\+Module\+::\+Network\+Server}}, \mbox{\hyperlink{classEngine_1_1Module_1_1Physic_a9f6ccf01ef1414adf0cabdee72b4f32d}{Engine\+::\+Module\+::\+Physic}}, and \mbox{\hyperlink{classEngine_1_1Module_1_1Renderer_a978f5aa16e4b4cf5ccd4c34ba1146dd5}{Engine\+::\+Module\+::\+Renderer}}.
+
+\Hypertarget{classEngine_1_1Module_1_1IModule_ad38434ae26e3afe6b51db6df3836cfb0}\label{classEngine_1_1Module_1_1IModule_ad38434ae26e3afe6b51db6df3836cfb0} 
+\index{Engine::Module::IModule@{Engine::Module::IModule}!loadModule@{loadModule}}
+\index{loadModule@{loadModule}!Engine::Module::IModule@{Engine::Module::IModule}}
+\doxysubsubsection{\texorpdfstring{loadModule()}{loadModule()}}
+{\footnotesize\ttfamily virtual void Engine\+::\+Module\+::\+IModule\+::load\+Module (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core\+::\+Core}} \&}]{core }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Load the module into the application\textquotesingle{}s core. 
+
+This method is responsible for initializing the module and integrating its functionalities into the application\textquotesingle{}s core.
+
+
+\begin{DoxyParams}{Parameters}
+{\em core} & A reference to the application\textquotesingle{}s core. This is used to register the module\textquotesingle{}s functionalities. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classEngine_1_1Module_1_1AudioRaylib_afa5ef13d857e1b150f1908e287c45ace}{Engine\+::\+Module\+::\+Audio\+Raylib}}, \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkClient_a3f3c526f33c8cb19bc2fec0ae18a8373}{Engine\+::\+Module\+::\+Network\+Client}}, \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkServer_ad0b1cbc11bf5738b9826a00f939d28fd}{Engine\+::\+Module\+::\+Network\+Server}}, \mbox{\hyperlink{classEngine_1_1Module_1_1Physic_ac8c289a1f8291124902286f15fc31820}{Engine\+::\+Module\+::\+Physic}}, and \mbox{\hyperlink{classEngine_1_1Module_1_1Renderer_a5b4cbe1f2fee8cf17218f729dc7b3302}{Engine\+::\+Module\+::\+Renderer}}.
+
+\Hypertarget{classEngine_1_1Module_1_1IModule_afff50ba5f4fe555a31f85b692eb1ecbb}\label{classEngine_1_1Module_1_1IModule_afff50ba5f4fe555a31f85b692eb1ecbb} 
+\index{Engine::Module::IModule@{Engine::Module::IModule}!unloadModule@{unloadModule}}
+\index{unloadModule@{unloadModule}!Engine::Module::IModule@{Engine::Module::IModule}}
+\doxysubsubsection{\texorpdfstring{unloadModule()}{unloadModule()}}
+{\footnotesize\ttfamily virtual void Engine\+::\+Module\+::\+IModule\+::unload\+Module (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Core\+::\+Core}} \&}]{core }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Unload the module and clean up its resources. 
+
+This method is responsible for removing the module\textquotesingle{}s functionalities from the application\textquotesingle{}s core and releasing any allocated resources.
+
+
+\begin{DoxyParams}{Parameters}
+{\em core} & A reference to the application\textquotesingle{}s core. This is used to unregister the module\textquotesingle{}s functionalities. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classEngine_1_1Module_1_1AudioRaylib_af1e99b780c3c90c5c54b55265c23d468}{Engine\+::\+Module\+::\+Audio\+Raylib}}, \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkClient_a093fa166016b7eab1a0bd165e58c8811}{Engine\+::\+Module\+::\+Network\+Client}}, \mbox{\hyperlink{classEngine_1_1Module_1_1NetworkServer_a995f8a6f502c92396f1bfb7f01f14ac5}{Engine\+::\+Module\+::\+Network\+Server}}, \mbox{\hyperlink{classEngine_1_1Module_1_1Physic_a1999c8b446bf119bb5860321de5d9312}{Engine\+::\+Module\+::\+Physic}}, and \mbox{\hyperlink{classEngine_1_1Module_1_1Renderer_ad22cba4e127846eec5eb8d2a58bf40c6}{Engine\+::\+Module\+::\+Renderer}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+lib/engine/includes/\mbox{\hyperlink{IModule_8hpp}{IModule.\+hpp}}\end{DoxyCompactItemize}

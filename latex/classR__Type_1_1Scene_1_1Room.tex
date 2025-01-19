@@ -1,0 +1,101 @@
+\doxysection{R\+\_\+\+Type\+::Scene\+::Room Class Reference}
+\hypertarget{classR__Type_1_1Scene_1_1Room}{}\label{classR__Type_1_1Scene_1_1Room}\index{R\_Type::Scene::Room@{R\_Type::Scene::Room}}
+
+
+{\ttfamily \#include $<$Room.\+hpp$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classR__Type_1_1Scene_1_1Room_af739a25a53377e3cae222b5a24f2ce86}{start\+Script}} (\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&r)
+\item 
+static void \mbox{\hyperlink{classR__Type_1_1Scene_1_1Room_a78c695bdd18df04674d8420c6779d97f}{back\+Button}} ()
+\item 
+static void \mbox{\hyperlink{classR__Type_1_1Scene_1_1Room_afcff33747561f85af5dd5e7384baaac7}{refresh\+Room\+List}} (\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&r, const std\+::vector$<$ std\+::string $>$ \&rooms)
+\item 
+static void \mbox{\hyperlink{classR__Type_1_1Scene_1_1Room_a2af16ffefce864f37e64491ae8f3ab36}{join\+Room\+Wrapper}} (const std\+::string \&room)
+\item 
+static void \mbox{\hyperlink{classR__Type_1_1Scene_1_1Room_aebe9209433112b0808074f4ce60dc185}{handle\+Room\+List\+Response}} (\mbox{\hyperlink{classNetwork_1_1Packet}{Network\+::\+Packet}} \&packet)
+\item 
+static void \mbox{\hyperlink{classR__Type_1_1Scene_1_1Room_a7a1e4e4ce54728cf00a96ebbdacb37f7}{print\+Test}} (\mbox{\hyperlink{classNetwork_1_1Packet}{Network\+::\+Packet}} \&packet)
+\item 
+static void \mbox{\hyperlink{classR__Type_1_1Scene_1_1Room_a3769607a7b0d8afe954abdb19c569008}{handle\+Room\+Joined}} (\mbox{\hyperlink{classNetwork_1_1Packet}{Network\+::\+Packet}} \&packet)
+\item 
+static void \mbox{\hyperlink{classR__Type_1_1Scene_1_1Room_a3aa470c8b96ab729147ce87f84ff18b3}{handle\+Room\+Join\+Failed}} (\mbox{\hyperlink{classNetwork_1_1Packet}{Network\+::\+Packet}} \&packet)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classECS_1_1Entity}{ECS\+::\+Entity}} \mbox{\hyperlink{classR__Type_1_1Scene_1_1Room_a01cd15d811e9732abd005bcfbc69d43b}{create\+Room\+Button}} (\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&r, std\+::string text, \mbox{\hyperlink{structGraphical_1_1Vect2i}{Graphical\+::\+Vect2i}} pos, std\+::function$<$ void()$>$ on\+Click)
+\item 
+static void \mbox{\hyperlink{classR__Type_1_1Scene_1_1Room_a2f783c3a9b1c87ef4fcf606807daf828}{join\+Room}} (int room\+Id)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classR__Type_1_1Scene_1_1Room_a78c695bdd18df04674d8420c6779d97f}\label{classR__Type_1_1Scene_1_1Room_a78c695bdd18df04674d8420c6779d97f} 
+\index{R\_Type::Scene::Room@{R\_Type::Scene::Room}!backButton@{backButton}}
+\index{backButton@{backButton}!R\_Type::Scene::Room@{R\_Type::Scene::Room}}
+\doxysubsubsection{\texorpdfstring{backButton()}{backButton()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+Scene\+::\+Room\+::back\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classR__Type_1_1Scene_1_1Room_a01cd15d811e9732abd005bcfbc69d43b}\label{classR__Type_1_1Scene_1_1Room_a01cd15d811e9732abd005bcfbc69d43b} 
+\index{R\_Type::Scene::Room@{R\_Type::Scene::Room}!createRoomButton@{createRoomButton}}
+\index{createRoomButton@{createRoomButton}!R\_Type::Scene::Room@{R\_Type::Scene::Room}}
+\doxysubsubsection{\texorpdfstring{createRoomButton()}{createRoomButton()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classECS_1_1Entity}{ECS\+::\+Entity}} R\+\_\+\+Type\+::\+Scene\+::\+Room\+::create\+Room\+Button (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&}]{r,  }\item[{std\+::string}]{text,  }\item[{\mbox{\hyperlink{structGraphical_1_1Vect2i}{Graphical\+::\+Vect2i}}}]{pos,  }\item[{std\+::function$<$ void()$>$}]{on\+Click }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{classR__Type_1_1Scene_1_1Room_a3769607a7b0d8afe954abdb19c569008}\label{classR__Type_1_1Scene_1_1Room_a3769607a7b0d8afe954abdb19c569008} 
+\index{R\_Type::Scene::Room@{R\_Type::Scene::Room}!handleRoomJoined@{handleRoomJoined}}
+\index{handleRoomJoined@{handleRoomJoined}!R\_Type::Scene::Room@{R\_Type::Scene::Room}}
+\doxysubsubsection{\texorpdfstring{handleRoomJoined()}{handleRoomJoined()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+Scene\+::\+Room\+::handle\+Room\+Joined (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNetwork_1_1Packet}{Network\+::\+Packet}} \&}]{packet }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classR__Type_1_1Scene_1_1Room_a3aa470c8b96ab729147ce87f84ff18b3}\label{classR__Type_1_1Scene_1_1Room_a3aa470c8b96ab729147ce87f84ff18b3} 
+\index{R\_Type::Scene::Room@{R\_Type::Scene::Room}!handleRoomJoinFailed@{handleRoomJoinFailed}}
+\index{handleRoomJoinFailed@{handleRoomJoinFailed}!R\_Type::Scene::Room@{R\_Type::Scene::Room}}
+\doxysubsubsection{\texorpdfstring{handleRoomJoinFailed()}{handleRoomJoinFailed()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+Scene\+::\+Room\+::handle\+Room\+Join\+Failed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNetwork_1_1Packet}{Network\+::\+Packet}} \&}]{packet }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classR__Type_1_1Scene_1_1Room_aebe9209433112b0808074f4ce60dc185}\label{classR__Type_1_1Scene_1_1Room_aebe9209433112b0808074f4ce60dc185} 
+\index{R\_Type::Scene::Room@{R\_Type::Scene::Room}!handleRoomListResponse@{handleRoomListResponse}}
+\index{handleRoomListResponse@{handleRoomListResponse}!R\_Type::Scene::Room@{R\_Type::Scene::Room}}
+\doxysubsubsection{\texorpdfstring{handleRoomListResponse()}{handleRoomListResponse()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+Scene\+::\+Room\+::handle\+Room\+List\+Response (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNetwork_1_1Packet}{Network\+::\+Packet}} \&}]{packet }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classR__Type_1_1Scene_1_1Room_a2f783c3a9b1c87ef4fcf606807daf828}\label{classR__Type_1_1Scene_1_1Room_a2f783c3a9b1c87ef4fcf606807daf828} 
+\index{R\_Type::Scene::Room@{R\_Type::Scene::Room}!joinRoom@{joinRoom}}
+\index{joinRoom@{joinRoom}!R\_Type::Scene::Room@{R\_Type::Scene::Room}}
+\doxysubsubsection{\texorpdfstring{joinRoom()}{joinRoom()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+Scene\+::\+Room\+::join\+Room (\begin{DoxyParamCaption}\item[{int}]{room\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{classR__Type_1_1Scene_1_1Room_a2af16ffefce864f37e64491ae8f3ab36}\label{classR__Type_1_1Scene_1_1Room_a2af16ffefce864f37e64491ae8f3ab36} 
+\index{R\_Type::Scene::Room@{R\_Type::Scene::Room}!joinRoomWrapper@{joinRoomWrapper}}
+\index{joinRoomWrapper@{joinRoomWrapper}!R\_Type::Scene::Room@{R\_Type::Scene::Room}}
+\doxysubsubsection{\texorpdfstring{joinRoomWrapper()}{joinRoomWrapper()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+Scene\+::\+Room\+::join\+Room\+Wrapper (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{room }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classR__Type_1_1Scene_1_1Room_a7a1e4e4ce54728cf00a96ebbdacb37f7}\label{classR__Type_1_1Scene_1_1Room_a7a1e4e4ce54728cf00a96ebbdacb37f7} 
+\index{R\_Type::Scene::Room@{R\_Type::Scene::Room}!printTest@{printTest}}
+\index{printTest@{printTest}!R\_Type::Scene::Room@{R\_Type::Scene::Room}}
+\doxysubsubsection{\texorpdfstring{printTest()}{printTest()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+Scene\+::\+Room\+::print\+Test (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNetwork_1_1Packet}{Network\+::\+Packet}} \&}]{packet }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classR__Type_1_1Scene_1_1Room_afcff33747561f85af5dd5e7384baaac7}\label{classR__Type_1_1Scene_1_1Room_afcff33747561f85af5dd5e7384baaac7} 
+\index{R\_Type::Scene::Room@{R\_Type::Scene::Room}!refreshRoomList@{refreshRoomList}}
+\index{refreshRoomList@{refreshRoomList}!R\_Type::Scene::Room@{R\_Type::Scene::Room}}
+\doxysubsubsection{\texorpdfstring{refreshRoomList()}{refreshRoomList()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+Scene\+::\+Room\+::refresh\+Room\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&}]{r,  }\item[{const std\+::vector$<$ std\+::string $>$ \&}]{rooms }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classR__Type_1_1Scene_1_1Room_af739a25a53377e3cae222b5a24f2ce86}\label{classR__Type_1_1Scene_1_1Room_af739a25a53377e3cae222b5a24f2ce86} 
+\index{R\_Type::Scene::Room@{R\_Type::Scene::Room}!startScript@{startScript}}
+\index{startScript@{startScript}!R\_Type::Scene::Room@{R\_Type::Scene::Room}}
+\doxysubsubsection{\texorpdfstring{startScript()}{startScript()}}
+{\footnotesize\ttfamily void R\+\_\+\+Type\+::\+Scene\+::\+Room\+::start\+Script (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classECS_1_1Registry}{ECS\+::\+Registry}} \&}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+client/includes/scenes/\mbox{\hyperlink{Room_8hpp}{Room.\+hpp}}\item 
+client/src/scenes/\mbox{\hyperlink{Room_8cpp}{Room.\+cpp}}\end{DoxyCompactItemize}

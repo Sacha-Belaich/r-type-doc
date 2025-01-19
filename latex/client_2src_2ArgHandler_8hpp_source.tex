@@ -1,0 +1,34 @@
+\doxysection{Arg\+Handler.\+hpp}
+\hypertarget{client_2src_2ArgHandler_8hpp_source}{}\label{client_2src_2ArgHandler_8hpp_source}\index{client/src/ArgHandler.hpp@{client/src/ArgHandler.hpp}}
+\mbox{\hyperlink{client_2src_2ArgHandler_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*size}}
+\DoxyCodeLine{00002\ \textcolor{comment}{size}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2024}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ R\_Type}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00006\ \textcolor{comment}{**\ ArgHandler}}
+\DoxyCodeLine{00007\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ ARGHANDLER\_HPP\_}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ ARGHANDLER\_HPP\_}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceR__Type}{R\_Type}}\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classR__Type_1_1ArgHandler}{ArgHandler}}\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classR__Type_1_1ArgHandler_a53a393a3c2fa531b4a16fab4f228abe1}{ArgHandler}}(std::size\_t\ max\_args);}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1ArgHandler_a70545f4711fbdae58a7a2355b1db9926}{display\_help}}(\textcolor{keyword}{const}\ std::string\_view\ \&exec\_name);}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classR__Type_1_1ArgHandler_abedad92083f2b0a44212499be78ce970}{check\_help}}(\textcolor{keywordtype}{int}\ ac,\ \textcolor{keyword}{const}\ std::string\_view\ \&exec\_name,\ \textcolor{keyword}{const}\ std::string\_view\ \&first\_arg);}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1ArgHandler_afa19aa5411f96aa795b43cdd34090064}{verif\_arg}}(\textcolor{keywordtype}{int}\ ac,\ \textcolor{keyword}{const}\ std::vector<std::string\_view>\ \&av)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ std::size\_t\ \mbox{\hyperlink{classR__Type_1_1ArgHandler_aa55267b4f0dff76797b2df8ffd718287}{\_max\_args}}\ =\ 0;}
+\DoxyCodeLine{00025\ \ \ \ \ \};}
+\DoxyCodeLine{00026\ \}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !ARGHANDLER\_HPP\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

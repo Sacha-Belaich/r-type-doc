@@ -1,0 +1,96 @@
+\doxysection{Core.\+hpp}
+\hypertarget{server_2src_2Core_8hpp_source}{}\label{server_2src_2Core_8hpp_source}\index{server/src/Core.hpp@{server/src/Core.hpp}}
+\mbox{\hyperlink{server_2src_2Core_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2024}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ R\_Type}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ Core}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ CORE\_HPP\_}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ CORE\_HPP\_}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <optional>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <dylib.hpp>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Registry_8hpp}{Registry.hpp}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{INetworkServer_8hpp}{INetworkServer.hpp}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IPhysic_8hpp}{IPhysic.hpp}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{lib_2engine_2includes_2Core_8hpp}{../../lib/engine/includes/Core.hpp}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\#include\ "{}../../lib/engine/core/ModuleLoader.hpp"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{PacketHandler_8hpp}{PacketHandler.hpp}}"{}}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{LobbySystem_8hpp}{systems/LobbySystem.hpp}}"{}}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{RoomSystem_8hpp}{systems/RoomSystem.hpp}}"{}}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ModuleLoader_8hpp}{ModuleLoader.hpp}}"{}}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Physic_8hpp}{../../lib/engine/modules/physic/includes/Physic.hpp}}"{}}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceR__Type}{R\_Type}}\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{class\ }Core\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classR__Type_1_1Core_ab39806a2554eb2c67d0763f9f2146e72}{Core}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classR__Type_1_1Core}{Core}}\ \&ref)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1Core_a9601032d14c9bb7d82400a5af2032b55}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classR__Type_1_1Core}{Core}}\ \&ref)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classR__Type_1_1Core_a474a9f67a76fcfb093fb8e2e3263b111}{\string~Core}}();}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classR__Type_1_1Core}{Core}}\ \&\mbox{\hyperlink{classR__Type_1_1Core_a0b48830331cb6696a2fd287d5f347f49}{getInstance}}();}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEngine_1_1Module_1_1INetworkServer}{Engine::Module::INetworkServer}}\ \&\mbox{\hyperlink{classR__Type_1_1Core_a869b922b6ba5489e45f5816f1a7cf9bb}{getNetworkLib}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classNetwork_1_1PacketHandler}{Network::PacketHandler}}\ \&\mbox{\hyperlink{classR__Type_1_1Core_af0d14ec7054ee004d52530d36bd8d087}{getPacketHandler}}();}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classR__Type_1_1Core_a114b8806d1703ad62b98964b0ff5154e}{isGameStarted}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::optional<ECS::Entity>\ \mbox{\hyperlink{classR__Type_1_1Core_ab9553f923c26cfae381ff06c896ef2d8}{getCamera}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1Core_ab7f13f91f4d07600e8128f5bda55de80}{run}}();}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1Core_a3e19755b91170a35fa1c6da8493f42fc}{createRoom}}(\textcolor{keywordtype}{int}\ roomId,\ \textcolor{keywordtype}{size\_t}\ maxPlayers);}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ std::optional<RoomSystem*>\ \mbox{\hyperlink{classR__Type_1_1Core_a02cfa5a4bf995c2721f827deb89aff9f}{getRoom}}(\textcolor{keywordtype}{int}\ roomId);}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1Core_a3a706e212f44632b1b3794b0314e78b8}{removeRoom}}(\textcolor{keywordtype}{int}\ roomId);}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classR__Type_1_1Core_a3880b966c3e03d98c3f69390b5e2d346}{assignRoom}}();}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1Core_a1141f6707b7ca8a28ac8e9de9745f5e5}{handlePlayerJoin}}(uint16\_t\ clientId,\ \textcolor{keywordtype}{int}\ roomId);}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1Core_a9f86078fe6ba97793a929cc40c50e5fe}{handleSetReady}}(uint16\_t\ clientId,\ \textcolor{keywordtype}{int}\ roomId,\ \textcolor{keywordtype}{bool}\ ready);}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1Core_ac011b676f1802c2a9de517469fcb9e9a}{handlePlayerDisconnect}}(uint16\_t\ clientId);}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1Core_a9604b26ba9ab7e2a32b701df3fce6403}{notifyRoomListUpdate}}();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1Core_a70b99cae9e8ee6198535a6311608f162}{\_sendRoomInfoToClient}}(uint16\_t\ clientId);}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1Core_af4032bddd9235c17752c666643981843}{updateRoomClients}}(\textcolor{keywordtype}{int}\ roomId,\ uint16\_t\ clientId,\ \textcolor{keywordtype}{bool}\ add)\ ;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ std::vector<uint16\_t>\ \mbox{\hyperlink{classR__Type_1_1Core_a56c4194cce47fda1c794780f0e17dbb4}{getClientsInRoom}}(\textcolor{keywordtype}{int}\ roomId);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ void\ broadcastToRoom(int\ roomId,\ const\ Network::Packet\ \&packet)\ \{}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ if\ (roomClients.find(roomId)\ ==\ roomClients.end())\ return;\ //\ No\ clients\ in\ the\ room}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ for\ (uint16\_t\ clientId\ :\ roomClients[roomId])\ \{}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \_network\_lib-\/>send(clientId,\ packet.serialize());}}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \}}}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \}}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classR__Type_1_1Core_a21fbea4c29f09d9bb40f65431cea868a}{Core}}();}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1Core_a1f43d98e0a9468e04b97bcbda6a0445a}{\_initPacketHandling}}();}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1Core_a733e861e031274019a895602839b5b69}{\_addLobbySystems}}();}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1Core_ad86257091d8d51295947e71ac20c44da}{\_addGameSystems}}();}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ void\ \_startGame();}}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1Core_a260513ccdac756a84bc9fab764db6c2b}{\_startGame}}(\textcolor{keywordtype}{int}\ roomId);}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1Core_ad662a02471565540dc485784a4f60432}{\_addLobbyPacketHandlers}}();}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEngine_1_1Core_1_1Core}{Engine::Core::Core}}\ \mbox{\hyperlink{classR__Type_1_1Core_ab1d6e21794b40c688b0f0a54d704f21c}{\_core}};}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEngine_1_1Core_1_1ModuleLoader}{Engine::Core::ModuleLoader}}\ \mbox{\hyperlink{classR__Type_1_1Core_a35b9d45bdb2bf47c99cd1f5956f19cf6}{\_module\_loader}};}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ std::unique\_ptr<Engine::Module::INetworkServer>\ \mbox{\hyperlink{classR__Type_1_1Core_a2fbe77646efee378b865ba6313164043}{\_network\_lib}};}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ std::unique\_ptr<Engine::Module::IPhysic>\ \mbox{\hyperlink{classR__Type_1_1Core_abe676f295652aaa5e314d92e847671c7}{\_physic\_lib}};}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classECS_1_1Registry}{ECS::Registry}}\ \mbox{\hyperlink{classR__Type_1_1Core_aefbbf3fdfa74d1231ddcdd5c5eba5cc4}{\_registry}};}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classNetwork_1_1PacketHandler}{Network::PacketHandler}}\ \mbox{\hyperlink{classR__Type_1_1Core_a367daa2ce3ed40bfbfee7be499e9af07}{\_packet\_handler}};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ std::unordered\_map<std::string,\ R\_Type::System::LobbySystem>\ \_lobbies;}}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ std::optional<ECS::Entity>\ \mbox{\hyperlink{classR__Type_1_1Core_a261a4c59acac9059e8ce61c07c6b276e}{\_camera}};}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classR__Type_1_1Core_a17a9d1bb3c7db8d6d2ac91d866e64498}{\_game\_started}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ std::unordered\_map<uint16\_t,\ std::optional<ECS::Entity>>\ \mbox{\hyperlink{classR__Type_1_1Core_ac462335a847637bb4bd7f116e687e80a}{\_lobbyPlayers}};}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ std::unordered\_map<uint16\_t,\ bool>\ \mbox{\hyperlink{classR__Type_1_1Core_a983c98e5481a2d1717b95124e2ade3ee}{\_lobbyReadyStatus}};}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ std::unordered\_map<std::size\_t,\ std::size\_t>\ \mbox{\hyperlink{classR__Type_1_1Core_a61a1a529b3995c7b089ace1f8f4b20ce}{\_entityToServerId}};}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ std::unordered\_map<std::size\_t,\ std::size\_t>\ \mbox{\hyperlink{classR__Type_1_1Core_ade60c0ee1565b6a1b9ea8addf6f152cc}{\_serverIdToEntity}};}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ std::unordered\_map<int,\ std::unique\_ptr<RoomSystem>>\ \mbox{\hyperlink{classR__Type_1_1Core_a4a133582571edb032a768fcaa0f7731f}{\_rooms}};}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ std::unordered\_map<std::string,\ std::function<void(std::string)>>\ \mbox{\hyperlink{classR__Type_1_1Core_a2705027a7dadd5b0f66cdd92b8e0e0ba}{\_konsole\_calls}};}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ std::unordered\_map<int,\ std::vector<uint16\_t>>\ \mbox{\hyperlink{classR__Type_1_1Core_a69091212721f60071b4748de56a7108f}{roomClients}};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::unique\_ptr<Core>\ \mbox{\hyperlink{classR__Type_1_1Core_a83f0c37d8bf9cd384291484483efa7e3}{\_instance}};}
+\DoxyCodeLine{00087\ \ \ \ \ \};}
+\DoxyCodeLine{00088\ \}\ \textcolor{comment}{//\ namespace\ R\_Type}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !CORE\_HPP\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

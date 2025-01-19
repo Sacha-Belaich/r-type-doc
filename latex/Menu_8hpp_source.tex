@@ -1,0 +1,40 @@
+\doxysection{Menu.\+hpp}
+\hypertarget{Menu_8hpp_source}{}\label{Menu_8hpp_source}\index{client/includes/scenes/Menu.hpp@{client/includes/scenes/Menu.hpp}}
+\mbox{\hyperlink{Menu_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2024}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ Project\ Name}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ main\ menu\ scene\ loading\ scripts}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}Entity.hpp"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IGraphical_8hpp}{IGraphical.hpp}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Registry_8hpp}{Registry.hpp}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceR__Type_1_1Scene}{R\_Type::Scene}}\ \{}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classR__Type_1_1Scene_1_1Menu}{Menu}}\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1Scene_1_1Menu_a5418e3cf05b5f7101457fe7aed340f31}{startScript}}(\mbox{\hyperlink{classECS_1_1Registry}{ECS::Registry}}\ \&r);}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1Scene_1_1Menu_afe814f1a028bad91a381ec439b7992b9}{playButton}}();}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1Scene_1_1Menu_ac40382b020d03e53f2fac146aa21cac9}{setReady}}();}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1Scene_1_1Menu_a1efa97fb8c5f0f30d2ceb4cd93c7f541}{optionButton}}();}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1Scene_1_1Menu_a3938b37a439d0733ddf3f56a5bd714b0}{joinLobbyButton}}();}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1Scene_1_1Menu_a50e66775b7662efce84eb05597ed0ca7}{adjustVolume}}();}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1Scene_1_1Menu_a4d0e587fd2fd21dee6736e95bca0164b}{toggleShaders}}();}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1Scene_1_1Menu_aeae93eed8ed5c46121de6b910909729b}{changeFPS}}();}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1Scene_1_1Menu_a407defb6b318ee232f8256dd69df5104}{backButton}}();}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1Scene_1_1Menu_aa31c78583d4dd8606d094d8fb7cc4ad4}{refreshRoomList}}(\mbox{\hyperlink{classECS_1_1Registry}{ECS::Registry}}\ \&r);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classECS_1_1Entity}{ECS::Entity}}\ \mbox{\hyperlink{classR__Type_1_1Scene_1_1Menu_a2933ca098e769da55a0d3bbdcd178d64}{createMenuButton}}(\mbox{\hyperlink{classECS_1_1Registry}{ECS::Registry}}\ \&r,\ std::string\ text,}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structGraphical_1_1Vect2i}{Graphical::Vect2i}}\ pos,\ \textcolor{keywordtype}{void}\ (*onClick)(\textcolor{keywordtype}{void}));}
+\DoxyCodeLine{00033\ \};}
+\DoxyCodeLine{00034\ \}\ \ \textcolor{comment}{//\ namespace\ R\_Type::Scene}}
+
+\end{DoxyCode}

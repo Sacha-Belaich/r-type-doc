@@ -1,0 +1,37 @@
+\doxysection{Room.\+hpp}
+\hypertarget{Room_8hpp_source}{}\label{Room_8hpp_source}\index{client/includes/scenes/Room.hpp@{client/includes/scenes/Room.hpp}}
+\mbox{\hyperlink{Room_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2024}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ Project\ Name}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ main\ room\ scene\ loading\ scripts}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}Entity.hpp"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IGraphical_8hpp}{IGraphical.hpp}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Registry_8hpp}{Registry.hpp}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Packet_8hpp}{Packet.hpp}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceR__Type_1_1Scene}{R\_Type::Scene}}\ \{}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classR__Type_1_1Scene_1_1Room}{Room}}\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1Scene_1_1Room_af739a25a53377e3cae222b5a24f2ce86}{startScript}}(\mbox{\hyperlink{classECS_1_1Registry}{ECS::Registry}}\ \&r);}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1Scene_1_1Room_a78c695bdd18df04674d8420c6779d97f}{backButton}}();}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1Scene_1_1Room_afcff33747561f85af5dd5e7384baaac7}{refreshRoomList}}(\mbox{\hyperlink{classECS_1_1Registry}{ECS::Registry}}\ \&r,\ \textcolor{keyword}{const}\ std::vector<std::string>\ \&rooms);}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1Scene_1_1Room_a2af16ffefce864f37e64491ae8f3ab36}{joinRoomWrapper}}(\textcolor{keyword}{const}\ std::string\ \&room);}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1Scene_1_1Room_aebe9209433112b0808074f4ce60dc185}{handleRoomListResponse}}(\mbox{\hyperlink{classNetwork_1_1Packet}{Network::Packet}}\ \&packet);}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1Scene_1_1Room_a7a1e4e4ce54728cf00a96ebbdacb37f7}{printTest}}(\mbox{\hyperlink{classNetwork_1_1Packet}{Network::Packet}}\ \&packet);}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1Scene_1_1Room_a3769607a7b0d8afe954abdb19c569008}{handleRoomJoined}}(\mbox{\hyperlink{classNetwork_1_1Packet}{Network::Packet}}\ \&packet);}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1Scene_1_1Room_a3aa470c8b96ab729147ce87f84ff18b3}{handleRoomJoinFailed}}(\mbox{\hyperlink{classNetwork_1_1Packet}{Network::Packet}}\ \&packet);}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classECS_1_1Entity}{ECS::Entity}}\ \mbox{\hyperlink{classR__Type_1_1Scene_1_1Room_a01cd15d811e9732abd005bcfbc69d43b}{createRoomButton}}(\mbox{\hyperlink{classECS_1_1Registry}{ECS::Registry}}\ \&r,\ std::string\ text,\ \mbox{\hyperlink{structGraphical_1_1Vect2i}{Graphical::Vect2i}}\ pos,\ std::function<\textcolor{keywordtype}{void}()>\ onClick);}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classR__Type_1_1Scene_1_1Room_a2f783c3a9b1c87ef4fcf606807daf828}{joinRoom}}(\textcolor{keywordtype}{int}\ roomId);}
+\DoxyCodeLine{00030\ \};}
+\DoxyCodeLine{00031\ \}\ \ \textcolor{comment}{//\ namespace\ R\_Type::Scene}}
+
+\end{DoxyCode}

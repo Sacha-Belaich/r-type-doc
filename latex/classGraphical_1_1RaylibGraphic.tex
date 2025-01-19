@@ -1,0 +1,285 @@
+\doxysection{Graphical\+::Raylib\+Graphic Class Reference}
+\hypertarget{classGraphical_1_1RaylibGraphic}{}\label{classGraphical_1_1RaylibGraphic}\index{Graphical::RaylibGraphic@{Graphical::RaylibGraphic}}
+
+
+{\ttfamily \#include $<$Raylib\+Graphic.\+hpp$>$}
+
+Inheritance diagram for Graphical\+::Raylib\+Graphic\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classGraphical_1_1RaylibGraphic}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGraphical_1_1RaylibGraphic_a5beae44f47fbb69acf1cab1de209f4a7}{Raylib\+Graphic}} ()
+\item 
+\mbox{\hyperlink{classGraphical_1_1RaylibGraphic_ad3bb89f3dbf80ad9236749e9c15975bd}{\texorpdfstring{$\sim$}{\string~}\+Raylib\+Graphic}} () override
+\item 
+\mbox{\hyperlink{namespaceGraphical_aaf527a3bc294ab26e5cc06976b0410db}{event\+\_\+t}} \mbox{\hyperlink{classGraphical_1_1RaylibGraphic_ab6d5840c80ee5ceaafdd47b4817d320f}{get\+Events}} () override
+\item 
+void \mbox{\hyperlink{classGraphical_1_1RaylibGraphic_a8c8a0a1296038f9f0577e2588dbddb76}{open\+Window}} (const std\+::string \&window\+\_\+name, const \mbox{\hyperlink{structGraphical_1_1Vect2i}{Vect2i}} \&win\+\_\+size) override
+\item 
+void \mbox{\hyperlink{classGraphical_1_1RaylibGraphic_a2bec03ef242983d8f799354133025480}{close\+Window}} () override
+\item 
+void \mbox{\hyperlink{classGraphical_1_1RaylibGraphic_aebb6382a32b22fa11077fbd37e0dadf4}{refresh\+Window}} () override
+\item 
+void \mbox{\hyperlink{classGraphical_1_1RaylibGraphic_ac56d60c1bc5a3d972e5e05b0538bbeb3}{clear\+Window}} (const \mbox{\hyperlink{structGraphical_1_1Color}{Color}} \&col) override
+\item 
+void \mbox{\hyperlink{classGraphical_1_1RaylibGraphic_aeddd73f64c3007d7626416c573d93c2b}{draw\+Sprite}} (const std\+::string \&path, const \mbox{\hyperlink{structGraphical_1_1TextureRect}{Texture\+Rect}} \&texture\+\_\+rect, const \mbox{\hyperlink{structGraphical_1_1Vect2i}{Vect2i}} \&pos, const \mbox{\hyperlink{structGraphical_1_1Vect2i}{Vect2i}} \&size, int8\+\_\+t rotation) override
+\item 
+void \mbox{\hyperlink{classGraphical_1_1RaylibGraphic_a310eaf71d0d244f59032e8058e525d2b}{draw\+Text}} (const std\+::string \&font\+\_\+path, const std\+::string \&str, const \mbox{\hyperlink{structGraphical_1_1Vect2i}{Vect2i}} \&pos, const int \&size, int8\+\_\+t rotation, const \mbox{\hyperlink{structGraphical_1_1Color}{Color}} \&color) override
+\item 
+void \mbox{\hyperlink{classGraphical_1_1RaylibGraphic_a25f2f2d7948713c6cd322de02083c8f5}{load\+Shader}} (const std\+::string \&name, const std\+::optional$<$ std\+::string $>$ \&vs\+Path, const std\+::optional$<$ std\+::string $>$ \&fs\+Path) override
+\item 
+void \mbox{\hyperlink{classGraphical_1_1RaylibGraphic_aa3e8287e653e6582bda7e6da7bb35fb9}{set\+Shader}} (const std\+::string \&name) override
+\item 
+void \mbox{\hyperlink{classGraphical_1_1RaylibGraphic_adf9c3285590d7ab27c4860e071deed48}{stop\+Shader}} (void) override
+\item 
+void \mbox{\hyperlink{classGraphical_1_1RaylibGraphic_a407184e4fceb334297ecdb8d34c62d7d}{draw\+Rectangle}} (const \mbox{\hyperlink{structGraphical_1_1Vect2i}{Vect2i}} \&pos, const \mbox{\hyperlink{structGraphical_1_1Vect2i}{Vect2i}} \&size, const \mbox{\hyperlink{structGraphical_1_1Color}{Color}} \&color, const int8\+\_\+t \&rotation) override
+\item 
+void \mbox{\hyperlink{classGraphical_1_1RaylibGraphic_a59be82f8cbdd58281ce0a8fbe49337c6}{draw\+Circle}} (const \mbox{\hyperlink{structGraphical_1_1Vect2i}{Vect2i}} \&pos, const int8\+\_\+t \&radius, const \mbox{\hyperlink{structGraphical_1_1Color}{Color}} \&color) override
+\item 
+void \mbox{\hyperlink{classGraphical_1_1RaylibGraphic_a6c79199e61fc8016f9d5d0ce7d05245b}{draw\+Line}} (const \mbox{\hyperlink{structGraphical_1_1Vect2i}{Vect2i}} \&start\+Pos, const \mbox{\hyperlink{structGraphical_1_1Vect2i}{Vect2i}} \&end\+Pos, const int8\+\_\+t \&thickness, const \mbox{\hyperlink{structGraphical_1_1Color}{Color}} \&color) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classGraphical_1_1IGraphical}{Graphical\+::\+IGraphical}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classGraphical_1_1IGraphical_a1dd5b0bc167627b237e1db94243f690a}{\texorpdfstring{$\sim$}{\string~}\+IGraphical}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGraphical_1_1AssetManager}{Asset\+Manager}}$<$ Texture $>$ \mbox{\hyperlink{classGraphical_1_1RaylibGraphic_a522190d6463cd28331ddd098b58920ac}{texture\+Manager}}
+\item 
+\mbox{\hyperlink{classGraphical_1_1AssetManager}{Asset\+Manager}}$<$ Font $>$ \mbox{\hyperlink{classGraphical_1_1RaylibGraphic_a4213ccd08c7eaeed2146f337ec78a21b}{font\+Manager}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, Shader $>$ \mbox{\hyperlink{classGraphical_1_1RaylibGraphic_ab624258432608d55bb1d4dab367d5ca0}{shader\+Map}}
+\item 
+const std\+::map$<$ int, \mbox{\hyperlink{namespaceGraphical_a028209aca40d8b0d34872f3297183452}{Key}} $>$ \mbox{\hyperlink{classGraphical_1_1RaylibGraphic_a749d65b1cbd7caafda460a2392b7b7a4}{\+\_\+input\+\_\+map}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classGraphical_1_1RaylibGraphic_a5beae44f47fbb69acf1cab1de209f4a7}\label{classGraphical_1_1RaylibGraphic_a5beae44f47fbb69acf1cab1de209f4a7} 
+\index{Graphical::RaylibGraphic@{Graphical::RaylibGraphic}!RaylibGraphic@{RaylibGraphic}}
+\index{RaylibGraphic@{RaylibGraphic}!Graphical::RaylibGraphic@{Graphical::RaylibGraphic}}
+\doxysubsubsection{\texorpdfstring{RaylibGraphic()}{RaylibGraphic()}}
+{\footnotesize\ttfamily Graphical\+::\+Raylib\+Graphic\+::\+Raylib\+Graphic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classGraphical_1_1RaylibGraphic_ad3bb89f3dbf80ad9236749e9c15975bd}\label{classGraphical_1_1RaylibGraphic_ad3bb89f3dbf80ad9236749e9c15975bd} 
+\index{Graphical::RaylibGraphic@{Graphical::RaylibGraphic}!````~RaylibGraphic@{\texorpdfstring{$\sim$}{\string~}RaylibGraphic}}
+\index{````~RaylibGraphic@{\texorpdfstring{$\sim$}{\string~}RaylibGraphic}!Graphical::RaylibGraphic@{Graphical::RaylibGraphic}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}RaylibGraphic()}{\string~RaylibGraphic()}}
+{\footnotesize\ttfamily Graphical\+::\+Raylib\+Graphic\+::\texorpdfstring{$\sim$}{\string~}\+Raylib\+Graphic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classGraphical_1_1RaylibGraphic_ac56d60c1bc5a3d972e5e05b0538bbeb3}\label{classGraphical_1_1RaylibGraphic_ac56d60c1bc5a3d972e5e05b0538bbeb3} 
+\index{Graphical::RaylibGraphic@{Graphical::RaylibGraphic}!clearWindow@{clearWindow}}
+\index{clearWindow@{clearWindow}!Graphical::RaylibGraphic@{Graphical::RaylibGraphic}}
+\doxysubsubsection{\texorpdfstring{clearWindow()}{clearWindow()}}
+{\footnotesize\ttfamily void Graphical\+::\+Raylib\+Graphic\+::clear\+Window (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structGraphical_1_1Color}{Color}} \&}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Fill window with color 
+\begin{DoxyParams}{Parameters}
+{\em col} & color in wich the window should be filled \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classGraphical_1_1IGraphical_ae6a6b8aa388c8225eff0b0dfd6371ef3}{Graphical\+::\+IGraphical}}.
+
+\Hypertarget{classGraphical_1_1RaylibGraphic_a2bec03ef242983d8f799354133025480}\label{classGraphical_1_1RaylibGraphic_a2bec03ef242983d8f799354133025480} 
+\index{Graphical::RaylibGraphic@{Graphical::RaylibGraphic}!closeWindow@{closeWindow}}
+\index{closeWindow@{closeWindow}!Graphical::RaylibGraphic@{Graphical::RaylibGraphic}}
+\doxysubsubsection{\texorpdfstring{closeWindow()}{closeWindow()}}
+{\footnotesize\ttfamily void Graphical\+::\+Raylib\+Graphic\+::close\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Close the previously oppened window 
+
+Implements \mbox{\hyperlink{classGraphical_1_1IGraphical_aca3380a3cf214e29361a273dad9d5453}{Graphical\+::\+IGraphical}}.
+
+\Hypertarget{classGraphical_1_1RaylibGraphic_a59be82f8cbdd58281ce0a8fbe49337c6}\label{classGraphical_1_1RaylibGraphic_a59be82f8cbdd58281ce0a8fbe49337c6} 
+\index{Graphical::RaylibGraphic@{Graphical::RaylibGraphic}!drawCircle@{drawCircle}}
+\index{drawCircle@{drawCircle}!Graphical::RaylibGraphic@{Graphical::RaylibGraphic}}
+\doxysubsubsection{\texorpdfstring{drawCircle()}{drawCircle()}}
+{\footnotesize\ttfamily void Graphical\+::\+Raylib\+Graphic\+::draw\+Circle (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structGraphical_1_1Vect2i}{Vect2i}} \&}]{pos,  }\item[{const int8\+\_\+t \&}]{radius,  }\item[{const \mbox{\hyperlink{structGraphical_1_1Color}{Color}} \&}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classGraphical_1_1IGraphical_ac9c727e8f8ce625db82c1ae7e7d96498}{Graphical\+::\+IGraphical}}.
+
+\Hypertarget{classGraphical_1_1RaylibGraphic_a6c79199e61fc8016f9d5d0ce7d05245b}\label{classGraphical_1_1RaylibGraphic_a6c79199e61fc8016f9d5d0ce7d05245b} 
+\index{Graphical::RaylibGraphic@{Graphical::RaylibGraphic}!drawLine@{drawLine}}
+\index{drawLine@{drawLine}!Graphical::RaylibGraphic@{Graphical::RaylibGraphic}}
+\doxysubsubsection{\texorpdfstring{drawLine()}{drawLine()}}
+{\footnotesize\ttfamily void Graphical\+::\+Raylib\+Graphic\+::draw\+Line (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structGraphical_1_1Vect2i}{Vect2i}} \&}]{start\+Pos,  }\item[{const \mbox{\hyperlink{structGraphical_1_1Vect2i}{Vect2i}} \&}]{end\+Pos,  }\item[{const int8\+\_\+t \&}]{thickness,  }\item[{const \mbox{\hyperlink{structGraphical_1_1Color}{Color}} \&}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classGraphical_1_1IGraphical_aa119d04a0c0b2d6db0e6300186b62811}{Graphical\+::\+IGraphical}}.
+
+\Hypertarget{classGraphical_1_1RaylibGraphic_a407184e4fceb334297ecdb8d34c62d7d}\label{classGraphical_1_1RaylibGraphic_a407184e4fceb334297ecdb8d34c62d7d} 
+\index{Graphical::RaylibGraphic@{Graphical::RaylibGraphic}!drawRectangle@{drawRectangle}}
+\index{drawRectangle@{drawRectangle}!Graphical::RaylibGraphic@{Graphical::RaylibGraphic}}
+\doxysubsubsection{\texorpdfstring{drawRectangle()}{drawRectangle()}}
+{\footnotesize\ttfamily void Graphical\+::\+Raylib\+Graphic\+::draw\+Rectangle (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structGraphical_1_1Vect2i}{Vect2i}} \&}]{pos,  }\item[{const \mbox{\hyperlink{structGraphical_1_1Vect2i}{Vect2i}} \&}]{size,  }\item[{const \mbox{\hyperlink{structGraphical_1_1Color}{Color}} \&}]{color,  }\item[{const int8\+\_\+t \&}]{rotation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classGraphical_1_1IGraphical_a323493f69dc4cc4d6da7f5b9c7b3ec89}{Graphical\+::\+IGraphical}}.
+
+\Hypertarget{classGraphical_1_1RaylibGraphic_aeddd73f64c3007d7626416c573d93c2b}\label{classGraphical_1_1RaylibGraphic_aeddd73f64c3007d7626416c573d93c2b} 
+\index{Graphical::RaylibGraphic@{Graphical::RaylibGraphic}!drawSprite@{drawSprite}}
+\index{drawSprite@{drawSprite}!Graphical::RaylibGraphic@{Graphical::RaylibGraphic}}
+\doxysubsubsection{\texorpdfstring{drawSprite()}{drawSprite()}}
+{\footnotesize\ttfamily void Graphical\+::\+Raylib\+Graphic\+::draw\+Sprite (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path,  }\item[{const \mbox{\hyperlink{structGraphical_1_1TextureRect}{Texture\+Rect}} \&}]{texture\+\_\+rect,  }\item[{const \mbox{\hyperlink{structGraphical_1_1Vect2i}{Vect2i}} \&}]{pos,  }\item[{const \mbox{\hyperlink{structGraphical_1_1Vect2i}{Vect2i}} \&}]{size,  }\item[{int8\+\_\+t}]{rotation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Draw a sprite on the window 
+\begin{DoxyParams}{Parameters}
+{\em path} & path of the texture asset \\
+\hline
+{\em texture\+\_\+rect} & rectangle of the texture to use (any negative value will result in full texture loaded) \\
+\hline
+{\em pos} & pos were texture will be displayed \\
+\hline
+{\em size} & resize the sprite \\
+\hline
+{\em rotation} & rotation in degrees \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classGraphical_1_1IGraphical_a1dd3f37a96316263156ce3bab5ffef0d}{Graphical\+::\+IGraphical}}.
+
+\Hypertarget{classGraphical_1_1RaylibGraphic_a310eaf71d0d244f59032e8058e525d2b}\label{classGraphical_1_1RaylibGraphic_a310eaf71d0d244f59032e8058e525d2b} 
+\index{Graphical::RaylibGraphic@{Graphical::RaylibGraphic}!drawText@{drawText}}
+\index{drawText@{drawText}!Graphical::RaylibGraphic@{Graphical::RaylibGraphic}}
+\doxysubsubsection{\texorpdfstring{drawText()}{drawText()}}
+{\footnotesize\ttfamily void Graphical\+::\+Raylib\+Graphic\+::draw\+Text (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{font\+\_\+path,  }\item[{const std\+::string \&}]{str,  }\item[{const \mbox{\hyperlink{structGraphical_1_1Vect2i}{Vect2i}} \&}]{pos,  }\item[{const int \&}]{size,  }\item[{int8\+\_\+t}]{rotation,  }\item[{const \mbox{\hyperlink{structGraphical_1_1Color}{Color}} \&}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Draw a text on the window 
+\begin{DoxyParams}{Parameters}
+{\em font\+\_\+path} & path of the font asset \\
+\hline
+{\em str} & string to print \\
+\hline
+{\em pos} & pos were print will be displayed \\
+\hline
+{\em size} & font size \\
+\hline
+{\em rotation} & rotation in degrees \\
+\hline
+{\em color} & color of the text \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classGraphical_1_1IGraphical_ac7c5f56eecbcac7f729cfc424b1ade7d}{Graphical\+::\+IGraphical}}.
+
+\Hypertarget{classGraphical_1_1RaylibGraphic_ab6d5840c80ee5ceaafdd47b4817d320f}\label{classGraphical_1_1RaylibGraphic_ab6d5840c80ee5ceaafdd47b4817d320f} 
+\index{Graphical::RaylibGraphic@{Graphical::RaylibGraphic}!getEvents@{getEvents}}
+\index{getEvents@{getEvents}!Graphical::RaylibGraphic@{Graphical::RaylibGraphic}}
+\doxysubsubsection{\texorpdfstring{getEvents()}{getEvents()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceGraphical_aaf527a3bc294ab26e5cc06976b0410db}{event\+\_\+t}} Graphical\+::\+Raylib\+Graphic\+::get\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Get all usefull events \begin{DoxyReturn}{Returns}
+all players input needed by the game 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classGraphical_1_1IGraphical_aebe66c31114ad9a79490b183e5375c0b}{Graphical\+::\+IGraphical}}.
+
+\Hypertarget{classGraphical_1_1RaylibGraphic_a25f2f2d7948713c6cd322de02083c8f5}\label{classGraphical_1_1RaylibGraphic_a25f2f2d7948713c6cd322de02083c8f5} 
+\index{Graphical::RaylibGraphic@{Graphical::RaylibGraphic}!loadShader@{loadShader}}
+\index{loadShader@{loadShader}!Graphical::RaylibGraphic@{Graphical::RaylibGraphic}}
+\doxysubsubsection{\texorpdfstring{loadShader()}{loadShader()}}
+{\footnotesize\ttfamily void Graphical\+::\+Raylib\+Graphic\+::load\+Shader (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::optional$<$ std\+::string $>$ \&}]{vs\+Path,  }\item[{const std\+::optional$<$ std\+::string $>$ \&}]{fs\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classGraphical_1_1IGraphical_a9d5b8b26dd341ca3289ba1593e02f99c}{Graphical\+::\+IGraphical}}.
+
+\Hypertarget{classGraphical_1_1RaylibGraphic_a8c8a0a1296038f9f0577e2588dbddb76}\label{classGraphical_1_1RaylibGraphic_a8c8a0a1296038f9f0577e2588dbddb76} 
+\index{Graphical::RaylibGraphic@{Graphical::RaylibGraphic}!openWindow@{openWindow}}
+\index{openWindow@{openWindow}!Graphical::RaylibGraphic@{Graphical::RaylibGraphic}}
+\doxysubsubsection{\texorpdfstring{openWindow()}{openWindow()}}
+{\footnotesize\ttfamily void Graphical\+::\+Raylib\+Graphic\+::open\+Window (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{window\+\_\+name,  }\item[{const \mbox{\hyperlink{structGraphical_1_1Vect2i}{Vect2i}} \&}]{win\+\_\+size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Open a window for getting inputs and displaying sprites 
+\begin{DoxyParams}{Parameters}
+{\em window\+\_\+name} & name of the openned window \\
+\hline
+{\em win\+\_\+size} & size of the window \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classGraphical_1_1IGraphical_a36a7aea0786a1a448895b339d5edd362}{Graphical\+::\+IGraphical}}.
+
+\Hypertarget{classGraphical_1_1RaylibGraphic_aebb6382a32b22fa11077fbd37e0dadf4}\label{classGraphical_1_1RaylibGraphic_aebb6382a32b22fa11077fbd37e0dadf4} 
+\index{Graphical::RaylibGraphic@{Graphical::RaylibGraphic}!refreshWindow@{refreshWindow}}
+\index{refreshWindow@{refreshWindow}!Graphical::RaylibGraphic@{Graphical::RaylibGraphic}}
+\doxysubsubsection{\texorpdfstring{refreshWindow()}{refreshWindow()}}
+{\footnotesize\ttfamily void Graphical\+::\+Raylib\+Graphic\+::refresh\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+refresh window with all drawed sprites or color 
+
+Implements \mbox{\hyperlink{classGraphical_1_1IGraphical_a93caadc86b67be589fce2c9500c29051}{Graphical\+::\+IGraphical}}.
+
+\Hypertarget{classGraphical_1_1RaylibGraphic_aa3e8287e653e6582bda7e6da7bb35fb9}\label{classGraphical_1_1RaylibGraphic_aa3e8287e653e6582bda7e6da7bb35fb9} 
+\index{Graphical::RaylibGraphic@{Graphical::RaylibGraphic}!setShader@{setShader}}
+\index{setShader@{setShader}!Graphical::RaylibGraphic@{Graphical::RaylibGraphic}}
+\doxysubsubsection{\texorpdfstring{setShader()}{setShader()}}
+{\footnotesize\ttfamily void Graphical\+::\+Raylib\+Graphic\+::set\+Shader (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classGraphical_1_1IGraphical_a300836f71917f87965b8307f2c61fde6}{Graphical\+::\+IGraphical}}.
+
+\Hypertarget{classGraphical_1_1RaylibGraphic_adf9c3285590d7ab27c4860e071deed48}\label{classGraphical_1_1RaylibGraphic_adf9c3285590d7ab27c4860e071deed48} 
+\index{Graphical::RaylibGraphic@{Graphical::RaylibGraphic}!stopShader@{stopShader}}
+\index{stopShader@{stopShader}!Graphical::RaylibGraphic@{Graphical::RaylibGraphic}}
+\doxysubsubsection{\texorpdfstring{stopShader()}{stopShader()}}
+{\footnotesize\ttfamily void Graphical\+::\+Raylib\+Graphic\+::stop\+Shader (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+stops drawing using the set shader if one is being used 
+
+Implements \mbox{\hyperlink{classGraphical_1_1IGraphical_a684fc1af45372c21fd75ac64fcee7dc6}{Graphical\+::\+IGraphical}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classGraphical_1_1RaylibGraphic_a749d65b1cbd7caafda460a2392b7b7a4}\label{classGraphical_1_1RaylibGraphic_a749d65b1cbd7caafda460a2392b7b7a4} 
+\index{Graphical::RaylibGraphic@{Graphical::RaylibGraphic}!\_input\_map@{\_input\_map}}
+\index{\_input\_map@{\_input\_map}!Graphical::RaylibGraphic@{Graphical::RaylibGraphic}}
+\doxysubsubsection{\texorpdfstring{\_input\_map}{\_input\_map}}
+{\footnotesize\ttfamily const std\+::map$<$int, \mbox{\hyperlink{namespaceGraphical_a028209aca40d8b0d34872f3297183452}{Key}}$>$ Graphical\+::\+Raylib\+Graphic\+::\+\_\+input\+\_\+map\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classGraphical_1_1RaylibGraphic_a4213ccd08c7eaeed2146f337ec78a21b}\label{classGraphical_1_1RaylibGraphic_a4213ccd08c7eaeed2146f337ec78a21b} 
+\index{Graphical::RaylibGraphic@{Graphical::RaylibGraphic}!fontManager@{fontManager}}
+\index{fontManager@{fontManager}!Graphical::RaylibGraphic@{Graphical::RaylibGraphic}}
+\doxysubsubsection{\texorpdfstring{fontManager}{fontManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGraphical_1_1AssetManager}{Asset\+Manager}}$<$Font$>$ Graphical\+::\+Raylib\+Graphic\+::font\+Manager\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classGraphical_1_1RaylibGraphic_ab624258432608d55bb1d4dab367d5ca0}\label{classGraphical_1_1RaylibGraphic_ab624258432608d55bb1d4dab367d5ca0} 
+\index{Graphical::RaylibGraphic@{Graphical::RaylibGraphic}!shaderMap@{shaderMap}}
+\index{shaderMap@{shaderMap}!Graphical::RaylibGraphic@{Graphical::RaylibGraphic}}
+\doxysubsubsection{\texorpdfstring{shaderMap}{shaderMap}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, Shader$>$ Graphical\+::\+Raylib\+Graphic\+::shader\+Map\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classGraphical_1_1RaylibGraphic_a522190d6463cd28331ddd098b58920ac}\label{classGraphical_1_1RaylibGraphic_a522190d6463cd28331ddd098b58920ac} 
+\index{Graphical::RaylibGraphic@{Graphical::RaylibGraphic}!textureManager@{textureManager}}
+\index{textureManager@{textureManager}!Graphical::RaylibGraphic@{Graphical::RaylibGraphic}}
+\doxysubsubsection{\texorpdfstring{textureManager}{textureManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGraphical_1_1AssetManager}{Asset\+Manager}}$<$Texture$>$ Graphical\+::\+Raylib\+Graphic\+::texture\+Manager\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/graphical/raylib\+\_\+graphic/\mbox{\hyperlink{RaylibGraphic_8hpp}{Raylib\+Graphic.\+hpp}}\item 
+lib/graphical/raylib\+\_\+graphic/\mbox{\hyperlink{RaylibGraphic_8cpp}{Raylib\+Graphic.\+cpp}}\end{DoxyCompactItemize}
